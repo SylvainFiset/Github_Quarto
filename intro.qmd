@@ -1,9 +1,72 @@
-# Introduction
+---
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
 
-This is a book created from markdown and executable code.
+# Introduction {.unnumbered}
 
-See @knuth84 for additional discussion of literate programming.
+*Utiliser R avec Quarto. Une introduction* présente la démarche à suivre afin de bien maîtriser l'application RStudio de la compagnie [POSIT](https://posit.co/) comme interface pour communiquer avec R. .
+
+La démarche présentée vient de mes années d'enseignement durant laquelle j'ai intégré le logiciel R dans mes cours de statistiques appliquées à l'université. Je remercie toutes mes étudiantes et tous mes étudiants pour leur patience. Si R est difficile à apprendre, il est aussi difficile à enseigner. À mon avis, ce livre utilise une structure qui facilite l'apprentissage et l'enseignement de l'analyse des données avec R.
+
+## Copier les codes
+
+Dans le présent livre, les codes R sont présentés à l'intérieur d'un bloc de codes sur fond gris. Pour copier toutes les lignes d'un bloc, il suffit de déplacer votre curseur par-dessus le bloc de codes pour voir apparaître le symbole `copier` dans le coin supérieur droit et de cliquer sur ce dernier. Par la suite, vous pouvez les insérer (coller) dans votre propres scripts R en appuyant sur `Ctrl + C` (PC) ou `Cmd + C` (Mac).
+
+![](./figures/intro-copier.png)
+
+## Exemples
+
+Afin de réduire la longueur des chapitres, pour de nombreuses fonctions de R, les exemples sont insérés à l'intérieur d'une bande déroulante verte. Cliquez sur la bande déroulante pour faire apparaître l'exemple et les explications supplémentaires (si disponibles). Voici un exemple qui montre comment utiliser la fonction numérique de la racine carrée (`sqrt()`) :
+
+::: {.callout-tip title="Exemple" collapse="true"}
+```{r}
+sqrt(100)
+```
+:::
+
+## Exercices
+
+Chacun des chapitres se termine par une série d'exercices qui permettent d'intégrer le contenu du chapitre. Pour chaque problème, la solution est insérée à l'intérieur d'une bande déroulante bleue. Cliquez sur la bande déroulante pour vérifier si vous avez réussit l'exercice. Certaines solutions comportent des informations additionnelles. Voici la solution pour un exercice qui porte sur "Comment citer R ?" :
+
+::: {.callout-note title="Solution" collapse="true"}
+```{r}
+citation()
+```
+:::
+
+## Résultats d'un bloc de codes {#sec-exécuter}
+
+Dans ce livre, la majorité des lignes de codes R ont déjà été exécutées. Cela signifie que R a analysé la ligne de codes et, qu'en l'absence d'erreur, il a généré un résultat. Le résultat est affiché sous le bloc de codes.
 
 ```{r}
-1 + 1
+sqrt(100)
 ```
+
+1.  La valeur entre crochets (ex : `[1]`) situé à la gauche du résultat (`10`) indique l'ordre de la position de la valeur du résultat dans une liste. Cela est utile lorsqu'il y a plusieurs résultats qui sont affichés (voir l'exemple ci-dessous).
+
+::: {.callout-tip title="Exemple" collapse="true"}
+```{r}
+sqrt(1:100)
+```
+:::
+
+## Comment exécuter une ligne de codes R
+
+Dans R (et RStudio), une fois que la rédaction de la ligne de codes est complétée, il faut l'exécuter. Bien que RStudio offre de multiples possibilités à cet égard, selon moi, l'option la plus simple consiste à placer le curseur de l'ordinateur sur la ligne de codes que nous voulons exécuter et d'appuyer sur les touches `Ctrl + Enter` (PC) ou `Cmd + Enter` (Mac).
+
+![](./figures/intro-touches.png)
+
+L'utilisation de ces deux touches fonctionne pour tous les types de documents produits avec RStudio (script R, documents Quarto, R Notebook ou R Markdown). Bref, mémorisez bien ces deux touches selon le type de système d'exploitation utilisé par votre ordinateur. Vous aurez à les utiliser très régulièrement.
+
+## Mot de la fin
+
+Quarto présente de nombreux avantages. Prenez le temps de bien maîtriser cette application. 
+
+Bonne lecture et bon apprentissage,
+
+Sylvain

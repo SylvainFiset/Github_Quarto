@@ -1,9 +1,21 @@
-# Preface {.unnumbered}
+---
+lang: fr
+---
 
-This is a Quarto book.
+# Bienvenue {.unnumbered}
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Ce livre électronique est une brève introduction à l'utilisation de Quarto avec R.
 
-```{r}
-1 + 1
-```
+Bonne lecture,
+
+Sylvain
+
+Sylvain Fiset, Ph.D.[^index-1]<br> Professeur titulaire de psychologie<br> Université de Moncton, campus d'Edmundston.
+
+[^index-1]: Cliquez sur [ce lien](https://www.umoncton.ca/prof/umce-fiset_sylvain){.external target="_blank"} pour accéder au **site web du professeur Fiset** à l'Université de Moncton.
+
+## License
+
+Ce document est gratuit (et il le sera toujours). Il est disponible sous la licence Creative Commons Attribution-NonCommercial-NoDerivs 4.0[^index-2].
+
+[^index-2]: Cliquez sur [ce lien](https://creativecommons.org/licenses/by-nc-nd/4.0/){.external target="_blank"} pour accéder à la description de cette licence.

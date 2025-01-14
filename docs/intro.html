@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction – Utiliser R avec Quarto</title>
+<title>Introduction – Utiliser R avec Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,27 +54,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -109,17 +89,17 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script>
 
@@ -132,13 +112,13 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -155,7 +135,7 @@ div.csl-indent {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -163,19 +143,19 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Bienvenue</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -189,15 +169,26 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#copier-les-codes" id="toc-copier-les-codes" class="nav-link active" data-scroll-target="#copier-les-codes">Copier les codes</a></li>
+  <li><a href="#exemples" id="toc-exemples" class="nav-link" data-scroll-target="#exemples">Exemples</a></li>
+  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices">Exercices</a></li>
+  <li><a href="#sec-exécuter" id="toc-sec-exécuter" class="nav-link" data-scroll-target="#sec-exécuter">Résultats d’un bloc de codes</a></li>
+  <li><a href="#comment-exécuter-une-ligne-de-codes-r" id="toc-comment-exécuter-une-ligne-de-codes-r" class="nav-link" data-scroll-target="#comment-exécuter-une-ligne-de-codes-r">Comment exécuter une ligne de codes R</a></li>
+  <li><a href="#mot-de-la-fin" id="toc-mot-de-la-fin" class="nav-link" data-scroll-target="#mot-de-la-fin">Mot de la fin</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title">Introduction</h1>
 </div>
 
 
@@ -214,21 +205,145 @@ div.csl-indent {
 </header>
 
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+<p><em>Utiliser R avec Quarto. Une introduction</em> présente la démarche à suivre afin de bien maîtriser l’application RStudio de la compagnie <a href="https://posit.co/">POSIT</a> comme interface pour communiquer avec R. .</p>
+<p>La démarche présentée vient de mes années d’enseignement durant laquelle j’ai intégré le logiciel R dans mes cours de statistiques appliquées à l’université. Je remercie toutes mes étudiantes et tous mes étudiants pour leur patience. Si R est difficile à apprendre, il est aussi difficile à enseigner. À mon avis, ce livre utilise une structure qui facilite l’apprentissage et l’enseignement de l’analyse des données avec R.</p>
+<section id="copier-les-codes" class="level2">
+<h2 class="anchored" data-anchor-id="copier-les-codes">Copier les codes</h2>
+<p>Dans le présent livre, les codes R sont présentés à l’intérieur d’un bloc de codes sur fond gris. Pour copier toutes les lignes d’un bloc, il suffit de déplacer votre curseur par-dessus le bloc de codes pour voir apparaître le symbole <code>copier</code> dans le coin supérieur droit et de cliquer sur ce dernier. Par la suite, vous pouvez les insérer (coller) dans votre propres scripts R en appuyant sur <code>Ctrl + C</code> (PC) ou <code>Cmd + C</code> (Mac).</p>
+<p><img src="./figures/intro-copier.png" class="img-fluid"></p>
+</section>
+<section id="exemples" class="level2">
+<h2 class="anchored" data-anchor-id="exemples">Exemples</h2>
+<p>Afin de réduire la longueur des chapitres, pour de nombreuses fonctions de R, les exemples sont insérés à l’intérieur d’une bande déroulante verte. Cliquez sur la bande déroulante pour faire apparaître l’exemple et les explications supplémentaires (si disponibles). Voici un exemple qui montre comment utiliser la fonction numérique de la racine carrée (<code>sqrt()</code>) :</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemple">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">100</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>[1] 10</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercices" class="level2">
+<h2 class="anchored" data-anchor-id="exercices">Exercices</h2>
+<p>Chacun des chapitres se termine par une série d’exercices qui permettent d’intégrer le contenu du chapitre. Pour chaque problème, la solution est insérée à l’intérieur d’une bande déroulante bleue. Cliquez sur la bande déroulante pour vérifier si vous avez réussit l’exercice. Certaines solutions comportent des informations additionnelles. Voici la solution pour un exercice qui porte sur “Comment citer R ?” :</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Solution">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+To cite R in publications use:
+
+  R Core Team (2021). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  URL https://www.R-project.org/.
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {R: A Language and Environment for Statistical Computing},
+    author = {{R Core Team}},
+    organization = {R Foundation for Statistical Computing},
+    address = {Vienna, Austria},
+    year = {2021},
+    url = {https://www.R-project.org/},
+  }
+
+We have invested a lot of time and effort in creating R, please cite it
+when using it for data analysis. See also 'citation("pkgname")' for
+citing R packages.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-exécuter" class="level2">
+<h2 class="anchored" data-anchor-id="sec-exécuter">Résultats d’un bloc de codes</h2>
+<p>Dans ce livre, la majorité des lignes de codes R ont déjà été exécutées. Cela signifie que R a analysé la ligne de codes et, qu’en l’absence d’erreur, il a généré un résultat. Le résultat est affiché sous le bloc de codes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">100</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+<ol type="1">
+<li>La valeur entre crochets (ex : <code>[1]</code>) situé à la gauche du résultat (<code>10</code>) indique l’ordre de la position de la valeur du résultat dans une liste. Cela est utile lorsqu’il y a plusieurs résultats qui sont affichés (voir l’exemple ci-dessous).</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemple">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1]  1.000000  1.414214  1.732051  2.000000  2.236068  2.449490  2.645751
+  [8]  2.828427  3.000000  3.162278  3.316625  3.464102  3.605551  3.741657
+ [15]  3.872983  4.000000  4.123106  4.242641  4.358899  4.472136  4.582576
+ [22]  4.690416  4.795832  4.898979  5.000000  5.099020  5.196152  5.291503
+ [29]  5.385165  5.477226  5.567764  5.656854  5.744563  5.830952  5.916080
+ [36]  6.000000  6.082763  6.164414  6.244998  6.324555  6.403124  6.480741
+ [43]  6.557439  6.633250  6.708204  6.782330  6.855655  6.928203  7.000000
+ [50]  7.071068  7.141428  7.211103  7.280110  7.348469  7.416198  7.483315
+ [57]  7.549834  7.615773  7.681146  7.745967  7.810250  7.874008  7.937254
+ [64]  8.000000  8.062258  8.124038  8.185353  8.246211  8.306624  8.366600
+ [71]  8.426150  8.485281  8.544004  8.602325  8.660254  8.717798  8.774964
+ [78]  8.831761  8.888194  8.944272  9.000000  9.055385  9.110434  9.165151
+ [85]  9.219544  9.273618  9.327379  9.380832  9.433981  9.486833  9.539392
+ [92]  9.591663  9.643651  9.695360  9.746794  9.797959  9.848858  9.899495
+ [99]  9.949874 10.000000</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="comment-exécuter-une-ligne-de-codes-r" class="level2">
+<h2 class="anchored" data-anchor-id="comment-exécuter-une-ligne-de-codes-r">Comment exécuter une ligne de codes R</h2>
+<p>Dans R (et RStudio), une fois que la rédaction de la ligne de codes est complétée, il faut l’exécuter. Bien que RStudio offre de multiples possibilités à cet égard, selon moi, l’option la plus simple consiste à placer le curseur de l’ordinateur sur la ligne de codes que nous voulons exécuter et d’appuyer sur les touches <code>Ctrl + Enter</code> (PC) ou <code>Cmd + Enter</code> (Mac).</p>
+<p><img src="./figures/intro-touches.png" class="img-fluid"></p>
+<p>L’utilisation de ces deux touches fonctionne pour tous les types de documents produits avec RStudio (script R, documents Quarto, R Notebook ou R Markdown). Bref, mémorisez bien ces deux touches selon le type de système d’exploitation utilisé par votre ordinateur. Vous aurez à les utiliser très régulièrement.</p>
+</section>
+<section id="mot-de-la-fin" class="level2">
+<h2 class="anchored" data-anchor-id="mot-de-la-fin">Mot de la fin</h2>
+<p>Quarto présente de nombreux avantages. Prenez le temps de bien maîtriser cette application.</p>
+<p>Bonne lecture et bon apprentissage,</p>
+<p>Sylvain</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
-</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -274,12 +389,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copié");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copié");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -650,13 +765,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./index.html" class="pagination-link" aria-label="Bienvenue">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bienvenue</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./summary.html" class="pagination-link" aria-label="Summary">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
