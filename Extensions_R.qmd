@@ -41,22 +41,44 @@ Au cours des années, certaines extensions sont devenues très populaires et ell
 
 Parmi les formats R Markdown disponibles, notons le format PDF, HTML (incluant le format R Notebook), Word. De plus, l'extension rmarkdown permet de produit des documents écrits (comme des livres électroniques, via l'extension Bookdown) mais aussi des présentations (comme PowerPoint, via R Presentation). 
 
+## Vérifier si rmarkdown est installée
+
+Si vous avez déjà installé l'extension rmarkdown, vous n'avez rien à faire et vous pouvez sauter l'étape de l'installation. Il est aussi possible que la version la plus récente de R contienne par défaut l'extension rmarkdown. Voici comment faire pour vérifier. Dans la fenêtre Files de RStudio, cliquez sur l'onglet Packages et défiler la liste d'extensions déjà installées jusqu'à rmarkdown. Si rmarkdown est là (comme dans la @fig-rmarkdown), vous n'avez rien à faire puisque l'extension est déjà installée.
+
+```{r}
+#| label: fig-rmarkdown
+#| fig-cap: "Vérifier si l'extension rmarkdown est installée à partir de la fenêtre Files de RStudio"
+#| fig-align: left
+#| fig-width: 100
+#| echo: false
+knitr::include_graphics('figures/rmarkdown_installed.png')
+```
+
 ## Installer rmarkdown
 
-*Si vous avez déjà installé l'extension rmarkdown, vous n'avez rien à faire et vous pouvez sauter cette étape.*
-
-Pour utiliser le format R Notebook, il faut donc que l'extension rmarkdown soit installée dans R via RStudio. L'approche la plus simple pour installer l'extension rmarkdown consiste à :
+L'approche la plus simple pour installer l'extension rmarkdown consiste à :
 
 - ouvrir le logiciel RStudio
-- écrire `install.packages("rmarkdown")` dans la fenêtre Console de RStudio (notez que selon la configuration des fenêtres de RStudio, la fenêtre Console peut se trouver en bas à gauche de l'écran) (Voir Figure \@ref(fig:fig4))
+- écrire `install.packages("rmarkdown")` dans la fenêtre Console de RStudio (notez que selon la configuration des fenêtres de RStudio, la fenêtre Console peut se trouver en bas à gauche de l'écran) (Voir @fig-fig4)
 - appuyer sur la touche enter (`↵`)
 
-```{r fig4, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Installation de l'extension rmarkdown à partir de la fenêtre Console de RStudio"}
+```{r}
+#| label: fig-fig4
+#| fig-cap: "Installation de l'extension rmarkdown à partir de la fenêtre Console de RStudio"
+#| fig-align: center
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/install_rmarkdown.png')
 ```
 
-- Par la suite, un message confirme l'installation de l'extension (nommée _package_, en anglais) dans la Console de RStudio (Voir Figure \@ref(fig:fig5)).
+- Par la suite, un message confirme l'installation de l'extension (nommée _package_, en anglais) dans la Console de RStudio (Voir @fig-fig5).
 
-```{r fig5, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Confirmation de l'installation"}
+```{r}
+#| label: fig-fig5
+#| fig-cap: "Confirmation de l'installation"
+#| fig-align: center
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/installed_rmarkdown.png')
 ```
+

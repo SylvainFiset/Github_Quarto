@@ -319,17 +319,20 @@ div.csl-indent {
 </header>
 
 
-<p>Qui n’a pas perdu son temps, ou même pire, fait des erreurs, lors de la transcription des résultats d’une analyse statistique vers son traitement de texte (ex: Microsoft Word, LaTeX, LibreOffice, etc.) ? Je vous promets que si vous suivez la démarche que je propose dans le présent livre, cette approche du copier-coller sera bientôt chose du passé. Finies les erreurs, finie la perte de temps et vive la productivité !</p>
-<p>Mais tout d’abord, examinons brièvement les raisons qui me poussent à proposer l’utilisation du format R Notebook à partir de RStudio.</p>
+<p>Qui n’a pas perdu son temps, ou même pire, fait des erreurs, lors de la transcription des résultats d’une analyse statistique vers son traitement de texte (ex: Microsoft Word, LaTeX, LibreOffice, etc.) ? Je vous promets que si vous suivez la démarche qui a fait l’objet d’un commentaire dans la revue Nature <span class="citation" data-cites="Guitard:2023aa">(<a href="references.html#ref-Guitard:2023aa" role="doc-biblioref">Guitard et Fiset 2023</a>)</span> et que je propose dans le présent livre, cette approche du copier-coller sera bientôt chose du passé. Terminées les erreurs et la perte de temps. Et vive la productivité ! Mais tout d’abord, examinons brièvement les raisons qui me poussent à proposer l’utilisation de Quarto à partir de RStudio.</p>
 <section id="interface-de-r" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="interface-de-r"><span class="header-section-number">1.1</span> Interface de R</h2>
-<p>Dans sa version de base, l’interface d’utilisation du logiciel R est relativement aride (voir Figure @ref(fig:fig1)), ce qui n’en facilite pas l’apprentissage. Toute information échangée entre l’analyste et le logiciel passe par la console de R. Une seule petite ligne où une série de codes, plus ou moins complexes, est écrite et soumise au logiciel. Ce dernier, à partir des consignes de l’analyste, emmagasine l’information, la transforme ou l’analyse. Les résultats sont ensuite affichés après la ligne de codes dans une fenêtre déroulante. Donc, chaque nouvelle ligne de codes entraîne la disparition du résultats obtenus précédemment. Cette interface est donc particulièrement désagréable à utiliser et plus la démarche d’analyse est longue, plus elle est sujette aux erreurs de transcription des résultats de l’analyse vers le logiciel de traitement de texte. De plus, lors de la création d’un graphique, une fenêtre additionnelle s’ouvre à l’écran et bloque, régulièrement, la vue de la console de R.</p>
+<p>Dans sa version de base, l’interface d’utilisation du logiciel R est relativement aride (voir <a href="#fig-Consoles2" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>), ce qui n’en facilite pas l’apprentissage. Toute information échangée entre l’analyste et le logiciel passe par la console de R. Une seule petite ligne où une série de codes, plus ou moins complexes, est écrite et soumise au logiciel. Ce dernier, à partir des consignes de l’analyste, emmagasine l’information, la transforme ou l’analyse. Les résultats sont ensuite affichés après la ligne de codes dans une fenêtre déroulante. Donc, chaque nouvelle ligne de codes entraîne la disparition du résultats obtenus précédemment. Cette interface est donc particulièrement désagréable à utiliser et plus la démarche d’analyse est longue, plus elle est sujette aux erreurs de transcription des résultats de l’analyse vers le logiciel de traitement de texte. De plus, lors de la création d’un graphique, une fenêtre additionnelle s’ouvre à l’écran et bloque, régulièrement, la vue de la console de R.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/R_Console2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Exemple de la console R classique</figcaption>
+<div id="fig-Consoles2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Consoles2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/R_Console2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="938">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Consoles2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Exemple de la console R classique
+</figcaption>
 </figure>
 </div>
 </div>
@@ -337,7 +340,7 @@ div.csl-indent {
 </section>
 <section id="interface-de-rstudio" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="interface-de-rstudio"><span class="header-section-number">1.2</span> Interface de RStudio</h2>
-<p>Heureusement, certains logiciels ont été développés pour agrémenter l’usage de R. Parmi ceux-ci, le logiciel RStudio est possiblement celui dont l’utilisation est la plus répandue. RStudio présente une interface divisée en quatre fenêtres (voir Figure @ref(fig:fig2)).</p>
+<p>Heureusement, certains logiciels ont été développés pour agrémenter l’usage de R. Parmi ceux-ci, le logiciel RStudio est possiblement celui dont l’utilisation est la plus répandue. RStudio présente une interface divisée en quatre fenêtres (voir <a href="#fig-fig2" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>)).</p>
 <ol type="1">
 <li>La fenêtre <em>Source</em> comprend les lignes de codes du script .R ou .Rmd.</li>
 <li>La fenêtre <em>Console</em> permet d’écrire une ligne de codes R ou d’obtenir les résultats d’un code R.</li>
@@ -347,10 +350,14 @@ div.csl-indent {
 <p>Malgré sa flexibilité, dans sa version de base, RStudio demeure rigide dans sa façon de présenter l’information. En effet, les tableaux, graphiques et/ou ensembles de données doivent être exportés vers d’autres logiciels pour y être intégrés (ex: Microsoft Word) dans un document final.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RStudio-panels.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Illustration de la configuration de RStudio</figcaption>
+<div id="fig-fig2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RStudio-panels.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="454">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: Illustration de la configuration de RStudio
+</figcaption>
 </figure>
 </div>
 </div>
@@ -358,13 +365,17 @@ div.csl-indent {
 </section>
 <section id="langage-r-markdown" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="langage-r-markdown"><span class="header-section-number">1.3</span> Langage R Markdown</h2>
-<p>Cette rigidité est maintenant chose du passé. En effet, depuis l’intégration du langage R Markdown à l’aide de l’extension rmarkdown <span class="citation" data-cites="xieMarkdownCookbook2020 xieMarkdownDefinitiveGuide2018">(<a href="references.html#ref-xieMarkdownCookbook2020" role="doc-biblioref">Xie, Dervieux, et Riederer 2020</a>; <a href="references.html#ref-xieMarkdownDefinitiveGuide2018" role="doc-biblioref">Xie, Allaire, et Grolemund 2018</a>)</span>, le logiciel RStudio permet de créer des fichiers dynamiques dans plusieurs formats (HTML, PDF, Word). Cela signifie qu’une fois les données récoltées, toutes les étapes de l’analyse, en passant de la transformation des variables jusqu’à la publication du rapport final, se déroulent dans RStudio (voir Figure @ref(fig:fig3)). Par exemple, la fenêtre de gauche de la Figure @ref(fig:fig3) comprend les codes R utilisés alors que la fenêtre de droite de la Figure @ref(fig:fig3) présente le résultat final des commandes R en format .html. Cela représente un net avantage puisque chaque petit changement est automatiquement intégré dans le document final.</p>
+<p>Cette rigidité est maintenant chose du passé. En effet, depuis l’intégration du langage R Markdown à l’aide de l’extension rmarkdown <span class="citation" data-cites="xieMarkdownCookbook2020 xieMarkdownDefinitiveGuide2018">(<a href="references.html#ref-xieMarkdownCookbook2020" role="doc-biblioref">Xie, Dervieux, et Riederer 2020</a>; <a href="references.html#ref-xieMarkdownDefinitiveGuide2018" role="doc-biblioref">Xie, Allaire, et Grolemund 2018</a>)</span>, le logiciel RStudio permet de créer des fichiers dynamiques dans plusieurs formats (HTML, PDF, Word). Cela signifie qu’une fois les données récoltées, toutes les étapes de l’analyse, en passant de la transformation des variables jusqu’à la publication du rapport final, se déroulent dans RStudio (voir <a href="#fig-fig3" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>). Par exemple, la fenêtre de gauche de la <a href="#fig-fig3" class="quarto-xref">Figure&nbsp;<span>1.3</span></a> comprend les codes R utilisés alors que la fenêtre de droite de la <a href="#fig-fig3" class="quarto-xref">Figure&nbsp;<span>1.3</span></a> présente le résultat final des commandes R en format .html. Cela représente un net avantage puisque chaque petit changement est automatiquement intégré dans le document final.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/notebook2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Illustration de R Notebook. Les codes sont écrits dans la fenêtre Source à la gauche et le fenêtre Viewer présente le document final</figcaption>
+<div id="fig-fig3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/notebook2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="502">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3: Illustration d’un document en format html. Les codes sont écrits dans la fenêtre Source à la gauche et le fenêtre Viewer présente le document final
+</figcaption>
 </figure>
 </div>
 </div>
@@ -380,6 +391,9 @@ div.csl-indent {
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Guitard:2023aa" class="csl-entry" role="listitem">
+Guitard, Dominic, et Sylvain Fiset. 2023. <span>«&nbsp;Stat checkers: make reproducible computer code mandatory.&nbsp;»</span> <em>Nature</em> 616 (7957): 433. <a href="https://doi.org/10.1038/d41586-023-01275-8">https://doi.org/10.1038/d41586-023-01275-8</a>.
+</div>
 <div id="ref-xieMarkdownDefinitiveGuide2018" class="csl-entry" role="listitem">
 Xie, Yihui, J. J. Allaire, et Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. New York: Chapman; Hall/<span>CRC</span>. <a href="https://doi.org/10.1201/9781138359444">https://doi.org/10.1201/9781138359444</a>.
 </div>

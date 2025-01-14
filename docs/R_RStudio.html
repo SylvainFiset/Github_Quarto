@@ -303,7 +303,7 @@ div.csl-indent {
   <li><a href="#installer-r-rstudio" id="toc-installer-r-rstudio" class="nav-link" data-scroll-target="#installer-r-rstudio"><span class="header-section-number">2.3</span> Installer R &amp; RStudio</a>
   <ul class="collapse">
   <li><a href="#vidéo-dinstallation" id="toc-vidéo-dinstallation" class="nav-link" data-scroll-target="#vidéo-dinstallation"><span class="header-section-number">2.3.1</span> Vidéo d’installation</a></li>
-  <li><a href="#liensweb" id="toc-liensweb" class="nav-link" data-scroll-target="#liensweb"><span class="header-section-number">2.3.2</span> Liens web</a></li>
+  <li><a href="#sec-liensweb" id="toc-sec-liensweb" class="nav-link" data-scroll-target="#sec-liensweb"><span class="header-section-number">2.3.2</span> Liens web</a></li>
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">2.3.3</span> Installation</a></li>
   </ul></li>
   <li><a href="#problèmes-et-solutions" id="toc-problèmes-et-solutions" class="nav-link" data-scroll-target="#problèmes-et-solutions"><span class="header-section-number">2.4</span> Problèmes et solutions</a></li>
@@ -371,16 +371,20 @@ div.csl-indent {
 </section>
 <section id="intro-à-rstudio" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="intro-à-rstudio"><span class="header-section-number">2.2</span> Intro à RStudio</h2>
-<p>RStudio, contrairement à R, est une compagnie privée (voir : https://rstudio.com/about/). RStudio est une interface logicielle entre R et l’utilisateur. Dans sa version de base, telle que démontrée précédemment, R présente une interface relativement sévère qui est difficile à utiliser. RStudio a été développé dans le but d’améliorer le plaisir de l’utilisateur qui interagit avec R.</p>
-<p>Tel que présenté précédemment (voir Figure @ref(fig:fig2)), RStudio comprend plusieurs fenêtres qui permettent à l’analyste de rédiger les codes R, tout en examinant les données et les résultats. De plus, RStudio facilite l’exportation des résultats en plusieurs formats (.docx, .pdf, .html) à partir de l’extension rmarkdown.</p>
-<p>Notons que RStudio ne se limite pas à être l’interface avec R puisque de nombreux autres langages de programmation y ont été intégrés (ex : Python, STAN, C<sup>++</sup>). Nous allons utiliser la version gratuite de RStudio, soit RStudio IDE. IDE signifie <em>Integrated Development Environment</em>. RStudio IDE fonctionne avec plusieurs systèmes d’exploitation, dont Windows, MacOS et Linux.</p>
-<p>Afin de faciliter l’interaction avec R, certaines alternatives à RStudio existent. À titre d’exemples, je souligne <a href="https://jupyter.org/">Jupyter notebook</a>, <a href="https://jupyter.org/try">Jupyter lab</a>, <a href="https://www.getarchitect.io/">Architect</a>, ou <a href="https://r.analyticflow.com/en/">R AnalyticFlow</a>. Malgré tout, RStudio demeure le standard de qualité quand vient le temps d’interagir avec R. Personnellement, si RStudio n’existait pas, j’opterais pour <a href="https://jupyter.org/">Jupyter notebook</a> via son intégration avec la plateforme <a href="https://www.anaconda.com/products/individual">Anaconda Navigator</a>, principalement en raison de sa simplicité d’utilisation et de son intégration avec le langage Markdown. La Figure @ref(fig:anaconda) présente un exemple de codes R à partir de l’application Jupiter notebook (à gauche) et son rendu en format .html (à droite).</p>
+<p>RStudio a été développé par une compagnie privée du nom de <a href="https://posit.co/">Posit</a>. RStudio est une interface logicielle entre R et l’utilisateur. Dans sa version de base, telle que démontrée précédemment, R présente une interface relativement sévère qui est difficile à utiliser. RStudio a été développé dans le but d’améliorer le plaisir de l’utilisateur qui interagit avec R.</p>
+<p>Tel que présenté précédemment précédamment, RStudio comprend plusieurs fenêtres qui permettent à l’analyste de rédiger les codes R, tout en examinant les données et les résultats. De plus, RStudio facilite l’exportation des résultats en plusieurs formats (.docx, .pdf, .html).</p>
+<p>Notez que RStudio ne se limite pas à être l’interface avec R puisque de nombreux autres langages de programmation y ont été intégrés (ex : Python, STAN, C<sup>++</sup>). Nous allons utiliser la version gratuite de RStudio, soit RStudio IDE. IDE signifie <em>Integrated Development Environment</em>. RStudio IDE fonctionne avec plusieurs systèmes d’exploitation, dont Windows, MacOS et Linux.</p>
+<p>Afin de faciliter l’interaction avec R, certaines alternatives à RStudio existent. À titre d’exemples, je souligne <a href="https://jupyter.org/">Jupyter notebook</a>, <a href="https://jupyter.org/try">Jupyter lab</a>, <a href="https://www.getarchitect.io/">Architect</a>, ou <a href="https://r.analyticflow.com/en/">R AnalyticFlow</a>. Malgré tout, RStudio demeure le standard de qualité quand vient le temps d’interagir avec R. Personnellement, si RStudio n’existait pas, j’opterais pour <a href="https://jupyter.org/">Jupyter notebook</a> via son intégration avec la plateforme <a href="https://www.anaconda.com/products/individual">Anaconda Navigator</a>, principalement en raison de sa simplicité d’utilisation et de son intégration avec le langage Markdown. La <a href="#fig-anaconda" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> présente un exemple de codes R à partir de l’application Jupiter notebook (à gauche) et son rendu en format .html (à droite).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/jupyter-notebook2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Illustration de codes R et du langage Markdown à partir de l’application Jupiter Notebook (image de gauche) et son rendu en format .html (image de droite)</figcaption>
+<div id="fig-anaconda" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anaconda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/jupyter-notebook2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="728">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anaconda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Illustration de codes R et du langage Markdown à partir de l’application Jupiter Notebook (image de gauche) et son rendu en format .html (image de droite)
+</figcaption>
 </figure>
 </div>
 </div>
@@ -390,23 +394,31 @@ div.csl-indent {
 <p>Dans le but de faciliter l’interaction avec l’utilisateur, RStudio présente quelques avantages très notables. Bien que ma démarche de présentation peut sembler un peu précoce pour celles et ceux d’entre vous qui ne connaissez pas encore RStudio, j’en profite immédiatement pour présenter deux de ses avantages.</p>
 <section id="syntaxe-intégrée" class="level4" data-number="2.2.1.1">
 <h4 data-number="2.2.1.1" class="anchored" data-anchor-id="syntaxe-intégrée"><span class="header-section-number">2.2.1.1</span> Syntaxe intégrée</h4>
-<p>RStudio facilite la rédaction des scripts R en proposant de compléter votre syntaxe. Ainsi, dès que vous débutez à écrire le nom d’une fonction, RStudio propose (1) le nom de quelques fonctions qui débute par les mêmes lettres et (2) la syntaxe à suivre pour compléter l’écriture de la fonction. Par exemple, imaginons que nous désirons effectuer un test binomial. Le nom de la fonction à utiliser est <code>binom.test()</code>. Dans un bloc de codes R, dès que j’inscris <code>binom</code>, RStudio me propose deux choix possibles de fonctions qui débutent par <code>binom</code> (voir Figure @ref(fig:binom)). Il me suffit de sélectionner celle que je désire utiliser pour qu’elle se complète automatiquement dans mon bloc de codes R. Par la suite, RStudio propose à nouveau la syntaxe à utiliser pour compléter l’écriture de la fonction sélectionnée (voir Figure @ref(fig:binom2)).</p>
-<div class="cell" data-layout-align="center">
+<p>RStudio facilite la rédaction des scripts R en proposant de compléter votre syntaxe. Ainsi, dès que vous débutez à écrire le nom d’une fonction, RStudio propose (1) le nom de quelques fonctions qui débute par les mêmes lettres et (2) la syntaxe à suivre pour compléter l’écriture de la fonction. Par exemple, imaginons que nous désirons effectuer un test binomial. Le nom de la fonction à utiliser est <code>binom.test()</code>. Dans un bloc de codes R, dès que j’inscris <code>binom</code>, RStudio me propose deux choix possibles de fonctions qui débutent par <code>binom</code> (voir <a href="#fig-binom" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>). Il me suffit de sélectionner celle que je désire utiliser pour qu’elle se complète automatiquement dans mon bloc de codes R. Par la suite, RStudio propose à nouveau la syntaxe à utiliser pour compléter l’écriture de la fonction sélectionnée (voir <a href="#fig-binom2" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-binom-test1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Suggestions de fonctions offertes par RStudio</figcaption>
+<div id="fig-binom" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-binom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-binom-test1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="399">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Suggestions de fonctions offertes par RStudio
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-binom-test2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Syntaxe proposée par RStudio pour la fonction binom.test</figcaption>
+<div id="fig-binom2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-binom2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-binom-test2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="337">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binom2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Syntaxe proposée par RStudio pour la fonction binom.test
+</figcaption>
 </figure>
 </div>
 </div>
@@ -414,35 +426,47 @@ div.csl-indent {
 </section>
 <section id="examiner-les-objets-r" class="level4" data-number="2.2.1.2">
 <h4 data-number="2.2.1.2" class="anchored" data-anchor-id="examiner-les-objets-r"><span class="header-section-number">2.2.1.2</span> Examiner les objets R</h4>
-<p>La fenêtre <code>Environment</code> vous permet de voir rapidement tous les objets R que vous avez créés lors de votre session de travail et de les examiner via une fenêtre qui ressemble à un chiffrier électronique (comme Excel ou Numbers). Prenons l’exemple du bloc de codes R de la Figure @ref(fig:d1) dans lequel j’ai créé un ensemble de données nommé <code>d1</code> qui contient le quotient intellectuel (QI) de 10 participants fictifs :</p>
-<div class="cell" data-layout-align="center">
+<p>La fenêtre <code>Environment</code> vous permet de voir rapidement tous les objets R que vous avez créés lors de votre session de travail et de les examiner via une fenêtre qui ressemble à un chiffrier électronique (comme Excel ou Numbers). Prenons l’exemple du bloc de codes R de la <a href="#fig-d1" class="quarto-xref">Figure&nbsp;<span>2.4</span></a> dans lequel j’ai créé un ensemble de données nommé <code>d1</code> qui contient le quotient intellectuel (QI) de 10 participants fictifs :</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-d1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Création de l’objet d1 qui contient le QI de 10 participants</figcaption>
+<div id="fig-d1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-d1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="470">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Création de l’objet d1 qui contient le QI de 10 participants
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Je peux examiner le contenu de cet objet <code>d1</code> à partir de la fenêtre <strong>Environment</strong> de RStudio en cliquant sur le triangle blanc placée dans un cercle bleu à la gauche l’objet <code>d1</code> (voir Figure @ref(fig:d2)).</p>
-<div class="cell" data-layout-align="center">
+<p>Je peux examiner le contenu de cet objet <code>d1</code> à partir de la fenêtre <strong>Environment</strong> de RStudio en cliquant sur le triangle blanc placée dans un cercle bleu à la gauche l’objet <code>d1</code> (voir <a href="#fig-d2" class="quarto-xref">Figure&nbsp;<span>2.5</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-d1-environment2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Examiner le contenu de l’objet d1 dans la fenêtre Environment de RStudio</figcaption>
+<div id="fig-d2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-d1-environment2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="474">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Examiner le contenu de l’objet d1 dans la fenêtre Environment de RStudio
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Je peux aussi examiner l’ensemble du contenu de l’objet <code>d1</code> en cliquant sur le symbole du chiffrier situé à l’extrême droite de l’objet <code>d1</code> dans le fenêtre <strong>Environment</strong> (voir Figure @ref(fig:d3)) :</p>
-<div class="cell" data-layout-align="center">
+<p>Je peux aussi examiner l’ensemble du contenu de l’objet <code>d1</code> en cliquant sur le symbole du chiffrier situé à l’extrême droite de l’objet <code>d1</code> dans le fenêtre <strong>Environment</strong> (voir <a href="#fig-d3" class="quarto-xref">Figure&nbsp;<span>2.6</span></a>) :</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-d1-tableur.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Examiner le contenu de l’objet d1 à l’aide du tableur intégré de RStudio</figcaption>
+<div id="fig-d3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-d1-tableur.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="476">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: Examiner le contenu de l’objet d1 à l’aide du tableur intégré de RStudio
+</figcaption>
 </figure>
 </div>
 </div>
@@ -462,13 +486,13 @@ div.csl-indent {
 <p><em>Si vous avez déjà installé R et RStudio, vous pouvez sauter cette section.</em></p>
 <section id="vidéo-dinstallation" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="vidéo-dinstallation"><span class="header-section-number">2.3.1</span> Vidéo d’installation</h3>
-<p>Si vous n’avez pas encore installé R et RStudio, voici une vidéo (7 min. 38 sec.) dans laquelle je montre comment installer les logiciels R et RStudio à partir du site web de téléchargement de la compagnie <em>Posit</em>. La démonstration est faite à la fois pour le système d’exploitation Windows et pour le système d’exploitation macOS. Pour macOS, j’explique aussi comment identifier si votre ordinateur possède un processeur Apple silicon ou un processeur Intel, ce qui est important pour télécharger la bonne version de R. La Section @ref(liensweb) présente les liens web pour installer R et RStudio.</p>
+<p>Si vous n’avez pas encore installé R et RStudio, voici une vidéo (7 min. 38 sec.) dans laquelle je montre comment installer les logiciels R et RStudio à partir du site web de téléchargement de la compagnie <em>Posit</em>. La démonstration est faite à la fois pour le système d’exploitation Windows et pour le système d’exploitation macOS. Pour macOS, j’explique aussi comment identifier si votre ordinateur possède un processeur Apple silicon ou un processeur Intel, ce qui est important pour télécharger la bonne version de R. La <a href="#sec-liensweb" class="quarto-xref"><span>Section 2.3.2</span></a> présente les liens web pour installer R et RStudio.</p>
 <ul>
 <li><a href="https://youtu.be/Qiz_CE-kb9o">Vidéo (en français) : Installation R RStudio</a></li>
 </ul>
 </section>
-<section id="liensweb" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="liensweb"><span class="header-section-number">2.3.2</span> Liens web</h3>
+<section id="sec-liensweb" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-liensweb"><span class="header-section-number">2.3.2</span> Liens web</h3>
 <p>Voici les liens pour télécharger une version récente (et gratuite) de R et de RStudio. Assurez-vous de télécharger les versions adaptées à votre système d’exploitation (OS, Windows, Linux) :</p>
 <ul>
 <li><p><a href="https://posit.co/download/rstudio-desktop/">R</a></p></li>
@@ -483,7 +507,7 @@ div.csl-indent {
 </section>
 <section id="problèmes-et-solutions" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="problèmes-et-solutions"><span class="header-section-number">2.4</span> Problèmes et solutions</h2>
-<p>Dans l’éventualité où, peu importe la raison, vous ne réussissez pas à installer une version pleinement fonctionnelle de R et/ou de RStudio sur votre ordinateur, je vous encourage à utiliser RStudio Cloud (voir Chapitre @ref(rcloud)). Cette version de RStudio vous permet d’utiliser R et RStudio directement dans votre navigateur web.</p>
+<p>Dans l’éventualité où, peu importe la raison, vous ne réussissez pas à installer une version pleinement fonctionnelle de R et/ou de RStudio sur votre ordinateur, je vous encourage à utiliser Posit Cloud (voir <a href="Posit_cloud.html" class="quarto-xref"><span>Chapitre 7</span></a>). Cette version de RStudio vous permet d’utiliser R et RStudio directement dans votre navigateur web.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -501,7 +525,7 @@ Wickham, Hadley, et Garrett Grolemund. 2017. <em>R for Data Science: Import, Tid
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>L’interface web <a href="https://www.rstudio.com/products/cloud/">RStudio Cloud</a> permet d’utiliser gratuitement les logiciels R et RStudio sans qu’il ne soit nécessaire de télécharger R et RStudio sur votre ordinateur. Mais prenez note qu’il y a un maximum d’heures gratuites d’utilisation et votre compte devient bloquer jusqu’au mois suivant. La seule solution consiste à payer un certain montant d’argent par mois ($).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>L’interface web <a href="https://posit.cloud/?_gl=1*1117k9g*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg3Nzk4MC4xLjAuMTczNjg3Nzk4MC4wLjAuMA..">Posit Cloud</a> permet d’utiliser gratuitement les logiciels R et RStudio sans qu’il ne soit nécessaire de télécharger R et RStudio sur votre ordinateur. Mais prenez note qu’il y a un maximum d’heures gratuites d’utilisation et votre compte devient bloquer jusqu’au mois suivant. La seule solution consiste à payer un certain montant d’argent par mois ($).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Prenez note que R est un langage de programmation qui s’apparente au langage S, lequel a été développé par Rick Becker, John Chambers et Allan Wilks de la compagnie AT&amp;T Bell Laboratories.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>

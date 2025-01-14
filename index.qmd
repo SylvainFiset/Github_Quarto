@@ -1,10 +1,19 @@
 ---
+format:
+  html:
+    css: include/webex.css
+    include-after-body: include/webex.js
 lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
 ---
 
 # Bienvenue {.unnumbered}
 
-Ce livre électronique est une brève introduction à l'utilisation de Quarto avec R. *Utiliser R avec Quarto. Une introduction* présente la démarche à suivre afin de bien maîtriser l'application RStudio de la compagnie [POSIT](https://posit.co/) comme interface pour communiquer avec R. .
+*Utiliser R avec Quarto. Une introduction* est une brève introduction à l'utilisation de Quarto avec R. Ce livre présente la démarche à suivre afin de bien maîtriser l'application RStudio de la compagnie [POSIT](https://posit.co/) comme interface pour communiquer avec R.
 
 ## Copier les codes
 
@@ -22,11 +31,15 @@ L'utilisation de ces deux touches fonctionne pour tous les types de documents pr
 
 ## Exercices
 
-Plusieurs des chapitres se terminent par une série d'exercices qui permettent d'intégrer le contenu du chapitre.
+Plusieurs des chapitres se terminent par une série d'exercices qui permettent d'intégrer le contenu du chapitre. N'hésitez pas à vous mettre au défit.
+
+## License
+
+Ce document est gratuit (et il le sera toujours). Il est disponible sous la licence Creative Commons Attribution-NonCommercial-NoDerivs 4.0[^index-2].
+
+[^index-2]: Cliquez sur [ce lien](https://creativecommons.org/licenses/by-nc-nd/4.0/){.external target="_blank"} pour accéder à la description de cette licence.
 
 ## Mot de la fin
-
-Quarto présente de nombreux avantages. Prenez le temps de bien maîtriser cette application. 
 
 Bonne lecture et bon apprentissage,
 
@@ -35,9 +48,3 @@ Sylvain
 Sylvain Fiset, Ph.D.[^index-1]<br> Professeur titulaire de psychologie<br> Université de Moncton, campus d'Edmundston.
 
 [^index-1]: Cliquez sur [ce lien](https://www.umoncton.ca/prof/umce-fiset_sylvain){.external target="_blank"} pour accéder au **site web du professeur Fiset** à l'Université de Moncton.
-
-## License
-
-Ce document est gratuit (et il le sera toujours). Il est disponible sous la licence Creative Commons Attribution-NonCommercial-NoDerivs 4.0[^index-2].
-
-[^index-2]: Cliquez sur [ce lien](https://creativecommons.org/licenses/by-nc-nd/4.0/){.external target="_blank"} pour accéder à la description de cette licence.

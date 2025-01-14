@@ -11,7 +11,7 @@ language:
     crossref-tbl-title: "Tableau"
 ---
 
-# Posit Cloud {#rcloud}
+# Posit Cloud {#sec-positcloud}
 
 Dans ce chapitre, j'introduis l'application [RStudio Cloud](https://www.rstudio.com/products/cloud/). RStudio Cloud est la version web de RStudio IDE. Elle permet : 
 

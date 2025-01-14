@@ -15,7 +15,7 @@ language:
 
 Dans ce chapitre, vous trouverez un brève description des logiciels R et RStudio. À la toute fin de ce chapitre, vous trouverez aussi les liens pour les télécharger et les installer sur votre ordinateur[^RStudio_cloud].
 
-[^RStudio_cloud]: L'interface web [RStudio Cloud](https://www.rstudio.com/products/cloud/) permet d'utiliser gratuitement les logiciels R et RStudio sans qu'il ne soit nécessaire de télécharger R et RStudio sur votre ordinateur. Mais prenez note qu'il y a un maximum d'heures gratuites d'utilisation et votre compte devient bloquer jusqu'au mois suivant. La seule solution consiste à payer un certain montant d'argent par mois ($).
+[^RStudio_cloud]: L'interface web [Posit Cloud](https://posit.cloud/?_gl=1*1117k9g*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg3Nzk4MC4xLjAuMTczNjg3Nzk4MC4wLjAuMA..) permet d'utiliser gratuitement les logiciels R et RStudio sans qu'il ne soit nécessaire de télécharger R et RStudio sur votre ordinateur. Mais prenez note qu'il y a un maximum d'heures gratuites d'utilisation et votre compte devient bloquer jusqu'au mois suivant. La seule solution consiste à payer un certain montant d'argent par mois ($).
 
 ## Intro à R
 
@@ -55,15 +55,20 @@ Malgré ses avantages, R possèdent quelques inconvénients qui doivent être so
 
 ## Intro à RStudio
 
-RStudio, contrairement à R, est une compagnie privée (voir : https://rstudio.com/about/). RStudio est une interface logicielle entre R et l’utilisateur. Dans sa version de base, telle que démontrée précédemment, R présente une interface relativement sévère qui est difficile à utiliser. RStudio a été développé dans le but d’améliorer le plaisir de l’utilisateur qui interagit avec R. 
+RStudio a été développé par une compagnie privée du nom de [Posit](https://posit.co/). RStudio est une interface logicielle entre R et l’utilisateur. Dans sa version de base, telle que démontrée précédemment, R présente une interface relativement sévère qui est difficile à utiliser. RStudio a été développé dans le but d’améliorer le plaisir de l’utilisateur qui interagit avec R. 
 
-Tel que présenté précédemment (voir Figure \@ref(fig:fig2)), RStudio comprend plusieurs fenêtres qui permettent à l'analyste de rédiger les codes R, tout en examinant les données et les résultats. De plus, RStudio facilite l'exportation des résultats en plusieurs formats (.docx, .pdf, .html) à partir de l'extension rmarkdown.
+Tel que présenté précédemment précédamment, RStudio comprend plusieurs fenêtres qui permettent à l'analyste de rédiger les codes R, tout en examinant les données et les résultats. De plus, RStudio facilite l'exportation des résultats en plusieurs formats (.docx, .pdf, .html).
 
-Notons que RStudio ne se limite pas à être l’interface avec R puisque de nombreux autres langages de programmation y ont été intégrés (ex : Python, STAN, C^++^). Nous allons utiliser la version gratuite de RStudio, soit RStudio IDE. IDE signifie *Integrated Development Environment*. RStudio IDE fonctionne avec plusieurs systèmes d’exploitation, dont Windows, MacOS et Linux.
+Notez que RStudio ne se limite pas à être l’interface avec R puisque de nombreux autres langages de programmation y ont été intégrés (ex : Python, STAN, C^++^). Nous allons utiliser la version gratuite de RStudio, soit RStudio IDE. IDE signifie *Integrated Development Environment*. RStudio IDE fonctionne avec plusieurs systèmes d’exploitation, dont Windows, MacOS et Linux.
 
-Afin de faciliter l'interaction avec R, certaines alternatives à RStudio existent. À titre d'exemples, je souligne [Jupyter notebook](https://jupyter.org/), [Jupyter lab](https://jupyter.org/try), [Architect](https://www.getarchitect.io/), ou [R AnalyticFlow](https://r.analyticflow.com/en/). Malgré tout, RStudio demeure le standard de qualité quand vient le temps d'interagir avec R. Personnellement, si RStudio n'existait pas, j'opterais pour [Jupyter notebook](https://jupyter.org/) via son intégration avec la plateforme [Anaconda Navigator](https://www.anaconda.com/products/individual), principalement en raison de sa simplicité d'utilisation et de son intégration avec le langage Markdown. La Figure \@ref(fig:anaconda) présente un exemple de codes R à partir de l'application Jupiter notebook (à gauche) et son rendu en format .html (à droite).
+Afin de faciliter l'interaction avec R, certaines alternatives à RStudio existent. À titre d'exemples, je souligne [Jupyter notebook](https://jupyter.org/), [Jupyter lab](https://jupyter.org/try), [Architect](https://www.getarchitect.io/), ou [R AnalyticFlow](https://r.analyticflow.com/en/). Malgré tout, RStudio demeure le standard de qualité quand vient le temps d'interagir avec R. Personnellement, si RStudio n'existait pas, j'opterais pour [Jupyter notebook](https://jupyter.org/) via son intégration avec la plateforme [Anaconda Navigator](https://www.anaconda.com/products/individual), principalement en raison de sa simplicité d'utilisation et de son intégration avec le langage Markdown. La @fig-anaconda présente un exemple de codes R à partir de l'application Jupiter notebook (à gauche) et son rendu en format .html (à droite).
 
-```{r anaconda, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Illustration de codes R et du langage Markdown à partir de l'application Jupiter Notebook (image de gauche) et son rendu en format .html (image de droite)"}
+```{r}
+#| label: fig-anaconda
+#| fig-cap: "Illustration de codes R et du langage Markdown à partir de l'application Jupiter Notebook (image de gauche) et son rendu en format .html (image de droite)"
+#| fig-align: center
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/jupyter-notebook2.png')
 ```
 
@@ -73,33 +78,59 @@ Dans le but de faciliter l'interaction avec l'utilisateur, RStudio présente que
 
 #### Syntaxe intégrée
 
-RStudio facilite la rédaction des scripts R en proposant de compléter votre syntaxe. Ainsi, dès que vous débutez à écrire le nom d'une fonction, RStudio propose (1) le nom de quelques fonctions qui débute par les mêmes lettres et (2) la syntaxe à suivre pour compléter l'écriture de la fonction. Par exemple, imaginons que nous désirons effectuer un test binomial. Le nom de la fonction à utiliser est `binom.test()`. Dans un bloc de codes R, dès que j'inscris `binom`, RStudio me propose deux choix possibles de fonctions qui débutent par `binom` (voir Figure \@ref(fig:binom)). Il me suffit de sélectionner celle que je désire utiliser pour qu'elle se complète automatiquement dans mon bloc de codes R. Par la suite, RStudio propose à nouveau la syntaxe à utiliser pour compléter l'écriture de la fonction sélectionnée (voir Figure \@ref(fig:binom2)).
+RStudio facilite la rédaction des scripts R en proposant de compléter votre syntaxe. Ainsi, dès que vous débutez à écrire le nom d'une fonction, RStudio propose (1) le nom de quelques fonctions qui débute par les mêmes lettres et (2) la syntaxe à suivre pour compléter l'écriture de la fonction. Par exemple, imaginons que nous désirons effectuer un test binomial. Le nom de la fonction à utiliser est `binom.test()`. Dans un bloc de codes R, dès que j'inscris `binom`, RStudio me propose deux choix possibles de fonctions qui débutent par `binom` (voir @fig-binom). Il me suffit de sélectionner celle que je désire utiliser pour qu'elle se complète automatiquement dans mon bloc de codes R. Par la suite, RStudio propose à nouveau la syntaxe à utiliser pour compléter l'écriture de la fonction sélectionnée (voir @fig-binom2).
 
-```{r binom, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Suggestions de fonctions offertes par RStudio"}
+```{r}
+#| label: fig-binom
+#| fig-cap: "Suggestions de fonctions offertes par RStudio"
+#| fig-align: left
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/rstudio-binom-test1.png')
 ```
 
-```{r binom2, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Syntaxe proposée par RStudio pour la fonction binom.test"}
+
+```{r}
+#| label: fig-binom2
+#| fig-cap: "Syntaxe proposée par RStudio pour la fonction binom.test"
+#| fig-align: left
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/rstudio-binom-test2.png')
 ```
 
 #### Examiner les objets R
 
-La fenêtre `Environment` vous permet de voir rapidement tous les objets R que vous avez créés lors de votre session de travail et de les examiner via une fenêtre qui ressemble à un chiffrier électronique (comme Excel ou Numbers). Prenons l'exemple du bloc de codes R de la Figure \@ref(fig:d1) dans lequel j'ai créé un ensemble de données nommé `d1` qui contient le quotient intellectuel (QI) de 10 participants fictifs :
+La fenêtre `Environment` vous permet de voir rapidement tous les objets R que vous avez créés lors de votre session de travail et de les examiner via une fenêtre qui ressemble à un chiffrier électronique (comme Excel ou Numbers). Prenons l'exemple du bloc de codes R de la @fig-d1 dans lequel j'ai créé un ensemble de données nommé `d1` qui contient le quotient intellectuel (QI) de 10 participants fictifs :
 
-```{r d1, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Création de l'objet d1 qui contient le QI de 10 participants"}
+```{r}
+#| label: fig-d1
+#| fig-cap: "Création de l'objet d1 qui contient le QI de 10 participants"
+#| fig-align: left
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/rstudio-d1.png')
 ```
 
-Je peux examiner le contenu de cet objet `d1` à partir de la fenêtre **Environment** de RStudio en cliquant sur le triangle blanc placée dans un cercle bleu à la gauche l'objet `d1` (voir Figure \@ref(fig:d2)).
+Je peux examiner le contenu de cet objet `d1` à partir de la fenêtre **Environment** de RStudio en cliquant sur le triangle blanc placée dans un cercle bleu à la gauche l'objet `d1` (voir @fig-d2).
 
-```{r d2, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Examiner le contenu de l'objet d1 dans la fenêtre Environment de RStudio"}
+```{r}
+#| label: fig-d2
+#| fig-cap: "Examiner le contenu de l'objet d1 dans la fenêtre Environment de RStudio"
+#| fig-align: left
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/rstudio-d1-environment2.png')
 ```
 
-Je peux aussi examiner l'ensemble du contenu de l'objet `d1` en cliquant sur le symbole du chiffrier situé à l'extrême droite de l'objet `d1` dans le fenêtre **Environment** (voir Figure \@ref(fig:d3)) :
+Je peux aussi examiner l'ensemble du contenu de l'objet `d1` en cliquant sur le symbole du chiffrier situé à l'extrême droite de l'objet `d1` dans le fenêtre **Environment** (voir @fig-d3) :
 
-```{r d3, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Examiner le contenu de l'objet d1 à l'aide du tableur intégré de RStudio"}
+```{r}
+#| label: fig-d3
+#| fig-cap: "Examiner le contenu de l'objet d1 à l'aide du tableur intégré de RStudio"
+#| fig-align: left
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/rstudio-d1-tableur.png')
 ```
 
@@ -115,13 +146,13 @@ Le nombre d'options offertes par RStudio est particulièrement vaste et seule un
 
 ### Vidéo d'installation
 
-Si vous n'avez pas encore installé R et RStudio, voici une vidéo (7 min. 38 sec.) dans laquelle je montre comment installer les logiciels R et RStudio à partir du site web de téléchargement de la compagnie *Posit*. La démonstration est faite à la fois pour le système d'exploitation Windows et pour le système d'exploitation macOS. Pour macOS, j'explique aussi comment identifier si votre ordinateur possède un processeur Apple silicon ou un processeur Intel, ce qui est important pour télécharger la bonne version de R. La Section \@ref(liensweb) présente les liens web pour installer R et RStudio. 
+Si vous n'avez pas encore installé R et RStudio, voici une vidéo (7 min. 38 sec.) dans laquelle je montre comment installer les logiciels R et RStudio à partir du site web de téléchargement de la compagnie *Posit*. La démonstration est faite à la fois pour le système d'exploitation Windows et pour le système d'exploitation macOS. Pour macOS, j'explique aussi comment identifier si votre ordinateur possède un processeur Apple silicon ou un processeur Intel, ce qui est important pour télécharger la bonne version de R. La @sec-liensweb présente les liens web pour installer R et RStudio. 
 
 [^web]: La vidéo fut produite le 10 janvier 2023.
 
 - [Vidéo (en français) : Installation R RStudio](https://youtu.be/Qiz_CE-kb9o)
 
-### Liens web {#liensweb}
+### Liens web {#sec-liensweb}
 
 Voici les liens pour télécharger une version récente (et gratuite) de R et de RStudio. Assurez-vous de télécharger les versions adaptées à votre système d'exploitation (OS, Windows, Linux) :
 
@@ -136,4 +167,4 @@ Une fois les fichiers .exe (PC) ou .dmg (Mac) téléchargés dans votre dossier 
 
 ## Problèmes et solutions
 
-Dans l'éventualité où, peu importe la raison, vous ne réussissez pas à installer une version pleinement fonctionnelle de R et/ou de RStudio sur votre ordinateur, je vous encourage à utiliser RStudio Cloud (voir Chapitre \@ref(rcloud)). Cette version de RStudio vous permet d'utiliser R et RStudio directement dans votre navigateur web. 
+Dans l'éventualité où, peu importe la raison, vous ne réussissez pas à installer une version pleinement fonctionnelle de R et/ou de RStudio sur votre ordinateur, je vous encourage à utiliser Posit Cloud (voir @sec-positcloud). Cette version de RStudio vous permet d'utiliser R et RStudio directement dans votre navigateur web. 

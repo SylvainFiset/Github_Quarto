@@ -272,7 +272,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#installation-des-extensions" id="toc-installation-des-extensions" class="nav-link active" data-scroll-target="#installation-des-extensions"><span class="header-section-number">3.1</span> Installation des extensions</a></li>
   <li><a href="#extension-rmarkdown" id="toc-extension-rmarkdown" class="nav-link" data-scroll-target="#extension-rmarkdown"><span class="header-section-number">3.2</span> Extension rmarkdown</a></li>
-  <li><a href="#installer-rmarkdown" id="toc-installer-rmarkdown" class="nav-link" data-scroll-target="#installer-rmarkdown"><span class="header-section-number">3.3</span> Installer rmarkdown</a></li>
+  <li><a href="#vérifier-si-rmarkdown-est-installée" id="toc-vérifier-si-rmarkdown-est-installée" class="nav-link" data-scroll-target="#vérifier-si-rmarkdown-est-installée"><span class="header-section-number">3.3</span> Vérifier si rmarkdown est installée</a></li>
+  <li><a href="#installer-rmarkdown" id="toc-installer-rmarkdown" class="nav-link" data-scroll-target="#installer-rmarkdown"><span class="header-section-number">3.4</span> Installer rmarkdown</a></li>
   </ul>
 </nav>
     </div>
@@ -318,34 +319,59 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Parmi les formats R Markdown disponibles, notons le format PDF, HTML (incluant le format R Notebook), Word. De plus, l’extension rmarkdown permet de produit des documents écrits (comme des livres électroniques, via l’extension Bookdown) mais aussi des présentations (comme PowerPoint, via R Presentation).</p>
 </section>
-<section id="installer-rmarkdown" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="installer-rmarkdown"><span class="header-section-number">3.3</span> Installer rmarkdown</h2>
-<p><em>Si vous avez déjà installé l’extension rmarkdown, vous n’avez rien à faire et vous pouvez sauter cette étape.</em></p>
-<p>Pour utiliser le format R Notebook, il faut donc que l’extension rmarkdown soit installée dans R via RStudio. L’approche la plus simple pour installer l’extension rmarkdown consiste à :</p>
+<section id="vérifier-si-rmarkdown-est-installée" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="vérifier-si-rmarkdown-est-installée"><span class="header-section-number">3.3</span> Vérifier si rmarkdown est installée</h2>
+<p>Si vous avez déjà installé l’extension rmarkdown, vous n’avez rien à faire et vous pouvez sauter l’étape de l’installation. Il est aussi possible que la version la plus récente de R contienne par défaut l’extension rmarkdown. Voici comment faire pour vérifier. Dans la fenêtre Files de RStudio, cliquez sur l’onglet Packages et défiler la liste d’extensions déjà installées jusqu’à rmarkdown. Si rmarkdown est là (comme dans la <a href="#fig-rmarkdown" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>), vous n’avez rien à faire puisque l’extension est déjà installée.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-rmarkdown" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rmarkdown-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rmarkdown_installed.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="368">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rmarkdown-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Vérifier si l’extension rmarkdown est installée à partir de la fenêtre Files de RStudio
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="installer-rmarkdown" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="installer-rmarkdown"><span class="header-section-number">3.4</span> Installer rmarkdown</h2>
+<p>L’approche la plus simple pour installer l’extension rmarkdown consiste à :</p>
 <ul>
 <li>ouvrir le logiciel RStudio</li>
-<li>écrire <code>install.packages("rmarkdown")</code> dans la fenêtre Console de RStudio (notez que selon la configuration des fenêtres de RStudio, la fenêtre Console peut se trouver en bas à gauche de l’écran) (Voir Figure @ref(fig:fig4))</li>
+<li>écrire <code>install.packages("rmarkdown")</code> dans la fenêtre Console de RStudio (notez que selon la configuration des fenêtres de RStudio, la fenêtre Console peut se trouver en bas à gauche de l’écran) (Voir <a href="#fig-fig4" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>)</li>
 <li>appuyer sur la touche enter (<code>↵</code>)</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/install_rmarkdown.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Installation de l’extension rmarkdown à partir de la fenêtre Console de RStudio</figcaption>
+<div id="fig-fig4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/install_rmarkdown.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="793">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Installation de l’extension rmarkdown à partir de la fenêtre Console de RStudio
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <ul>
-<li>Par la suite, un message confirme l’installation de l’extension (nommée <em>package</em>, en anglais) dans la Console de RStudio (Voir Figure @ref(fig:fig5)).</li>
+<li>Par la suite, un message confirme l’installation de l’extension (nommée <em>package</em>, en anglais) dans la Console de RStudio (Voir <a href="#fig-fig5" class="quarto-xref">Figure&nbsp;<span>3.3</span></a>).</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/installed_rmarkdown.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Confirmation de l’installation</figcaption>
+<div id="fig-fig5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/installed_rmarkdown.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1177">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: Confirmation de l’installation
+</figcaption>
 </figure>
 </div>
 </div>

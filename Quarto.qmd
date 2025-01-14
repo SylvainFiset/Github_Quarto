@@ -13,7 +13,7 @@ language:
 
 # Application Quarto
 
-L'application Quarto permet d'utiliser le logiciel R à partir de blocs de codes qui sont intégrés dans le document. Ces blocs de codes R sont insérés, au besoin, autour du texte qui documente la démarche de l'analyste. Il est donc possible de combiner le texte et les analyses (incluant tableaux, figures, résultats) à l'intérieur d'un même document.
+L'application Quarto est relativement récente. Elle permet d'utiliser le logiciel R à partir de blocs de codes qui sont intégrés dans le document. Ces blocs de codes R sont insérés, au besoin, autour du texte qui documente la démarche de l'analyste. Il est donc possible de combiner le texte et les analyses (incluant tableaux, figures, résultats) à l'intérieur d'un même document.
 
 ## Démarche avec Quarto
 
@@ -23,14 +23,20 @@ La démarche de l'analyste qui utilise Quarto se résume, normalement, par les �
 - Ajuster les métadonnées du ficher Quarto pour les rendre conformes au type de document final désiré.
 - Insérer un bloc de codes R et importer un ou des fichiers de données (ex : via un fichier Excel).
 - Examiner, manipuler, analyser et présenter les données à l'aide de plusieurs blocs de codes R.
-- Documenter sa démarche d'analyse et ses interprétations en insérant du texte autour des blocs de codes R à l'aide du langage R Markdown. Normalement, cette étape est effectuée à chaque fois qu'un bloc de codes R est intégré dans le document R Notebook.
+- Documenter sa démarche d'analyse et ses interprétations en insérant du texte autour des blocs de codes R à l'aide du langage R Markdown. Normalement, cette étape est effectuée à chaque fois qu'un bloc de codes R est intégré dans le document Quarto.
 - Générer, sauvegarder et publier le document final (en format HTML, PDF ou Word).
 
-La Figure \@ref(fig:nb123) présente un résumé visuel de cette démarche :
+La @fig-nb123 présente un résumé visuel de cette démarche :
 
-```{r nb123, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Démarche de l'analyste qui utilise le format R Notebook"}
+```{r}
+#| label: fig-nb123
+#| fig-cap: "Démarche de l'analyste qui utilise Quarto"
+#| fig-align: center
+#| fig-width: 100
+#| echo: false
 knitr::include_graphics('figures/demarche.png')
 ```
+
 
 ## Avantages
 
