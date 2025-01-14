@@ -1,10 +1,16 @@
 project:
   type: book
+  output-dir: docs
 
 book:
-  title: "Github_Quarto"
-  author: "Norah Jones"
-  date: "1/14/2025"
+  title: "Utiliser R avec Quarto"
+  subtitle: "Une introduction"
+  author: "Sylvain Fiset, PhD"
+  date: today
+  sidebar:
+    style: "floating"
+    collapse-level: 2
+  search: true
   chapters:
     - index.qmd
     - intro.qmd
@@ -17,7 +23,23 @@ format:
   html:
     theme: cosmo
   pdf:
-    documentclass: scrreprt
+    documentclass: book
+    toc: true
+    toc-depth: 5
+    number-sections: true
+    colorlinks: true
+    keep-tex: true
+    code-line-numbers: true
+    code-copy: true
+    code-fold: false
+    embed-resources: true
+    css: include/webex.css
+    include-after-body: include/webex.js    
+    
+editor: visual
+
+_language: fr
+
 
 
 
