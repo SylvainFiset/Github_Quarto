@@ -23,7 +23,7 @@ Dans sa version de base, l'interface d'utilisation du logiciel R est relativemen
 #| label: fig-Consoles2
 #| fig-cap: "Exemple de la console R classique"
 #| fig-align: center
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/R_Console2.png')
 ```
@@ -44,7 +44,7 @@ Malgré sa flexibilité, dans sa version de base, RStudio demeure rigide dans sa
 #| label: fig-fig2
 #| fig-cap: "Illustration de la configuration de RStudio"
 #| fig-align: center
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/RStudio-panels.png')
 ```
@@ -57,7 +57,7 @@ Cette rigidité est maintenant chose du passé. En effet, depuis l'intégration 
 #| label: fig-fig3
 #| fig-cap: "Illustration d'un document en format html. Les codes sont écrits dans la fenêtre Source à la gauche et le fenêtre Viewer présente le document final"
 #| fig-align: center
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/notebook2.png')
 ```

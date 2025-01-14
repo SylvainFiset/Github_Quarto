@@ -273,6 +273,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#démarche-avec-quarto" id="toc-démarche-avec-quarto" class="nav-link active" data-scroll-target="#démarche-avec-quarto"><span class="header-section-number">4.1</span> Démarche avec Quarto</a></li>
   <li><a href="#avantages" id="toc-avantages" class="nav-link" data-scroll-target="#avantages"><span class="header-section-number">4.2</span> Avantages</a></li>
   <li><a href="#désavantages" id="toc-désavantages" class="nav-link" data-scroll-target="#désavantages"><span class="header-section-number">4.3</span> Désavantages</a></li>
+  <li><a href="#installer-quarto" id="toc-installer-quarto" class="nav-link" data-scroll-target="#installer-quarto"><span class="header-section-number">4.4</span> Installer Quarto</a></li>
+  <li><a href="#vérifier-la-version-de-quarto-installée-sur-votre-ordinateur" id="toc-vérifier-la-version-de-quarto-installée-sur-votre-ordinateur" class="nav-link" data-scroll-target="#vérifier-la-version-de-quarto-installée-sur-votre-ordinateur"><span class="header-section-number">4.5</span> Vérifier la version de Quarto installée sur votre ordinateur</a></li>
   </ul>
 </nav>
     </div>
@@ -316,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-nb123" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nb123-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/demarche.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="920">
+<img src="figures/demarche.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nb123-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4.1: Démarche de l’analyste qui utilise Quarto
@@ -346,6 +348,28 @@ Figure&nbsp;4.1: Démarche de l’analyste qui utilise Quarto
 <li><p>Le format Quarto est dynamique. Il est donc un peu gourmant au niveau de la mémoire pour les ordinateurs qui commencent à avoir de l’âge. Pour les documents courts, cela ne cause pas de problème. Mais pour les documents longs, cela risque d’agacer l’utilisateur.</p></li>
 <li><p>Le format Quarto est extrêmement bien adapté à la production de documents électroniques de type HTML. Malheureusement, l’exportation vers les formats PDF et Word nécessitent souvent des ajustements après la production final du document.</p></li>
 </ol>
+</section>
+<section id="installer-quarto" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="installer-quarto"><span class="header-section-number">4.4</span> Installer Quarto</h2>
+<p>Pour installer Quarto, il suffit de visiter le site de <a href="https://quarto.org/">Quarto</a> de la compagnie Posit. Cliquez sur <code>Get Started</code> et ensuite sur <code>Download Quarto CLI</code>. Par défaut, Quarto détecte votre système d’exploitation (Ubuntu, Linus, Mac, Windows). Une fois le fichier téléchargé, il faut l’installer comme les autres logiciels.</p>
+</section>
+<section id="vérifier-la-version-de-quarto-installée-sur-votre-ordinateur" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="vérifier-la-version-de-quarto-installée-sur-votre-ordinateur"><span class="header-section-number">4.5</span> Vérifier la version de Quarto installée sur votre ordinateur</h2>
+<p>Puisque Quarto est mis à jour régulièrement, il est parfois nécessaire de vérifier la version qui est déjà installée sur votre ordinateur. Pour cela, dans la fenêtre Console de RStudio, cliquez sur Terminal et inscrire <code>quarto check</code> ou <code>quarto --version</code>. La première commande fait une longue série de vérifications alors que la second commande indique seulement le numéro de la version de Quarto qui est installée. À vous de sélectionner la commande qui vous convient le mieux. La <a href="#fig-quartoversion" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> présente la deuxième option :</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-quartoversion" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quartoversion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/quarto_version.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quartoversion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Vérification de la version intallée de Quarto
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>

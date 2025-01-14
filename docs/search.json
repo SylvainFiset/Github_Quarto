@@ -309,6 +309,28 @@
     ]
   },
   {
+    "objectID": "Quarto.html#installer-quarto",
+    "href": "Quarto.html#installer-quarto",
+    "title": "4  Application Quarto",
+    "section": "4.4 Installer Quarto",
+    "text": "4.4 Installer Quarto\nPour installer Quarto, il suffit de visiter le site de Quarto de la compagnie Posit. Cliquez sur Get Started et ensuite sur Download Quarto CLI. Par défaut, Quarto détecte votre système d’exploitation (Ubuntu, Linus, Mac, Windows). Une fois le fichier téléchargé, il faut l’installer comme les autres logiciels.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Application Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Quarto.html#vérifier-la-version-de-quarto-installée-sur-votre-ordinateur",
+    "href": "Quarto.html#vérifier-la-version-de-quarto-installée-sur-votre-ordinateur",
+    "title": "4  Application Quarto",
+    "section": "4.5 Vérifier la version de Quarto installée sur votre ordinateur",
+    "text": "4.5 Vérifier la version de Quarto installée sur votre ordinateur\nPuisque Quarto est mis à jour régulièrement, il est parfois nécessaire de vérifier la version qui est déjà installée sur votre ordinateur. Pour cela, dans la fenêtre Console de RStudio, cliquez sur Terminal et inscrire quarto check ou quarto --version. La première commande fait une longue série de vérifications alors que la second commande indique seulement le numéro de la version de Quarto qui est installée. À vous de sélectionner la commande qui vous convient le mieux. La Figure 4.2 présente la deuxième option :\n\n\n\n\n\n\n\n\nFigure 4.2: Vérification de la version intallée de Quarto",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Application Quarto</span>"
+    ]
+  },
+  {
     "objectID": "Quarto.html#footnotes",
     "href": "Quarto.html#footnotes",
     "title": "4  Application Quarto",

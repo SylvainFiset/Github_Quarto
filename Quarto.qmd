@@ -32,11 +32,10 @@ La @fig-nb123 présente un résumé visuel de cette démarche :
 #| label: fig-nb123
 #| fig-cap: "Démarche de l'analyste qui utilise Quarto"
 #| fig-align: center
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/demarche.png')
 ```
-
 
 ## Avantages
 
@@ -65,3 +64,28 @@ Quarto possède aussi quelques désavantages dont il faut être conscients et qu
 3. Le format Quarto est dynamique. Il est donc un peu gourmant au niveau de la mémoire pour les ordinateurs qui commencent à avoir de l'âge. Pour les documents courts, cela ne cause pas de problème. Mais pour les documents longs, cela risque d'agacer l'utilisateur.
 
 4. Le format Quarto est extrêmement bien adapté à la production de documents électroniques de type HTML. Malheureusement, l'exportation vers les formats PDF et Word nécessitent souvent des ajustements après la production final du document. 
+
+## Installer Quarto
+
+Pour installer Quarto, il suffit de visiter le site de [Quarto](https://quarto.org/) de la compagnie Posit. Cliquez sur `Get Started` et ensuite sur `Download Quarto CLI`. Par défaut, Quarto détecte votre système d'exploitation (Ubuntu, Linus, Mac, Windows). Une fois le fichier téléchargé, il faut l'installer comme les autres logiciels.
+
+## Vérifier la version de Quarto installée sur votre ordinateur
+
+Puisque Quarto est mis à jour régulièrement, il est parfois nécessaire de vérifier la version qui est déjà installée sur votre ordinateur. Pour cela, dans la fenêtre Console de RStudio, cliquez sur Terminal et inscrire `quarto check` ou `quarto --version`. La première commande fait une longue série de vérifications alors que la second commande indique seulement le numéro de la version de Quarto qui est installée. À vous de sélectionner la commande qui vous convient le mieux. La @fig-quartoversion présente la deuxième option :
+
+```{r}
+#| label: fig-quartoversion
+#| fig-cap: "Vérification de la version intallée de Quarto"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
+knitr::include_graphics('figures/quarto_version.png')
+```
+
+
+
+
+
+
+
+

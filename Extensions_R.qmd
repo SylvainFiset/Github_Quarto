@@ -49,7 +49,7 @@ Si vous avez déjà installé l'extension rmarkdown, vous n'avez rien à faire e
 #| label: fig-rmarkdown
 #| fig-cap: "Vérifier si l'extension rmarkdown est installée à partir de la fenêtre Files de RStudio"
 #| fig-align: left
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/rmarkdown_installed.png')
 ```
@@ -66,7 +66,7 @@ L'approche la plus simple pour installer l'extension rmarkdown consiste à :
 #| label: fig-fig4
 #| fig-cap: "Installation de l'extension rmarkdown à partir de la fenêtre Console de RStudio"
 #| fig-align: center
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/install_rmarkdown.png')
 ```
@@ -77,7 +77,7 @@ knitr::include_graphics('figures/install_rmarkdown.png')
 #| label: fig-fig5
 #| fig-cap: "Confirmation de l'installation"
 #| fig-align: center
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/installed_rmarkdown.png')
 ```

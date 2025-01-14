@@ -67,7 +67,7 @@ Afin de faciliter l'interaction avec R, certaines alternatives à RStudio existe
 #| label: fig-anaconda
 #| fig-cap: "Illustration de codes R et du langage Markdown à partir de l'application Jupiter Notebook (image de gauche) et son rendu en format .html (image de droite)"
 #| fig-align: center
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/jupyter-notebook2.png')
 ```
@@ -84,7 +84,7 @@ RStudio facilite la rédaction des scripts R en proposant de compléter votre sy
 #| label: fig-binom
 #| fig-cap: "Suggestions de fonctions offertes par RStudio"
 #| fig-align: left
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/rstudio-binom-test1.png')
 ```
@@ -94,7 +94,7 @@ knitr::include_graphics('figures/rstudio-binom-test1.png')
 #| label: fig-binom2
 #| fig-cap: "Syntaxe proposée par RStudio pour la fonction binom.test"
 #| fig-align: left
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/rstudio-binom-test2.png')
 ```
@@ -107,7 +107,7 @@ La fenêtre `Environment` vous permet de voir rapidement tous les objets R que v
 #| label: fig-d1
 #| fig-cap: "Création de l'objet d1 qui contient le QI de 10 participants"
 #| fig-align: left
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/rstudio-d1.png')
 ```
@@ -118,7 +118,7 @@ Je peux examiner le contenu de cet objet `d1` à partir de la fenêtre **Environ
 #| label: fig-d2
 #| fig-cap: "Examiner le contenu de l'objet d1 dans la fenêtre Environment de RStudio"
 #| fig-align: left
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/rstudio-d1-environment2.png')
 ```
@@ -129,7 +129,7 @@ Je peux aussi examiner l'ensemble du contenu de l'objet `d1` en cliquant sur le 
 #| label: fig-d3
 #| fig-cap: "Examiner le contenu de l'objet d1 à l'aide du tableur intégré de RStudio"
 #| fig-align: left
-#| fig-width: 100
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/rstudio-d1-tableur.png')
 ```
