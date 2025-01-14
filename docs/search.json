@@ -4,7 +4,47 @@
     "href": "index.html",
     "title": "Utiliser R avec Quarto",
     "section": "",
-    "text": "Bienvenue\nCe livre électronique est une brève introduction à l’utilisation de Quarto avec R.\nBonne lecture,\nSylvain\nSylvain Fiset, Ph.D.1 Professeur titulaire de psychologie Université de Moncton, campus d’Edmundston.",
+    "text": "Bienvenue\nCe livre électronique est une brève introduction à l’utilisation de Quarto avec R. Utiliser R avec Quarto. Une introduction présente la démarche à suivre afin de bien maîtriser l’application RStudio de la compagnie POSIT comme interface pour communiquer avec R. .",
+    "crumbs": [
+      "Bienvenue"
+    ]
+  },
+  {
+    "objectID": "index.html#copier-les-codes",
+    "href": "index.html#copier-les-codes",
+    "title": "Utiliser R avec Quarto",
+    "section": "Copier les codes",
+    "text": "Copier les codes\nDans le présent livre, les codes R sont présentés à l’intérieur d’un bloc de codes sur fond gris. Pour copier toutes les lignes d’un bloc, il suffit de déplacer votre curseur par-dessus le bloc de codes pour voir apparaître le symbole copier dans le coin supérieur droit et de cliquer sur ce dernier. Par la suite, vous pouvez les insérer (coller) dans votre propres scripts R en appuyant sur Ctrl + C (PC) ou Cmd + C (Mac).",
+    "crumbs": [
+      "Bienvenue"
+    ]
+  },
+  {
+    "objectID": "index.html#comment-exécuter-une-ligne-de-codes-r",
+    "href": "index.html#comment-exécuter-une-ligne-de-codes-r",
+    "title": "Utiliser R avec Quarto",
+    "section": "Comment exécuter une ligne de codes R",
+    "text": "Comment exécuter une ligne de codes R\nDans R (et RStudio), une fois que la rédaction de la ligne de codes est complétée, il faut l’exécuter. Bien que RStudio offre de multiples possibilités à cet égard, selon moi, l’option la plus simple consiste à placer le curseur de l’ordinateur sur la ligne de codes que nous voulons exécuter et d’appuyer sur les touches Ctrl + Enter (PC) ou Cmd + Enter (Mac).\n\nL’utilisation de ces deux touches fonctionne pour tous les types de documents produits avec RStudio (script R, documents Quarto, R Notebook ou R Markdown). Bref, mémorisez bien ces deux touches selon le type de système d’exploitation utilisé par votre ordinateur. Vous aurez à les utiliser très régulièrement.",
+    "crumbs": [
+      "Bienvenue"
+    ]
+  },
+  {
+    "objectID": "index.html#exercices",
+    "href": "index.html#exercices",
+    "title": "Utiliser R avec Quarto",
+    "section": "Exercices",
+    "text": "Exercices\nPlusieurs des chapitres se terminent par une série d’exercices qui permettent d’intégrer le contenu du chapitre.",
+    "crumbs": [
+      "Bienvenue"
+    ]
+  },
+  {
+    "objectID": "index.html#mot-de-la-fin",
+    "href": "index.html#mot-de-la-fin",
+    "title": "Utiliser R avec Quarto",
+    "section": "Mot de la fin",
+    "text": "Mot de la fin\nQuarto présente de nombreux avantages. Prenez le temps de bien maîtriser cette application.\nBonne lecture et bon apprentissage,\nSylvain\nSylvain Fiset, Ph.D.1 Professeur titulaire de psychologie Université de Moncton, campus d’Edmundston.",
     "crumbs": [
       "Bienvenue"
     ]
@@ -57,66 +97,6 @@
     "text": "Après avoir suivi tous les cours offerts en mathématiques et en psychologie au niveau collégial, lorsque vient le temps de m’inscrire dans un programme d’études à l’université, mon cœur balançait entre ces deux disciplines. Finalement, pour ma formation universitaire, j’ai opté pour la psychologie, la plus belle des sciences, comme je me plais si souvent à le dire. Mais quelle ne fut pas ma surprise lorsque j’ai constaté que les conclusions de la psychologie reposaient, en grande partie, sur une démarche rigoureuse appuyée par des analyses statistiques. Mon désir d’apprentissage était comblé !\nMes intérêts marqués pour les mathématiques et les statistiques m’ont amené, lors de mes études doctorales en psychologie, à enseigner des cours de statistiques au niveau gradué à l’Université Laval et au niveau collégial, au Petit Séminaire de Québec. À la fin de mes études doctorales, j’ai accepté un poste de professeur régulier en psychologie à l’Université de Moncton, campus d’Edmundston où j’y enseigne, entre autres, les statistiques. Mes compétences en statistiques sont bien reconnues par mes collègues, ce qui m’amène à collaborer avec différents chercheurs afin de les aider à planifier leurs études, et/ou à les aider à analyser et à interpréter leurs propres données de recherche.\nSylvain Fiset, Ph.D.\nProfesseur titulaire en psychologie\nUniversité de Moncton, campus d’Edmundston\nEdmundston, N.-B., Canada",
     "crumbs": [
       "À propos de l'auteur"
-    ]
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "Copier les codes\nUtiliser R avec Quarto. Une introduction présente la démarche à suivre afin de bien maîtriser l’application RStudio de la compagnie POSIT comme interface pour communiquer avec R. .\nDans le présent livre, les codes R sont présentés à l’intérieur d’un bloc de codes sur fond gris. Pour copier toutes les lignes d’un bloc, il suffit de déplacer votre curseur par-dessus le bloc de codes pour voir apparaître le symbole copier dans le coin supérieur droit et de cliquer sur ce dernier. Par la suite, vous pouvez les insérer (coller) dans votre propres scripts R en appuyant sur Ctrl + C (PC) ou Cmd + C (Mac).",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "intro.html#exemples",
-    "href": "intro.html#exemples",
-    "title": "Introduction",
-    "section": "Exemples",
-    "text": "Exemples\nAfin de réduire la longueur des chapitres, pour de nombreuses fonctions de R, les exemples sont insérés à l’intérieur d’une bande déroulante verte. Cliquez sur la bande déroulante pour faire apparaître l’exemple et les explications supplémentaires (si disponibles). Voici un exemple qui montre comment utiliser la fonction numérique de la racine carrée (sqrt()) :\n\n\n\n\n\n\nExemple\n\n\n\n\n\n\nsqrt(100)\n\n[1] 10",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "intro.html#exercices",
-    "href": "intro.html#exercices",
-    "title": "Introduction",
-    "section": "Exercices",
-    "text": "Exercices\nChacun des chapitres se termine par une série d’exercices qui permettent d’intégrer le contenu du chapitre. Pour chaque problème, la solution est insérée à l’intérieur d’une bande déroulante bleue. Cliquez sur la bande déroulante pour vérifier si vous avez réussit l’exercice. Certaines solutions comportent des informations additionnelles. Voici la solution pour un exercice qui porte sur “Comment citer R ?” :\n\n\n\n\n\n\nSolution\n\n\n\n\n\n\ncitation()\n\n\nTo cite R in publications use:\n\n  R Core Team (2021). R: A language and environment for statistical\n  computing. R Foundation for Statistical Computing, Vienna, Austria.\n  URL https://www.R-project.org/.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {R: A Language and Environment for Statistical Computing},\n    author = {{R Core Team}},\n    organization = {R Foundation for Statistical Computing},\n    address = {Vienna, Austria},\n    year = {2021},\n    url = {https://www.R-project.org/},\n  }\n\nWe have invested a lot of time and effort in creating R, please cite it\nwhen using it for data analysis. See also 'citation(\"pkgname\")' for\nciting R packages.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "intro.html#sec-exécuter",
-    "href": "intro.html#sec-exécuter",
-    "title": "Introduction",
-    "section": "Résultats d’un bloc de codes",
-    "text": "Résultats d’un bloc de codes\nDans ce livre, la majorité des lignes de codes R ont déjà été exécutées. Cela signifie que R a analysé la ligne de codes et, qu’en l’absence d’erreur, il a généré un résultat. Le résultat est affiché sous le bloc de codes.\n\nsqrt(100)\n\n[1] 10\n\n\n\nLa valeur entre crochets (ex : [1]) situé à la gauche du résultat (10) indique l’ordre de la position de la valeur du résultat dans une liste. Cela est utile lorsqu’il y a plusieurs résultats qui sont affichés (voir l’exemple ci-dessous).\n\n\n\n\n\n\n\nExemple\n\n\n\n\n\n\nsqrt(1:100)\n\n  [1]  1.000000  1.414214  1.732051  2.000000  2.236068  2.449490  2.645751\n  [8]  2.828427  3.000000  3.162278  3.316625  3.464102  3.605551  3.741657\n [15]  3.872983  4.000000  4.123106  4.242641  4.358899  4.472136  4.582576\n [22]  4.690416  4.795832  4.898979  5.000000  5.099020  5.196152  5.291503\n [29]  5.385165  5.477226  5.567764  5.656854  5.744563  5.830952  5.916080\n [36]  6.000000  6.082763  6.164414  6.244998  6.324555  6.403124  6.480741\n [43]  6.557439  6.633250  6.708204  6.782330  6.855655  6.928203  7.000000\n [50]  7.071068  7.141428  7.211103  7.280110  7.348469  7.416198  7.483315\n [57]  7.549834  7.615773  7.681146  7.745967  7.810250  7.874008  7.937254\n [64]  8.000000  8.062258  8.124038  8.185353  8.246211  8.306624  8.366600\n [71]  8.426150  8.485281  8.544004  8.602325  8.660254  8.717798  8.774964\n [78]  8.831761  8.888194  8.944272  9.000000  9.055385  9.110434  9.165151\n [85]  9.219544  9.273618  9.327379  9.380832  9.433981  9.486833  9.539392\n [92]  9.591663  9.643651  9.695360  9.746794  9.797959  9.848858  9.899495\n [99]  9.949874 10.000000",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "intro.html#comment-exécuter-une-ligne-de-codes-r",
-    "href": "intro.html#comment-exécuter-une-ligne-de-codes-r",
-    "title": "Introduction",
-    "section": "Comment exécuter une ligne de codes R",
-    "text": "Comment exécuter une ligne de codes R\nDans R (et RStudio), une fois que la rédaction de la ligne de codes est complétée, il faut l’exécuter. Bien que RStudio offre de multiples possibilités à cet égard, selon moi, l’option la plus simple consiste à placer le curseur de l’ordinateur sur la ligne de codes que nous voulons exécuter et d’appuyer sur les touches Ctrl + Enter (PC) ou Cmd + Enter (Mac).\n\nL’utilisation de ces deux touches fonctionne pour tous les types de documents produits avec RStudio (script R, documents Quarto, R Notebook ou R Markdown). Bref, mémorisez bien ces deux touches selon le type de système d’exploitation utilisé par votre ordinateur. Vous aurez à les utiliser très régulièrement.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "intro.html#mot-de-la-fin",
-    "href": "intro.html#mot-de-la-fin",
-    "title": "Introduction",
-    "section": "Mot de la fin",
-    "text": "Mot de la fin\nQuarto présente de nombreux avantages. Prenez le temps de bien maîtriser cette application.\nBonne lecture et bon apprentissage,\nSylvain",
-    "crumbs": [
-      "Introduction"
     ]
   },
   {

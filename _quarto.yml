@@ -15,7 +15,6 @@ book:
     - index.qmd
     - preface.qmd
     - a_propos_auteur.qmd
-    - intro.qmd
     - part: "Partie I"
       chapters:
       - introduction.qmd

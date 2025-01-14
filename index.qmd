@@ -4,9 +4,31 @@ lang: fr
 
 # Bienvenue {.unnumbered}
 
-Ce livre électronique est une brève introduction à l'utilisation de Quarto avec R.
+Ce livre électronique est une brève introduction à l'utilisation de Quarto avec R. *Utiliser R avec Quarto. Une introduction* présente la démarche à suivre afin de bien maîtriser l'application RStudio de la compagnie [POSIT](https://posit.co/) comme interface pour communiquer avec R. .
 
-Bonne lecture,
+## Copier les codes
+
+Dans le présent livre, les codes R sont présentés à l'intérieur d'un bloc de codes sur fond gris. Pour copier toutes les lignes d'un bloc, il suffit de déplacer votre curseur par-dessus le bloc de codes pour voir apparaître le symbole `copier` dans le coin supérieur droit et de cliquer sur ce dernier. Par la suite, vous pouvez les insérer (coller) dans votre propres scripts R en appuyant sur `Ctrl + C` (PC) ou `Cmd + C` (Mac).
+
+![](./figures/intro-copier.png)
+
+## Comment exécuter une ligne de codes R
+
+Dans R (et RStudio), une fois que la rédaction de la ligne de codes est complétée, il faut l'exécuter. Bien que RStudio offre de multiples possibilités à cet égard, selon moi, l'option la plus simple consiste à placer le curseur de l'ordinateur sur la ligne de codes que nous voulons exécuter et d'appuyer sur les touches `Ctrl + Enter` (PC) ou `Cmd + Enter` (Mac).
+
+![](./figures/intro-touches.png)
+
+L'utilisation de ces deux touches fonctionne pour tous les types de documents produits avec RStudio (script R, documents Quarto, R Notebook ou R Markdown). Bref, mémorisez bien ces deux touches selon le type de système d'exploitation utilisé par votre ordinateur. Vous aurez à les utiliser très régulièrement.
+
+## Exercices
+
+Plusieurs des chapitres se terminent par une série d'exercices qui permettent d'intégrer le contenu du chapitre.
+
+## Mot de la fin
+
+Quarto présente de nombreux avantages. Prenez le temps de bien maîtriser cette application. 
+
+Bonne lecture et bon apprentissage,
 
 Sylvain
 
