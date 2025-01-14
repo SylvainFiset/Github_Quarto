@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>16&nbsp; Project RStudio - niveau II – Utiliser R avec Quarto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./Problemes.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="include/webex.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./RProject_avance.html">Partie III</a></li><li class="breadcrumb-item"><a href="./RProject_avance.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Utiliser R avec Quarto</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Préface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a_propos_auteur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">À propos de l’auteur</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Partie I</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R_RStudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R et RStudio</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Extensions_R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Extensions R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Application Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RStudio_options.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Options de RStudio</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RProject.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Projet RStudio - niveau I</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Posit_cloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Posit Cloud</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Partie II</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Utiliser_Quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Utiliser Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Metadonnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Les métadonnées</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Texte.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le texte</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Bloc_de_codes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Blocs de codes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ExempleR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exemple avec R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Extract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Extraction et intégration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Save_share.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Sauvegarde et partage</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Problemes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Problèmes</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Partie III</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RProject_avance.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#sous-répertoires" id="toc-sous-répertoires" class="nav-link active" data-scroll-target="#sous-répertoires"><span class="header-section-number">16.1</span> Sous-répertoires</a></li>
+  <li><a href="#description-des-sous-répertoires" id="toc-description-des-sous-répertoires" class="nav-link" data-scroll-target="#description-des-sous-répertoires"><span class="header-section-number">16.2</span> Description des sous-répertoires</a></li>
+  <li><a href="#avantages-et-désavantages" id="toc-avantages-et-désavantages" class="nav-link" data-scroll-target="#avantages-et-désavantages"><span class="header-section-number">16.3</span> Avantages et désavantages</a></li>
+  <li><a href="#comment-créer-les-sous-répertoires" id="toc-comment-créer-les-sous-répertoires" class="nav-link" data-scroll-target="#comment-créer-les-sous-répertoires"><span class="header-section-number">16.4</span> Comment créer les sous-répertoires</a></li>
+  <li><a href="#exemple" id="toc-exemple" class="nav-link" data-scroll-target="#exemple"><span class="header-section-number">16.5</span> Exemple</a></li>
+  <li><a href="#répertoire-du-projet" id="toc-répertoire-du-projet" class="nav-link" data-scroll-target="#répertoire-du-projet"><span class="header-section-number">16.6</span> Répertoire du projet</a></li>
+  <li><a href="#chemins-daccès-relatifs" id="toc-chemins-daccès-relatifs" class="nav-link" data-scroll-target="#chemins-daccès-relatifs"><span class="header-section-number">16.7</span> Chemins d’accès relatifs</a>
+  <ul class="collapse">
+  <li><a href="#importation-de-fichiers" id="toc-importation-de-fichiers" class="nav-link" data-scroll-target="#importation-de-fichiers"><span class="header-section-number">16.7.1</span> Importation de fichiers</a></li>
+  <li><a href="#exportation-de-fichiers" id="toc-exportation-de-fichiers" class="nav-link" data-scroll-target="#exportation-de-fichiers"><span class="header-section-number">16.7.2</span> Exportation de fichiers</a></li>
+  </ul></li>
+  <li><a href="#recommandation" id="toc-recommandation" class="nav-link" data-scroll-target="#recommandation"><span class="header-section-number">16.8</span> Recommandation</a></li>
+  <li><a href="#exercice-7" id="toc-exercice-7" class="nav-link" data-scroll-target="#exercice-7"><span class="header-section-number">16.9</span> Exercice 7</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution"><span class="header-section-number">16.10</span> Solution</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./RProject_avance.html">Partie III</a></li><li class="breadcrumb-item"><a href="./RProject_avance.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="niveau2" class="quarto-section-identifier"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Dans le Chapitre @ref(projetRStudio), nous avons vu brièvement comment créer un projet R de manière à y regrouper l’ensemble des fichiers associés à un projet d’analyse de données. Malheureusement, l’approche présentée au Chapitre @ref(projetRStudio) n’est <em>valide</em> que lorsque le nombre de fichiers utilisés est petit et qu’il est possible de placer tous nos fichiers à l’intérieur du même répertoire. Par contre, lorsque le nombre de fichiers de données et/ou d’analyse devient trop grand, il est préférable d’utiliser une meilleure organisation de notre projet R. Cela permet, entre autres, de regrouper les différents types de fichiers ensembles. Dans le présent chapitre, nous avons examiner comment organiser adéquatement le répertoire (aussi nommé “dossier” ou “folder” en anglais) qui contient votre fichier .Rproj sur votre ordinateur. De cette façon, vos données, fichiers d’analyses et résultats seront toujours organisés de manière cohérente sur votre ordinateur dans le répertoire qui contient le projet R.</p>
+<p>À titre de rappel, immédiatement après la création d’un nouveau projet R dans un nouveau répertoire, un seul fichier compose ce répertoire. Dans notre exemple du Chapitre @ref(projetRStudio), seul le fichier Projet_1.Rproj faisait partie de ce répertoire (voir Figure @ref(fig:figrp2)).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rprojet-2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Fichier avec l’extension .Pproj disponible dans le répertoire associé au projet RStudio</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="sous-répertoires" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="sous-répertoires"><span class="header-section-number">16.1</span> Sous-répertoires</h2>
+<p>Idéalement, le répertoire qui contient le projet R doit être divisé en sous-répertoires. La Figure @ref(fig:structure) montre l’organisation de base d’un répertoire qui contient un projet R. Je suggère la création de quatre sous-répertoires principaux : <em>Data</em>, <em>Output</em>, <em>R</em> et <em>Rmd</em>. L’appellation anglophone permet d’arrimer l’utilisation de RStudio avec d’autres outils, comme GitHub. Évidemment, vous pouvez les modifier et les nommer à votre goût en leur donnant un nom en français, comme <em>Données</em>, <em>Résultats</em>, <em>R</em> et <em>Rmd</em>. Personnellement, j’évite d’utiliser les accents dans la création des répertoires et les objets R. Cela peut compliquer bien des choses lorsque l’on partage nos fichiers avec des collègues qui n’utilisent pas l’encodage de type UFT-8.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/structure_Rproj.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Organisation des sous-répertoires d’un projet R</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="description-des-sous-répertoires" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="description-des-sous-répertoires"><span class="header-section-number">16.2</span> Description des sous-répertoires</h2>
+<ol type="1">
+<li><em>Data</em></li>
+</ol>
+<ul>
+<li>Le sous-répertoire <em>Data</em> est divisée en deux sous-répertoires : <em>Raw</em> et <em>Transformed</em>. Le sous-répertoire <em>Raw</em> contient le fichier des données brutes, soit les données initialement récoltées par le chercheur ou l’analyste, comme un fichier Excel. Le sous-répertoire <em>Transformed</em> contient, quant à lui, les fichiers de données transformés par l’analyste à partir de ses scripts .R ou .Rmd. Par exemple, il arrive fréquemment que l’analyste ajoute des variables au fichier de données initiales. Donc, au lieu de travailler avec le donnée original, il en crée un nouveau qu’il sauvegarde dans le répertoire <em>Transformed</em>.</li>
+</ul>
+<ol start="2" type="1">
+<li><em>Output</em></li>
+</ol>
+<ul>
+<li>Le sous-répertoire <em>Output</em> contient le document final produit par l’analyse. Par exemple, ce répertoire contient les fichiers .pdf et/ou les fichiers .docs qui sont associées aux analyses produites par l’analyste. Il comprend aussi les fichiers associés aux Figures qui seront utilisées dans les différentes publications associées au projet.</li>
+</ul>
+<ol start="3" type="1">
+<li><em>R et Rmd</em></li>
+</ol>
+<ul>
+<li>Finalement, les sous-répertoires <em>R</em> et <em>Rmd</em> contiennent, respectivement, les fichiers .R et .Rmd (avec l’écriture R Markdown, comme les fichiers R Notebook). En résumé, ce sont les fichiers qui contiennent tous les codes R et R Markdown nécessaires pour transformer les données, réaliser les analyses et les figures, et publier les rapports finaux.</li>
+</ul>
+</section>
+<section id="avantages-et-désavantages" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="avantages-et-désavantages"><span class="header-section-number">16.3</span> Avantages et désavantages</h2>
+<p>Plusieurs raisons militent pour cette sous-division :</p>
+<ol type="1">
+<li>Nous pouvons regrouper les fichiers de même nature dans le même sous-répertoire (ex : fichiers de données).</li>
+<li>En utilisant une structure semblable d’un projet R à l’autre, l’analyste peut facilement importer et exporter des fichiers de données sans craindre de ne pas savoir où les retrouver.</li>
+<li>Lors du partage du projet R, il est facile pour un collaborateur de retrouver toutes les informations à partir du nom des sous-répertoires.</li>
+</ol>
+<p>Par ailleurs, l’utilisation de sous-répertoires produit quelques inconvénients :</p>
+<ol type="1">
+<li>Lors de l’importation et de l’exportation des fichiers de données, il faut ajouter l’extension du sous-répertoire associé au répertoire <em>Data</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
+<li>Parfois, dans notre empressement de créer une nouvelle analyse, nous oublions de déplacer le fichier dans le bon répertoire (<em>R</em> ou <em>Rmd</em>).</li>
+<li>L’ajout de multiples sous-répertoires peut complexifier la navigation à l’intérieur du projet R. Il est donc recommandé de limiter les sous-répertoires à deux niveaux (ex : <em>Data</em> / <em>Raw</em>).</li>
+</ol>
+</section>
+<section id="comment-créer-les-sous-répertoires" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="comment-créer-les-sous-répertoires"><span class="header-section-number">16.4</span> Comment créer les sous-répertoires</h2>
+<p>Bien que vous pouvez créer les sous-répertoires à partir de logiciels déjà disponibles par défaut avec votre ordinateur<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, je recommande d’utiliser le logiciel RStudio pour cela. Dans le fenêtre des utilitaires (Files, Plots, Packages, Help, Viewer), l’onglet <strong>Files</strong> contient, entre autres, tous les outils nécessaires pour créer, effacer et renommer les sous-répertoires. Cette approche réplique d’ailleurs celle qui doit être utilisée avec RStudio Cloud.</p>
+<p>Avant de débuter à créer de nouveaux sous-répertoires, il faut s’assurer que la fenêtre <strong>Files</strong> présente les fichiers disponibles dans le répertoire principal de votre projet R. Si le nom du fichier de votre projet R est visible (fichier .Rproj), vous êtes à la bonne place (voir Figure @ref(fig:figrp2)) ! Sinon, naviguez à l’intérieur des répertoires situés à la droite de <strong>Home</strong> pour retrouver votre fichier .Rproj. Par la suite, l’onglet <strong>New Folder</strong> vous permet de créer les sous-répertoires. Pour effacer ou renommer un sous-répertoire, il faut cocher la case située à sa gauche et cliquer sur l’onglet <strong>Delete</strong> ou <strong>Rename</strong>. De plus, l’onglet <strong>More</strong> comprend d’autres options intéressantes comme le déplacement des fichiers d’un répertoire à l’autre ou la possibilité de copier les fichiers dans de nouveaux répertoires.</p>
+</section>
+<section id="exemple" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="exemple"><span class="header-section-number">16.5</span> Exemple</h2>
+<p>À titre d’exemple, j’ai créé les sous-répertoires dans le répertoire principal de mon projet R (<strong>Projet_1</strong>) et j’ai déplacé dans le sous-répertoire les fichiers .Rmd et .nb.html que nous avons créé à la section @ref(deuxfichiers). À l’aide du logiciel <em>Finder</em> de mon ordinateur (Mac), nous pouvons voir l’organisation des sous-répertoires (voir Figure @ref(fig:Files2)).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/Files2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Sous-répertoires du projet Projet_1.Rproj sur mon ordinateur</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="répertoire-du-projet" class="level2" data-number="16.6">
+<h2 data-number="16.6" class="anchored" data-anchor-id="répertoire-du-projet"><span class="header-section-number">16.6</span> Répertoire du projet</h2>
+<p>Après avoir créer nos répertoires dans notre projet RStudio, pour chacun des fichiers .Rmd que nous créons, il faut indiquer à RStudio d’utiliser le répertoire principal de notre projet RStudio. Par défaut, R utilise le répertoire <em>Document</em> de votre ordinateur et non celui du projet. Il faut donc changer le répertoire <em>Document</em> par le répertoire du projet RStudio. La démarche consiste simplement à cliquer sur l’onglet <code>Knit</code>, au haut de la fenêtre Source de RStudio, de sélectionner <code>Directory</code> et ensuite <code>Project Directory</code> (voir Figure @ref(fig:project-directory)).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/project-directory.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Sélectionner le répertoire du projet RStudio à partir de l’option Knit</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chemins-daccès-relatifs" class="level2" data-number="16.7">
+<h2 data-number="16.7" class="anchored" data-anchor-id="chemins-daccès-relatifs"><span class="header-section-number">16.7</span> Chemins d’accès relatifs</h2>
+<p>En indiquant à RStudio d’utiliser le répertoire du projet RStudio comme répertoire principal, il est possible d’utiliser des <em>chemins d’accès relatifs</em> dans nos codes R pour préciser les répertoires où il faut importer et/ou exporter nos fichiers sur notre ordinateur. Un <em>chemin d’accès relatif</em> est un chemin (<em>path</em>, en anglais) qui précise le répertoire où se trouve nos fichiers sur notre ordinateur relativement au répertoire principal du projet RStudio.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/chemin-relatif2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Chemin relatif du fichier oranges.txt à partir du répertoire du projet RStudio</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Dans l’exemple de la Figure @ref(fig:Files2), le répertoire principal du projet RStudio est <code>Projet_1</code>. Donc, tous les chemins relatifs précisés dans nos codes R doivent prendre le répertoire <code>Projet_1</code> comme point de départ. Ainsi, le chemin relatif pour le fichier <code>oranges.txt</code> qui se trouve dans le répertoire <code>Raw</code> (voir Figure @ref(fig:chemin-relatif2) aurait la forme suivante :</p>
+<p><span class="math display">\[
+./Data/Raw/oranges.txt
+\]</span></p>
+<p>Notez la présence du <code>.</code> qui désigne le répertoire principal du projet RStudio.</p>
+<section id="importation-de-fichiers" class="level3" data-number="16.7.1">
+<h3 data-number="16.7.1" class="anchored" data-anchor-id="importation-de-fichiers"><span class="header-section-number">16.7.1</span> Importation de fichiers</h3>
+<p>La Figure @ref(fig:import-data) montre le chemin d’accès relatif (<code>./Data/Raw/</code>) pour importer le fichier de données oranges.txt à partir d’un bloc de codes R.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/import-data.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Chemin relatif pour l’importation du fichier oranges.txt dans un bloc de codes R</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="exportation-de-fichiers" class="level3" data-number="16.7.2">
+<h3 data-number="16.7.2" class="anchored" data-anchor-id="exportation-de-fichiers"><span class="header-section-number">16.7.2</span> Exportation de fichiers</h3>
+<p>La Figure @ref(fig:export-data) montre le chemin d’accès relatif (<code>./Data/Transformed/</code>) pour exporter (et sauvegarder) le fichier de données oranges-transformed.txt à partir d’un bloc de codes R. Dans le premier bloc de codes, les mesures métriques de l’âge et de la circonférences des arbres ont été transformées en mesures anglaises. Dans le second bloc de codes, le fichier oranges-transformed a été sauvegardé en format .txt.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/export-data.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Chemin relatif pour l’exportation du fichier oranges-transformed.txt dans un bloc de codes R</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>La Figure @ref(fig:chemin-relatif-transformed) nous confirme que le fichier oranges-transformed.txt a bel et bien été exporté dans le répertoire /Data/Transformed/ du Projet_1.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/chemin-relatif-transformed.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Confirmation de l’exportation du fichier oranges-transformed.txt</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="recommandation" class="level2" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="recommandation"><span class="header-section-number">16.8</span> Recommandation</h2>
+<p>Lorsque nous travaillons sur un projet d’analyse de données, il est facile de devenir mélangé dans les différentes versions de nos analyses et avec les différents fichiers qui contiennent les données transformées. La meilleure façon d’éviter la confusion consiste à bien organiser votre espace de travail pour chacun des projets R que vous allez entreprendre. Et la meilleure façon consiste à créer la même structure que celle présentée ci-haut pour chacun de vos projets R.</p>
+<p>Néanmoins, prenez note que cette proposition de structure de projet R est minimale. Si vous le désirez, vous pouvez créer autant de sous-répertoires que vous le désirez. Par exemple, le sous-répertoire <em>Rmd</em> pourrait comprendre les sous-répertoires <em>Analyse-1</em>, <em>Analyse-2</em>, <em>Analyse-3</em>, etc. Bref, avec la pratique, vous serez en mesure de préciser la structure d’un projet R qui vous convient le mieux. Malgré tout, gardez en tête de limiter le nombre de sous-répertoires. Parfois, trop, c’est comme pas assez !</p>
+</section>
+<section id="exercice-7" class="level2" data-number="16.9">
+<h2 data-number="16.9" class="anchored" data-anchor-id="exercice-7"><span class="header-section-number">16.9</span> Exercice 7</h2>
+<p>L’objectif de l’Exercice 7 consiste à organiser votre projet R. En résumé, vous devez créer les sous-répertoires présentés ci-haut et déplacer les fichiers correspondants dans les bons sous-répertoires. À partir du fichier <strong>Exercice R Notebook</strong> que vous avez complété lors de l’Exercice 6, veuillez :</p>
+<ol type="1">
+<li>Créer les sous-répertoires <em>Data</em>, <em>Output</em>, <em>R</em> et <em>Rmd</em>.</li>
+<li>Dans le répertoire <em>Data</em>, créer les sous-répertoires <em>Raw</em> et <em>Transformed</em>.</li>
+<li>Déplacer les fichiers <em>Exercice Notebook.Rmd</em> et <em>Exercice Notebook.nb.html</em> dans le sous-répertoire <em>Rmd</em>.</li>
+</ol>
+</section>
+<section id="solution" class="level2" data-number="16.10">
+<h2 data-number="16.10" class="anchored" data-anchor-id="solution"><span class="header-section-number">16.10</span> Solution</h2>
+<p>La structure de votre projet R (dans l’onglet Projet_1) devrait ressembler à celui de la Figure @ref(fig:Files3).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/Files.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>À la fin de l’Exercice 7, vos sous-répertoires de votre projet R devraient ressembler à ceci</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>De plus, votre répertoire <em>Data</em> devraient comprendre les sous-répertoires illustrés à la Figure @ref(fig:Files4) et votre répertoire <em>Rmd</em> devraient comprendre les fichiers présentés à la Figure @ref(fig:Files5).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/FilesData.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>À la fin de l’Exercice 7, les sous-répertoires du répertoire Data devraient ressembler à ceci</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/FilesRmd.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>À la fin de l’Exercice 7, le répertoire Rmd devraient comprendre ceux deux fichiers</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Par exemple, l’importation et l’exportation des fichiers de données nécessitent l’obligation d’ajouter le chemin d’accès relatif au répertoire du projet RStudio.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Avec un Mac, vous pouvez créer les sous-répertoires à partir du logiciel <em>Finder</em>. Avec un PC, vous pouvez créer les sous-répertoires à partir du logiciel <em>Explorateur de fichiers</em>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  update_total_correct();
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Problemes.html" class="pagination-link" aria-label="Problèmes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Problèmes</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

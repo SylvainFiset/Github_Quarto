@@ -30,6 +30,36 @@
     ]
   },
   {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "Préface",
+    "section": "",
+    "text": "Pendant de nombreuses années, les étudiants qui suivaient mon cours Introduction à la statistique appliquée en psychologie (ou sous différentes appellations) avaient comme consigne de rédiger leurs travaux à la main. Ils devaient donc transcrire de nombreuses formules, plus complexes les unes que les autres, et utiliser des tables statistiques pour tirer leurs conclusions. L’utilisation du logiciel SPSS de IBM me satisfaisait pleinement comme complément à la compréhension de la matière. En plus de calculer à la main les différents tests statistiques, mes étudiants devaient vérifier, à l’aide de SPSS, si leurs calculs s’avéraient exacts (vérification qu’ils ne faisaient pas toujours, par manque de temps, me disait-on…).\nLors d’un récent congé sabbatique (l’un des privilèges associés au fait d’être professeur régulier au niveau universitaire…), je me suis inscrit à une formation de cinq jours offerte par John Kruschke, professeur de psychologie à l’Université de l’Indiana à Bloomington, sur les analyses bayésiennes. L’occasion de suivre une formation par l’un des maîtres incontestés des analyses bayésiennes m’enchantait. Par contre, la formation offerte par John Kruschke avait un prérequis obligatoire très important, soit celui d’être en mesure d’utiliser un logiciel qui m’était complètement inconnu à l’époque : R. N’ayant à ma disposition que le livre de John Kruschke Doing Bayesian Data Analysis: A tutorial with R, JAGS, and Stan (et internet) pour apprendre R, je me suis lancé dans l’apprentissage autodidacte de ce logiciel. Oh, quelle aventure ! Il ne me restait que quelques mois entre mon inscription et cette formation. Avec l’enseignement de mes cours et la poursuite de mes travaux de recherche, le temps s’est écoulé très rapidement… Bien honnêtement, et malgré tous mes efforts, ma compréhension de R n’était pas à la hauteur de mes attentes lorsque j’ai finalement mis les pieds à Albuquerque, Nouveau-Mexique, dans la petite salle que je partageais avec John Kruschke et 15 autres personnes.\nFort heureusement, John Kruschke est un formateur exceptionnel et mes connaissances limitées de R ne m’ont pas empêchées d’apprendre à un rythme époustouflant les rudiments de base (et avancés) des analyses bayésiennes. Cette formation a changé mon congé sabbatique de façon radicale. En effet, le reste de mon année sabbatique fut consacré à approfondir ma compréhension de R et des analyses bayésiennes, tout en continuant de suivre de nombreuses formations en statistiques avancées. Au fond de moi, à mon retour de sabbatique, je jalousais le désir de substituer le logiciel SPSS par R pour l’enseignement de mon cours de statistiques. Ne vous méprenez pas. À l’époque, SPSS rencontrait parfaitement mes besoins. Avec une aisance déconcertante, mes étudiants apprenaient rapidement à insérer leurs données dans le chiffrier intégré de SPSS et à produire leurs analyses statistiques en cliquant sur les options des différents menus offerts par SPSS.\nMais pourquoi vouloir changer de logiciel, me direz-vous, si SPSS rencontrait mes exigences ? Le problème principal était un problème de licence. Voyez-vous, le coût d’une licence annuelle de SPSS est particulièrement élevé, surtout pour un étudiant. Bien entendu, la licence institutionnelle de l’université permettait à mes étudiant d’utiliser gratuitement SPSS à partir des ordinateurs mis à leur disposition, et ce, 24h sur 24 (si désiré…). Par contre, j’avais constaté deux choses. La première était que mes étudiants pirataient des codes d’accès à SPSS, ce qui leur permettait d’installer illégalement (et temporairement) SPSS directement sur leur ordinateur. La seconde était que lorsque mes étudiants quittaient le campus pour aller étudier dans d’autres institutions, SPSS n’était pas toujours disponible (certaines institutions et laboratoires de recherche utilisent STATA, SAS ou R). Leur apprentissage avec SPSS s’avérait pratiquement inutile, à moins, bien évidemment, qu’ils n’investissent de l’argent pour se payer une licence annuelle de SPSS, ce que peu d’entre eux étaient enclins à faire.\nR, étant gratuit, s’avérait donc pour moi une belle opportunité d’enseigner un logiciel statistique qui serait toujours disponible, peu importe où se retrouveraient mes étudiants pour compléter leurs études et leur formation1. Non, la substitution de SPSS par R en salle de classe ne fut pas facile… loin de là ! Et je remercie les premiers groupes d’étudiants qui ont dû subir cette transition : ils ont fait preuve d’une grande compréhension et d’une patience légendaire. Au cours des dernières années, j’ai été en mesure d’ajuster mon enseignement de manière à maximiser mon enseignement sur l’utilisation de R, la compréhension de la démarche statistique et l’interprétation des résultats. De plus, la rédaction des travaux, qui au départ se faisait à partir de captures d’écrans des résultats affichés dans la console de R, s’est transformée, avec la publication de l’application Quarto qui utilise le language rmarkdown, de manière à produire des documents complets, dynamiques, agréables à lire et facilement partageables. De mon point de vue, R, lorsque jumelé avec l’extension rmarkdown, permet une intégration complète de la démarche statistique2.\nLe présent document reflète donc mon expérience des dernières années avec l’enseignement de R et de l’utilisation du format R Notebook de l’extension rmarkdown pour R. Bien qu’aux premiers abords, R et R Notebook semblent intimidant, l’étudiant qui prend le temps de suivre la démarche et les exercices présentés ci-dessous sera en mesure de produire des documents de qualité dans le domaine des statistiques mais aussi dans n’importe quelle discipline.\nBonne lecture,\nSylvain",
+    "crumbs": [
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "preface.html#footnotes",
+    "href": "preface.html#footnotes",
+    "title": "Préface",
+    "section": "",
+    "text": "La substitution de SPSS par R me fut d’une grande utilité à l’hiver 2021 lorsque, en raison de la pandémie de la COVID-19, j’ai dû enseigner mon cours de statistiques à distance à tous mes étudiants. Ils n’ont eux qu’à télécharger R, en toute légalité.↩︎\nNotez que le logiciel STATA permet une intégration relativement similaire avec Microsoft Word. Mais, une licence perpétuelle étudiante de STATA coûte malgré tout quelque centaines de dollars…↩︎",
+    "crumbs": [
+      "Préface"
+    ]
+  },
+  {
+    "objectID": "a_propos_auteur.html",
+    "href": "a_propos_auteur.html",
+    "title": "À propos de l’auteur",
+    "section": "",
+    "text": "Après avoir suivi tous les cours offerts en mathématiques et en psychologie au niveau collégial, lorsque vient le temps de m’inscrire dans un programme d’études à l’université, mon cœur balançait entre ces deux disciplines. Finalement, pour ma formation universitaire, j’ai opté pour la psychologie, la plus belle des sciences, comme je me plais si souvent à le dire. Mais quelle ne fut pas ma surprise lorsque j’ai constaté que les conclusions de la psychologie reposaient, en grande partie, sur une démarche rigoureuse appuyée par des analyses statistiques. Mon désir d’apprentissage était comblé !\nMes intérêts marqués pour les mathématiques et les statistiques m’ont amené, lors de mes études doctorales en psychologie, à enseigner des cours de statistiques au niveau gradué à l’Université Laval et au niveau collégial, au Petit Séminaire de Québec. À la fin de mes études doctorales, j’ai accepté un poste de professeur régulier en psychologie à l’Université de Moncton, campus d’Edmundston où j’y enseigne, entre autres, les statistiques. Mes compétences en statistiques sont bien reconnues par mes collègues, ce qui m’amène à collaborer avec différents chercheurs afin de les aider à planifier leurs études, et/ou à les aider à analyser et à interpréter leurs propres données de recherche.\nSylvain Fiset, Ph.D.\nProfesseur titulaire en psychologie\nUniversité de Moncton, campus d’Edmundston\nEdmundston, N.-B., Canada",
+    "crumbs": [
+      "À propos de l'auteur"
+    ]
+  },
+  {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "Introduction",
@@ -90,13 +120,1069 @@
     ]
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "1  Summary",
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "1  Introduction",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "text": "1.1 Interface de R\nQui n’a pas perdu son temps, ou même pire, fait des erreurs, lors de la transcription des résultats d’une analyse statistique vers son traitement de texte (ex: Microsoft Word, LaTeX, LibreOffice, etc.) ? Je vous promets que si vous suivez la démarche que je propose dans le présent livre, cette approche du copier-coller sera bientôt chose du passé. Finies les erreurs, finie la perte de temps et vive la productivité !\nMais tout d’abord, examinons brièvement les raisons qui me poussent à proposer l’utilisation du format R Notebook à partir de RStudio.\nDans sa version de base, l’interface d’utilisation du logiciel R est relativement aride (voir Figure @ref(fig:fig1)), ce qui n’en facilite pas l’apprentissage. Toute information échangée entre l’analyste et le logiciel passe par la console de R. Une seule petite ligne où une série de codes, plus ou moins complexes, est écrite et soumise au logiciel. Ce dernier, à partir des consignes de l’analyste, emmagasine l’information, la transforme ou l’analyse. Les résultats sont ensuite affichés après la ligne de codes dans une fenêtre déroulante. Donc, chaque nouvelle ligne de codes entraîne la disparition du résultats obtenus précédemment. Cette interface est donc particulièrement désagréable à utiliser et plus la démarche d’analyse est longue, plus elle est sujette aux erreurs de transcription des résultats de l’analyse vers le logiciel de traitement de texte. De plus, lors de la création d’un graphique, une fenêtre additionnelle s’ouvre à l’écran et bloque, régulièrement, la vue de la console de R.\nExemple de la console R classique",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Summary</span>"
+      "Partie I",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#interface-de-rstudio",
+    "href": "introduction.html#interface-de-rstudio",
+    "title": "1  Introduction",
+    "section": "1.2 Interface de RStudio",
+    "text": "1.2 Interface de RStudio\nHeureusement, certains logiciels ont été développés pour agrémenter l’usage de R. Parmi ceux-ci, le logiciel RStudio est possiblement celui dont l’utilisation est la plus répandue. RStudio présente une interface divisée en quatre fenêtres (voir Figure @ref(fig:fig2)).\n\nLa fenêtre Source comprend les lignes de codes du script .R ou .Rmd.\nLa fenêtre Console permet d’écrire une ligne de codes R ou d’obtenir les résultats d’un code R.\nLa fenêtre Environnement, History, Connexion contient les objets R en mémoire et l’historique des codes R utilisés.\nLa fenêtre Files, Plots, Packages, help, Viewer comprend de nombreuses fonctions qui permettent de copier les fichiers, examiner les graphiques, d’installer des extension, etc..\n\nMalgré sa flexibilité, dans sa version de base, RStudio demeure rigide dans sa façon de présenter l’information. En effet, les tableaux, graphiques et/ou ensembles de données doivent être exportés vers d’autres logiciels pour y être intégrés (ex: Microsoft Word) dans un document final.\n\n\n\n\n\nIllustration de la configuration de RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#langage-r-markdown",
+    "href": "introduction.html#langage-r-markdown",
+    "title": "1  Introduction",
+    "section": "1.3 Langage R Markdown",
+    "text": "1.3 Langage R Markdown\nCette rigidité est maintenant chose du passé. En effet, depuis l’intégration du langage R Markdown à l’aide de l’extension rmarkdown (Xie, Dervieux, et Riederer 2020; Xie, Allaire, et Grolemund 2018), le logiciel RStudio permet de créer des fichiers dynamiques dans plusieurs formats (HTML, PDF, Word). Cela signifie qu’une fois les données récoltées, toutes les étapes de l’analyse, en passant de la transformation des variables jusqu’à la publication du rapport final, se déroulent dans RStudio (voir Figure @ref(fig:fig3)). Par exemple, la fenêtre de gauche de la Figure @ref(fig:fig3) comprend les codes R utilisés alors que la fenêtre de droite de la Figure @ref(fig:fig3) présente le résultat final des commandes R en format .html. Cela représente un net avantage puisque chaque petit changement est automatiquement intégré dans le document final.\n\n\n\n\n\nIllustration de R Notebook. Les codes sont écrits dans la fenêtre Source à la gauche et le fenêtre Viewer présente le document final",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#format-quarto",
+    "href": "introduction.html#format-quarto",
+    "title": "1  Introduction",
+    "section": "1.4 Format Quarto",
+    "text": "1.4 Format Quarto\nBien que le langage rmarkdown permette de produire un document final dans divers formats, je me limite en n’en présenter qu’un seul, soit le format Quarto. Vous découvrirez, à la lecture du présent document, pourquoi je favorise l’utilisation du format Quarto comparativement aux autres formats proposés comme R Notebook ou R Markdown. Ainsi, après avoir complété la lecture de ce document, vous serez en mesure :\n\nd’utiliser le format de présentation Quarto afin d’examiner et d’analyser des données à partir des logiciels R et RStudio,\nde produire des documents de qualité facilement partageables avec vos collaborateurs.\n\n\n\n\n\nXie, Yihui, J. J. Allaire, et Garrett Grolemund. 2018. R Markdown: The Definitive Guide. New York: Chapman; Hall/CRC. https://doi.org/10.1201/9781138359444.\n\n\nXie, Yihui, Christophe Dervieux, et Emily Riederer. 2020. R Markdown Cookbook. Boca Raton: Chapman; Hall/CRC. https://doi.org/10.1201/9781003097471.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "R_RStudio.html",
+    "href": "R_RStudio.html",
+    "title": "2  R et RStudio",
+    "section": "",
+    "text": "2.1 Intro à R\nDans ce chapitre, vous trouverez un brève description des logiciels R et RStudio. À la toute fin de ce chapitre, vous trouverez aussi les liens pour les télécharger et les installer sur votre ordinateur1.\nR a été développé par Robert Gentleman et Ross Ihaka du département de statistiques de l’Université de Auckland (Nouvelle-Zélande). Le nom R proviendrait de la première lettre du prénom de ces deux auteurs 2. Depuis le milieu des années 1997, R est la responsabilité d’un groupe de travail intitulé The R Project (Douglass et al. 2022; Wickham et Grolemund 2017). La liste des membres de ce groupe est disponible en cliquant ici.\nR n’est pas simplement un logiciel de statistiques mais bien une suite intégrée de fonctionnalités logicielles. R est un environnement de travail pour la manipulation de données, le calcul de données et la représentation graphique de données. Entre autres, R :",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R et RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "R_RStudio.html#intro-à-r",
+    "href": "R_RStudio.html#intro-à-r",
+    "title": "2  R et RStudio",
+    "section": "",
+    "text": "permet de manipuler, d’enregistrer et de présenter des données\ncomprend de nombreux opérateurs arithmétiques, logiques et de comparaison\ncomprend une multitude d’outils pour l’analyse statistique de données\ncomprend une capacité graphique exhaustive\ncomprend un langage de programmation\n\n\n2.1.1 Avantages\nEn plus de sa gratuité (telle que discutée dans la préface), R possède de nombreux avantages.\n\nR permet de produire, à partir d’un même système, des analyses statistiques très simples mais aussi des analyses extrêmement complexes.\nLes nouvelles approches statistiques développées par les statisticiens sont rapidement implantées par les développeurs de la communauté R. Il n’est pas nécessaire d’attendre des années avant qu’une compagnie intègre cette nouvelle approche dans son logiciel.\nR possède un langage très flexible et il peut être adapté au besoin de l’utilisateur.\nR est de nature open source. Donc, les codes des différentes fonctions statistiques sont disponibles à tous, ce qui permet de vérifier l’exactitude de l’approche utilisée et de les reproduire.\nL’apprentissage de R facilite grandement l’apprentissage de d’autres logiciels statistiques, comme STATA ou SPSS. L’inverse, cependant, n’est pas vrai.\nL’apprentissage de R favorise aussi l’apprentissage de d’autres langages informatiques, comme Python.\nFogarty (2018) argumente même que la connaissance de R est un atout incomparable lors de la sélection des candidats qui appliquent aux études gradués. Selon lui, les opportunités d’emploi sont plus grandes pour les candidats ayant des connaissances avec R que pour les autres candidats.\n\n\n\n2.1.2 Désavantages\nMalgré ses avantages, R possèdent quelques inconvénients qui doivent être soulignés :\n\nContrairement à STATA, SPSS ou SAS, R n’offre pas de support d’aide centralisé. Heureusement, la communauté R est planétaire et il est relativement facile de trouver réponse à nos questions à l’aide du moteur de recherche de Google.\nLa courbe d’apprentissage de R est relativement abrupte et les premiers pas avec R peuvent être décourageants.\nIl y a un manque de consistance dans l’implantation des différentes fonctions statistiques et dans la présentation des fonctions d’aide. Certaines extensions sont très bien expliquées à l’aide de vignettes alors que d’autres sont présentées de façon très rudimentaire.\nLes mêmes fonctions statistiques peuvent apparaître dans différentes extensions, dédoublant ou triplant même la même fonctionnalité.\nDifférentes fonctions statistiques associées à des extensions différentes possèdent le même nom mais elles n’ont pas la même utilité. Heureusement, il existe des solutions relativement simples pour préciser la fonction que nous désirons utiliser.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R et RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "R_RStudio.html#intro-à-rstudio",
+    "href": "R_RStudio.html#intro-à-rstudio",
+    "title": "2  R et RStudio",
+    "section": "2.2 Intro à RStudio",
+    "text": "2.2 Intro à RStudio\nRStudio, contrairement à R, est une compagnie privée (voir : https://rstudio.com/about/). RStudio est une interface logicielle entre R et l’utilisateur. Dans sa version de base, telle que démontrée précédemment, R présente une interface relativement sévère qui est difficile à utiliser. RStudio a été développé dans le but d’améliorer le plaisir de l’utilisateur qui interagit avec R.\nTel que présenté précédemment (voir Figure @ref(fig:fig2)), RStudio comprend plusieurs fenêtres qui permettent à l’analyste de rédiger les codes R, tout en examinant les données et les résultats. De plus, RStudio facilite l’exportation des résultats en plusieurs formats (.docx, .pdf, .html) à partir de l’extension rmarkdown.\nNotons que RStudio ne se limite pas à être l’interface avec R puisque de nombreux autres langages de programmation y ont été intégrés (ex : Python, STAN, C++). Nous allons utiliser la version gratuite de RStudio, soit RStudio IDE. IDE signifie Integrated Development Environment. RStudio IDE fonctionne avec plusieurs systèmes d’exploitation, dont Windows, MacOS et Linux.\nAfin de faciliter l’interaction avec R, certaines alternatives à RStudio existent. À titre d’exemples, je souligne Jupyter notebook, Jupyter lab, Architect, ou R AnalyticFlow. Malgré tout, RStudio demeure le standard de qualité quand vient le temps d’interagir avec R. Personnellement, si RStudio n’existait pas, j’opterais pour Jupyter notebook via son intégration avec la plateforme Anaconda Navigator, principalement en raison de sa simplicité d’utilisation et de son intégration avec le langage Markdown. La Figure @ref(fig:anaconda) présente un exemple de codes R à partir de l’application Jupiter notebook (à gauche) et son rendu en format .html (à droite).\n\n\n\n\n\nIllustration de codes R et du langage Markdown à partir de l’application Jupiter Notebook (image de gauche) et son rendu en format .html (image de droite)\n\n\n\n\n\n2.2.1 Avantages\nDans le but de faciliter l’interaction avec l’utilisateur, RStudio présente quelques avantages très notables. Bien que ma démarche de présentation peut sembler un peu précoce pour celles et ceux d’entre vous qui ne connaissez pas encore RStudio, j’en profite immédiatement pour présenter deux de ses avantages.\n\n2.2.1.1 Syntaxe intégrée\nRStudio facilite la rédaction des scripts R en proposant de compléter votre syntaxe. Ainsi, dès que vous débutez à écrire le nom d’une fonction, RStudio propose (1) le nom de quelques fonctions qui débute par les mêmes lettres et (2) la syntaxe à suivre pour compléter l’écriture de la fonction. Par exemple, imaginons que nous désirons effectuer un test binomial. Le nom de la fonction à utiliser est binom.test(). Dans un bloc de codes R, dès que j’inscris binom, RStudio me propose deux choix possibles de fonctions qui débutent par binom (voir Figure @ref(fig:binom)). Il me suffit de sélectionner celle que je désire utiliser pour qu’elle se complète automatiquement dans mon bloc de codes R. Par la suite, RStudio propose à nouveau la syntaxe à utiliser pour compléter l’écriture de la fonction sélectionnée (voir Figure @ref(fig:binom2)).\n\n\n\n\n\nSuggestions de fonctions offertes par RStudio\n\n\n\n\n\n\n\n\n\nSyntaxe proposée par RStudio pour la fonction binom.test\n\n\n\n\n\n\n2.2.1.2 Examiner les objets R\nLa fenêtre Environment vous permet de voir rapidement tous les objets R que vous avez créés lors de votre session de travail et de les examiner via une fenêtre qui ressemble à un chiffrier électronique (comme Excel ou Numbers). Prenons l’exemple du bloc de codes R de la Figure @ref(fig:d1) dans lequel j’ai créé un ensemble de données nommé d1 qui contient le quotient intellectuel (QI) de 10 participants fictifs :\n\n\n\n\n\nCréation de l’objet d1 qui contient le QI de 10 participants\n\n\n\n\nJe peux examiner le contenu de cet objet d1 à partir de la fenêtre Environment de RStudio en cliquant sur le triangle blanc placée dans un cercle bleu à la gauche l’objet d1 (voir Figure @ref(fig:d2)).\n\n\n\n\n\nExaminer le contenu de l’objet d1 dans la fenêtre Environment de RStudio\n\n\n\n\nJe peux aussi examiner l’ensemble du contenu de l’objet d1 en cliquant sur le symbole du chiffrier situé à l’extrême droite de l’objet d1 dans le fenêtre Environment (voir Figure @ref(fig:d3)) :\n\n\n\n\n\nExaminer le contenu de l’objet d1 à l’aide du tableur intégré de RStudio\n\n\n\n\n\n\n\n2.2.2 RStudio - vidéo d’introduction\nLe nombre d’options offertes par RStudio est particulièrement vaste et seule une bonne séance de travail avec RStudio nous permettrait d’en faire le tour. Néanmoins, ci-dessous, j’ai ajouté un lien pour une vidéo (10 min. 13 sec.) qui montre les principales caractéristiques de RStudio. Pour toute personne qui débute avec RStudio, le visionnement de cette vidéo est fortement recommandé. Personnellement, j’aurais bien aimé avoir accès à ce type de documentation lorsque j’ai débuté à utiliser RStudio !\n\nVidéo (en anglais) : Comment utiliser RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R et RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "R_RStudio.html#installer-r-rstudio",
+    "href": "R_RStudio.html#installer-r-rstudio",
+    "title": "2  R et RStudio",
+    "section": "2.3 Installer R & RStudio",
+    "text": "2.3 Installer R & RStudio\nSi vous avez déjà installé R et RStudio, vous pouvez sauter cette section.\n\n2.3.1 Vidéo d’installation\nSi vous n’avez pas encore installé R et RStudio, voici une vidéo (7 min. 38 sec.) dans laquelle je montre comment installer les logiciels R et RStudio à partir du site web de téléchargement de la compagnie Posit. La démonstration est faite à la fois pour le système d’exploitation Windows et pour le système d’exploitation macOS. Pour macOS, j’explique aussi comment identifier si votre ordinateur possède un processeur Apple silicon ou un processeur Intel, ce qui est important pour télécharger la bonne version de R. La Section @ref(liensweb) présente les liens web pour installer R et RStudio.\n\nVidéo (en français) : Installation R RStudio\n\n\n\n2.3.2 Liens web\nVoici les liens pour télécharger une version récente (et gratuite) de R et de RStudio. Assurez-vous de télécharger les versions adaptées à votre système d’exploitation (OS, Windows, Linux) :\n\nR\nRStudio Desktop.\nXQuartz. Pour les utilisateurs d’ordinateur Mac, l’installation du logiciel XQuartz est aussi nécessaire pour la version 10.9 de OS X et les versions les plus récentes de OS X.\n\n\n\n2.3.3 Installation\nUne fois les fichiers .exe (PC) ou .dmg (Mac) téléchargés dans votre dossier de Téléchargement, cliquez sur les fichiers pour installer les applications et ensuite, suivez les étapes d’installation. Débutez par installer R avant d’installer RStudio.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R et RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "R_RStudio.html#problèmes-et-solutions",
+    "href": "R_RStudio.html#problèmes-et-solutions",
+    "title": "2  R et RStudio",
+    "section": "2.4 Problèmes et solutions",
+    "text": "2.4 Problèmes et solutions\nDans l’éventualité où, peu importe la raison, vous ne réussissez pas à installer une version pleinement fonctionnelle de R et/ou de RStudio sur votre ordinateur, je vous encourage à utiliser RStudio Cloud (voir Chapitre @ref(rcloud)). Cette version de RStudio vous permet d’utiliser R et RStudio directement dans votre navigateur web.\n\n\n\n\nDouglass, Alex, Deon Roos, Francesca Mancini, Ana Couto, et David Lusseau. 2022. An Introduction to R. https://alexd106.github.io/Rbook/.\n\n\nFogarty, Brian J. 2018. Quantitative Social Science Data with R: An Introduction. Thousand Oaks, California: SAGE Publications, Inc. https://us.sagepub.com/en-us/nam/quantitative-social-science-data-with-r/book257236.\n\n\nWickham, Hadley, et Garrett Grolemund. 2017. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 1st edition. Sebastopol, CA: O’Reilly Media. https://r4ds.had.co.nz/.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R et RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "R_RStudio.html#footnotes",
+    "href": "R_RStudio.html#footnotes",
+    "title": "2  R et RStudio",
+    "section": "",
+    "text": "L’interface web RStudio Cloud permet d’utiliser gratuitement les logiciels R et RStudio sans qu’il ne soit nécessaire de télécharger R et RStudio sur votre ordinateur. Mais prenez note qu’il y a un maximum d’heures gratuites d’utilisation et votre compte devient bloquer jusqu’au mois suivant. La seule solution consiste à payer un certain montant d’argent par mois ($).↩︎\nPrenez note que R est un langage de programmation qui s’apparente au langage S, lequel a été développé par Rick Becker, John Chambers et Allan Wilks de la compagnie AT&T Bell Laboratories.↩︎",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>R et RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "Extensions_R.html",
+    "href": "Extensions_R.html",
+    "title": "3  Extensions R",
+    "section": "",
+    "text": "3.1 Installation des extensions\nBien qu’à la base, R possède une multitude de fonctionnalités, il y a toujours une fonction qui manque ! En raison de sa license d’utilisation, R peut facilement être amélioré à partir d’extensions (en anglais : packages). Les extensions sont des programmes qui s’ajoutent à R. Ces extensions sont développées par des programmeurs indépendants et ils répondent à des besoins spécifiques. Bref, de nombreux programmeurs ont ajouté (et ajoutent encore) de nombreuses extensions dont le but est d’ajouter les fonctions manquantes à R. Vous pouvez consulter la liste des nouvelles extensions en consultant le site https://rweekly.org/archive.\nLors de son téléchargement initial, la version de base de R comprend déjà plusieurs extensions. Mais, selon ses besoins, l’utilisateur peut en ajouter autant qu’il le veut. Habituellement, les extensions sont déposées par leur(s) auteur(s) sur CRAN. CRAN signifie Comprehensive R Archive Network. Le nombre d’extensions disponibles sur CRAN se chiffre par milliers. Bien que les extensions ne soient pas toutes disponibles sur CRAN (plusieurs sont disponibles sur GitHub ou d’autres sites webs indépendants), il est avantageux d’utiliser les extensions disponibles sur CRAN :\nL’installation des extensions peut se faire de différentes façons via l’interface de RStudio. Malgré tout, selon moi, l’approche la plus simple consiste à inscrire la ligne de code install.packages(pkgs=\"nom de l'extension\") dans la fenêtre Console de RStudio1.\nTout comme les logiciels que nous installons et que nous utilisons sur notre ordinateur (ex: Microsoft Word), les extensions ne doivent être installées qu’une seule fois mais elles doivent être ouvertes à chaque fois que nous voulons les utiliser durant une séance de travail2. De plus, tout comme nos logiciels, les extensions doivent être mises à jour régulièrement parce que les auteurs leur apportent des améliorations3.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Extensions R</span>"
+    ]
+  },
+  {
+    "objectID": "Extensions_R.html#extension-rmarkdown",
+    "href": "Extensions_R.html#extension-rmarkdown",
+    "title": "3  Extensions R",
+    "section": "3.2 Extension rmarkdown",
+    "text": "3.2 Extension rmarkdown\nAu cours des années, certaines extensions sont devenues très populaires et elles sont pour ainsi dire essentielles. L’extension rmarkdown est l’une de celles-ci. L’extension rmarkdown est décrite, par ses auteurs, comme un cadre de travail qui :\n\npermet d’écrire, d’exécuter et de sauvegarder des codes d’analyses et\nde produire des documents de haute qualité qui sont reproductibles, dynamiques et disponibles dans plusieurs formats.\n\nParmi les formats R Markdown disponibles, notons le format PDF, HTML (incluant le format R Notebook), Word. De plus, l’extension rmarkdown permet de produit des documents écrits (comme des livres électroniques, via l’extension Bookdown) mais aussi des présentations (comme PowerPoint, via R Presentation).",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Extensions R</span>"
+    ]
+  },
+  {
+    "objectID": "Extensions_R.html#installer-rmarkdown",
+    "href": "Extensions_R.html#installer-rmarkdown",
+    "title": "3  Extensions R",
+    "section": "3.3 Installer rmarkdown",
+    "text": "3.3 Installer rmarkdown\nSi vous avez déjà installé l’extension rmarkdown, vous n’avez rien à faire et vous pouvez sauter cette étape.\nPour utiliser le format R Notebook, il faut donc que l’extension rmarkdown soit installée dans R via RStudio. L’approche la plus simple pour installer l’extension rmarkdown consiste à :\n\nouvrir le logiciel RStudio\nécrire install.packages(\"rmarkdown\") dans la fenêtre Console de RStudio (notez que selon la configuration des fenêtres de RStudio, la fenêtre Console peut se trouver en bas à gauche de l’écran) (Voir Figure @ref(fig:fig4))\nappuyer sur la touche enter (↵)\n\n\n\n\n\n\nInstallation de l’extension rmarkdown à partir de la fenêtre Console de RStudio\n\n\n\n\n\nPar la suite, un message confirme l’installation de l’extension (nommée package, en anglais) dans la Console de RStudio (Voir Figure @ref(fig:fig5)).\n\n\n\n\n\n\nConfirmation de l’installation",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Extensions R</span>"
+    ]
+  },
+  {
+    "objectID": "Extensions_R.html#footnotes",
+    "href": "Extensions_R.html#footnotes",
+    "title": "3  Extensions R",
+    "section": "",
+    "text": "Faites attention de ne pas écrire cette ligne de codes dans votre script R de la fenêtre Source de RStudio. Sinon, l’extension sera réinstallée à toutes les fois que vous exécuterez le bloc de codes qui le contient dans la fenêtre Source. Si vous oubliez, ce n’est pas dommageable pour votre ordinateur mais c’est simplement inutile…↩︎\nÀ partir du code library(nom de l'extension) que nous inscrivons dans le script R de la fenêtre Source de RStudio.↩︎\nPour mettre à jour une extension en particulier, il suffit de réinstaller l’extension à partir du code install.packages(pkgs=\"nom de l'extension\")↩︎",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Extensions R</span>"
+    ]
+  },
+  {
+    "objectID": "Quarto.html",
+    "href": "Quarto.html",
+    "title": "4  Application Quarto",
+    "section": "",
+    "text": "4.1 Démarche avec Quarto\nL’application Quarto permet d’utiliser le logiciel R à partir de blocs de codes qui sont intégrés dans le document. Ces blocs de codes R sont insérés, au besoin, autour du texte qui documente la démarche de l’analyste. Il est donc possible de combiner le texte et les analyses (incluant tableaux, figures, résultats) à l’intérieur d’un même document.\nLa démarche de l’analyste qui utilise Quarto se résume, normalement, par les étapes suivantes :\nLa Figure @ref(fig:nb123) présente un résumé visuel de cette démarche :\nDémarche de l’analyste qui utilise le format R Notebook",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Application Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Quarto.html#démarche-avec-quarto",
+    "href": "Quarto.html#démarche-avec-quarto",
+    "title": "4  Application Quarto",
+    "section": "",
+    "text": "Créer un document Quarto à partir de RStudio.\nAjuster les métadonnées du ficher Quarto pour les rendre conformes au type de document final désiré.\nInsérer un bloc de codes R et importer un ou des fichiers de données (ex : via un fichier Excel).\nExaminer, manipuler, analyser et présenter les données à l’aide de plusieurs blocs de codes R.\nDocumenter sa démarche d’analyse et ses interprétations en insérant du texte autour des blocs de codes R à l’aide du langage R Markdown. Normalement, cette étape est effectuée à chaque fois qu’un bloc de codes R est intégré dans le document R Notebook.\nGénérer, sauvegarder et publier le document final (en format HTML, PDF ou Word).",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Application Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Quarto.html#avantages",
+    "href": "Quarto.html#avantages",
+    "title": "4  Application Quarto",
+    "section": "4.2 Avantages",
+    "text": "4.2 Avantages\nLe format Quarto possède de nombreux avantages :\n\nSon premier avantage réside dans la flexibilité du format de présentation. En effet, le document final peut facilement être exporté1 en format HTML, Word ou PDF (ce dernier, à l’aide du langage LaTeX).\nSon second avantage réside dans le fait que les résultats obtenus à l’aide des codes exécutés dans Quarto peuvent s’afficher directement sous les codes R à l’écran, mimant ainsi Jupiter Notebook pour le langage de programmation Python. Cela facilite la documentation des différentes étapes de l’analyse statistique.\nSon troisième avantage est que la rédaction du document se fait à l’aide du langage R Markdown. La syntaxe Markdown est simple et facile à utiliser, ce qui permet de créer des documents de qualité sans à avoir à insérer une série de codes plus ou moins complexes (comme le langage html).\nSon quatrième avantage est que l’analyste peut documenter ses analyses et ses conclusions dans le même document que celui utilisé pour examiner, organiser, analyser et présenter ses résultats. Cette approche permet facilement le partage et la reproductibilité des conclusions tirées par l’analyste.\nFinalement, l’intégration de R avec RStudio via le format Quarto est dynamique. Cela signifie que lorsque les données utilisées pour produire les analyses changent (exemple : par l’ajout de nouveaux participants), une nouvelle exécution des blocs de codes R rafraîchissent simultanément les tableaux et les figures du document R Notebook. Il n’est donc pas nécessaire d’utiliser la vieille et désuète technique du copier-coller, laquelle est propice aux erreurs et aux oublis.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Application Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Quarto.html#désavantages",
+    "href": "Quarto.html#désavantages",
+    "title": "4  Application Quarto",
+    "section": "4.3 Désavantages",
+    "text": "4.3 Désavantages\nQuarto possède aussi quelques désavantages dont il faut être conscients et qu’il ne faut pas oublier, faute de quoi, l’utilisation de Quarto sera désagréable et le document final ne sera pas satisfaisant.\n\nMalgré sa simplicité d’utilisation, le format Quarto (et le langage Markdown) demande, lors de ses premières utilisations, de porter attention à de nombreux petits détails qui risquent d’importuner et de décourager l’utilisateur. Heureusement, le présent document examine la majorité de ces détails et il suffit de suivre la démarche présentée pour obtenir un document de qualité. Aussi, au lien de débuter avec un fichier neuf à toutes les fois, je recommande fortement de dupliquer les fichiers Quarto qui fonctionnement bien. Cette approche accélère la productivité !\nUne autre difficulté réside dans le fait qu’au début, l’utilisateur tente d’apprendre à la fois l’utilisation du format Quarto (via le logiciel RStudio) et celle du logiciel R. L’apprenant a parfois de la difficulté à dissocier les codes du logiciel R avec ceux du format R Notebook. Le présent document a justement pour objectif de permettre à l’apprenant de bien maîtriser le format Quarto, pour se concentrer, par la suite, sur l’apprentissage des codes R.\nLe format Quarto est dynamique. Il est donc un peu gourmant au niveau de la mémoire pour les ordinateurs qui commencent à avoir de l’âge. Pour les documents courts, cela ne cause pas de problème. Mais pour les documents longs, cela risque d’agacer l’utilisateur.\nLe format Quarto est extrêmement bien adapté à la production de documents électroniques de type HTML. Malheureusement, l’exportation vers les formats PDF et Word nécessitent souvent des ajustements après la production final du document.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Application Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Quarto.html#footnotes",
+    "href": "Quarto.html#footnotes",
+    "title": "4  Application Quarto",
+    "section": "",
+    "text": "Pour exporter le fichier dans un autre format, comme le format LaTeX. Mais ce format ne sera pas abordé dans le présent document. Notez que le format PDF n’est disponible que si vous avez déjà installé le langage LaTeX sur votre ordinateur. À partir d’un bloc de codes R, il est possible d’installer TinyTeX, laquelle est une librairie qui permet la publication en format LaTeX. Après avoir installer la librairie TinyTeX à l’aide du code install.packages('tinytex'), tapez le code tinytex::install_tinytex() suivi de la touche ↵.↩︎",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Application Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "RStudio_options.html",
+    "href": "RStudio_options.html",
+    "title": "5  Options de RStudio",
+    "section": "",
+    "text": "5.1 Options Code\nAvant de créer notre premier fichier R Notebook, je me propose de vous initier à quelques options de RStudio qui détermineront votre façon de travailler avec R Notebook1. Dans le menu principal de RStudio, sélectionnez l’onglet Tools &gt; Global Options… (voir Figure @ref(fig:fig6).\nDans un premier temps, il faut s’assurer que le type d’encodage de RStudio soit réglé à UTF-8. Cela nous assure que les accents seront disponibles en tout temps d’un ordinateur à l’autre. Dans le menu principal de RStudio, sélectionnez l’onglet Tools &gt; Global Options…. Ensuite, dans Code, sélectionnez Saving, cliquez sur Change…, sélectionnez UTF-8 et cliquez sur OK (voir Figure @ref(fig:fig7)).\nSélection du code UTF-8",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Options de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "RStudio_options.html#rstudio-affichage",
+    "href": "RStudio_options.html#rstudio-affichage",
+    "title": "5  Options de RStudio",
+    "section": "5.2 RStudio affichage",
+    "text": "5.2 RStudio affichage\nRStudio présente normalement quatre fenêtres, lesquelles peuvent être agencées selon les préférences de l’utilisateur :\n\nSource : Où nous écrivons le script de l’analyse (texte et codes)\nConsole : Où nous retrouvons les résultats des codes exécutés. Il est aussi possible d’écrire des codes dans la console\nEnvironnement, History, Connection : Où nous retrouvons les objets R et les ensembles de données disponibles\nFiles, Plots, Packages, Help, View : Contient plusieurs fenêtres très utiles où nous retrouvons nos fichiers, nos graphiques, nos extensions, l’aide et la visionneuse.\n\nPersonnellement, j’organise mes fenêtres selon la configuration présentée à la Figure @ref(fig:fig8). Deux raisons supportent ce choix:\n\nJe peux réduire au minimum la fenêtre Environnement afin de maximiser l’espace pour rédiger mon script R dans la fenêtre Source de RStudio.\nLa ligne de codes de la Console est toujours disponible. Cela me permet, par exemple, d’installer rapidement de nouvelles extensions ou de faire un calcul rapide.\n\nEn classe, je recommande à mes étudiants d’utiliser aussi cette configuration. De cette manière, les informations sont disposées aux mêmes endroits sur mon écran et sur leur écran de travail.\n\n\n\n\n\nConfiguration recommandée pour les fenêtres de RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Options de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "RStudio_options.html#r-markdown-options",
+    "href": "RStudio_options.html#r-markdown-options",
+    "title": "5  Options de RStudio",
+    "section": "5.3 R Markdown Options",
+    "text": "5.3 R Markdown Options\nL’utilisation du format R Notebook nécessite de prendre quelques décisions avec le format d’affichage de R Markdown dans RStudio. Ci-dessous, je montre comment faire ces choix après avoir sélectionné, dans le menu principal de RStudio, l’onglet Tools &gt; Global Options….\nEt voici les choix possibles dans dans la fenêtre R Markdown &gt; Basic (voir lignes et cercles rouges dans la Figure @ref(fig:fig9)) :\n\n5.3.1 Affichage Résultats\n\n\n\n\n\nOption pour obtenir le résultat d’un code R sous le bloc de codes\n\n\n\n\n\nLorsque nous travaillons avec R Notebook, quelques options s’offrent à nous pour afficher le résultat du code R que nous venons d’exécuter :\n\nNous pouvons l’afficher directement sous le bloc de codes R (option = cochez Show output inline…). Voir Figure @ref(fig:fig9).\nSi cette option n’est pas cochée, selon le type de codes R, le résultat apparaîtra dans l’une des fenêtres suivantes de RStudio : Console, Plots ou Viewer.\n\nAvec R Notebook, je recommande de cocher l’option Show output inline… parce qu’on peut voir et conserver à l’écran le résultat d’un bloc de codes (voir un exemple dans la Figure @ref(fig:fig10)).\n\n\n\n\n\n\nExemple d’un résultat présenté sous un bloc de codes\n\n\n\n\n\n\n5.3.2 Affichage Doc Final\n\n\n\n\n\nSélection de l’option Viewer Pane lorsque nous travaillons avec le format R Markdown\n\n\n\n\n\nAvec le format R Notebook, lorsque nous générons le document final en cliquant sur l’option Preview, le document final peut être affiché (voir Figure @ref(fig:fig11)) :\n\ndans une nouvelle fenêtre (option =&gt; Viewer Pane =&gt; Window), ou\ndans la fenêtre Viewer de RStudio (option =&gt; Viewer Pane =&gt; Viewer Pane).\n\nAvec R Notebook, je recommande l’option Viewer Pane  parce qu’on peut voir en temps réel (ou presque) les changements apportés à notre document à partir de la fenêtre Source de RStudio. Dans l’exemple ci-dessous (voir Figure @ref(fig:fig12)), le texte et les blocs de codes R sont dans la fenêtre Source (à gauche) et le document final en format html est disponible dans la fenêtre Viewer (à droite).\n\n\n\n\n\n\nExemple du format R Notebook dans la fenêtre Viewer de RStudio (à droite dans la figure ci-haut)",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Options de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "RStudio_options.html#dictadd",
+    "href": "RStudio_options.html#dictadd",
+    "title": "5  Options de RStudio",
+    "section": "5.4 Changer la langue du dictionnaire",
+    "text": "5.4 Changer la langue du dictionnaire\nPar défaut, RStudio propose l’anglais comme langue d’usage. Le dictionnaire associé à RStudio est donc en anglais. Il est possible de changer la langue du dictionnaire. Voici les étapes à suivre.\n\n5.4.1 Ajouter des dictionnaires\nÀ partir de l’onglet Tools de RStudio, sélectionnez Global Options… (Figure @ref(fig:spell1)). Dans la fenêtre Options, cliquez sur Spelling. Sur la ligne de l’option Main dictionary language, cliquez sur le symbole combiné des flèches montantes (▲) et descendantes (▼). Finalement, dans la bande déroulante, sélectionnez l’option Install More Languages.\n\n\n\n\n\nAjouter des dictionnaires supplémentaires dans RStudio\n\n\n\n\n\n\n5.4.2 Ajouter le dictionnaire français\nAprès avoir cliquer sur Install More Languages, une roue pointillée apparaît avec l’appellation Downloading additional languages. Lorsque ces informations disparaissent, cliquez sur la flèche descendante située à la droite de la langue par défaut (English) de RStudio et, dans la bande déroulante, sélectionnez French (Figure @ref(fig:spell2)).\n\n\n\n\n\nAjouter le dictionnaire français à RStudio\n\n\n\n\nN’oubliez pas de cliquez sur OK au bas de la page pour confirmer l’utilisation du dictionnaire français comme dictionnaire principal de RStudio (Figure @ref(fig:spell3)).\n\n\n\n\n\nAjouter des dictionnaires supplémentaires dans RStudio\n\n\n\n\n\n\n5.4.3 Vérification\nPour vérifier si vous avez bien installé le dictionnaire français, fermez la fenêtre Options de RStudio et ouvrez la de nouveau. En cliquant sur l’onglet Spelling, vous verrez que le dictionnaire principal de RStudio est French (Figure @ref(fig:spell4)).\n\n\n\n\n\nAjouter des dictionnaires supplémentaires dans RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Options de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "RStudio_options.html#mot-de-la-fin",
+    "href": "RStudio_options.html#mot-de-la-fin",
+    "title": "5  Options de RStudio",
+    "section": "5.5 Mot de la fin",
+    "text": "5.5 Mot de la fin\nUne fois qu’elles ont été sélectionnées, les différentes options de RStudio sont mémorisées et entrent en action dès l’ouverture de RStudio. Donc, vous pouvez fermer le logiciel RStudio et l’ouvrir de nouveau sans craindre de perdre les options sélectionnées ci-haut. Par expérience, je connais des étudiants qui n’ont jamais fermé le logiciel RStudio durant tout un semestre universitaire, soit quatre mois consécutifs, par peur de perdre la configuration de travail de RStudio. N’ayez pas cette crainte.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Options de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "RStudio_options.html#footnotes",
+    "href": "RStudio_options.html#footnotes",
+    "title": "5  Options de RStudio",
+    "section": "",
+    "text": "Prenez note que les options proposées s’inscrivent dans une démarche pédagogique et qu’au départ, il est préférable de sélectionner les options proposées. Par ailleurs, au fil de votre apprentissage, vous voudrez peut être modifier ces options. Libre à vous, à ce moment là, de sélectionner les options qui vous conviendront le mieux. Par exemple, il m’arrive fréquemment de décocher l’option Output inline afin d’avoir plus d’espace pour mes lignes de codes dans la fenêtre Source de RStudio.↩︎",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Options de RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "RProject.html",
+    "href": "RProject.html",
+    "title": "6  Projet RStudio - niveau I",
+    "section": "",
+    "text": "6.1 Nouveau projet RStudio\nPuisque la démarche d’analyse de données nécessite le besoin de travailler avec plusieurs fichiers, je recommande fortement de créer un Projet RStudio. Un Projet RStudio est un répertoire sur votre ordinateur qui contient tous les fichiers nécessaires pour compléter un projet d’analyses statistiques. Cette approche permet de s’assurer que tous les fichiers (.Rmd, .txt, .dat, .csv, etc.) soient disponibles dans le même environnement de travail.\nPar expérience, je peux vous assurer que c’est une excellente idée que de créer un projet RStudio. Vous m’en remercierez bien plus tard lorsque vous verrez vos collègues, qui n’utilisent pas cette approche, chercher pendant de nombreuses minutes leurs fichiers de données sur leur disque dur ! Évidemment, ils vont blâmer R et RStudio… ou peut être même leur professeur !\nPour créer un projet RStudio, il faut ouvrir le logiciel RStudio. Dans le menu RStudio, sélectionnez File &gt; New Project… (ou cliquez sur l’icone avec un rond vert et le signe + blanc à l’intérieur superposé sur un hexagone bleu avec la lettre R à l’intérieur) (voir Figure @ref(fig:fig131)).\nCréer un nouveau projet RStudio à partir du menu de RStudio\nDans la fenêtre qui s’ouvre (voir Figure @ref(fig:fig132)), je vous invite à sélectionner New Directory &gt; New Project &gt; Directory Name:. De cette manière, vous allez pouvoir créer votre répertoire de travail qui contiendra tous vos fichiers. Le nom du projet doit refléter la nature du travail. Sélectionnez le sous-répertoire où vous voulez créer votre projet sur le disque dur de votre ordinateur. Dans l’exemple de la Figure @ref(fig:fig132), j’ai nommé mon projet Projet_1 et, à partir de l’option Browse…, je l’ai placé dans le répertoire ~/Desktop/PSYC2002/Periode1. Aussi, lors de la création du projet R, je suggère de cocher la case Open in new session (voir en base à gauche de la dernière fenêtre de la Figure @ref(fig:fig132)).\nCréer un nouveau répertoire qui contiendra tous les fichiers associés à un projet RStudio\nUne fois le projet créé, ce dernier s’affiche dans l’en-tête de RStudio et un fichier avec l’extension .Rproj s’ajoute dans le répertoire associé à ce projet (voir @ref(fig:fig133)). Dans mon exemple, ce fichier se nomme Projet_1.Rproj et la fenêtre Files de RStudio nous indique qu’il se trouve dans le répertoire associé à ce projet.\nFichier avec l’extension .Pproj disponible dans le répertoire associé au projet RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Projet RStudio - niveau I</span>"
+    ]
+  },
+  {
+    "objectID": "RProject.html#fermer-un-projet-rstudio",
+    "href": "RProject.html#fermer-un-projet-rstudio",
+    "title": "6  Projet RStudio - niveau I",
+    "section": "6.2 Fermer un projet RStudio",
+    "text": "6.2 Fermer un projet RStudio\nUne fois que votre projet RStudio est créé, vous pouvez le fermer en sélectionnant, dans le menu principal de RStudio, l’onglet File et sélectionner Close project dans la bande déroulante. Il est aussi possible de fermer votre projet en cliquant sur le nom de votre projet (coin supérieur droit de RStudio) et de sélectionner Close Project dans la bande déroulante (voir @ref(fig:closeRproject)).\n\n\n\n\n\nFermeture d’un projet RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Projet RStudio - niveau I</span>"
+    ]
+  },
+  {
+    "objectID": "RProject.html#ouvrir-un-projet-rstudio",
+    "href": "RProject.html#ouvrir-un-projet-rstudio",
+    "title": "6  Projet RStudio - niveau I",
+    "section": "6.3 Ouvrir un projet RStudio",
+    "text": "6.3 Ouvrir un projet RStudio\nAu début d’une session de travail, lorsque vous désirez ouvrir un projet RStudio en particulier, rendez-vous, à l’aide du logiciel Finder (Mac) ou Explorateur de fichiers (PC) dans le répertoire qui contient ce fichier .Rproj sur votre ordinateur et cliquez sur le nom du fichier .Rproj. RStudio va ouvrir le projet et les fichiers associés.\nUne autre approche consiste à ouvrir RStudio et, dans le menu principal de RStudio, sélectionnez l’onglet File et dans la bande déroulante, sélectionnez Open Project… ou Recent Projects. Il est aussi possible d’ouvrir votre projet en cliquant sur le nom de votre projet (coin supérieur droit de RStudio) et de sélectionner Open Project… ou Recent Projects dans la bande déroulante (voir @ref(fig:openRproject)).\n\n\n\n\n\nOuverture d’un projet RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Projet RStudio - niveau I</span>"
+    ]
+  },
+  {
+    "objectID": "RProject.html#ouvrir-plusieurs-projets-rstudio-stimultanément",
+    "href": "RProject.html#ouvrir-plusieurs-projets-rstudio-stimultanément",
+    "title": "6  Projet RStudio - niveau I",
+    "section": "6.4 Ouvrir plusieurs projets RStudio stimultanément",
+    "text": "6.4 Ouvrir plusieurs projets RStudio stimultanément\nRégulièrement, l’analyste travaille sur plusieurs projets simultanément. Il doit donc ouvrir deux ou plusieurs projets RStudio en même temps sur son ordinateur. Après l’ouverture d’un premier projet RStudio, l’approche pour ouvrir un second projet RStudio consiste à sélectionner l’option Open Project in New Session… dans la bande déroulante (voir Figure @ref(fig:openRprojectNS)). De cette manière, l’analyste pourra se déplacer d’un projet à l’autre sans fermer le premier projet ouvert, ce qui se produirait en optant pour l’option Close Project.\n\n\n\n\n\nOuverture d’un projet RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Projet RStudio - niveau I</span>"
+    ]
+  },
+  {
+    "objectID": "RProject.html#options-projet-rstudio",
+    "href": "RProject.html#options-projet-rstudio",
+    "title": "6  Projet RStudio - niveau I",
+    "section": "6.5 Options Projet RStudio",
+    "text": "6.5 Options Projet RStudio\nFinalement, voici quelques options que je vous encourage à sélectionner pour vos projets RStudio. Débutons par ouvrir la fenêtre des options associées aux projets RStudio. Dans la bande déroulante, sélectionnez l’option Project Options…, juste en bas de la liste (voir @ref(fig:optionRproj)).\n\n\n\n\n\nOuverture d’un projet RStudio\n\n\n\n\n\n6.5.1 Options General\nDans l’onglet General, sélectionnez l’option No pour les deux premiers choix. Cela va réduire la durée de la fermeture de vos projets RStudio (voir @ref(fig:optionRprojGeneral)).\n\n\n\n\n\nOptions générales d’un projet RStudio\n\n\n\n\n\n\n6.5.2 Options Spelling\nDans l’onglet Spelling, sélectionnez le dictionnaire French dans la bande déroulante du dictionnaire principal (voir la Figure @ref(fig:optionRprojSpell)). Si le dictionaire French n’est pas disponible, veuillez installer les dictionnaires additionnels en suivant la procédure présentée à la section @ref(dictadd).\n\n\n\n\n\nOptions du dictionnaire d’un projet RStudio",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Projet RStudio - niveau I</span>"
+    ]
+  },
+  {
+    "objectID": "RProject.html#rprojet---niveau-avancé",
+    "href": "RProject.html#rprojet---niveau-avancé",
+    "title": "6  Projet RStudio - niveau I",
+    "section": "6.6 Rprojet - niveau avancé",
+    "text": "6.6 Rprojet - niveau avancé\nLe Chapitre @ref(niveau2) va plus en détails dans l’organisation de la structure d’un projet RStudio. Vous êtes invités à y jeter un coup d’oeil.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Projet RStudio - niveau I</span>"
+    ]
+  },
+  {
+    "objectID": "Posit_cloud.html",
+    "href": "Posit_cloud.html",
+    "title": "7  Posit Cloud",
+    "section": "",
+    "text": "7.1 Création d’un compte\nDans ce chapitre, j’introduis l’application RStudio Cloud. RStudio Cloud est la version web de RStudio IDE. Elle permet :\nSi vous avez téléchargé avec succès les applications R et RStudio sur votre ordinateur (et quelles fonctionnent correctement) et que vous n’envisagez pas de partager vos projets d’analyse avec quelqu’un d’autre (ce qui arrive rarement, soit dit en passant), vous pouvez sauter la lecture de ce chapitre.\nBien que RStudio Cloud s’apparente à la version locale1 de RStudio IDE, les premiers pas avec RStudio Cloud peuvent s’avérer difficiles. Dans le présent chapitre, je désire soulever quelques éléments importants afin de maximiser l’expérience d’utilisation de RStudio Cloud.\nLa première étape consiste à créer un compte gratuit (Free) sur le site web de RStudio Cloud (voir Figure @ref(fig:signup)). Notez, par ailleurs, que l’utilisateur atteint très rapidement les limites d’utilisation du plan gratuit de RStudio Cloud. Dans l’optique où l’utilisateur (i) dépasse le nombre de projets ou d’espaces de travail admissibles, (ii) dépasse le nombre d’heures par projet disponibles, ou (iii) qu’il désire augmenter la mémoire RAM et la vitesse d’exécution des codes, le plan Premium de RStudio Cloud s’avère une alternative intéressante, mais relativement dispendieuse2.\nProcédure de création d’un compte gratuit avec RStudio Cloud",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Posit Cloud</span>"
+    ]
+  },
+  {
+    "objectID": "Posit_cloud.html#espaces-de-travail",
+    "href": "Posit_cloud.html#espaces-de-travail",
+    "title": "7  Posit Cloud",
+    "section": "7.2 Espaces de travail",
+    "text": "7.2 Espaces de travail\nRStudio Cloud possède la capacité de regrouper plusieurs projets RStudio à l’intérieur d’un même espace de travail. Dans RStudio Cloud, ces environnements se nomment Spaces. Cette caractéristique permet (1) de regrouper tous vos projets RStudio associés au même thème (ex: un cours universitaire, une formation, une étude scientifique, etc.) à l’intérieur d’un même environnement et/ou (2) de partager un espace de travail avec d’autres personnes, comme un professeur avec ses étudiants.\nAfin d’atteindre ces objectifs, RStudio Cloud divise l’espace de travail en deux catégories d’espace :\n\nles espaces de travail individuels\nles espaces de travail partagés3.\n\n\n7.2.1 Espace individuel\nL’espace de travail individuel se trouve dans l’onglet Your Workspace sous l’en-tête Spaces à la gauche de RStudio Cloud (voir Figure @ref(fig:ws)). Par défaut, les projets RStudio qui sont créés à l’intérieur de cet espace de travail individuel ne sont disponibles et visibles qu’à l’utilisateur du compte. Cependant, il est possible de rendre disponibles les projets de cet espace individuel afin qu’ils soient consultés et copiés par d’autres utilisateurs de RStudio Cloud (si cela vous intéresse, veuillez cliquer ici).\n\n\n\n\n\nEspace de travail individuel de RStudio Cloud\n\n\n\n\nPersonnellement, j’utilise rarement l’espace de travail individuel. Je préfère regrouper mes projets RStudio à l’intérieur de thèmes spécifiques (cours, projets de recherche, etc.) à l’aide d’espace de travail partagé (voir ci-dessous). De plus, puisque l’utilité première de RStudio Cloud est de favoriser le travail collaboratif, je ne discute pas plus longuement de l’espace de travail individuel. Je considère qu’une gestion responsable des espaces partagés permet d’obtenir le même niveau de confidentialité que l’espace de travail individuel.\n\n\n7.2.2 Espaces partagés\nRStudio Cloud permet de regrouper et de partager avec d’autres utilisateurs des projets RStudio dans le même espace de travail. Les projets RStudio qui sont intégrés à l’intérieur d’un espace de travail partagé doivent obligatoirement avoir un thème commun. Par exemple, je peux regrouper les exercices d’un même cours dans un espace de travail partagé ou regrouper les projets associés à mes travaux de recherche sur une thématique spécifique. Bref, avant de créer un espace de travail partagé, il faut cibler le dénominateur commun aux projets qui y seront regroupés. Dans le cadre d’un cours, par exemple, un professeur peut créer un espace de travail partagé avec tous ces étudiants pour un exercice particulier. Cela lui permet d’avoir accès à tous les travaux effectués dans le cadre de cet exercice4.\nÀ titre d’exemple, la Figure @ref(fig:spaces) montre — voir la colonne de gauche — que j’ai créé un espace de travail partagé (voir l’icone avec 3 personnes) du nom de Exercices. Si désiré, je pourrais créer un nouvel espace de travail partagé en cliquant sur + New Space. Personnellement, tous mes espaces de travail dans RStudio Cloud sont de nature partagée. Cette façon de faire me permet, si désiré, de rendre disponibles plusieurs projets à plusieurs personnes, et ce, très rapidement.\n\n\n\n\n\nIllustration de la fenêtre d’ouverture de RStudio Cloud",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Posit Cloud</span>"
+    ]
+  },
+  {
+    "objectID": "Posit_cloud.html#projets",
+    "href": "Posit_cloud.html#projets",
+    "title": "7  Posit Cloud",
+    "section": "7.3 Projets",
+    "text": "7.3 Projets\nRStudio oblige l’utilisateur à créer un projet RStudio, ce qui, à mon avis, est une très bonne chose 5. À titre de rappel (voir Chapitre @ref(projetRStudio)), un projet RStudio permet de regrouper tous les fichiers (données, analyses, figures, etc.) liés à un projet d’analyse statistique.\n\n7.3.1 Créer un nouveau projet\nPour créer un nouveau projet, il suffit de cliquer sur la flèche (∨) de l’onglet New Project (voir à droite de la Figure @ref(fig:spaces)) et, dans la bande déroulante, de sélectionner l’option New RStudio Project (voir Figure @ref(fig:newproject)). Pendant quelques secondes, le message Deploying Project apparaît et, ensuite, votre nouveau projet s’ouvre dans RStudio Cloud.\n\n\n\n\n\nCréation d’un nouveau projet dans RStudio Cloud\n\n\n\n\n\n\n7.3.2 Renommer le nouveau projet\nÀ l’ouverture d’un nouveau projet (voir Figure @ref(fig:untitled)), RStudio Cloud attribue le nom Untitled Project au nouveau projet. Le nom du projet est disponible tout au haut de l’écran et il est possible de voir dans quel espace de travail le projet est inséré. Dans mon exemple, l’expression Exercices / indique que le nouveau projet est inséré à l’intérieur de l’espace de travail partagé nommé Exercices.\n\n\n\n\n\nUntitled project dans RStudio Cloud\n\n\n\n\nDonc, à l’ouverture d’un nouveau projet, la première chose à faire consiste à renommer le projet. Il faut cliquer sur Untitled Project (en haut à gauche de la fenêtre) et inscrire le nouveau nom de votre projet (Figure @ref(fig:exercice2)). À titre de démonstration, j’ai créé un nouveau projet du nom de Exercice2.\n\n\n\n\n\nModifier le nom d’un nouveau projet dans RStudio Cloud\n\n\n\n\n\n\n7.3.3 Importer des fichiers dans un projet\nHabituellement, l’analyste importe un ou des fichiers de données (.xlsx, .dat, .txt, .csv, etc.) dans RStudio pour ensuite l’analyser à l’aide d’un script R ou d’un script R Markdown. Avec la version locale de RStudio IDE, l’analyste n’a qu’à copier son fichier dans le répertoire qui contient son projet RStudio. Avec RStudio Cloud, l’approche est différente. À partir du projet RStudio, il faut importer le fichier de données dans l’espace cloud dédié à ce projet sur le serveur de RStudio.\nVoici un exemple. Dans la fenêtre Files de RStudio, nous pouvons voir que le projet RStudio (project.Rproj) est inséré dans le dossier Cloud &gt; Project (voir Figure @ref(fig:upload)).\n\nNous pouvons importer un fichier de données dans ce dossier en cliquant sur l’onglet Upload.\nUne fenêtre s’ouvre et il faut simplement cliquer sur Choisir le fichier sous l’en-tête File to upload. Dans mon exemple, le fichier que je désire importé se nomme RatLives.csv6. Il est possible d’importer plusieurs fichiers simultanément. Ceux-ci, cependant, doivent être regroupés, au préalable, à l’intérieur d’un fichier .zip.\nAprès l’importation, le fichier (RatLives.csv) est disponible dans le projet RStudio Cloud.\n\n\n\n\n\n\nImporter un fichier dans un projet RStudio Cloud\n\n\n\n\n\n\n7.3.4 Examiner la liste des projets\nIl est possible d’obtenir la liste de tous les projets d’un même espace de travail. Pour cela, il faut cliquer sur le nom de l’espace de travail que vous désirez consulter. Dans mon exemple, le nom de mon espace de travail est Exercices. Pour voir la liste des projets associés à cet espace de travail, deux choix s’offrent à moi :\n\nJe peux cliquer sur l’onglet Exercices [Sylvain Fiset] dans la liste des espaces à la gauche de la fenêtre de RStudio Cloud (sous l’en-tête Spaces).\nJe peux aussi cliquer sur Exercices dans le titre Exercices / Exercice2 de mon projet qui est déjà ouvert.\n\nLa Figure @ref(fig:liste) montre un exemple de la liste des projets disponibles pour mon espace de travail Exercices.\n\n\n\n\n\nExaminer la liste de tous les projets d’un espace de travail dans RStudio Cloud\n\n\n\n\n\n\n7.3.5 Exporter un projet RStudio Cloud\nLorsque la liste des projets d’un espace de travail de RStudio Cloud est affichée à l’écran, vous pouvez facilement exporter l’un des projets sur votre ordinateur et le partager. Il suffit de cliquer sur l’option Export, laquelle est située à la droite du nom du projet dans la liste (voir la Figure @ref(fig:liste)). Tous les fichiers associés à ce projet seront exportés. L’exportation d’un projet RStudio Cloud sert principalement deux objectifs :\n\nL’exportation permet de sauvegarder une copie de votre projet sur votre ordinateur.\nL’exportation facilite grandement le partage des projets RStudio entre les utilisateurs7.\n\nAprès avoir cliquer sur l’option Export, une première fenêtre s’ouvre et génère le dossier d’exportation du projet. Ensuite, une seconde fenêtre apparaît et il faut cliquer sur Download pour télécharger le dossier (voir la Figure @ref(fig:export)). Par défaut, le projet est téléchargé dans le répertoire (ou dossier) de téléchargement de votre ordinateur. Il conserve exactement la même structure que votre dossier dans RStudio Cloud. Vous pouvez donc l’ouvrir avec la version locale de RStudio IDE sur votre ordinateur et avoir accès à tous les fichiers. Prenez note que lors du téléchargement, le dossier de téléchargement se voit attribuer un nom arbitraire composé de 7 chiffres. Si vous téléchargez à plusieurs reprises le même projet, le nom à 7 chiffres demeure le même d’un téléchargement à l’autre.\n\n\n\n\n\nExportation d’un projet à partir de RStudio Cloud\n\n\n\n\n\n\n7.3.6 Partager un projet dans RStudio Cloud\nL’un des avantages de RStudio Cloud est la possibilité de partager des projets RStudio avec plusieurs utilisateurs sans avoir à télécharger le projet. Tous les utilisateurs ont accès au même projet via RStudio Cloud. Par exemple, les membres d’une même équipe de recherche peuvent contribuer sur un même projet d’analyse statistique ou un étudiant peut partager son projet avec son professeur.\nLe partage d’un projet RStudio Cloud s’effectue à partir de l’espace de travail partagé (dans Spaces) dans lequel vous avez créé (ou déplacé) votre projet. Afin de partager votre espace de travail partagé, vous devez ajouter des membres. Sur la page d’ouverture de RStudio Cloud, cliquez sur le nom de l’espace de travail que vous désirez partager. Au haut de l’écran, cliquez sur Members. La liste des membres de l’environnement de travail sera affichée (voir Figure @ref(fig:members)). Par la suite, cliquez sur l’option Add Member pour inviter de nouveaux membres. Lors de l’invitation, vous devrez fournir une adresse courriel et préciser le rôle du nouveau membre (Admin, Moderator, Contributor, Viewer). Par défaut, le choix Contributor est offert et, à moins de raisons valables, ce choix demeure la meilleure option. De plus, en tant qu’administrateur de cet environnement de travail, vous pouvez déterminer les privilèges que vous désirez accorder à chaque membre que vous invitez (voir l’encadré pointillé à la droite de la Figure @ref(fig:members)).\n\n\n\n\n\nAjouter des membres à un espace de travail RStudio Cloud\n\n\n\n\n\n7.3.6.1 Accessibilité\nLors du partage d’un projet, vous pouvez restreindre l’accessibilité de votre projet. Ainsi, même si vous partagez un espace de travail avec 20 autres utilisateurs, vous pouvez limiter l’accès de votre projet aux administrateurs et aux modérateurs de l’environnement de travail. Pour vous assurez que cette option soit activée pour un projet en particulier, ouvrez le projet et cliquez sur l’icone de la petite roue située à la gauche de votre nom en haut à droite dans le fenêtre web de RStudio Cloud (voir Figure @ref(fig:access)). Par la suite, sélectionnez Access et assurez-vous que l’option You* soit sélectionnée dans la bande déroulante. Limiter l’accessibilité à un projet est particulièrement important dans le cadre d’un cours.\n\n\n\n\n\nContrôler l’accessibilité à un projet RStudio Cloud\n\n\n\n\n\n\n\n7.3.7 Effacer un projet\nSi vous désirez effacer un projet de votre compte RStudio Cloud, deux possibilités s’offrent à vous :\n\nDans la liste des projets associés à un espace de travail spécifique, cliquez sur l’option Delete. L’option Delete est située à la droite du nom du projet dans la liste des projets (voir la Figure @ref(fig:liste)).\nLorsque le projet est déjà ouvert dans RStudio Cloud, vous pouvez cliquer sur l’icone avec les trois petits points à l’horizontal situé près de votre nom en haut à droite de la page web de RStudio Cloud. Ensuite, sélectionnez l’option Delete Project dans la bande déroulante (voir la Figure @ref(fig:delete)).\n\n\n\n\n\n\nEffacer un projet à partir de RStudio Cloud",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Posit Cloud</span>"
+    ]
+  },
+  {
+    "objectID": "Posit_cloud.html#options-de-rstudio-cloud",
+    "href": "Posit_cloud.html#options-de-rstudio-cloud",
+    "title": "7  Posit Cloud",
+    "section": "7.4 Options de RStudio Cloud",
+    "text": "7.4 Options de RStudio Cloud\nTout comme la version locale de RStudio IDE, tel que montré au Chapitre @ref(options), il est possible de modifier les options de RStudio Cloud. Prenez note, cependant, qu’il faut modifier les options pour chacun des projets que vous créez — ce qui n’est pas le cas avec la version locale de RStudio. Cela est nécessaire puisque pour chaque projet, RStudio Cloud produit un espace de travail dans lequel les projets sont tous indépendants les uns des autres.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Posit Cloud</span>"
+    ]
+  },
+  {
+    "objectID": "Posit_cloud.html#consulter-votre-compte",
+    "href": "Posit_cloud.html#consulter-votre-compte",
+    "title": "7  Posit Cloud",
+    "section": "7.5 Consulter votre compte",
+    "text": "7.5 Consulter votre compte\nVous pouvez consulter les paramètres d’utilisation de votre compte RStudio Cloud en cliquant sur votre nom. Vous y verrez quelques statistiques, comme le nombre de projets et le nombre d’heures d’utilisation pour un mois (voir la Figure @ref(fig:account)). Cela est particulièrement important si votre compte d’utilisateur est gratuit.\n\n\n\n\n\nParamètres du compte de l’utilisateur",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Posit Cloud</span>"
+    ]
+  },
+  {
+    "objectID": "Posit_cloud.html#quitter-rstudio-cloud",
+    "href": "Posit_cloud.html#quitter-rstudio-cloud",
+    "title": "7  Posit Cloud",
+    "section": "7.6 Quitter RStudio Cloud",
+    "text": "7.6 Quitter RStudio Cloud\nPour quitter RStudio Cloud, n’oubliez pas de cliquez l’option Log Out après avoir cliquer sur votre nom (voir la Figure @ref(fig:account)).",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Posit Cloud</span>"
+    ]
+  },
+  {
+    "objectID": "Posit_cloud.html#footnotes",
+    "href": "Posit_cloud.html#footnotes",
+    "title": "7  Posit Cloud",
+    "section": "",
+    "text": "L’expression version locale désigne la version de RStudio téléchargée et installée sur un ordinateur (et non dans le nuage, comme RStudio Cloud).↩︎\nCela est d’autant plus vrai que la version locale de RStudio IDE est, elle, disponible gratuitement.↩︎\nLes espaces de travail individuels sont illustrés par une icone avec une personne et les espaces de travail partagés sont illustrés par des icones avec trois personnes.↩︎\nRStudio Cloud a d’ailleurs été conçu, en partie, pour répondre à ce besoin lors de l’enseignement de R et de RStudio.↩︎\nSi vous n’êtes pas familier avec les projets RStudio, je vous invite à consulter le chapitre @ref(projetRStudio).↩︎\nCe fichier provient des fichiers de données qui accompagnent le livre de John Kruschke, Doing Bayesian Data Analysis.↩︎\nSi vous ne désirez pas utiliser la fonction share de RStudio Cloud.↩︎",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Posit Cloud</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html",
+    "href": "Utiliser_Quarto.html",
+    "title": "8  Utiliser Quarto",
+    "section": "",
+    "text": "8.1 Nouveau fichier\nNous sommes maintenant prêts à créer un fichier qui utilise le format de présentation R Notebook. À partir d’un document vierge, nous allons graduellement ajouter des éléments à notre script jusqu’au moment où nous seront en mesure d’ajouter des codes R.\nAprès l’ouverture de votre projet RStudio, vous devez maintenant créer votre fichier R Notebook. Pour ce faire, deux options s’offrent à vous :\nCréer un nouveau document R Notebook à partir du menu\nCréer un nouveau document R Notebook à partir de l’icone\nRemarquez que la fenêtre Source de RStudio contient maintenant un fichier du nom de Untitled1*.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html#nouveau-fichier",
+    "href": "Utiliser_Quarto.html#nouveau-fichier",
+    "title": "8  Utiliser Quarto",
+    "section": "",
+    "text": "La première solution consiste à cliquez sur l’icone avec le rond vert et le signe + blanc à l’intérieur (lequel est situé dans le coin supérieur gauche du menu de RStudio) (voir Figure @ref(fig:fig13)). Par la suite, il faut sélectionner R Notebook dans les options offertes dans la bande déroulante.\n\n\n\nLa seconde solution consiste, à partir du menu de RStudio, de sélectionner : File &gt; New File &gt; R Notebook (voir Figure @ref(fig:fig1331)).",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html#cut",
+    "href": "Utiliser_Quarto.html#cut",
+    "title": "8  Utiliser Quarto",
+    "section": "8.2 Effacer texte",
+    "text": "8.2 Effacer texte\nPar défaut, tous les nouveaux fichiers R Notebook qui s’affichent dans la fenêtre Source de RStudio contiennent du texte qui explique, brièvement, comment utiliser R Notebook. Ce texte, bien que pertinent, doit être enlevé de la fenêtre Source de RStudio. Je recommande de l’effacer en sélectionnant le texte et de l’effacer à l’aide de l’option cut (voir Figure @ref(fig:fig14)).\nAssurez-vous, cependant, de ne pas effacer les six premières lignes, incluant les lignes avec des tirets (---) ! Cette section, nommée Métadonnées, est nécessaire pour générer le fichier R Notebook.\n\n\n\n\n\nEffacer le texte inutilisé lors de l’ouverture d’un nouveau document R Notebook",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html#répertoire-de-travail",
+    "href": "Utiliser_Quarto.html#répertoire-de-travail",
+    "title": "8  Utiliser Quarto",
+    "section": "8.3 Répertoire de travail",
+    "text": "8.3 Répertoire de travail\nSi vous avez créé un projet RStudio (voir Section @ref(projetRStudio)), vous pouvez sauter cette section et vous diriger à la Section @ref(preview).\nSi vous n’avez pas créé un projet RStudio pour votre environnement de travail pour ce projet en particulier1, avant de sauvegarder le fichier, il est important de décider du répertoire de travail (Working directory) sur votre ordinateur où vous allez sauvegarder les fichiers .Rmd et .nb.html qui seront sauvegardés par RStudio. Une fois cette décision prise, il faut indiquer à RStudio où se trouve ce répertoire de travail sur votre ordinateur.\nBien qu’il existe plusieurs façons de faire pour sélectionner le répertoire de travail, je recommande d’utiliser le menu de RStudio. Dans le menu, cliquez sur Session, sélectionnez Set Working directory et ensuite, cliquez sur Choose Directory… (voir Figure @ref(fig:fig15)).\n\n\n\n\n\nComment sélectionner un répertoire de travail\n\n\n\n\nLorsque le répertoire de travail est sélectionné, la fenêtre Console de RStudio génère un code à partir de la fonction setwd qui indique où se trouve votre répertoire de travail sur votre ordinateur (voir Figure @ref(fig:fig16)). Remarquez aussi que le chemin d’accès au répertoire de travail sélectionné est aussi indiqué dans l’onglet Files de RStudio.\n\n\n\n\n\nCode qui indique où se trouve le répertoire de travail sur l’ordinateur",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html#preview",
+    "href": "Utiliser_Quarto.html#preview",
+    "title": "8  Utiliser Quarto",
+    "section": "8.4 Preview on save",
+    "text": "8.4 Preview on save\nAprès avoir effacer le texte (voir Section @ref(cut)) et avoir créé votre répertoire de travail (si nécessaire), je vous invite à cocher l’option Preview on Save (voir Figure @ref(fig:fig191)). De cette façon, à chaque fois que vous sauvegarderez votre fichier, le document final sera mise à jour dans la fenêtre Viewer de RStudio. C’est une bonne façon de voir, en temps réel, la progression de votre document en format .html.\n\n\n\n\n\nSélectionner l’option Preview on Save",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html#sauvegarder",
+    "href": "Utiliser_Quarto.html#sauvegarder",
+    "title": "8  Utiliser Quarto",
+    "section": "8.5 Sauvegarder",
+    "text": "8.5 Sauvegarder\nVous êtes maintenant prêts à sauvegarder le fichier R Notebook sur votre ordinateur. Notez que la démarche démontrée ci-dessous est effectuée après avoir créé un projet RStudio du nom de Projet_1. Pour la sauvegarde, encore une fois, deux options s’offrent à vous :\n\nCliquez sur l’icone de la petite disquette bleue (voir Figure @ref(fig:fig17)).\n\n\n\n\n\n\nSauvegarder le nouveau document R Notebook\n\n\n\n\n\nLa seconde solution consiste, à partir du menu de RStudio, de sélectionner : File &gt; Save (voir Figure @ref(fig:fig1332)).\n\n\n\n\n\n\nCréer un nouveau document R Notebook à partir de l’icone\n\n\n\n\nPar la suite, effacez Untitled1 et écrivez le nom du fichier que vous désirez utiliser. Cliquez sur Save (voir Figure @ref(fig:fig18)).\n\n\n\n\n\nInscrire le nom du nouveau document R Notebook",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html#deuxfichiers",
+    "href": "Utiliser_Quarto.html#deuxfichiers",
+    "title": "8  Utiliser Quarto",
+    "section": "8.6 Deux fichiers",
+    "text": "8.6 Deux fichiers\nAprès avoir cliquer sur Save, RStudio sauvegarde deux fichiers avec le même nom dans votre répertoire de travail (dans notre exemple, ce nom est : Exercice Notebook). La fenêtre Files de RStudio montre ces deux fichiers (voir Figure @ref(fig:fig192)). Un fichier contient une extension .Rmd et l’autre une extension .nb.html.\n\nLe fichier .Rmd contient tous vos codes et c’est lui qui permet de modifier et de générer le fichier .html.\nle fichier .nb.html présente le produit final de votre fichier. Il est mis à jour lorsque l’on clique sur l’option Preview de RStudio.\n\n\n\n\n\n\nVotre projet RStudio comprend maintenant deux nouveaux fichiers, un ficher .Rmd et un fichier .html",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html#exercice-1",
+    "href": "Utiliser_Quarto.html#exercice-1",
+    "title": "8  Utiliser Quarto",
+    "section": "8.7 Exercice 1",
+    "text": "8.7 Exercice 1\nVoici un exercice dont les objectifs sont : (1) de créer un nouveau projet RStudio et (2) de créer un nouveau fichier R Notebook. Les instructions sont :\n\nÀ partir de Finder (Mac) ou de Explorateur de fichiers (PC), créez un répertoire sur votre ordinateur, du type :\n\nHome &gt; Desktop &gt; PSYC2002 &gt; Periode 1\n\nOuvrez le logiciel RStudio\nCréez, dans le répertoire que vous avez créé à l’étape 1, un nouveau projet RStudio du nom de Projet_1.\nÀ l’aide de RStudio, créez un nouveau fichier R Notebook\nActivez l’option Save on Preview\nSauvegarder votre fichier R Notebook sous le nom de Exercice Notebook dans le répertoire de travail du projet RStudio que vous avez créé à l’étape 3\nExaminer la fenêtre Files de RStudio (voir Figure @ref(fig:fig192)) et assurez-vous que deux fichiers s’y trouvent, soit :\n\nExercice Notebook.Rmd\nExercice Notebook.nb.html\n\nCliquez sur Preview pour visualiser votre document dans la fenêtre Viewer de RStudio. Il devrait ressembler à celui présenté par la Figure @ref(fig:fig193)\n\n\n\n\n\n\nAprès avoir complété l’Exercice 1, votre document devrait ressembler à ceci",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Utiliser_Quarto.html#footnotes",
+    "href": "Utiliser_Quarto.html#footnotes",
+    "title": "8  Utiliser Quarto",
+    "section": "",
+    "text": "Je recommande fortement de créer un projet RStudio (voir File &gt; New Project…) lorsque vous débuter un nouveau projet d’analyses statistiques. En créant un projet RStudio, tous vous fichiers sont conservés dans le même répertoire sur votre ordinateur. Rien n’empêche que vous devez créer ce répertoire sur votre ordinateur et vous assurez d’y déposer vos fichiers de données (ex: .xlsx, .csv, .dat, etc.)↩︎",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Utiliser Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Metadonnees.html",
+    "href": "Metadonnees.html",
+    "title": "9  Les métadonnées",
+    "section": "",
+    "text": "9.1 Exemple\nUn fichier R Notebook comprend trois sections1. La première de ces sections se nomme Métadonnées. Les métadonnées d’un fichier R Markdown désignent le type de document que vous avez créé, la date de création du fichier, le nom de l’auteur et plusieurs autres types d’information qui contrôlent l’aspect visuel du document final.\nÀ titre d’information, la section Métadonnées porte aussi le nom de Préambule et l’expression YAML désigne Ain’t Markup langage.\nCi-dessous se trouve une figure qui illustre la section Métadonnées d’un fichier R Markdown. Vous remarquerez que les métadonnées sont situées au tout début du fichier (d’où l’appellation préambule) et qu’elles sont incluses à l’intérieur de deux lignes créées à partir de trois tirets (---).\nDans l’exemple présenté à la Figure @ref(fig:nb2), les lignes qui délimitent les métadonnées (---) correspondent aux lignes 1 et 19, respectivement. Il est important de ne jamais effacer les lignes avec les trois tirets à l’horizontal. Sinon, le logiciel RStudio sera incapable de générer le document final avec le format R Notebook.\nExemple des métadonnées d’un fichier R Notebook",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Les métadonnées</span>"
+    ]
+  },
+  {
+    "objectID": "Metadonnees.html#composantes",
+    "href": "Metadonnees.html#composantes",
+    "title": "9  Les métadonnées",
+    "section": "9.2 Composantes",
+    "text": "9.2 Composantes\nVoici, brièvement, la définition de chacun des éléments présentés dans les métadonnées du fichier R Notebook illustré par la Figure @ref(fig:nb2) :\n\ntitle : le titre du document placé entre guillemets (” “) ou (’ ’). Le titre devrait refléter la nature du travail. Par exemple :”PSYC2002 - Exercice 1”.\nauthor : le nom de l’auteur du document. L’approche la plus simple consiste à inscrire son nom entre guillemets (“Sylvain Fiset”) ou (‘Sylvain Fiset’). Il est possible de mettre plusieurs auteurs (ou information supplémentaire - comme je l’ai fait) en plaçant un tiret (-) au début de chaque ligne sous la ligne Author. Assurez-vous d’avoir un espace devant le tiret et un espace après le tiret.\ndate : la date de création du document est inscrite automatiquement par l’expression \"r Sys.Date()\", laquelle est insérée à l’intérieur des guillemets (” “) ou (’ ’). Ne pas oublier d’ajouter les deux accents de grave (`) avant les guillemets (voir dans la Figure @ref(fig:nb2)). Il est aussi possible de modifier le format de la date, comme je l’ai fait, mais cela demande un code plus complexe et ce n’est pas nécessaire.\noutput: html_notebook: : désigne le type de document produit. Dans ce cas-ci, c’est le format html_notebook.\ntheme : le theme cerulean est utilisé. D’autres thèmes sont disponibles en cliquant ici.\nnumber_sections : permet (yes) ou non (no) d’attribuer automatiquement un numéro aux sections et sous-section du document.\ntoc : désigne la table des matières (toc = table of contents)\ntoc_depth : désigne le nombre de niveaux de la table des matières qui s’affichent à l’écran\ntoc-float: collapsed : indique si la table des matières se déroule (yes) ou non (no).\ntoc-float: smooth_scrool : indique si la table des matières se déroule lentement (yes) ou non (no).\neditor_options: chunk_output_type : l’option inline indique que le résultat du code sera affiché immédiatement sous le code alors que l’option console indique que le résultat du code sera affiché dans la fenêtre console de RStudio.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Les métadonnées</span>"
+    ]
+  },
+  {
+    "objectID": "Metadonnees.html#nouveau-fichier",
+    "href": "Metadonnees.html#nouveau-fichier",
+    "title": "9  Les métadonnées",
+    "section": "9.3 Nouveau fichier",
+    "text": "9.3 Nouveau fichier\nLorsqu’on crée un nouveau fichier R Notebook, quelques métadonnées sont déjà disponibles par défaut dans le fichier .Rmd qui est créé. La Figure @ref(fig:nb3) présente ces métadonnées, situées entre les lignes 1 à 6 :\n\n\n\n\n\nMétadonnées vierges\n\n\n\n\n\n9.3.1 Modification\nUne façon rapide de modifier les métadonnées d’un fichier vierge consiste à modifier les options de présentation du fichier R Notebook. Pour ce faire, il suffit de cliquer sur la petite roue blanche située dans le menu de RStudio et de sélectionner, dans la bande déroulante, l’option Output Options…. Voir la Figure @ref(fig:nb32) :\n\n\n\n\n\nComment modifier les métadonnées\n\n\n\n\n\n\n9.3.2 Édition\nUne fenêtre s’ouvre et présente différentes options. Je propose de faire les changements indiqués par les lignes et cercles rouges dans la Figure @ref(fig:nb5).\nIl peut aussi s’avérer utile de modifier le format de présentation des figures créées par R. Pour ce faire, je recommande de cliquer sur l’onglet Figures et de changer la largeur des figures (width) pour 4 pouces (4 inches) et de changer la hauteur des figures (height) pour 3 pouces (3 inches).\n\n\n\n\n\nChangements proposés pour les métadonnées d’un fichier R Notebook\n\n\n\n\n\n\n9.3.3 Vérification\nAprès avoir cliquer sur la case OK, les métadonnées du fichier sont modifiées. Dans l’exemple de la Figure @ref(fig:nb6), nous pouvons voir les ajouts pour la table des matières et le thème. Il est toujours important de vérifier si nos métadonnées correspondent aux changements apportés.\n\n\n\n\n\nModifications apportées aux métadonnées d’un fichier vierge\n\n\n\n\n\n\n9.3.4 Ajouts\nCertaines options des métadonnées ne peuvent pas être ajoutées via Output Options.... Mais cela n’est pas vraiment un problème. Il suffit d’ajouter manuellement les quelques options supplémentaires manquantes (voir la Figure @ref(fig:nb62)), comme :\n\nle titre du document\nle nom de l’auteur du document\nla date du document\nles options pour la table des matières (toc).\n\nÉvidemment, une fois qu’un premier document a été créé avec succès, il suffit de copier - coller les métadonnées d’un fichier à l’autre pour accélérer le processus de rédaction !\n\n\n\n\n\nMétadonnées modifiées\n\n\n\n\n\n\n9.3.5 Taille du lettrage\nNotez que par défaut, le lettrage du format qui apparaît dans la fenêtre Viewer de RStudio peut vous sembler petit. Il est possible d’ajouter une ligne dans les métadonnées qui contrôle la grosseur du lettrage. Dans la section métadonnée, vous pouvez ajouter cette ligne sous la ligne de la date2 :\n\nfontsize: 14pt",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Les métadonnées</span>"
+    ]
+  },
+  {
+    "objectID": "Metadonnees.html#exercice-2",
+    "href": "Metadonnees.html#exercice-2",
+    "title": "9  Les métadonnées",
+    "section": "9.4 Exercice 2",
+    "text": "9.4 Exercice 2\nL’objectif de cet exercice est d’apprendre à modifier les métadonnées d’un fichier R Notebook. Voici les instructions :\n\nOuvrez le fichier Exercice Notebook.Rmd que vous avez créé lors de l’Exercice 1.\nModifiez les métadonnées de manière à ajouter ou à modifier les informations suivantes :\n\nChangez le titre du document pour Exercice R Notebook\nAjoutez votre nom comme l’auteur du document\nAjoutez la date courante au document\nAjoutez une table des matières\nAjoutez 3 niveaux à la table des matières\nAjoutez le thème cerulean\nAjoutez la numérotation des sections\nAjoutez une table des matières avec les attributs suivants :\n\nDéroulement de la table des matières (oui)\nDéroulement lent de la table des matières (oui)\n\nAjoutez l’option pour que le résultat du code soit affiché directement sous le bloc de codes\n\nSauvegardez votre fichier dans le répertoire de travail de votre projet RStudio\nVisualisez votre document final R Notebook en sélectionnant Preview\n\nAu besoin, apportez les correctifs pour qu’il ressemble à l’exemple de la Figure @ref(fig:meta) :\n\n\n\n\n\n\n\nAprès avoir complété l’Exercice 2, votre document devrait ressembler à ceci",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Les métadonnées</span>"
+    ]
+  },
+  {
+    "objectID": "Metadonnees.html#footnotes",
+    "href": "Metadonnees.html#footnotes",
+    "title": "9  Les métadonnées",
+    "section": "",
+    "text": "Ces trois sections sont : (1) Métadonnées, (2) Texte et (3) Blocs de codes↩︎\nNotez, cependant, qu’il est bien plus simple d’ouvrir le fichier .nb.html dans votre navigateur web et d’agrandir directement le lettrage à partir de la combinaison des touches “Cmd +” (agrandir) ou “Cmd -” (diminuer) (Mac). Avec PC, les combinaisons des touches “Ctrl +” et “Ctrl -” font la même chose. C’est ce que je fais la plupart du temps.↩︎",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Les métadonnées</span>"
+    ]
+  },
+  {
+    "objectID": "Texte.html",
+    "href": "Texte.html",
+    "title": "10  Le texte",
+    "section": "",
+    "text": "10.1 Exemple\nLes fichiers R Notebook se caractérisent par la faciliter avec laquelle du texte peut être intégré autour des blocs de codes qui produisent les résultats des différentes analyses statistiques produites avec R. Ce texte est ajouté directement dans la fenêtre Source de RStudio sous les Métadonnées.\nPuisqu’il est possible d’insérer du texte autour des blocs de codes, l’analyste peut facilement documenter toutes les étapes de ses analyses statistiques et y présenter ses interprétations. De cette façon, il/elle peut reprendre une analyse produite quelques mois ou années auparavant et reproduire les résultats et les conclusions tirées à l’époque.\nTel que mentionné précédemment, les fichiers R Notebook utilisent le langage Markdown. Ce langage est très flexible et permet de formater un document très facilement. Dans ce chapitre, je présente quelques petits trucs et options qui doivent être maîtrisés lorsque nous utilisons le langage Markdown. Mais pour avoir une vue détaillée de ce langage, je vous encourage fortement à consulter le document résumé du langage rmarkdown.\nL’écriture du texte à l’intérieur d’un document R Notebook diffère légèrement de l’écriture d’un texte avec un logiciel spécialisé de traitement de texte (ex : Microsoft Word ou LibreOffice). La Figure @ref(fig:nb711) montre l’écriture de texte dans un document R Notebook à l’aide du langage R Markdown et la Figure @ref(fig:nb712) montre le résultat, en format HTML.\nExemple d’un document R Notebook avec du texte selon le langage R Markdown\nExemple d’un document R Notebook en format HTML",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Le texte</span>"
+    ]
+  },
+  {
+    "objectID": "Texte.html#lignes-vides",
+    "href": "Texte.html#lignes-vides",
+    "title": "10  Le texte",
+    "section": "10.2 Lignes vides",
+    "text": "10.2 Lignes vides\nAvec le langage Markdown, il ne faut pas coller les paragraphes les uns sur les autres. En fait, il est préférable de séparer les paragraphes, les blocs de codes et les en-têtes avec une ligne vide placée au-dessus du paragraphe, du bloc de codes ou de l’en-tête et une ligne vide placée en-dessous du paragraphe, du bloc de codes ou de l’en-tête. Cela vous évitera bien des petits pépins… Je présente un exemple dans la Figure @ref(fig:nb7).",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Le texte</span>"
+    ]
+  },
+  {
+    "objectID": "Texte.html#en-têtes",
+    "href": "Texte.html#en-têtes",
+    "title": "10  Le texte",
+    "section": "10.3 En-têtes",
+    "text": "10.3 En-têtes\nAvec R Markdown, il est possible de générer des en-têtes de différentes grandeurs, ce qui permet de créer des sous-sections à l’intérieur d’un même document. Les différents niveaux des en-têtes se fait à l’aide de la touche # placée en début de ligne devant un mot ou une série de mots (voir Figure @ref(fig:nb71)). Plus le nombre de # placés devant le mot est grand (ex: ####), plus l’en-tête est petit.\nJe suggère d’utiliser de noms d’en-têtes très brefs, soit de un, deux ou trois mots. Cela aide le déroulement de la table des matières dans le document HTML et facilite la navigation. De plus, cela aide la navigation dans la table des matières à l’intérieur du fichier R Notebook lorsque l’option Show document outline est activée (touches Shift+Cmd+O avec Mac). Je recommande d’ailleurs l’utilisation de cet affichage pour se déplacer à l’intérieur de la fenêtre Source d’un fichier R Notebook (voir Figure @ref(fig:nb71)).\n\n\n\n\n\nExemple d’un document rédigé avec le langage R Markdown avec un en-tête de niveau 2 et l’option ‘Show document outline’ de RStudio activée\n\n\n\n\n\n10.3.1 Codes\nVoici un exemple de codes d’en-têtes avec le langage R Markdown. Vous remarquerez qu’il y a une ligne vide avant et une ligne vide après chaque en-tête. Dans la Figure @ref(fig:nb7), les lignes 19, 21, 23, 25, etc., sont vides. Comme je le mentionnais précédemment, ces lignes vides sont importantes pour éviter que les lignes se combinent dans le document final. Par exemple, en l’absence de la ligne vide, l’en-tête et le texte situé juste en-dessous se collent ensembles. Dans l’exemple de la Figure @ref(fig:nb7), ce problème produirait quelque chose comme En-tête niveau 1Voici un en-tête de niveau 1.## En-tête niveau 2Voici un…, ce qui, vous en conviendrez, est plutôt difficile à lire.\n\n\n\n\n\nDifférents niveaux d’en-tête tels qu’écrits avec le langage R Markdown\n\n\n\n\n\n\n10.3.2 Output\nLa Figure @ref(fig:nb8) illustre le document final en format R Notebook, lequel fut produit à partir du langage R Markdown. Nous voyons que plus le nombre de # augmente, plus la grosseur du lettrage de l’en-tête est réduite. En fait, avec l’en-tête de grosseur 6, nous remarquons que le texte du document est plus gros que celui de l’en-tête ! Aussi, en raison du fait que nous avons ajouté l’option number_sections: yes aux métadonnées, nous voyons que chaque en-tête est précédé d’un numéro qui est de plus en plus petit.\n\n\n\n\n\nIllustration de la taille des différents niveaux d’en-tête générés par un document R Notebook à partir du langage R Markdown",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Le texte</span>"
+    ]
+  },
+  {
+    "objectID": "Texte.html#format-markdown",
+    "href": "Texte.html#format-markdown",
+    "title": "10  Le texte",
+    "section": "10.4 Format Markdown",
+    "text": "10.4 Format Markdown\nIl est possible de modifier le format du texte avec R Markdown. Voici quelques exemples1.\n\nL’italique peut être créé en entourant le texte par des traits soulignés (_texte_ = texte) ou des astérisques (*texte* = texte).\nLe gras peut être obtenu en plaçant deux astériques avant et après le texte (**texte** = texte).\nLes exposants à l’aide de deux chapeaux ^ (2^2^ = 22).\nLes indices avec deux tildes ~ (T~2~ = T2).\nUne ligne verticale à l’aide de trois étoiles placées seules en début de ligne (***).\nUne citation à l’aide du signe &gt; placé en début de paragraphe (&gt; citation).\nUne liste à puces (comme dans Word) en plaçant un tiret (- liste) ou un astérisque (* liste) en début de paragraphe. Assurez-vous de laisser un espace entre le tiret et le mot.\nUne liste numérotée en plaçant 1., 2., 3., etc. au début de chaque ligne qui compose la liste (1. Liste numéro 1). Pour d’autres exemples, cliquez ici\nIl est aussi possible de créer une liste numérotée continue pour l’ensemble du document en plaçant simplement (@) au début de chaque ligne qui compose la liste continue ((@) liste 1). Malheureusement, la numérotation de la liste ne peut pas être interrompue et recommencée, comme c’est le cas avec l’approche précédente.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Le texte</span>"
+    ]
+  },
+  {
+    "objectID": "Texte.html#exercice-3",
+    "href": "Texte.html#exercice-3",
+    "title": "10  Le texte",
+    "section": "10.5 Exercice 3",
+    "text": "10.5 Exercice 3\nL’objectif de cet exercice est d’apprendre à insérer des en-têtes et du texte à partir du langage R Markdown. Voici les instructions :\n\nOuvrez le fichier Exercice Notebook.Rmd que vous avez créé lors de l’Exercice 2\nSous les métadonnées, insérez des en-têtes et du texte tel que suggèré ci-dessous :\n\nAjoutez un en-tête de niveau 1 : Fichier women\nAjoutez un en-tête de niveau 2 : Variables\nAjoutez la phrase suivante sous l’en-tête Variables :\n\nVoici les variables qui composent le fichier women disponible par défaut dans le logiciel R\n\nMettre en italique le mot women dans la phrase précédente\nMettre en gras le mot logiciel R dans la phrase précédente\n\nSauvegardez votre fichier R Notebook\nVisualisez votre document final R Notebook en sélectionnant Preview\n\nAu besoin, apportez les correctifs pour qu’il ressemble à l’exemple ci-dessous :\n\n\n\n\n\n\n\nAprès avoir complété l’Exercice 3, votre document devrait ressembler à ceci",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Le texte</span>"
+    ]
+  },
+  {
+    "objectID": "Texte.html#footnotes",
+    "href": "Texte.html#footnotes",
+    "title": "10  Le texte",
+    "section": "",
+    "text": "Pour une liste exhaustive des options, voir la section Pandoc’s Markdown en cliquant ici↩︎",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Le texte</span>"
+    ]
+  },
+  {
+    "objectID": "Bloc_de_codes.html",
+    "href": "Bloc_de_codes.html",
+    "title": "11  Blocs de codes",
+    "section": "",
+    "text": "11.1 Exemple\nLa troisième section d’un fichier R Notebook est l’utilisation des blocs de codes. Les blocs de codes nous permettent d’importer, d’examiner, d’analyser et présenter nos données. Dans notre cas, nous allons utiliser des blocs de codes du langage R. Donc, afin d’utiliser les codes R, il faut, dans un premier temps, insérer des blocs de codes (nommés “chunks” dans RStudio) à l’intérieur du fichier R Notebook sous les Métadonnées dans la fenêtre Source de RStudio.\nDans l’exemple de la Figure @ref(fig:nb91), le bloc de codes est inséré entre les lignes 32 à 36 et ce bloc de codes est entouré par du texte et des en-têtes (voir ##). Cet exemple nous permet de bien voir comment le texte et les codes R sont intégrés à l’intérieur d’un document R Notebook.\nVoici un exemple de blocs de codes R entouré par du texte et des en-têtes dans la fenêtre Source de RStudio",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Blocs de codes</span>"
+    ]
+  },
+  {
+    "objectID": "Bloc_de_codes.html#insertion",
+    "href": "Bloc_de_codes.html#insertion",
+    "title": "11  Blocs de codes",
+    "section": "11.2 Insertion",
+    "text": "11.2 Insertion\nPour insérer un bloc de codes R, dans la fenêtre Source de RStudio, il faut placer votre curseur sur la ligne du fichier R Notebook où vous désirez insérer le bloc de codes. Par la suite, quelques choix s’offrent à vous :\n\ndans le menu de RStudio, il faut cliquer sur l’icone avec le carré vert avec un C blanc à l’intérieur et, dans la bande déroulante, il faut choisir l’option R (voir Figure @ref(fig:nb9)).\ndans le menu de RStudio, sélectionnez Code &gt; Insert Chunk.\nles touches Alt+Ctrl+I (Mac) ou Cmd+Option+I (PC) permettent d’insérer automatiquement un bloc de codes R.\n\n\n\n\n\n\nInsertion d’un bloc de codes R dans la fenêtre Source de RStudio",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Blocs de codes</span>"
+    ]
+  },
+  {
+    "objectID": "Bloc_de_codes.html#bloc-de-code-vierge",
+    "href": "Bloc_de_codes.html#bloc-de-code-vierge",
+    "title": "11  Blocs de codes",
+    "section": "11.3 Bloc de code vierge",
+    "text": "11.3 Bloc de code vierge\nLa Figure @ref(fig:nb10) illustre à quoi ressemble un bloc de codes R vierge. Dans cet exemple, le bloc de codes R est inséré entre les lignes 156 et 158 de mon document. Une bande grise est insérée à l’intérieur de deux lignes créées à partir de 3 accents graves (```). Il est important de ne jamais effacer ces deux lignes puisque le bloc de codes est délimité par ces lignes. En les effaçant, le bloc va s’agrandir et intégrer du texte non désiré à l’intérieur du bloc de codes.\nDans le bloc de codes R, l’acolade {r} indique que notre bloc est un bloc de codes R. Il est possible de contrôler le comportement d’un bloc de codes R en ajoutant des codes additionnels dans cette acolade. Vous trouverez la liste des options possibles en cliquant ici. Notez que plusieurs de ces options ne fonctionnent pas avec le format R Notebook.\n\n\n\n\n\nInsertion d’un nouveau bloc de codes R dans la fenêtre Source de RStudio",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Blocs de codes</span>"
+    ]
+  },
+  {
+    "objectID": "Bloc_de_codes.html#exécuter-du-code-r",
+    "href": "Bloc_de_codes.html#exécuter-du-code-r",
+    "title": "11  Blocs de codes",
+    "section": "11.4 Exécuter du code R",
+    "text": "11.4 Exécuter du code R\nRegardons comment nous pouvons exécuter les lignes de codes inscrites à l’intérieur d’un bloc de codes R. À titre de démonstration, j’insère un bloc de codes R avec trois lignes de codes à l’intérieur de la fenêtre Source de RStudio (voir ci-dessous)1 :\n\n( a &lt;- 8^2 )    # créer l'objet a\n( b &lt;- a + 36 ) # créer l'objet b\na * b           # multiplication des objets a et b\n\n\n11.4.1 Une ligne\nPour exécuter une ligne de codes dans R Notebook, il faut placer le curseur sur la ligne que l’on désire exécuter (ou sélectionner toute la ligne) (voir la Figure @ref(fig:chunk1)). Par la suite,\n\nil faut cliquer sur le bouton Run [situé en haut à droite dans la fenêtre Source] et choisir l’option désirée (Run Selected Line(s)).\nUne alternative consiste à appuyer sur les touches Cmd+Enter (Mac) ou Ctrl+Enter (PC).\n\n\n\n\n\n\nExécuter une ligne de codes R\n\n\n\n\nLe résultat s’affiche directement sous le bloc de codes R. Dans notre exemple, le résultat est 64. Le chiffre [1] désigne la première ligne dédié aux résultats.\n\n\n11.4.2 Plusieurs lignes\nParfois, nous désirons exécuter plusieurs lignes de codes adjacentes dans R Notebook. À l’aide de votre curseur, il faut sélectionner toutes les lignes de codes (voir la Figure @ref(fig:chunk2)) et ensuite :\n\nil faut cliquer sur le bouton Run [situé en haut à droite dans la fenêtre Source] et choisir l’option désirée (Run Selected Line(s)).\nUne alternative consiste à appuyer sur les touches Cmd+Enter (Mac) ou Ctrl+Enter (PC).\n\n\n\n\n\n\nExécuter plusieurs lignes de codes R simultanément\n\n\n\n\nLe résultat s’affiche directement sous le bloc de codes R. Dans notre exemple, le résultat de la première ligne de codes est 64 et le résultat de la seconde ligne de codes est 100. Encore une fois, le chiffre [1] désigne la première ligne dédié aux résultats de chacune des lignes de codes.\n\n\n11.4.3 Un bloc\nParfois, voir souvent, nous désirons exécuter simultanément tous les codes contenus dans un bloc de codes. Pour cela :\n\nil faut cliquer sur le bouton Run [situé en haut à droite dans la fenêtre Source] et choisir l’option désirée (Run Current Chunk) (voir la Figure @ref(fig:chunk3)).\nUne alternative consiste à cliquer sur la flêche verte située dans le coin supérieur droite du bloc de codes R que l’on désire exécuter.\n\n\n\n\n\n\nExécuter un bloc de codes R\n\n\n\n\nLe résultat s’affiche directement sous le bloc de codes R. Dans notre exemple, le résultat de la première ligne de coded est 64, le résultat de la seconde ligne de codes est 100 et le résultat de la troisième ligne de codes est 6400. Encore une fois, le chiffre [1] désigne la première ligne dédié aux résultats de chacune des lignes de codes.\n\n\n11.4.4 Plusieurs blocs\n\nNotez qu’il est aussi possible d’exécuter une série de blocs de codes R simultanément en sélectionnant les options Run All Chunks Above, Run All Chunks Below ou Run All. Il suffit de cliquer sur Run et de sélectionner l’option désirée dans la bande déroulante (voir la Figure @ref(fig:chunk4)).\n\n\n\n\n\n\nExécuter plusieurs blocs de codes R",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Blocs de codes</span>"
+    ]
+  },
+  {
+    "objectID": "Bloc_de_codes.html#diviser-un-bloc",
+    "href": "Bloc_de_codes.html#diviser-un-bloc",
+    "title": "11  Blocs de codes",
+    "section": "11.5 Diviser un bloc",
+    "text": "11.5 Diviser un bloc\nAvec R Notebook, il est parfois nécessaire de couper un bloc de codes qui est trop long. Par exemple, notre bloc de codes pourrait comprendre :\n\nune première ligne de codes qui donne un premier résultat que nous désirons interpréter et,\nune seconde ligne de codes qui donne un second résultat que nous désirons aussi interpréter, mais séparément.\n\nAfin d’éviter la confusion dans l’interprétation, il est parfois plus simple de diviser notre bloc de codes en deux blocs de codes. Pour ce faire, à l’intérieur du bloc que vous désirez séparer, placez votre curseur sur la ligne qui sera associée à la première ligne de codes du deuxième bloc de codes et appuyer simultanément sur les touches Alt+Ctrl+I (Mac).\nDans l’exemple illustré ci-dessous (voir la Figure @ref(fig:chunk5)), j’ai placé mon curseur sur la ligne avec le code ( b &lt;- a + 36 ) et j’ai appuyé sur les touches Alt+Ctrl+I. J’ai maintenant (voir la Figure @ref(fig:chunk6)) deux blocs de codes et je peux les exécuter et les interpréter séparément par la suite.\n\n\n\n\n\nSéparer un bloc de codes R\n\n\n\n\n\n\n\n\n\nExemple d’un bloc de codes R séparé",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Blocs de codes</span>"
+    ]
+  },
+  {
+    "objectID": "Bloc_de_codes.html#exercice-4",
+    "href": "Bloc_de_codes.html#exercice-4",
+    "title": "11  Blocs de codes",
+    "section": "11.6 Exercice 4",
+    "text": "11.6 Exercice 4\nLes objectifs de cet exercice sont (1) d’apprendre à insérer un bloc de codes R et (2) à exécuter une ligne de codes à l’intérieur d’un bloc de codes R. Voici les instructions :\n\nOuvrez le fichier Exercice Notebook.Rmd que vous avez créé lors de l’Exercice 3\nDans la fenêtre Source de RStudio, insérez un nouveau bloc de codes R sur la ligne suivant la phrase Voici les variables qui composent le fichier women disponible par défaut dans le logiciel R\n\nDans le bloc de code R, ajoutez le code suivant : str(women)\nExécutez le code de la ligne précédente\n\nSauvegardez votre fichier R Notebook\nVisualisez votre document final R Notebook en sélectionnant Preview\n\nAu besoin, apportez les correctifs pour qu’il ressemble à l’exemple de la Figure @ref(fig:exercice4) :\n\n\n\n\n\n\n\nAprès avoir complété l’Exercice 4, votre document devrait ressembler à ceci",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Blocs de codes</span>"
+    ]
+  },
+  {
+    "objectID": "Bloc_de_codes.html#footnotes",
+    "href": "Bloc_de_codes.html#footnotes",
+    "title": "11  Blocs de codes",
+    "section": "",
+    "text": "Vous pouvez copier ces trois lignes de codes en cliquant sur l’icone situé à la droite à l’intérieur de mon bloc de codes R.↩︎",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Blocs de codes</span>"
+    ]
+  },
+  {
+    "objectID": "ExempleR.html",
+    "href": "ExempleR.html",
+    "title": "12  Exemple avec R",
+    "section": "",
+    "text": "12.1 Introduction à R\nDans le chapitre précédent, nous avons vu comment insérer un bloc de codes R à l’intérieur d’un document R Notebook. Dans le présent chapitre, à l’aide d’un exemple, nous allons explorer plus en détails le fonctionnement des blocs de codes R dans R Notebook.\nAvant d’aborder l’utilisation de blocs de codes R, j’encourage les plus curieux d’entre vous à consulter le livre électronique d’Anouar El Ghouch, professeur de statistiques à l’Université Catholique de Louvain (Belgique). Dans son livre Exploration de données avec R, le professeur Ghouch présente de façon simple la plupart des concepts de base de R.\nSi la lecture en anglais ne vous fait pas peur, je suggère fortement la lecture du livre électronique d’Alex Douglas, Deon Roos, Rrancesca Mancini, Ana Couto et David Lusseau (2022). An Introduction to R. À mon avis, ce livre est l’un des meilleurs pour introduire les logiciels R et RStudio. Plusieurs petits trucs y sont présentés et ce, dans un style d’écriture très abordable. Et, comme bonus, les auteurs ont intégré quelques vidéos qui permettent de bien comprendre comment utiliser R et RStudio. Vous pouvez consulter la liste de ces vidéos en cliquant ici.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exemple avec R</span>"
+    ]
+  },
+  {
+    "objectID": "ExempleR.html#données",
+    "href": "ExempleR.html#données",
+    "title": "12  Exemple avec R",
+    "section": "12.2 Données",
+    "text": "12.2 Données\nAfin de démontrer le fonctionnement des blocs de codes R dans R Notebook, utilisons un fichier de données déjà disponible par défaut dans R1. Nous allons utiliser le fichier de données cars. Ce fichier contient des données relatives à différentes marques de voitures.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exemple avec R</span>"
+    ]
+  },
+  {
+    "objectID": "ExempleR.html#variables",
+    "href": "ExempleR.html#variables",
+    "title": "12  Exemple avec R",
+    "section": "12.3 Variables",
+    "text": "12.3 Variables\nLa fonction str de R permet d’examiner le contenu d’un ensemble de données (str = structure). Puisque nous avons sélectionné l’option inline dans les métadonnées, après avoir exécuté la ligne de codes, les résultats s’affichent directement sous les codes exécutés dans la fenêtre Source de RStudio.\n\nstr(cars)\n\n'data.frame':   50 obs. of  2 variables:\n $ speed: num  4 4 7 7 8 9 10 10 10 11 ...\n $ dist : num  2 10 4 22 16 10 18 26 34 17 ...\n\n\nSuite à l’exécution de la commande str(cars), nous remarquons que le fichier cars contient 50 observations (i.e. 50 voitures) et deux variables, soit speed et dist2. Ces deux variables sont de nature numérique (num). De plus, les dix premières valeurs de chacune des variables sont affichées à la droite du nom de chaque variable. Dans ce livre, vous pouvez copier les codes R en cliquant sur l’icone situé à la droite dans les blocs de codes R.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exemple avec R</span>"
+    ]
+  },
+  {
+    "objectID": "ExempleR.html#graphique-avec-r",
+    "href": "ExempleR.html#graphique-avec-r",
+    "title": "12  Exemple avec R",
+    "section": "12.4 Graphique avec R",
+    "text": "12.4 Graphique avec R\nImaginons que nous voulons examiner la relation qui existe entre les variables speed et dist à l’aide d’un diagramme en nuage de points (scatterplot, en anglais). La fonction plot de R permet de créer rapidement ce type de graphique.\nNotez que les variables sont nommées en relation avec leur ensemble de données d’appartenance (cars) à l’aide du signe $. Par défaut, avec la fonction plot, la première variable nommée (cars$speed) se retrouve sur l’axe des X et la seconde variable (cars$dist) sur l’axe des X3.\n\nplot(cars$speed, cars$dist)",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exemple avec R</span>"
+    ]
+  },
+  {
+    "objectID": "ExempleR.html#graphique-amélioré",
+    "href": "ExempleR.html#graphique-amélioré",
+    "title": "12  Exemple avec R",
+    "section": "12.5 Graphique amélioré",
+    "text": "12.5 Graphique amélioré\nLe graphique présenté ci-haut est correct mais rien pour écrire à sa mère, n’est-ce pas ? Heureusement, R possède de nombreuses fonctions graphiques de base qui permettent d’améliorer l’apparence visuelle des graphiques. Ci-dessous, j’apporte les modifications suivantes :\n\nl’ajout de type = \"p\" qui permet de préciser le type de graphique désiré (“p” = nuage de points). Il est possible de créer d’autres types de graphique avec la fonction type. Je vous invite à cliquer ici ou ici pour voir les autres types de graphiques possibles.\nl’ajout de plusieurs fonctions (xlab, ylab, col, main, etc.) qui permettent de contrôler l’aspect visuelle du graphique.\nDe plus, dans un bloc de codes, l’ajout du symbole # permet aussi d’insérer des commentaires qui ne sont pas traités comme des lignes de codes. Cela permet de documenter l’utilisation de telle ou de telle fonction directement dans notre bloc de codes.\n\n\nDe plus, imaginons que nous voulons ajouter la droite de régression qui permet de prédire la variable dist à partir de la variable speed. Il faut dans un premier temps :\n\ncréer un objet R (model_1)4 qui contient les résultats du calcul de la droite de régression avec la fonction lm (lm = linear model) et,\najouter la droite de régression avec la fonction abline à partir de l’objet R model_1\n\n\nplot(cars$dist ~ cars$speed, # variables mises en relation avec ~\n     type = \"p\", # nuage de points\n     main = \"Relation entre la distance et la vitesse\", # titre\n     xlab = \"Vitesse (milles à l'heure)\", # titre axe des x\n     ylab = \"Distance parcourue (milles)\", # titre axe des y\n     col = \"red\", # couleur des points\n     las = 1, # orientation horizontale des chiffres sur axe y\n     cex = 1.25, # grosseur des points\n     frame = FALSE, # pas de cadre autour du graphique\n     xlim = c(0, 30), # étendue axe des x\n     ylim = c(0, 120) # étendue axe des y\n)\nmodel_1 &lt;- lm(cars$dist ~ cars$speed) # modèle linéaire simple\nabline(model_1, col=\"grey50\", cex=2, lty=\"dashed\") # droite de régression\n\n\n\n\nGraphique amélioré",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exemple avec R</span>"
+    ]
+  },
+  {
+    "objectID": "ExempleR.html#exercice-5",
+    "href": "ExempleR.html#exercice-5",
+    "title": "12  Exemple avec R",
+    "section": "12.6 Exercice 5",
+    "text": "12.6 Exercice 5\nDans le but de mettre en pratique quelqu’uns des éléments présentés ci-haut, voici un exercice. À partir du fichier Exercice R Notebook que vous avez complété lors de l’Exercice 4, veuillez ajouter :\n\nUn second en-tête de niveau 2 du nom de Graphique\nSous cet en-tête, écrire le texte Illustration de la relation entre le poids et la taille pour un échantillon fictif de 15 femmes\nInsérer un bloc de codes R après ce texte.\nDans le bloc de codes, ajouter les codes R pour créer un graphique semblable à celui illustré ci-dessous (avec titres) dont les points sont reliés par une ligne5.\n\nPour vous aider avec la figure, veuillez consulter la section Graphique amélioré.\n\nSauvegardez votre fichier R Notebook\nVisualisez votre document final R Notebook en sélectionnant Preview\n\nAssurez-vous de la disponibilité des codes R dans le fichier .nb.html (voir le menu Code dans le coin supérieur droit)\nAu besoin, apportez les correctifs pour qu’il ressemble à l’exemple de la Figure @ref(fig:exercice5) :\n\n\n\n\n\n\n\nAprès avoir complété l’Exercice 5, votre document devrait ressembler à ceci",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exemple avec R</span>"
+    ]
+  },
+  {
+    "objectID": "ExempleR.html#footnotes",
+    "href": "ExempleR.html#footnotes",
+    "title": "12  Exemple avec R",
+    "section": "",
+    "text": "Vous pouvez consulter la liste de tous les ensembles de données disponibles dans R en inscrivant le code data() dans la fenêtre Console de RStudio.↩︎\nLa variable speed désigne la vitesse (en milles à l’heure) de la voiture et la variable dist désigne la distance de freinage (en pieds). Ces données ont été collectées dans les années 1920 ! Pour obtenir des informations supplémentaires sur cet ensemble de données, tapez ?cars et la touche ↵ dans la Console de RStudio.↩︎\nIl est aussi possible d’écrire plot(cars$dist ~ cars$speed). Dans ce cas, la variable distance est mise en relation avec la variable speed à l’aide du symbole ~ (tilde). Avec cette notation, la première variable désigne la variable dépendante (dist) et la seconde variable désigne la variable indépendante (speed).↩︎\nLe nom d’un objet R est arbitraire. Vous pouvez écrire le nom que vous voulez. Nous aurions pu l’appeler Michel !↩︎\nMême en sélectionnant le bon type de graphique, il est possible que la ligne qui joint les points n’apparaissent pas. Solution : Il faut agrandir la fenêtre Source du logiciel RStudio.↩︎",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exemple avec R</span>"
+    ]
+  },
+  {
+    "objectID": "Extract.html",
+    "href": "Extract.html",
+    "title": "13  Extraction et intégration",
+    "section": "",
+    "text": "13.1 Relation distance/vitesse\nDans ce chapitre, nous allons voir comment extraire le résultat d’un code R (ex: calcul de la moyenne) et l’intégrer dans le texte de notre document R Notebook. À titre d’exemple, le texte ci-dessous intègre les valeurs de la droite de régression que nous avons dessinée dans le graphique amélioré du Chapitre @ref(ExempleR).\nL’un des nombreux avantages du langage R est la facilité avec laquelle nous pouvons extraire des valeurs spécifiques générées par du code R. Dans l’exemple du Chapitre @ref(ExempleR), à l’aide d’un diagramme de type nuage de points, nous avons mis en relation la variable dist avec la variable speed. À titre de rappel, voici de nouveau cette relation :\nplot(cars$dist, cars$speed, # variables mises en relation\n     type=\"p\", # nuage de points\n     pch=16,   # type de points (remplis)\n     cex=1.25, # grosseur des points\n     las=1)    # orientation de l'axe des y",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Extraction et intégration</span>"
+    ]
+  },
+  {
+    "objectID": "Extract.html#calcul-de-la-corrélation",
+    "href": "Extract.html#calcul-de-la-corrélation",
+    "title": "13  Extraction et intégration",
+    "section": "13.2 Calcul de la corrélation",
+    "text": "13.2 Calcul de la corrélation\nExaminons de nouveau cette relation mais en calculant la corrélation qui existe entre ces deux variables. Ci-dessous, je présente deux approches pour extraire les codes R : une simple et une complexe.\n\nL’approche simple s’utilise lorsque nous pouvons extraire directement les valeurs à partir d’un code R sans avoir à créer un objet R qui contient les résultats.\nL’approche complexe s’utilise lorsque nous avons créé un objet R qui contient les résultats d’une analyse statistique. Il faut par la suite extraire les valeurs à partir de cet objet R que nous avons créé.\n\n\n13.2.1 Approche simple\nLa fonction cor() permet d’obtenir et d’extraire directement la valeur de la corrélation entre différentes variables. Voici le bloc de codes R :\n\ncor(cars$speed, cars$dist)\n\n[1] 0.8068949\n\n\nVoici l’interprétation :\n\nLa corrélation entre la vitesse et la distance de freinage est positive et d’une valeur de 0.8068949.\n\n\n13.2.1.1 Intégration dans R Notebook\nDans la phrase précédente, la valeur 0.8068949 a été extraite directement à partir du code R présenté dans le bloc de codes R ci-haut. De plus, pour accentuer l’effet de l’interprétation, j’ai ajouté le code de citation de R Markdown (&gt;) Voici à quoi ressemble la phrase dans mon document R Notebook :\n\n\n\n\n\nTexte de type R Markdown avec intégration des codes pour extraire les résultats des codes R\n\n\n\n\nNotez qu’il faut entourer le code de la valeur extraite par des accents graves (voir Figure @ref(fig:nb100)). Et il ne pas oublier d’insérer r devant chaque objet R qui est intégré dans le texte. Aussi, le texte est en rouge parce que c’est une citation dans mon texte R Notebook.\nSi nous désirons contrôler le nombre de décimales, une solution consiste à ajouter la fonction format(x, digits = ) à votre code dans R Notebook. Voici un exemple et la Figure @ref(fig:nb103) montre comment écrire le code dans R Notebook :\n\nLa corrélation entre la vitesse et la distance de freinage est positive et d’une valeur de 0.807.\n\n\n\n\n\n\nTexte de type R Markdown avec intégration des codes pour extraire les résultats des codes R\n\n\n\n\n\n\n\n13.2.2 Approche complexe\nLa fonction cor.test de R permet de calculer la corrélation entre la distance de freinage et la vitesse d’un véhicule automobile. Cette même fonction, cependant, permet d’examiner d’autres statistiques associées à l’estimation de la corrélation entre les deux variables.\nPour les besoins pédagogiques, nous allons créer un objet R du nom de CorrTest qui va mémoriser l’estimation de la force de la relation entre la variable distance (cars$dist) et la variable vitesse (cars$speed). Voici le code R :\n\n( CorrTest &lt;- cor.test(cars$dist, cars$speed) )\n\n\n    Pearson's product-moment correlation\n\ndata:  cars$dist and cars$speed\nt = 9.464, df = 48, p-value = 1.49e-12\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.6816422 0.8862036\nsample estimates:\n      cor \n0.8068949 \n\n\n\n13.2.2.1 Contenu d’un objet R\nÀ première vue, il est plutôt difficile d’extraire les valeurs de cet objet R. L’approche la plus simple consiste à vérifier les sous-objets disponibles dans l’objet R que nous avons créé à l’aide de la fonction str().\n\nstr(CorrTest)\n\nList of 9\n $ statistic  : Named num 9.46\n  ..- attr(*, \"names\")= chr \"t\"\n $ parameter  : Named int 48\n  ..- attr(*, \"names\")= chr \"df\"\n $ p.value    : num 1.49e-12\n $ estimate   : Named num 0.807\n  ..- attr(*, \"names\")= chr \"cor\"\n $ null.value : Named num 0\n  ..- attr(*, \"names\")= chr \"correlation\"\n $ alternative: chr \"two.sided\"\n $ method     : chr \"Pearson's product-moment correlation\"\n $ data.name  : chr \"cars$dist and cars$speed\"\n $ conf.int   : num [1:2] 0.682 0.886\n  ..- attr(*, \"conf.level\")= num 0.95\n - attr(*, \"class\")= chr \"htest\"\n\n\nOuf, il y a beaucoup d’information dans ce résumé. Mais nous pouvons voir certaines similitudes avec les résultats du calcul de la corrélation. Les 9 sous-objets présents dans l’objet CorrTest peuvent être identifiés à cet objet à l’aide du signe $. Regardons de plus prêt quelqu’uns d’entre eux :\n\nCorrTest$statistic = 9.46. Cette valeur correspond à la valeur du test t.\nCorrTest$parameter = 48. Cette valeur correspond à la valeur des degrés de liberté du test t.\nCorrTest$p.value = 1.49e-12. Cette valeur correspond à la probabilité associée à une valeur t de 9.46 pour 48 degrés de liberté.\nCorrTest$estimate = 0.807. Cette valeur correspond à la valeur de la corrélation entre les deux variables.\nCorrTest$method = “Pearson’s product-moment correlation”. Ceci précise que nous avons effectué un test de corrélation de Pearson.\nCorrTest$conf.int = [1:2] 0.682 0.886. Ces valeurs sont intégrés dans un vecteur de 2 valeurs [1:2] et elles désignent [1] la valeur inférieure des intervalles de confiance à 95% et [2] la valeur supérieure des intervalles de confiance à 95%.\n\n\nVous aurez certainement déduit qu’il est possible d’obtenir directement ces valeurs à partir du code R qui désigne chacun de ces sous-objets. Par exemple, je peux créer un bloc de codes R qui demande d’évaluer la valeur de chacun de ces sous-objets R :\n\nCorrTest$statistic # test t\n\n      t \n9.46399 \n\nCorrTest$parameter # degrés de liberté\n\ndf \n48 \n\nCorrTest$p.value   # valeur p\n\n[1] 1.489836e-12\n\nCorrTest$estimate  # corrélation\n\n      cor \n0.8068949 \n\nCorrTest$method    # type de corrélation\n\n[1] \"Pearson's product-moment correlation\"\n\nCorrTest$conf.int[1] # valeur inférieure des IC à 95%\n\n[1] 0.6816422\n\nCorrTest$conf.int[2] # valeur supérieure des IC à 95%\n\n[1] 0.8862036\n\n\n\n\n13.2.2.2 Combiner les sous-objets R\nJe dois avouer que présentée ainsi, le résultat obtenu par l’extraction des sous-objets de notre objet R est un peu mêlant. Donc, ci-dessous, j’utilise la fonction rbind1 pour attribuer un nom à chaque élément et de les regrouper dans une même fenêtre. Et pour extraire uniquement la valeur que je désire, j’utilise les doubles croches [[ ]]. Ce bloc de codes est purement facultatif mais il permet de démontrer que nous pouvons manipuler le format de présentation de différents sous-objets R.\n\noptions(scipen=999) # retirer la notation scientifique\nrbind(test_t      = CorrTest$statistic[[1]], \n      dl          = CorrTest$parameter[[1]],\n      valeur_p    = CorrTest$p.value[[1]],\n      correlation = CorrTest$estimate[[1]],\n      lower.ic    = CorrTest$conf.int[[1]],\n      upper.ic    = CorrTest$conf.int[[2]]\n      )\n\n                             [,1]\ntest_t       9.463989990298367516\ndl          48.000000000000000000\nvaleur_p     0.000000000001489836\ncorrelation  0.806894900689210437\nlower.ic     0.681642222094305583\nupper.ic     0.886203628526014975\n\n\n\n\n13.2.2.3 Integration dans R Markdown\nBon, maintenant voici la section la plus intéressante vers notre objectif ultime qui consiste à ne pas copier les valeurs calculées par R mais à les extraire et à les intégrer directement dans du texte.\nImaginons que nous voulons écrire :\n\nL’analyse révèle une corrélation positive de 0.806 entre la distance de freinage et la vitesse de la voiture avec des intervalles de confiance à 95% qui varient entre 0.682 et 0.886.\n\nSans aucun doute, nous pouvons faire des erreurs de transcription quand vient le temps d’écrire les chiffres et les décimales dans notre texte. Avec R Markdown, nous pouvons extraire nos valeurs directement de notre objet R (CorrTest) et les intégrer dans notre texte. Mais, comme nous l’avons fait ci-haut, il faut entourer le test par des accents graves (voir Figure @ref(fig:nb102)). Et il ne pas oublier d’insérer r devant chaque objet R. De plus, la fonction round( , digits=3) permet d’arrondir après 3 décimales les valeurs extraites.\n\n\n\n\n\nTexte de type R Markdown avec intégration des codes pour extraire les résultats des codes R\n\n\n\n\nVoici le même texte obtenu directement avec les codes d’extraction de résultats R de la Figure @ref(fig:nb102) :\n\nL’analyse révèle une corrélation positive de 0.807 entre la distance de freinage et la vitesse de la voiture avec des intervalles de confiance à 95% qui varient entre 0.682 et 0.886.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Extraction et intégration</span>"
+    ]
+  },
+  {
+    "objectID": "Extract.html#commentaire-final",
+    "href": "Extract.html#commentaire-final",
+    "title": "13  Extraction et intégration",
+    "section": "13.3 Commentaire final",
+    "text": "13.3 Commentaire final\nMais c’est donc compliqué, me direz-vous ? J’avoue que toute cette démarche, dont l’objetif ultime est de ne pas avoir à recopier quelques chiffres ici et là, peut vous sembler une perte de temps. De plus, je vous entends dire : “Moi, faire une erreur de transcription ? Jamais, ce n’est pas mon style, je suis personne ordonnée et systématique !” Soyez assurés que je n’ai jamais rencontré personne qui n’a pas fait une petite erreur de transcription de son logiciel statistique à son logiciel de traitement de texte. Bref, vous aussi, vous pouvez faire cette erreur. Je l’ai déjà fait moi aussi…\nDe plus, n’oubliez pas que si jamais, les valeurs des variables dist et speed devaient changer (en ajoutant des voitures dans notre fichier de données), les codes pour extraire les valeurs ne changeraient pas et notre texte présenterait automatiquement les bonnes valeurs. Quelle belle façon de gagner du temps !",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Extraction et intégration</span>"
+    ]
+  },
+  {
+    "objectID": "Extract.html#exercice-6",
+    "href": "Extract.html#exercice-6",
+    "title": "13  Extraction et intégration",
+    "section": "13.4 Exercice 6",
+    "text": "13.4 Exercice 6\nDans le but de mettre en pratique l’extraction de résultats obtenus dans des codes R, voici un exercice. À partir du fichier Exercice R Notebook que vous avez complété lors de l’Exercice 5, veuillez ajouter :\n\nUn troisième en-tête de niveau 2 du nom de Statistiques descriptives\nSous cet en-tête, écrire le texte Voici la moyenne et l'écart-type du poids et de la taille des femmes\nInsérer un bloc de codes R après ce texte.\nDans le bloc de codes, ajouter les codes R pour calculer la moyenne et l’écart-type des deux variables de votre échantillon, soit la taille et le poids.\n\nLes fonctions R pour obtenir la moyenne (mean) et l’écart-type (sd=standard deviation) de chacune de vos variables dépendantes sont :\n\nmean()\nsd()\n\n\nExécutez votre bloc de codes R\nSous le bloc de codes créé à l’étape 4, insérez un en-tête de niveau 3 du nom de Conclusion.\nÉcrivez un texte qui intègre les résultats. Voici le texte à écrire. Notez qu’il manque les valeurs des moyennes et des écart-types (illustré par []).\n\nLa moyenne de la taille de mon échantillon de femmes est de [] (écart-type = []) et la moyenne du poids de ces mêmes femmes est de [] (écart-type = []).\n\nSauvegardez votre fichier R Notebook\nVisualisez votre document final R Notebook en sélectionnant Preview\n\nAssurez-vous de la disponibilité des codes R dans le fichier .nb.html (voir le menu Code dans le coin supérieur droit)\nAu besoin, apportez les correctifs pour qu’il ressemble à l’exemple de la Figure @ref(fig:exercice6) :\n\n\n\n\n\n\n\nAprès avoir complété l’Exercice 6, la section 1.3 de votre document devrait ressembler à ceci",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Extraction et intégration</span>"
+    ]
+  },
+  {
+    "objectID": "Extract.html#footnotes",
+    "href": "Extract.html#footnotes",
+    "title": "13  Extraction et intégration",
+    "section": "",
+    "text": "Cette fonction combine les objets par rangée, d’où l’expression r (row) bind.↩︎",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Extraction et intégration</span>"
+    ]
+  },
+  {
+    "objectID": "Save_share.html",
+    "href": "Save_share.html",
+    "title": "14  Sauvegarde et partage",
+    "section": "",
+    "text": "14.1 R Markdown\nVoici quelques informations liées à la sauvegarde et au partage des fichiers R Notebook.\nLorsque vous créer un fichier R Notebook, vous créez un fichier R Markdown (.Rmd). En cliquant sur File / Save (ou l’icone de la petite disquette bleue dans le menu), RStudio sauvegarde automatiquement ce fichier, toujours en format R Markdown (.Rmd), dans votre répertoire de travail (voir Figure @ref(fig:fig192)). Lorsque vous modifiez votre document R Notebook, en réalité, vous modifiez le fichier .Rmd.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sauvegarde et partage</span>"
+    ]
+  },
+  {
+    "objectID": "Save_share.html#preview",
+    "href": "Save_share.html#preview",
+    "title": "14  Sauvegarde et partage",
+    "section": "14.2 Preview",
+    "text": "14.2 Preview\nPour voir votre fichier en format HTML, il faut cliquez sur l’option Preview du menu de RStudio. RStudio crée un fichier HTML avec l’extension .nb.html. Une fois que le fichier .nb.html est sauvegardé dans votre répertoire de travail, vous pouvez l’ouvrir directement dans votre navigateur web à partir de Finder (Mac) ou Explorateur de fichiers (PC).",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sauvegarde et partage</span>"
+    ]
+  },
+  {
+    "objectID": "Save_share.html#partager",
+    "href": "Save_share.html#partager",
+    "title": "14  Sauvegarde et partage",
+    "section": "14.3 Partager",
+    "text": "14.3 Partager\nPuisque le fichier final .nb.html est en format HTML, il peut facilement être partagé. N’importe quel navigateur web pourra l’ouvrir. De plus, le fichier .nb.html possède aussi une caractéristique bien particulière : le fichier .Rmd peut être téléchargé directement à partir de la page d’ouverture du fichier .nb.html ((voir Figure @ref(fig:nb101)). Cette fonctionnalité, cependant, n’est pas toujours disponible (surtout sur les ordinateurs Mac). Donc, pour être certain que votre collaborateur puisque effectuer des modifications, il faut partager tous les fichiers suivants :\n\nle fichier en format .Rmd1\nle fichier en format .nb.html\ntous les fichiers qui l’accompagnent, comme les fichiers de données (format .csv, .xlsx, .dat) ou les fichiers avec des images (format .png, .tiff, .jpeg) que vous avez utilisés pour produire votre document final.\n\n\n\n\n\n\nIllustration de l’option download Rmd via le fichier .nb.html",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sauvegarde et partage</span>"
+    ]
+  },
+  {
+    "objectID": "Save_share.html#footnotes",
+    "href": "Save_share.html#footnotes",
+    "title": "14  Sauvegarde et partage",
+    "section": "",
+    "text": "Tel qu’indiqué ci-haut, le format .Rmd peut aussi être téléchargé via l’option download Rmd du fichier .nb.html (si disponible).↩︎",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Sauvegarde et partage</span>"
+    ]
+  },
+  {
+    "objectID": "Problemes.html",
+    "href": "Problemes.html",
+    "title": "15  Problèmes",
+    "section": "",
+    "text": "15.1 Noms des objets R\nParfois, lorsque vient le temps de produire notre document final, R Notebook émet un message d’erreur ou produit un document qui est incomplet. Que ce passe t-il ? Habituellement, le problème vient de l’utilisateur et non de R Notebook… Souvent, dans notre empressement de compléter un document, nous oublions certains petits détails qui empêchent R Notebook de produire un document final complet. Voici quelques pistes de solutions à ces problèmes potentiels.\nSouvent, l’analyse travaille simultanément sur plusieurs fichiers R Notebook. Si, à l’intérieur de ces différents fichiers, le même nom est utilisé pour deux objets R différents, R utilise la plus récente version de l’objet et l’applique à tous les codes associés à ce nom. Cela peut faire en sorte qu’une analyse n’utilise pas les bonnes données. Donc, une bonne habitude consiste à donner des noms différents aux différents objets R qui sont créés lors d’une session de travail.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Problèmes</span>"
+    ]
+  },
+  {
+    "objectID": "Problemes.html#activer-les-extensions",
+    "href": "Problemes.html#activer-les-extensions",
+    "title": "15  Problèmes",
+    "section": "15.2 Activer les extensions",
+    "text": "15.2 Activer les extensions\nLes fichiers .Rmd sont des fichiers autonomes. Ils doivent donc comprendre tous les codes nécessaires à l’exécution finale de tous les codes inscrits dans la fenêtre Source de RStudio. Dans une même session de travail, il arrive régulièrement à l’analyste de travailler simultanément avec plusieurs fichiers R différents dans RStudio. En activant une extension dans un fichier R, celle-ci devient disponible pour tous les fichiers ouverts dans RStudio pendant une session de travail.\nDonc, au moment d’exécuter les codes du fichier R Notebook, un message d’erreur peut apparaître parce que l’analyste a oublié d’insérer le code qui active une extension en particulier dans son fichier R Notebook. En bref, assurez-vous d’ajouter l’activation de toutes les extensions utilisées dans votre document. La pratique veut que toutes les activations d’extension soient incluses dans un bloc de codes R inséré après la section Métadonnéees (voir Figure @ref(fig:library).\n\n\n\n\n\nPlacer un bloc de codes R pour les extensions immédiatement après les métadonnées",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Problèmes</span>"
+    ]
+  },
+  {
+    "objectID": "Problemes.html#activer-tous-les-codes",
+    "href": "Problemes.html#activer-tous-les-codes",
+    "title": "15  Problèmes",
+    "section": "15.3 Activer tous les codes",
+    "text": "15.3 Activer tous les codes\nAvant de générer le fichier final en format .nb.html, assurez-vous d’avoir activé tous les codes de chacun de vos blocs de codes R. Sinon, certains résultats n’apparieront pas dans le ficher .nb.html. Ceci se produit régulièrement lorsque nous ouvrons une nouvelle session de travail à partir d’un fichier .Rmd que nous avons débuté lors d’une session de travail précédente et que nous avons oublié d’activer certains blocs de codes R lors de la réouverture du fichier R Notebook.\nUne solution simple à ce problème consiste à cliquer sur l’option Run All disponible dans la bande déroulante de l’option Run du menu de RStudio. Notez que sur un Mac, les touches Shift+Cmd+R produisent le même résultat.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Problèmes</span>"
+    ]
+  },
+  {
+    "objectID": "Problemes.html#nettoyer-le-cache",
+    "href": "Problemes.html#nettoyer-le-cache",
+    "title": "15  Problèmes",
+    "section": "15.4 Nettoyer le cache",
+    "text": "15.4 Nettoyer le cache\nParfois, le produit final n’est pas tout à fait semblable à nos attentes. Il nous semble avoir fait des modifications dans nos codes R mais ceux-ci n’apparaissent pas dans le fichier .nb.html final lorsqu’on clique sur Preview. Notez que ce problème est possible pour tous les types de codes que l’on insère dans un bloc de codes R (analyses, graphiques, etc.). Par exemple, il est possible qu’une figure ne soit pas semblable à celle que vous avez produite dans votre fichier R Notebook et vous ne savez pas pourquoi.\nUne cause possible de ce problème est que RStudio a enregistré une ancienne copie du graphique en mémoire et qu’il n’a pas emmagasiné la mise-à-jour du graphique. La solution consiste à nettoyer la mémoire de RStudio en cliquant sur l’option Clear Knitr Cache… disponible dans la bande déroulante de l’option Preview dans le menu de RStudio. Une fois le cache libéré, il faut activer de nouveau tous les codes, tel que précisé ci-haut.",
+    "crumbs": [
+      "Partie II",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Problèmes</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html",
+    "href": "RProject_avance.html",
+    "title": "16  Project RStudio - niveau II",
+    "section": "",
+    "text": "16.1 Sous-répertoires\nDans le Chapitre @ref(projetRStudio), nous avons vu brièvement comment créer un projet R de manière à y regrouper l’ensemble des fichiers associés à un projet d’analyse de données. Malheureusement, l’approche présentée au Chapitre @ref(projetRStudio) n’est valide que lorsque le nombre de fichiers utilisés est petit et qu’il est possible de placer tous nos fichiers à l’intérieur du même répertoire. Par contre, lorsque le nombre de fichiers de données et/ou d’analyse devient trop grand, il est préférable d’utiliser une meilleure organisation de notre projet R. Cela permet, entre autres, de regrouper les différents types de fichiers ensembles. Dans le présent chapitre, nous avons examiner comment organiser adéquatement le répertoire (aussi nommé “dossier” ou “folder” en anglais) qui contient votre fichier .Rproj sur votre ordinateur. De cette façon, vos données, fichiers d’analyses et résultats seront toujours organisés de manière cohérente sur votre ordinateur dans le répertoire qui contient le projet R.\nÀ titre de rappel, immédiatement après la création d’un nouveau projet R dans un nouveau répertoire, un seul fichier compose ce répertoire. Dans notre exemple du Chapitre @ref(projetRStudio), seul le fichier Projet_1.Rproj faisait partie de ce répertoire (voir Figure @ref(fig:figrp2)).\nIdéalement, le répertoire qui contient le projet R doit être divisé en sous-répertoires. La Figure @ref(fig:structure) montre l’organisation de base d’un répertoire qui contient un projet R. Je suggère la création de quatre sous-répertoires principaux : Data, Output, R et Rmd. L’appellation anglophone permet d’arrimer l’utilisation de RStudio avec d’autres outils, comme GitHub. Évidemment, vous pouvez les modifier et les nommer à votre goût en leur donnant un nom en français, comme Données, Résultats, R et Rmd. Personnellement, j’évite d’utiliser les accents dans la création des répertoires et les objets R. Cela peut compliquer bien des choses lorsque l’on partage nos fichiers avec des collègues qui n’utilisent pas l’encodage de type UFT-8.\nOrganisation des sous-répertoires d’un projet R",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#description-des-sous-répertoires",
+    "href": "RProject_avance.html#description-des-sous-répertoires",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.2 Description des sous-répertoires",
+    "text": "16.2 Description des sous-répertoires\n\nData\n\n\nLe sous-répertoire Data est divisée en deux sous-répertoires : Raw et Transformed. Le sous-répertoire Raw contient le fichier des données brutes, soit les données initialement récoltées par le chercheur ou l’analyste, comme un fichier Excel. Le sous-répertoire Transformed contient, quant à lui, les fichiers de données transformés par l’analyste à partir de ses scripts .R ou .Rmd. Par exemple, il arrive fréquemment que l’analyste ajoute des variables au fichier de données initiales. Donc, au lieu de travailler avec le donnée original, il en crée un nouveau qu’il sauvegarde dans le répertoire Transformed.\n\n\nOutput\n\n\nLe sous-répertoire Output contient le document final produit par l’analyse. Par exemple, ce répertoire contient les fichiers .pdf et/ou les fichiers .docs qui sont associées aux analyses produites par l’analyste. Il comprend aussi les fichiers associés aux Figures qui seront utilisées dans les différentes publications associées au projet.\n\n\nR et Rmd\n\n\nFinalement, les sous-répertoires R et Rmd contiennent, respectivement, les fichiers .R et .Rmd (avec l’écriture R Markdown, comme les fichiers R Notebook). En résumé, ce sont les fichiers qui contiennent tous les codes R et R Markdown nécessaires pour transformer les données, réaliser les analyses et les figures, et publier les rapports finaux.",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#avantages-et-désavantages",
+    "href": "RProject_avance.html#avantages-et-désavantages",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.3 Avantages et désavantages",
+    "text": "16.3 Avantages et désavantages\nPlusieurs raisons militent pour cette sous-division :\n\nNous pouvons regrouper les fichiers de même nature dans le même sous-répertoire (ex : fichiers de données).\nEn utilisant une structure semblable d’un projet R à l’autre, l’analyste peut facilement importer et exporter des fichiers de données sans craindre de ne pas savoir où les retrouver.\nLors du partage du projet R, il est facile pour un collaborateur de retrouver toutes les informations à partir du nom des sous-répertoires.\n\nPar ailleurs, l’utilisation de sous-répertoires produit quelques inconvénients :\n\nLors de l’importation et de l’exportation des fichiers de données, il faut ajouter l’extension du sous-répertoire associé au répertoire Data1.\nParfois, dans notre empressement de créer une nouvelle analyse, nous oublions de déplacer le fichier dans le bon répertoire (R ou Rmd).\nL’ajout de multiples sous-répertoires peut complexifier la navigation à l’intérieur du projet R. Il est donc recommandé de limiter les sous-répertoires à deux niveaux (ex : Data / Raw).",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#comment-créer-les-sous-répertoires",
+    "href": "RProject_avance.html#comment-créer-les-sous-répertoires",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.4 Comment créer les sous-répertoires",
+    "text": "16.4 Comment créer les sous-répertoires\nBien que vous pouvez créer les sous-répertoires à partir de logiciels déjà disponibles par défaut avec votre ordinateur2, je recommande d’utiliser le logiciel RStudio pour cela. Dans le fenêtre des utilitaires (Files, Plots, Packages, Help, Viewer), l’onglet Files contient, entre autres, tous les outils nécessaires pour créer, effacer et renommer les sous-répertoires. Cette approche réplique d’ailleurs celle qui doit être utilisée avec RStudio Cloud.\nAvant de débuter à créer de nouveaux sous-répertoires, il faut s’assurer que la fenêtre Files présente les fichiers disponibles dans le répertoire principal de votre projet R. Si le nom du fichier de votre projet R est visible (fichier .Rproj), vous êtes à la bonne place (voir Figure @ref(fig:figrp2)) ! Sinon, naviguez à l’intérieur des répertoires situés à la droite de Home pour retrouver votre fichier .Rproj. Par la suite, l’onglet New Folder vous permet de créer les sous-répertoires. Pour effacer ou renommer un sous-répertoire, il faut cocher la case située à sa gauche et cliquer sur l’onglet Delete ou Rename. De plus, l’onglet More comprend d’autres options intéressantes comme le déplacement des fichiers d’un répertoire à l’autre ou la possibilité de copier les fichiers dans de nouveaux répertoires.",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#exemple",
+    "href": "RProject_avance.html#exemple",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.5 Exemple",
+    "text": "16.5 Exemple\nÀ titre d’exemple, j’ai créé les sous-répertoires dans le répertoire principal de mon projet R (Projet_1) et j’ai déplacé dans le sous-répertoire les fichiers .Rmd et .nb.html que nous avons créé à la section @ref(deuxfichiers). À l’aide du logiciel Finder de mon ordinateur (Mac), nous pouvons voir l’organisation des sous-répertoires (voir Figure @ref(fig:Files2)).\n\n\n\n\n\nSous-répertoires du projet Projet_1.Rproj sur mon ordinateur",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#répertoire-du-projet",
+    "href": "RProject_avance.html#répertoire-du-projet",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.6 Répertoire du projet",
+    "text": "16.6 Répertoire du projet\nAprès avoir créer nos répertoires dans notre projet RStudio, pour chacun des fichiers .Rmd que nous créons, il faut indiquer à RStudio d’utiliser le répertoire principal de notre projet RStudio. Par défaut, R utilise le répertoire Document de votre ordinateur et non celui du projet. Il faut donc changer le répertoire Document par le répertoire du projet RStudio. La démarche consiste simplement à cliquer sur l’onglet Knit, au haut de la fenêtre Source de RStudio, de sélectionner Directory et ensuite Project Directory (voir Figure @ref(fig:project-directory)).\n\n\n\n\n\nSélectionner le répertoire du projet RStudio à partir de l’option Knit",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#chemins-daccès-relatifs",
+    "href": "RProject_avance.html#chemins-daccès-relatifs",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.7 Chemins d’accès relatifs",
+    "text": "16.7 Chemins d’accès relatifs\nEn indiquant à RStudio d’utiliser le répertoire du projet RStudio comme répertoire principal, il est possible d’utiliser des chemins d’accès relatifs dans nos codes R pour préciser les répertoires où il faut importer et/ou exporter nos fichiers sur notre ordinateur. Un chemin d’accès relatif est un chemin (path, en anglais) qui précise le répertoire où se trouve nos fichiers sur notre ordinateur relativement au répertoire principal du projet RStudio.\n\n\n\n\n\nChemin relatif du fichier oranges.txt à partir du répertoire du projet RStudio\n\n\n\n\nDans l’exemple de la Figure @ref(fig:Files2), le répertoire principal du projet RStudio est Projet_1. Donc, tous les chemins relatifs précisés dans nos codes R doivent prendre le répertoire Projet_1 comme point de départ. Ainsi, le chemin relatif pour le fichier oranges.txt qui se trouve dans le répertoire Raw (voir Figure @ref(fig:chemin-relatif2) aurait la forme suivante :\n\\[\n./Data/Raw/oranges.txt\n\\]\nNotez la présence du . qui désigne le répertoire principal du projet RStudio.\n\n16.7.1 Importation de fichiers\nLa Figure @ref(fig:import-data) montre le chemin d’accès relatif (./Data/Raw/) pour importer le fichier de données oranges.txt à partir d’un bloc de codes R.\n\n\n\n\n\nChemin relatif pour l’importation du fichier oranges.txt dans un bloc de codes R\n\n\n\n\n\n\n16.7.2 Exportation de fichiers\nLa Figure @ref(fig:export-data) montre le chemin d’accès relatif (./Data/Transformed/) pour exporter (et sauvegarder) le fichier de données oranges-transformed.txt à partir d’un bloc de codes R. Dans le premier bloc de codes, les mesures métriques de l’âge et de la circonférences des arbres ont été transformées en mesures anglaises. Dans le second bloc de codes, le fichier oranges-transformed a été sauvegardé en format .txt.\n\n\n\n\n\nChemin relatif pour l’exportation du fichier oranges-transformed.txt dans un bloc de codes R\n\n\n\n\nLa Figure @ref(fig:chemin-relatif-transformed) nous confirme que le fichier oranges-transformed.txt a bel et bien été exporté dans le répertoire /Data/Transformed/ du Projet_1.\n\n\n\n\n\nConfirmation de l’exportation du fichier oranges-transformed.txt",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#recommandation",
+    "href": "RProject_avance.html#recommandation",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.8 Recommandation",
+    "text": "16.8 Recommandation\nLorsque nous travaillons sur un projet d’analyse de données, il est facile de devenir mélangé dans les différentes versions de nos analyses et avec les différents fichiers qui contiennent les données transformées. La meilleure façon d’éviter la confusion consiste à bien organiser votre espace de travail pour chacun des projets R que vous allez entreprendre. Et la meilleure façon consiste à créer la même structure que celle présentée ci-haut pour chacun de vos projets R.\nNéanmoins, prenez note que cette proposition de structure de projet R est minimale. Si vous le désirez, vous pouvez créer autant de sous-répertoires que vous le désirez. Par exemple, le sous-répertoire Rmd pourrait comprendre les sous-répertoires Analyse-1, Analyse-2, Analyse-3, etc. Bref, avec la pratique, vous serez en mesure de préciser la structure d’un projet R qui vous convient le mieux. Malgré tout, gardez en tête de limiter le nombre de sous-répertoires. Parfois, trop, c’est comme pas assez !",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#exercice-7",
+    "href": "RProject_avance.html#exercice-7",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.9 Exercice 7",
+    "text": "16.9 Exercice 7\nL’objectif de l’Exercice 7 consiste à organiser votre projet R. En résumé, vous devez créer les sous-répertoires présentés ci-haut et déplacer les fichiers correspondants dans les bons sous-répertoires. À partir du fichier Exercice R Notebook que vous avez complété lors de l’Exercice 6, veuillez :\n\nCréer les sous-répertoires Data, Output, R et Rmd.\nDans le répertoire Data, créer les sous-répertoires Raw et Transformed.\nDéplacer les fichiers Exercice Notebook.Rmd et Exercice Notebook.nb.html dans le sous-répertoire Rmd.",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#solution",
+    "href": "RProject_avance.html#solution",
+    "title": "16  Project RStudio - niveau II",
+    "section": "16.10 Solution",
+    "text": "16.10 Solution\nLa structure de votre projet R (dans l’onglet Projet_1) devrait ressembler à celui de la Figure @ref(fig:Files3).\n\n\n\n\n\nÀ la fin de l’Exercice 7, vos sous-répertoires de votre projet R devraient ressembler à ceci\n\n\n\n\nDe plus, votre répertoire Data devraient comprendre les sous-répertoires illustrés à la Figure @ref(fig:Files4) et votre répertoire Rmd devraient comprendre les fichiers présentés à la Figure @ref(fig:Files5).\n\n\n\n\n\nÀ la fin de l’Exercice 7, les sous-répertoires du répertoire Data devraient ressembler à ceci\n\n\n\n\n\n\n\n\n\nÀ la fin de l’Exercice 7, le répertoire Rmd devraient comprendre ceux deux fichiers",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "RProject_avance.html#footnotes",
+    "href": "RProject_avance.html#footnotes",
+    "title": "16  Project RStudio - niveau II",
+    "section": "",
+    "text": "Par exemple, l’importation et l’exportation des fichiers de données nécessitent l’obligation d’ajouter le chemin d’accès relatif au répertoire du projet RStudio.↩︎\nAvec un Mac, vous pouvez créer les sous-répertoires à partir du logiciel Finder. Avec un PC, vous pouvez créer les sous-répertoires à partir du logiciel Explorateur de fichiers.↩︎",
+    "crumbs": [
+      "Partie III",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Project RStudio - niveau II</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Douglass, Alex, Deon Roos, Francesca Mancini, Ana Couto, and David\nLusseau. 2022. An Introduction to r. https://alexd106.github.io/Rbook/.\n\n\nFogarty, Brian J. 2018. Quantitative Social Science Data with r: An\nIntroduction. Thousand Oaks, California: SAGE\nPublications, Inc. https://us.sagepub.com/en-us/nam/quantitative-social-science-data-with-r/book257236.\n\n\nWickham, Hadley, and Garrett Grolemund. 2017. R for Data Science:\nImport, Tidy, Transform, Visualize, and Model Data. 1st edition.\nSebastopol, CA: O’Reilly Media. https://r4ds.had.co.nz/.\n\n\nXie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. R Markdown:\nThe Definitive Guide. New York: Chapman; Hall/CRC. https://doi.org/10.1201/9781138359444.\n\n\nXie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. R\nMarkdown Cookbook. Boca Raton: Chapman; Hall/CRC. https://doi.org/10.1201/9781003097471.",
+    "crumbs": [
+      "References"
     ]
   }
 ]

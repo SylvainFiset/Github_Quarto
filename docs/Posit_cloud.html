@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; Posit Cloud – Utiliser R avec Quarto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Utiliser_Quarto.html" rel="next">
+<link href="./RProject.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="include/webex.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Partie I</a></li><li class="breadcrumb-item"><a href="./Posit_cloud.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Posit Cloud</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Utiliser R avec Quarto</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Recherche"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Préface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a_propos_auteur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">À propos de l’auteur</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Partie I</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./R_RStudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R et RStudio</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Extensions_R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Extensions R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Application Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RStudio_options.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Options de RStudio</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RProject.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Projet RStudio - niveau I</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Posit_cloud.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Posit Cloud</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Partie II</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Utiliser_Quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Utiliser Quarto</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Metadonnees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Les métadonnées</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Texte.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Le texte</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Bloc_de_codes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Blocs de codes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ExempleR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exemple avec R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Extract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Extraction et intégration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Save_share.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Sauvegarde et partage</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Problemes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Problèmes</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Partie III</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./RProject_avance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#création-dun-compte" id="toc-création-dun-compte" class="nav-link active" data-scroll-target="#création-dun-compte"><span class="header-section-number">7.1</span> Création d’un compte</a></li>
+  <li><a href="#espaces-de-travail" id="toc-espaces-de-travail" class="nav-link" data-scroll-target="#espaces-de-travail"><span class="header-section-number">7.2</span> Espaces de travail</a>
+  <ul class="collapse">
+  <li><a href="#espace-individuel" id="toc-espace-individuel" class="nav-link" data-scroll-target="#espace-individuel"><span class="header-section-number">7.2.1</span> Espace individuel</a></li>
+  <li><a href="#espaces-partagés" id="toc-espaces-partagés" class="nav-link" data-scroll-target="#espaces-partagés"><span class="header-section-number">7.2.2</span> Espaces partagés</a></li>
+  </ul></li>
+  <li><a href="#projets" id="toc-projets" class="nav-link" data-scroll-target="#projets"><span class="header-section-number">7.3</span> Projets</a>
+  <ul class="collapse">
+  <li><a href="#créer-un-nouveau-projet" id="toc-créer-un-nouveau-projet" class="nav-link" data-scroll-target="#créer-un-nouveau-projet"><span class="header-section-number">7.3.1</span> Créer un nouveau projet</a></li>
+  <li><a href="#renommer-le-nouveau-projet" id="toc-renommer-le-nouveau-projet" class="nav-link" data-scroll-target="#renommer-le-nouveau-projet"><span class="header-section-number">7.3.2</span> Renommer le nouveau projet</a></li>
+  <li><a href="#importer-des-fichiers-dans-un-projet" id="toc-importer-des-fichiers-dans-un-projet" class="nav-link" data-scroll-target="#importer-des-fichiers-dans-un-projet"><span class="header-section-number">7.3.3</span> Importer des fichiers dans un projet</a></li>
+  <li><a href="#examiner-la-liste-des-projets" id="toc-examiner-la-liste-des-projets" class="nav-link" data-scroll-target="#examiner-la-liste-des-projets"><span class="header-section-number">7.3.4</span> Examiner la liste des projets</a></li>
+  <li><a href="#exporter-un-projet-rstudio-cloud" id="toc-exporter-un-projet-rstudio-cloud" class="nav-link" data-scroll-target="#exporter-un-projet-rstudio-cloud"><span class="header-section-number">7.3.5</span> Exporter un projet RStudio Cloud</a></li>
+  <li><a href="#partager-un-projet-dans-rstudio-cloud" id="toc-partager-un-projet-dans-rstudio-cloud" class="nav-link" data-scroll-target="#partager-un-projet-dans-rstudio-cloud"><span class="header-section-number">7.3.6</span> Partager un projet dans RStudio Cloud</a></li>
+  <li><a href="#effacer-un-projet" id="toc-effacer-un-projet" class="nav-link" data-scroll-target="#effacer-un-projet"><span class="header-section-number">7.3.7</span> Effacer un projet</a></li>
+  </ul></li>
+  <li><a href="#options-de-rstudio-cloud" id="toc-options-de-rstudio-cloud" class="nav-link" data-scroll-target="#options-de-rstudio-cloud"><span class="header-section-number">7.4</span> Options de RStudio Cloud</a></li>
+  <li><a href="#consulter-votre-compte" id="toc-consulter-votre-compte" class="nav-link" data-scroll-target="#consulter-votre-compte"><span class="header-section-number">7.5</span> Consulter votre compte</a></li>
+  <li><a href="#quitter-rstudio-cloud" id="toc-quitter-rstudio-cloud" class="nav-link" data-scroll-target="#quitter-rstudio-cloud"><span class="header-section-number">7.6</span> Quitter RStudio Cloud</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html">Partie I</a></li><li class="breadcrumb-item"><a href="./Posit_cloud.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Posit Cloud</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="rcloud" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Posit Cloud</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Dans ce chapitre, j’introduis l’application <a href="https://www.rstudio.com/products/cloud/">RStudio Cloud</a>. RStudio Cloud est la version web de RStudio IDE. Elle permet :</p>
+<ul>
+<li>d’utiliser R et RStudio directement dans votre navigateur web et ce, sans avoir à télécharger les logiciels R et RStudio sur votre ordinateur</li>
+<li>de partager aisément des projets RStudio avec plusieurs utilisateurs</li>
+</ul>
+<p>Si vous avez téléchargé avec succès les applications R et RStudio sur votre ordinateur (et quelles fonctionnent correctement) et que vous n’envisagez pas de partager vos projets d’analyse avec quelqu’un d’autre (ce qui arrive rarement, soit dit en passant), vous pouvez sauter la lecture de ce chapitre.</p>
+<p>Bien que RStudio Cloud s’apparente à la version locale<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> de RStudio IDE, les premiers pas avec RStudio Cloud peuvent s’avérer difficiles. Dans le présent chapitre, je désire soulever quelques éléments importants afin de maximiser l’expérience d’utilisation de RStudio Cloud.</p>
+<section id="création-dun-compte" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="création-dun-compte"><span class="header-section-number">7.1</span> Création d’un compte</h2>
+<p>La première étape consiste à créer un compte gratuit (<em>Free</em>) sur le site web de <a href="https://www.rstudio.com/products/cloud/">RStudio Cloud</a> (voir Figure @ref(fig:signup)). Notez, par ailleurs, que l’utilisateur atteint très rapidement les limites d’utilisation du plan gratuit de RStudio Cloud. Dans l’optique où l’utilisateur (i) dépasse le nombre de projets ou d’espaces de travail admissibles, (ii) dépasse le nombre d’heures par projet disponibles, ou (iii) qu’il désire augmenter la mémoire RAM et la vitesse d’exécution des codes, le plan <em>Premium</em> de RStudio Cloud s’avère une alternative intéressante, mais relativement dispendieuse<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-Free-signUp.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Procédure de création d’un compte gratuit avec RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="espaces-de-travail" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="espaces-de-travail"><span class="header-section-number">7.2</span> Espaces de travail</h2>
+<p>RStudio Cloud possède la capacité de regrouper plusieurs projets RStudio à l’intérieur d’un même espace de travail. Dans RStudio Cloud, ces environnements se nomment <code>Spaces</code>. Cette caractéristique permet (1) de regrouper tous vos projets RStudio associés au même thème (ex: un cours universitaire, une formation, une étude scientifique, etc.) à l’intérieur d’un même environnement et/ou (2) de partager un espace de travail avec d’autres personnes, comme un professeur avec ses étudiants.</p>
+<p>Afin d’atteindre ces objectifs, RStudio Cloud divise l’espace de travail en deux catégories d’espace :</p>
+<ul>
+<li>les espaces de travail individuels</li>
+<li>les espaces de travail partagés<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</li>
+</ul>
+<section id="espace-individuel" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="espace-individuel"><span class="header-section-number">7.2.1</span> Espace individuel</h3>
+<p>L’espace de travail individuel se trouve dans l’onglet <code>Your Workspace</code> sous l’en-tête <code>Spaces</code> à la gauche de RStudio Cloud (voir Figure @ref(fig:ws)). Par défaut, les projets RStudio qui sont créés à l’intérieur de cet espace de travail individuel ne sont disponibles et visibles qu’à l’utilisateur du compte. Cependant, il est possible de rendre disponibles les projets de cet espace individuel afin qu’ils soient consultés et copiés par d’autres utilisateurs de RStudio Cloud (si cela vous intéresse, veuillez <a href="https://rstudio.cloud/learn/guide#:~:text=for%20more%20info.-,Your%20Workspace,-Every%20RStudio%20Cloud">cliquer ici</a>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-yourProjects-yourws.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption>Espace de travail individuel de RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Personnellement, j’utilise rarement l’espace de travail individuel. Je préfère regrouper mes projets RStudio à l’intérieur de thèmes spécifiques (cours, projets de recherche, etc.) à l’aide d’espace de travail partagé (voir ci-dessous). De plus, puisque l’utilité première de RStudio Cloud est de favoriser le travail collaboratif, je ne discute pas plus longuement de l’espace de travail individuel. Je considère qu’une gestion responsable des espaces partagés permet d’obtenir le même niveau de confidentialité que l’espace de travail individuel.</p>
+</section>
+<section id="espaces-partagés" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="espaces-partagés"><span class="header-section-number">7.2.2</span> Espaces partagés</h3>
+<p>RStudio Cloud permet de regrouper et de partager avec d’autres utilisateurs des projets RStudio dans le même espace de travail. Les projets RStudio qui sont intégrés à l’intérieur d’un espace de travail partagé doivent obligatoirement avoir un thème commun. Par exemple, je peux regrouper les exercices d’un même cours dans un espace de travail partagé ou regrouper les projets associés à mes travaux de recherche sur une thématique spécifique. Bref, avant de créer un espace de travail partagé, il faut cibler le dénominateur commun aux projets qui y seront regroupés. Dans le cadre d’un cours, par exemple, un professeur peut créer un espace de travail partagé avec tous ces étudiants pour un exercice particulier. Cela lui permet d’avoir accès à tous les travaux effectués dans le cadre de cet exercice<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>À titre d’exemple, la Figure @ref(fig:spaces) montre — voir la colonne de gauche — que j’ai créé un espace de travail partagé (voir l’icone avec 3 personnes) du nom de <code>Exercices</code>. Si désiré, je pourrais créer un nouvel espace de travail partagé en cliquant sur <code>+ New Space</code>. Personnellement, tous mes espaces de travail dans RStudio Cloud sont de nature partagée. Cette façon de faire me permet, si désiré, de rendre disponibles plusieurs projets à plusieurs personnes, et ce, très rapidement.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-NewSpace.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Illustration de la fenêtre d’ouverture de RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="projets" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="projets"><span class="header-section-number">7.3</span> Projets</h2>
+<p>RStudio oblige l’utilisateur à créer un projet RStudio, ce qui, à mon avis, est une très bonne chose <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. À titre de rappel (voir Chapitre @ref(projetRStudio)), un projet RStudio permet de regrouper tous les fichiers (données, analyses, figures, etc.) liés à un projet d’analyse statistique.</p>
+<section id="créer-un-nouveau-projet" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="créer-un-nouveau-projet"><span class="header-section-number">7.3.1</span> Créer un nouveau projet</h3>
+<p>Pour créer un nouveau projet, il suffit de cliquer sur la flèche (<code>∨</code>) de l’onglet <code>New Project</code> (voir à droite de la Figure @ref(fig:spaces)) et, dans la bande déroulante, de sélectionner l’option <code>New RStudio Project</code> (voir Figure @ref(fig:newproject)). Pendant quelques secondes, le message <em>Deploying Project</em> apparaît et, ensuite, votre nouveau projet s’ouvre dans RStudio Cloud.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-newProject.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Création d’un nouveau projet dans RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="renommer-le-nouveau-projet" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="renommer-le-nouveau-projet"><span class="header-section-number">7.3.2</span> Renommer le nouveau projet</h3>
+<p>À l’ouverture d’un nouveau projet (voir Figure @ref(fig:untitled)), RStudio Cloud attribue le nom <code>Untitled Project</code> au nouveau projet. Le nom du projet est disponible tout au haut de l’écran et il est possible de voir dans quel espace de travail le projet est inséré. Dans mon exemple, l’expression <code>Exercices /</code> indique que le nouveau projet est inséré à l’intérieur de l’espace de travail partagé nommé <code>Exercices</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-untitled.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Untitled project dans RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Donc, à l’ouverture d’un nouveau projet, la première chose à faire consiste à renommer le projet. Il faut cliquer sur <code>Untitled Project</code> (en haut à gauche de la fenêtre) et inscrire le nouveau nom de votre projet (Figure @ref(fig:exercice2)). À titre de démonstration, j’ai créé un nouveau projet du nom de <code>Exercice2</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-exercices.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Modifier le nom d’un nouveau projet dans RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="importer-des-fichiers-dans-un-projet" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="importer-des-fichiers-dans-un-projet"><span class="header-section-number">7.3.3</span> Importer des fichiers dans un projet</h3>
+<p>Habituellement, l’analyste importe un ou des fichiers de données (.xlsx, .dat, .txt, .csv, etc.) dans RStudio pour ensuite l’analyser à l’aide d’un script R ou d’un script R Markdown. Avec la version locale de RStudio IDE, l’analyste n’a qu’à copier son fichier dans le répertoire qui contient son projet RStudio. Avec RStudio Cloud, l’approche est différente. À partir du projet RStudio, il faut importer le fichier de données dans l’espace <em>cloud</em> dédié à ce projet sur le serveur de RStudio.</p>
+<p>Voici un exemple. Dans la fenêtre <strong>Files</strong> de RStudio, nous pouvons voir que le projet RStudio (<code>project.Rproj</code>) est inséré dans le dossier <code>Cloud &gt; Project</code> (voir Figure @ref(fig:upload)).</p>
+<ol type="1">
+<li>Nous pouvons importer un fichier de données dans ce dossier en cliquant sur l’onglet <code>Upload</code>.</li>
+<li>Une fenêtre s’ouvre et il faut simplement cliquer sur <code>Choisir le fichier</code> sous l’en-tête <code>File to upload</code>. Dans mon exemple, le fichier que je désire importé se nomme <code>RatLives.csv</code><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. Il est possible d’importer plusieurs fichiers simultanément. Ceux-ci, cependant, doivent être regroupés, au préalable, à l’intérieur d’un fichier .zip.</li>
+<li>Après l’importation, le fichier (<code>RatLives.csv</code>) est disponible dans le projet RStudio Cloud.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-uploadFile.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Importer un fichier dans un projet RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="examiner-la-liste-des-projets" class="level3" data-number="7.3.4">
+<h3 data-number="7.3.4" class="anchored" data-anchor-id="examiner-la-liste-des-projets"><span class="header-section-number">7.3.4</span> Examiner la liste des projets</h3>
+<p>Il est possible d’obtenir la liste de tous les projets d’un même espace de travail. Pour cela, il faut cliquer sur le nom de l’espace de travail que vous désirez consulter. Dans mon exemple, le nom de mon espace de travail est <code>Exercices</code>. Pour voir la liste des projets associés à cet espace de travail, deux choix s’offrent à moi :</p>
+<ol type="1">
+<li>Je peux cliquer sur l’onglet <code>Exercices [Sylvain Fiset]</code> dans la liste des espaces à la gauche de la fenêtre de RStudio Cloud (sous l’en-tête <code>Spaces</code>).</li>
+<li>Je peux aussi cliquer sur <code>Exercices</code> dans le titre <code>Exercices / Exercice2</code> de mon projet qui est déjà ouvert.</li>
+</ol>
+<p>La Figure @ref(fig:liste) montre un exemple de la liste des projets disponibles pour mon espace de travail <code>Exercices</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-ProjectsList.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Examiner la liste de tous les projets d’un espace de travail dans RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="exporter-un-projet-rstudio-cloud" class="level3" data-number="7.3.5">
+<h3 data-number="7.3.5" class="anchored" data-anchor-id="exporter-un-projet-rstudio-cloud"><span class="header-section-number">7.3.5</span> Exporter un projet RStudio Cloud</h3>
+<p>Lorsque la liste des projets d’un espace de travail de RStudio Cloud est affichée à l’écran, vous pouvez facilement exporter l’un des projets sur votre ordinateur et le partager. Il suffit de cliquer sur l’option <code>Export</code>, laquelle est située à la droite du nom du projet dans la liste (voir la Figure @ref(fig:liste)). Tous les fichiers associés à ce projet seront exportés. L’exportation d’un projet RStudio Cloud sert principalement deux objectifs :</p>
+<ol type="1">
+<li>L’exportation permet de sauvegarder une copie de votre projet sur votre ordinateur.</li>
+<li>L’exportation facilite grandement le partage des projets RStudio entre les utilisateurs<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</li>
+</ol>
+<p>Après avoir cliquer sur l’option <code>Export</code>, une première fenêtre s’ouvre et génère le dossier d’exportation du projet. Ensuite, une seconde fenêtre apparaît et il faut cliquer sur <code>Download</code> pour télécharger le dossier (voir la Figure @ref(fig:export)). Par défaut, le projet est téléchargé dans le répertoire (ou dossier) de téléchargement de votre ordinateur. Il conserve exactement la même structure que votre dossier dans RStudio Cloud. Vous pouvez donc l’ouvrir avec la version locale de RStudio IDE sur votre ordinateur et avoir accès à tous les fichiers. Prenez note que lors du téléchargement, le dossier de téléchargement se voit attribuer un nom arbitraire composé de 7 chiffres. Si vous téléchargez à plusieurs reprises le même projet, le nom à 7 chiffres demeure le même d’un téléchargement à l’autre.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-export.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Exportation d’un projet à partir de RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="partager-un-projet-dans-rstudio-cloud" class="level3" data-number="7.3.6">
+<h3 data-number="7.3.6" class="anchored" data-anchor-id="partager-un-projet-dans-rstudio-cloud"><span class="header-section-number">7.3.6</span> Partager un projet dans RStudio Cloud</h3>
+<p>L’un des avantages de RStudio Cloud est la possibilité de partager des projets RStudio avec plusieurs utilisateurs sans avoir à télécharger le projet. Tous les utilisateurs ont accès au même projet via RStudio Cloud. Par exemple, les membres d’une même équipe de recherche peuvent contribuer sur un même projet d’analyse statistique ou un étudiant peut partager son projet avec son professeur.</p>
+<p>Le partage d’un projet RStudio Cloud s’effectue à partir de l’espace de travail partagé (dans <code>Spaces</code>) dans lequel vous avez créé (ou déplacé) votre projet. Afin de partager votre espace de travail partagé, vous devez ajouter des membres. Sur la page d’ouverture de RStudio Cloud, cliquez sur le nom de l’espace de travail que vous désirez partager. Au haut de l’écran, cliquez sur <code>Members</code>. La liste des membres de l’environnement de travail sera affichée (voir Figure @ref(fig:members)). Par la suite, cliquez sur l’option <code>Add Member</code> pour inviter de nouveaux membres. Lors de l’invitation, vous devrez fournir une adresse courriel et préciser le rôle du nouveau membre (<em>Admin</em>, <em>Moderator</em>, <em>Contributor</em>, <em>Viewer</em>). Par défaut, le choix <em>Contributor</em> est offert et, à moins de raisons valables, ce choix demeure la meilleure option. De plus, en tant qu’administrateur de cet environnement de travail, vous pouvez déterminer les privilèges que vous désirez accorder à chaque membre que vous invitez (voir l’encadré pointillé à la droite de la Figure @ref(fig:members)).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-spaceMembers.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Ajouter des membres à un espace de travail RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="accessibilité" class="level4" data-number="7.3.6.1">
+<h4 data-number="7.3.6.1" class="anchored" data-anchor-id="accessibilité"><span class="header-section-number">7.3.6.1</span> Accessibilité</h4>
+<p>Lors du partage d’un projet, vous pouvez restreindre l’accessibilité de votre projet. Ainsi, même si vous partagez un espace de travail avec 20 autres utilisateurs, vous pouvez limiter l’accès de votre projet aux administrateurs et aux modérateurs de l’environnement de travail. Pour vous assurez que cette option soit activée pour un projet en particulier, ouvrez le projet et cliquez sur l’icone de la petite roue située à la gauche de votre nom en haut à droite dans le fenêtre web de RStudio Cloud (voir Figure @ref(fig:access)). Par la suite, sélectionnez <code>Access</code> et assurez-vous que l’option <code>You*</code> soit sélectionnée dans la bande déroulante. Limiter l’accessibilité à un projet est particulièrement important dans le cadre d’un cours.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-project-accessibility.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Contrôler l’accessibilité à un projet RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="effacer-un-projet" class="level3" data-number="7.3.7">
+<h3 data-number="7.3.7" class="anchored" data-anchor-id="effacer-un-projet"><span class="header-section-number">7.3.7</span> Effacer un projet</h3>
+<p>Si vous désirez effacer un projet de votre compte RStudio Cloud, deux possibilités s’offrent à vous :</p>
+<ul>
+<li>Dans la liste des projets associés à un espace de travail spécifique, cliquez sur l’option <code>Delete</code>. L’option <code>Delete</code> est située à la droite du nom du projet dans la liste des projets (voir la Figure @ref(fig:liste)).</li>
+<li>Lorsque le projet est déjà ouvert dans RStudio Cloud, vous pouvez cliquer sur l’icone avec les trois petits points à l’horizontal situé près de votre nom en haut à droite de la page web de RStudio Cloud. Ensuite, sélectionnez l’option <code>Delete Project</code> dans la bande déroulante (voir la Figure @ref(fig:delete)).</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-deleteProject.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Effacer un projet à partir de RStudio Cloud</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="options-de-rstudio-cloud" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="options-de-rstudio-cloud"><span class="header-section-number">7.4</span> Options de RStudio Cloud</h2>
+<p>Tout comme la version locale de RStudio IDE, tel que montré au Chapitre @ref(options), il est possible de modifier les options de RStudio Cloud. Prenez note, cependant, qu’il faut modifier les options pour chacun des projets que vous créez — ce qui n’est pas le cas avec la version locale de RStudio. Cela est nécessaire puisque pour chaque projet, RStudio Cloud produit un espace de travail dans lequel les projets sont tous indépendants les uns des autres.</p>
+</section>
+<section id="consulter-votre-compte" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="consulter-votre-compte"><span class="header-section-number">7.5</span> Consulter votre compte</h2>
+<p>Vous pouvez consulter les paramètres d’utilisation de votre compte RStudio Cloud en cliquant sur votre nom. Vous y verrez quelques statistiques, comme le nombre de projets et le nombre d’heures d’utilisation pour un mois (voir la Figure @ref(fig:account)). Cela est particulièrement important si votre compte d’utilisateur est gratuit.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/RScloud-account.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Paramètres du compte de l’utilisateur</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="quitter-rstudio-cloud" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="quitter-rstudio-cloud"><span class="header-section-number">7.6</span> Quitter RStudio Cloud</h2>
+<p>Pour quitter RStudio Cloud, n’oubliez pas de cliquez l’option <code>Log Out</code> après avoir cliquer sur votre nom (voir la Figure @ref(fig:account)).</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>L’expression <code>version locale</code> désigne la version de RStudio téléchargée et installée sur un ordinateur (et non dans le nuage, comme RStudio Cloud).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Cela est d’autant plus vrai que la version locale de RStudio IDE est, elle, disponible gratuitement.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Les espaces de travail individuels sont illustrés par une icone avec une personne et les espaces de travail partagés sont illustrés par des icones avec trois personnes.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>RStudio Cloud a d’ailleurs été conçu, en partie, pour répondre à ce besoin lors de l’enseignement de R et de RStudio.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Si vous n’êtes pas familier avec les projets RStudio, je vous invite à consulter le chapitre @ref(projetRStudio).<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Ce fichier provient des fichiers de données qui accompagnent le livre de John Kruschke, <em>Doing Bayesian Data Analysis</em>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Si vous ne désirez pas utiliser la fonction <code>share</code> de RStudio Cloud.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  update_total_correct();
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./RProject.html" class="pagination-link" aria-label="Projet RStudio - niveau I">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Projet RStudio - niveau I</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Utiliser_Quarto.html" class="pagination-link" aria-label="Utiliser Quarto">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Utiliser Quarto</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,14 @@
+---
+lang: fr
+---
+
+# À propos de l'auteur {-}
+
+Après avoir suivi tous les cours offerts en mathématiques et en psychologie au niveau collégial, lorsque vient le temps de m'inscrire dans un programme d'études à l'université, mon cœur balançait entre ces deux disciplines. Finalement, pour ma formation universitaire, j'ai opté pour la psychologie, la plus belle des sciences, comme je me plais si souvent à le dire. Mais quelle ne fut pas ma surprise lorsque j'ai constaté que les conclusions de la psychologie reposaient, en grande partie, sur une démarche rigoureuse appuyée par des analyses statistiques. Mon désir d'apprentissage était comblé ! 
+
+Mes intérêts marqués pour les mathématiques et les statistiques m'ont amené, lors de mes études doctorales en psychologie, à enseigner des cours de statistiques au niveau gradué à l'[Université Laval](https://www.ulaval.ca) et au niveau collégial, au Petit Séminaire de Québec. À la fin de mes études doctorales, j'ai accepté un poste de professeur régulier en psychologie à l'[Université de Moncton, campus d'Edmundston](https://www.umoncton.ca/umce-campus/) où j'y enseigne, entre autres, les statistiques. Mes compétences en statistiques sont bien reconnues par mes collègues, ce qui m'amène à collaborer avec différents chercheurs afin de les aider à planifier leurs études, et/ou à les aider à analyser et à interpréter leurs propres données de recherche.
+
+Sylvain Fiset, Ph.D.      
+Professeur titulaire en psychologie    
+Université de Moncton, campus d'Edmundston    
+Edmundston, N.-B., Canada

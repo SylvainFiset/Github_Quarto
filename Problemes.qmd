@@ -1,0 +1,43 @@
+---
+format:
+  html:
+    css: include/webex.css
+    include-after-body: include/webex.js
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
+
+# Problèmes
+
+Parfois, lorsque vient le temps de produire notre document final, R Notebook émet un message d'erreur ou produit un document qui est incomplet. Que ce passe t-il ? Habituellement, le problème vient de l'utilisateur et non de R Notebook... Souvent, dans notre empressement de compléter un document, nous oublions certains petits détails qui empêchent R Notebook de produire un document final complet. Voici quelques pistes de solutions à ces problèmes potentiels.
+
+## Noms des objets R
+
+Souvent, l'analyse travaille simultanément sur plusieurs fichiers R Notebook. Si, à l'intérieur de ces différents fichiers, le même nom est utilisé pour deux objets R différents, R utilise la plus récente version de l'objet et l'applique à tous les codes associés à ce nom. Cela peut faire en sorte qu'une analyse n'utilise pas les bonnes données. Donc, une bonne habitude consiste à donner des noms différents aux différents objets R qui sont créés lors d'une session de travail.
+
+## Activer les extensions
+
+Les fichiers .Rmd sont des fichiers autonomes. Ils doivent donc comprendre tous les codes nécessaires à l'exécution finale de tous les codes inscrits dans la fenêtre Source de RStudio. Dans une même session de travail, il arrive régulièrement à l'analyste de travailler simultanément avec plusieurs fichiers R différents dans RStudio. En activant une extension dans un fichier R, celle-ci devient disponible pour tous les fichiers ouverts dans RStudio pendant une session de travail. 
+
+Donc, au moment d'exécuter les codes du fichier R Notebook, un message d'erreur peut apparaître parce que l'analyste a oublié d'insérer le code qui active une extension en particulier dans son fichier R Notebook. En bref, assurez-vous d'ajouter l'activation de toutes les extensions utilisées dans votre document. La pratique veut que toutes les activations d'extension soient incluses dans un bloc de codes R inséré après la section Métadonnéees (voir Figure \@ref(fig:library).
+
+```{r library, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Placer un bloc de codes R pour les extensions immédiatement après les métadonnées"}
+knitr::include_graphics('figures/library.png')
+```
+
+## Activer tous les codes
+
+Avant de générer le fichier final en format .nb.html, assurez-vous d'avoir activé tous les codes de chacun de vos blocs de codes R. Sinon, certains résultats n'apparieront pas dans le ficher .nb.html. Ceci se produit régulièrement lorsque nous ouvrons une nouvelle session de travail à partir d'un fichier .Rmd que nous avons débuté lors d'une session de travail précédente et que nous avons oublié d'activer certains blocs de codes R lors de la réouverture du fichier R Notebook.
+
+Une solution simple à ce problème consiste à cliquer sur l'option <font color = "magenta">Run All</font> disponible dans la bande déroulante de l'option **Run** du menu de RStudio. Notez que sur un Mac, les touches Shift+Cmd+R produisent le même résultat.
+
+## Nettoyer le cache
+
+Parfois, le produit final n'est pas tout à fait semblable à nos attentes. Il nous semble avoir fait des modifications dans nos codes R mais ceux-ci n'apparaissent pas dans le fichier .nb.html final lorsqu'on clique sur **Preview**. Notez que ce problème est possible pour tous les types de codes que l'on insère dans un bloc de codes R (analyses, graphiques, etc.). Par exemple, il est possible qu'une figure ne soit pas semblable à celle que vous avez produite dans votre fichier R Notebook et vous ne savez pas pourquoi.
+
+Une cause possible de ce problème est que RStudio a enregistré une ancienne copie du graphique en mémoire et qu'il n'a pas emmagasiné la mise-à-jour du graphique. La solution consiste à nettoyer la mémoire de RStudio en cliquant sur l'option <font color = "magenta">Clear Knitr Cache...</font> disponible dans la bande déroulante de l'option **Preview** dans le menu de RStudio. Une fois le **cache** libéré, il faut activer de nouveau tous les codes, tel que précisé ci-haut.
+

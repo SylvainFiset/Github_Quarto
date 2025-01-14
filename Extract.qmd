@@ -1,0 +1,180 @@
+---
+format:
+  html:
+    css: include/webex.css
+    include-after-body: include/webex.js
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
+
+# Extraction et intégration
+
+Dans ce chapitre, nous allons voir comment extraire le résultat d'un code R (ex: calcul de la moyenne) et l'intégrer dans le texte de notre document R Notebook. À titre d'exemple, le texte ci-dessous intègre les valeurs de la droite de régression que nous avons dessinée dans le graphique *amélioré* du Chapitre \@ref(ExempleR).
+
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+model_1 <- lm(cars$dist ~ cars$speed) # modèle linéaire simple
+```
+
+>L'analyse de régression simple indique que la valeur de l'intercept est estimée à `r format(summary(model_1)$coefficients[1,1], digits=5)` et que la valeur du coefficient *b* de la variable vitesse à `r format(summary(model_1)$coefficients[2,1], digits=5)`. L'analyse supporte l'hypothèse que la vitesse est un bon prédicteur de la distance (*t*(`r format(model_1$df.residual, digits=2)`) = `r format(summary(model_1)$coefficients[2,3], digits=4)`, *p* = `r format(summary(model_1)$coefficients[2,4], digits=3)`.
+
+## Relation distance/vitesse
+
+L'un des nombreux avantages du langage R est la facilité avec laquelle nous pouvons extraire des valeurs spécifiques générées par du code R. Dans l'exemple du Chapitre \@ref(ExempleR), à l'aide d'un diagramme de type nuage de points, nous avons mis en relation la variable `dist` avec la variable `speed`. À titre de rappel, voici de nouveau cette relation :
+
+```{r}
+plot(cars$dist, cars$speed, # variables mises en relation
+     type="p", # nuage de points
+     pch=16,   # type de points (remplis)
+     cex=1.25, # grosseur des points
+     las=1)    # orientation de l'axe des y
+```
+
+## Calcul de la corrélation
+
+Examinons de nouveau cette relation mais en calculant la corrélation qui existe entre ces deux variables. Ci-dessous, je présente deux approches pour extraire les codes R : une simple et une complexe. 
+
+- L'approche *simple* s'utilise lorsque nous pouvons extraire directement les valeurs à partir d'un code R sans avoir à créer un objet R qui contient les résultats.
+- L'approche *complexe* s'utilise lorsque nous avons créé un objet R qui contient les résultats d'une analyse statistique. Il faut par la suite extraire les valeurs à partir de cet objet R que nous avons créé.
+
+### Approche simple
+
+La fonction `cor()` permet d'obtenir et d'extraire directement la valeur de la corrélation entre différentes variables. Voici le bloc de codes R :
+
+```{r}
+cor(cars$speed, cars$dist)
+```
+
+Voici l'interprétation :
+
+> La corrélation entre la vitesse et la distance de freinage est positive et d'une valeur de `r cor(cars$speed, cars$dist)`.
+
+#### Intégration dans R Notebook
+
+Dans la phrase précédente, la valeur `r cor(cars$speed, cars$dist)` a été extraite directement à partir du code R présenté dans le bloc de codes R ci-haut. De plus, pour accentuer l'effet de l'interprétation, j'ai ajouté le code de citation de R Markdown (` > `) Voici à quoi ressemble la phrase dans mon document R Notebook :
+
+```{r nb100, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Texte de type R Markdown avec intégration des codes pour extraire les résultats des codes R"}
+knitr::include_graphics('figures/corrSimple.png')
+```
+
+Notez qu'il faut entourer le code de la valeur extraite par des accents graves (voir Figure \@ref(fig:nb100)). Et il ne pas oublier d'insérer ` r ` devant chaque objet R qui est intégré dans le texte. Aussi, le texte est en rouge parce que c'est une citation dans mon texte R Notebook. 
+
+Si nous désirons contrôler le nombre de décimales, une solution consiste à ajouter la fonction `format(x, digits = )` à votre code dans R Notebook. Voici un exemple et la Figure \@ref(fig:nb103) montre comment écrire le code dans R Notebook :
+
+> La corrélation entre la vitesse et la distance de freinage est positive et d'une valeur de `r format(cor(cars$speed, cars$dist), digits=3)`.
+
+```{r nb103, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Texte de type R Markdown avec intégration des codes pour extraire les résultats des codes R"}
+knitr::include_graphics('figures/corrSimple2.png')
+```
+
+### Approche complexe
+
+La fonction `cor.test` de R permet de calculer la corrélation entre la distance de freinage et la vitesse d'un véhicule automobile. Cette même fonction, cependant, permet d'examiner d'autres statistiques associées à l'estimation de la corrélation entre les deux variables.
+
+Pour les besoins pédagogiques, nous allons créer un objet R du nom de `CorrTest` qui va *mémoriser* l'estimation de la force de la relation entre la variable distance (`cars$dist`) et la variable vitesse (`cars$speed`). Voici le code R :
+
+```{r}
+( CorrTest <- cor.test(cars$dist, cars$speed) )
+```
+
+#### Contenu d'un objet R
+
+À première vue, il est plutôt difficile d'extraire les valeurs de cet objet R. L'approche la plus simple consiste à vérifier les sous-objets disponibles dans l'objet R que nous avons créé à l'aide de la fonction `str()`.
+
+```{r}
+str(CorrTest)
+```
+
+Ouf, il y a beaucoup d'information dans ce résumé. Mais nous pouvons voir certaines similitudes avec les résultats du calcul de la corrélation. Les 9 sous-objets présents dans l'objet `CorrTest` peuvent être identifiés à cet objet à l'aide du signe `$`. Regardons de plus prêt quelqu'uns d'entre eux :
+
+- <font color = "hotpink">CorrTest$statistic</font> = 9.46. Cette valeur correspond à la valeur du test t.
+- <font color = "hotpink">CorrTest$parameter</font> = 48. Cette valeur correspond à la valeur des degrés de liberté du test t.
+- <font color = "hotpink">CorrTest$p.value</font> = 1.49e-12. Cette valeur correspond à la probabilité associée à une valeur t de 9.46 pour 48 degrés de liberté.
+- <font color = "hotpink">CorrTest$estimate</font> = 0.807. Cette valeur correspond à la valeur de la corrélation entre les deux variables.
+- <font color = "hotpink">CorrTest$method</font> = "Pearson's product-moment correlation". Ceci précise que nous avons effectué un test de corrélation de Pearson.
+- <font color = "hotpink">CorrTest$conf.int</font> = [1:2] 0.682 0.886. Ces valeurs sont intégrés dans un vecteur de 2 valeurs [1:2] et elles désignent [1] la valeur inférieure des intervalles de confiance à 95% et [2] la valeur supérieure des intervalles de confiance à 95%.
+
+***
+
+Vous aurez certainement déduit qu'il est possible d'obtenir directement ces valeurs à partir du code R qui désigne chacun de ces *sous-objets*. Par exemple, je peux créer un bloc de codes R qui demande d'évaluer la valeur de chacun de ces sous-objets R :
+
+```{r}
+CorrTest$statistic # test t
+CorrTest$parameter # degrés de liberté
+CorrTest$p.value   # valeur p
+CorrTest$estimate  # corrélation
+CorrTest$method    # type de corrélation
+CorrTest$conf.int[1] # valeur inférieure des IC à 95%
+CorrTest$conf.int[2] # valeur supérieure des IC à 95%
+```
+
+#### Combiner les sous-objets R
+
+Je dois avouer que présentée ainsi, le résultat obtenu par l'extraction des sous-objets de notre objet R est un peu mêlant. Donc, ci-dessous, j'utilise la fonction ` rbind `[^rbind] pour attribuer un nom à chaque élément et de les regrouper dans une même fenêtre. Et pour extraire uniquement la valeur que je désire, j'utilise les doubles croches [[ ]]. Ce bloc de codes est purement facultatif mais il permet de démontrer que nous pouvons manipuler le format de présentation de différents sous-objets R.
+
+[^rbind]: Cette fonction combine les objets par rangée, d'où l'expression r (row) bind.
+
+```{r}
+options(scipen=999) # retirer la notation scientifique
+rbind(test_t      = CorrTest$statistic[[1]], 
+      dl          = CorrTest$parameter[[1]],
+      valeur_p    = CorrTest$p.value[[1]],
+      correlation = CorrTest$estimate[[1]],
+      lower.ic    = CorrTest$conf.int[[1]],
+      upper.ic    = CorrTest$conf.int[[2]]
+      )
+```
+
+#### Integration dans R Markdown
+
+Bon, maintenant voici la section la plus intéressante vers notre objectif ultime qui consiste à ne pas copier les valeurs calculées par R mais à les extraire et à les intégrer directement dans du texte.
+
+Imaginons que nous voulons écrire :
+
+>L'analyse révèle une corrélation positive de 0.806 entre la distance de freinage et la vitesse de la voiture avec des intervalles de confiance à 95% qui varient entre 0.682 et 0.886.
+
+Sans aucun doute, nous pouvons faire des erreurs de transcription quand vient le temps d'écrire les chiffres et les décimales dans notre texte. Avec R Markdown, nous pouvons extraire nos valeurs directement de notre objet R (CorrTest) et les intégrer dans notre texte. Mais, comme nous l'avons fait ci-haut, il faut entourer le test par des accents graves (voir Figure \@ref(fig:nb102)). Et il ne pas oublier d'insérer ` r ` devant chaque objet R. De plus, la fonction `round( , digits=3)` permet d'arrondir après 3 décimales les valeurs extraites. 
+
+```{r nb102, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Texte de type R Markdown avec intégration des codes pour extraire les résultats des codes R"}
+knitr::include_graphics('figures/textMkd.png')
+```
+
+Voici le même texte obtenu directement avec les codes d'extraction de résultats R de la Figure \@ref(fig:nb102) :
+
+>L'analyse révèle une corrélation positive de `r round(CorrTest$estimate[[1]], digits=3)` entre la distance de freinage et la vitesse de la voiture avec des intervalles de confiance à 95% qui varient entre `r round(CorrTest$conf.int[[1]], digits=3)` et `r round(CorrTest$conf.int[[2]], digits=3)`. 
+
+## Commentaire final
+
+Mais c'est donc compliqué, me direz-vous ? J'avoue que toute cette démarche, dont l'objetif ultime est de ne pas avoir à recopier quelques chiffres ici et là, peut vous sembler une perte de temps. De plus, je vous entends dire : "*Moi, faire une erreur de transcription ? Jamais, ce n'est pas mon style, je suis personne ordonnée et systématique !*" Soyez assurés que je n'ai jamais rencontré personne qui n'a pas fait une petite erreur de transcription de son logiciel statistique à son logiciel de traitement de texte. Bref, vous aussi, vous pouvez faire cette erreur. Je l'ai déjà fait moi aussi...
+
+De plus, n'oubliez pas que si jamais, les valeurs des variables `dist` et `speed` devaient changer (en ajoutant des voitures dans notre fichier de données), les codes pour extraire les valeurs ne changeraient pas et notre texte présenterait automatiquement les bonnes valeurs. Quelle belle façon de gagner du temps !
+
+## Exercice 6
+
+Dans le but de mettre en pratique l'extraction de résultats obtenus dans des codes R, voici un  exercice. À partir du fichier **Exercice R Notebook** que vous avez complété lors de l'Exercice 5, veuillez ajouter :
+
+1. Un troisième en-tête de niveau 2 du nom de `Statistiques descriptives`
+2. Sous cet en-tête, écrire le texte `Voici la moyenne et l'écart-type du poids et de la taille des femmes`
+3. Insérer un bloc de codes R après ce texte.
+4. Dans le bloc de codes, ajouter les codes R pour calculer la **moyenne** et l'**écart-type** des deux variables de votre échantillon, soit la **taille** et le **poids**.
+    + Les fonctions R pour obtenir la moyenne (mean) et l'écart-type (sd=standard deviation) de chacune de vos variables dépendantes sont :
+        + ` mean() `
+        + ` sd() `
+5. Exécutez votre bloc de codes R
+6. Sous le bloc de codes créé à l'étape 4, insérez un en-tête de niveau 3 du nom de `Conclusion`.
+7. Écrivez un texte qui intègre les résultats. Voici le texte à écrire. Notez qu'il manque les valeurs des moyennes et des écart-types (illustré par []).
+    + La moyenne de la taille de mon échantillon de femmes est de [] (écart-type = []) et la moyenne du poids de ces mêmes femmes est de [] (écart-type = []).
+8. Sauvegardez votre fichier R Notebook
+9. Visualisez votre document final R Notebook en sélectionnant **Preview**
+    + Assurez-vous de la disponibilité des codes R dans le fichier .nb.html (voir le menu `Code` dans le coin supérieur droit)
+    + Au besoin, apportez les correctifs pour qu'il ressemble à l'exemple de la Figure \@ref(fig:exercice6) :
+
+```{r exercice6, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Après avoir complété l'Exercice 6, la section 1.3 de votre document devrait ressembler à ceci"}
+knitr::include_graphics('figures/exercice6.png')
+```

@@ -1,0 +1,38 @@
+---
+format:
+  html:
+    css: include/webex.css
+    include-after-body: include/webex.js
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
+
+# Sauvegarde et partage
+
+Voici quelques informations liées à la sauvegarde et au partage des fichiers R Notebook.
+
+## R Markdown
+
+Lorsque vous créer un fichier R Notebook, vous créez un fichier R Markdown (.Rmd). En cliquant sur File / Save (ou l'icone de la petite disquette bleue dans le menu), RStudio sauvegarde automatiquement ce fichier, toujours en format R Markdown (.Rmd), dans votre répertoire de travail (voir Figure \@ref(fig:fig192)). Lorsque vous modifiez votre document R Notebook, en réalité, vous modifiez le fichier .Rmd.
+
+## Preview
+
+Pour voir votre fichier en format HTML, il faut cliquez sur l'option **Preview** du menu de RStudio. RStudio crée un fichier HTML avec l'extension .nb.html. Une fois que le fichier .nb.html est sauvegardé dans votre répertoire de travail, vous pouvez l'ouvrir directement dans votre navigateur web à partir de Finder (Mac) ou Explorateur de fichiers (PC).
+
+## Partager
+
+Puisque le fichier final .nb.html est en format HTML, il peut facilement être partagé. N'importe quel navigateur web pourra l'ouvrir. De plus, le fichier .nb.html possède aussi une caractéristique bien particulière : le fichier .Rmd peut être téléchargé directement à partir de la page d'ouverture du fichier .nb.html ((voir Figure \@ref(fig:nb101)). Cette fonctionnalité, cependant, n'est pas toujours disponible (surtout sur les ordinateurs Mac). Donc, pour être certain que votre collaborateur puisque effectuer des modifications, il faut partager tous les fichiers suivants : 
+
+- le fichier en format .Rmd[^html]
+- le fichier en format .nb.html
+- tous les fichiers qui l'accompagnent, comme les fichiers de données (format .csv, .xlsx, .dat) ou les fichiers avec des images (format .png, .tiff, .jpeg) que vous avez utilisés pour produire votre document final.
+
+[^html]: Tel qu'indiqué ci-haut, le format .Rmd peut aussi être téléchargé via l'option `download Rmd` du fichier .nb.html (si disponible).
+
+```{r nb101, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Illustration de l'option download Rmd via le fichier .nb.html"}
+knitr::include_graphics('figures/download.png')
+```

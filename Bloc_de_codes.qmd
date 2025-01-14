@@ -1,0 +1,144 @@
+---
+format:
+  html:
+    css: include/webex.css
+    include-after-body: include/webex.js
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
+
+# Blocs de codes
+
+La troisième section d'un fichier R Notebook est l'utilisation des blocs de codes. Les blocs de codes nous permettent d'importer, d'examiner, d'analyser et présenter nos données. Dans notre cas, nous allons utiliser des blocs de codes du langage R. Donc, afin d'utiliser les codes R, il faut, dans un premier temps, insérer des blocs de codes (nommés "chunks" dans RStudio) à l'intérieur du fichier R Notebook sous les Métadonnées dans la fenêtre Source de RStudio.
+
+## Exemple
+
+Dans l'exemple de la Figure \@ref(fig:nb91), le bloc de codes est inséré entre les lignes 32 à 36 et ce bloc de codes est entouré par du texte et des en-têtes (voir ##). Cet exemple nous permet de bien voir comment le texte et les codes R sont intégrés à l'intérieur d'un document R Notebook.
+
+```{r nb91, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Voici un exemple de blocs de codes R entouré par du texte et des en-têtes dans la fenêtre Source de RStudio"}
+knitr::include_graphics('figures/insertChunk.png')
+```
+
+## Insertion
+
+Pour insérer un bloc de codes R, dans la fenêtre Source de RStudio, il faut placer votre curseur sur la ligne du fichier R Notebook où vous désirez insérer le bloc de codes. Par la suite, quelques choix s'offrent à vous :
+
+- dans le menu de RStudio, il faut cliquer sur l'icone avec le carré vert avec un C blanc à l'intérieur et, dans la bande déroulante, il faut choisir l'option R (voir Figure \@ref(fig:nb9)). 
+- dans le menu de RStudio, sélectionnez Code > Insert Chunk. 
+- les touches Alt+Ctrl+I (Mac) ou Cmd+Option+I (PC) permettent d'insérer automatiquement un bloc de codes R.
+
+```{r nb9, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Insertion d'un bloc de codes R dans la fenêtre Source de RStudio"}
+knitr::include_graphics('figures/rnb.fig10.png')
+```
+
+## Bloc de code vierge
+
+La Figure \@ref(fig:nb10) illustre à quoi ressemble un bloc de codes R vierge. Dans cet exemple, le bloc de codes R est inséré entre les lignes 156 et 158 de mon document. Une bande grise est insérée à l'intérieur de deux lignes créées à partir de 3 accents graves (```). Il est important de <font color = "red">ne jamais effacer ces deux lignes</font> puisque le bloc de codes est délimité par ces lignes. En les effaçant, le bloc va s'agrandir et intégrer du texte non désiré à l'intérieur du bloc de codes.
+
+Dans le bloc de codes R, l'acolade `{r}` indique que notre bloc est un bloc de codes R. Il est possible de contrôler le _comportement_ d'un bloc de codes R en ajoutant des codes additionnels dans cette acolade. Vous trouverez la liste des options possibles en [cliquant ici](https://bookdown.org/yihui/rmarkdown/r-code.html). Notez que plusieurs de ces options ne fonctionnent pas avec le format R Notebook.
+
+```{r nb10, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Insertion d'un nouveau bloc de codes R dans la fenêtre Source de RStudio"}
+knitr::include_graphics('figures/rnb.fig11.png')
+```
+
+## Exécuter du code R
+
+Regardons comment nous pouvons exécuter les lignes de codes inscrites à l'intérieur d'un bloc de codes R. À titre de démonstration, j'insère un bloc de codes R avec trois lignes de codes à l'intérieur de la fenêtre Source de RStudio (voir ci-dessous)[^iconebloc] :
+
+[^iconebloc]: Vous pouvez copier ces trois lignes de codes en cliquant sur l'icone situé à la droite à l'intérieur de mon bloc de codes R.
+
+```{r chunk, echo=TRUE, results='hide'}
+( a <- 8^2 )    # créer l'objet a
+( b <- a + 36 ) # créer l'objet b
+a * b           # multiplication des objets a et b
+```
+
+### Une ligne
+
+Pour exécuter une ligne de codes dans R Notebook, il faut placer le curseur sur la ligne que l'on désire exécuter (ou sélectionner toute la ligne) (voir la Figure \@ref(fig:chunk1)). Par la suite,
+
+- il faut cliquer sur le bouton **Run** [situé en haut à droite dans la fenêtre **Source**] et choisir l'option désirée (**Run Selected Line(s)**). 
+
+- Une alternative consiste à appuyer sur les touches Cmd+Enter (Mac) ou Ctrl+Enter (PC).
+
+```{r chunk1, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Exécuter une ligne de codes R"}
+knitr::include_graphics('figures/chunk1.1.png')
+```
+
+Le résultat s'affiche directement sous le bloc de codes R. Dans notre exemple, le résultat est `64`. Le chiffre `[1]` désigne la première ligne dédié aux résultats.
+
+
+### Plusieurs lignes
+
+Parfois, nous désirons exécuter plusieurs lignes de codes adjacentes dans R Notebook. À l'aide de votre curseur, il faut sélectionner toutes les lignes de codes (voir la Figure \@ref(fig:chunk2)) et ensuite :
+
+- il faut cliquer sur le bouton **Run** [situé en haut à droite dans la fenêtre **Source**] et choisir l'option désirée (**Run Selected Line(s)**). 
+
+- Une alternative consiste à appuyer sur les touches Cmd+Enter (Mac) ou Ctrl+Enter (PC).
+
+```{r chunk2, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Exécuter plusieurs lignes de codes R simultanément"}
+knitr::include_graphics('figures/chunk1.2.png')
+```
+
+Le résultat s'affiche directement sous le bloc de codes R. Dans notre exemple, le résultat de la première ligne de codes est `64` et le résultat de la seconde ligne de codes est `100`. Encore une fois, le chiffre `[1]` désigne la première ligne dédié aux résultats de chacune des lignes de codes.
+
+### Un bloc
+
+Parfois, voir souvent, nous désirons exécuter simultanément tous les codes contenus dans un bloc de codes. Pour cela :
+
+- il faut cliquer sur le bouton **Run** [situé en haut à droite dans la fenêtre **Source**] et choisir l'option désirée (**Run Current Chunk**) (voir la Figure \@ref(fig:chunk3)). 
+
+- Une alternative consiste à cliquer sur la flêche verte située dans le coin supérieur droite du bloc de codes R que l'on désire exécuter.
+
+```{r chunk3, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Exécuter un bloc de codes R"}
+knitr::include_graphics('figures/chunk1.3.png')
+```
+
+Le résultat s'affiche directement sous le bloc de codes R. Dans notre exemple, le résultat de la première ligne de coded est `64`, le résultat de la seconde ligne de codes est `100` et le résultat de la troisième ligne de codes est `6400`. Encore une fois, le chiffre `[1]` désigne la première ligne dédié aux résultats de chacune des lignes de codes.
+
+### Plusieurs blocs
+
+- Notez qu'il est aussi possible d'exécuter une série de blocs de codes R simultanément en sélectionnant les options `Run All Chunks Above`, `Run All Chunks Below` ou `Run All`. Il suffit de cliquer sur **Run** et de sélectionner l'option désirée dans la bande déroulante (voir la Figure \@ref(fig:chunk4)).
+
+```{r chunk4, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Exécuter plusieurs blocs de codes R"}
+knitr::include_graphics('figures/chunk1.4.png')
+```
+
+## Diviser un bloc
+
+Avec R Notebook, il est parfois nécessaire de couper un bloc de codes qui est trop long. Par exemple, notre bloc de codes pourrait comprendre :
+
+- une première ligne de codes qui donne un premier résultat que nous désirons interpréter et,
+- une seconde ligne de codes qui donne un second résultat que nous désirons aussi interpréter, mais séparément. 
+
+Afin d'éviter la confusion dans l'interprétation, il est parfois plus simple de diviser notre bloc de codes en deux blocs de codes. Pour ce faire, à l'intérieur du bloc que vous désirez séparer, placez votre curseur sur la ligne qui sera associée à la première ligne de codes du deuxième bloc de codes et appuyer simultanément sur les touches Alt+Ctrl+I (Mac). 
+
+Dans l'exemple illustré ci-dessous (voir la Figure \@ref(fig:chunk5)), j'ai placé mon curseur sur la ligne avec le code ( b <- a + 36 ) et j'ai appuyé sur les touches Alt+Ctrl+I. J'ai maintenant (voir la Figure \@ref(fig:chunk6)) deux blocs de codes et je peux les exécuter et les interpréter séparément par la suite. 
+
+```{r chunk5, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Séparer un bloc de codes R"}
+knitr::include_graphics('figures/chunk1.6.png')
+```
+
+```{r chunk6, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Exemple d'un bloc de codes R séparé"}
+knitr::include_graphics('figures/chunk1.5.png')
+```
+
+## Exercice 4
+
+Les objectifs de cet exercice sont (1) d'apprendre à insérer un bloc de codes R et (2) à exécuter une ligne de codes à l'intérieur d'un bloc de codes R. Voici les instructions :
+
+1. Ouvrez le fichier Exercice Notebook.Rmd que vous avez créé lors de l'Exercice 3 
+2. Dans la fenêtre Source de RStudio, insérez **un nouveau bloc de codes R** sur la ligne suivant la phrase `Voici les variables qui composent le fichier women disponible par défaut dans le logiciel R`
+    + Dans le bloc de code R, ajoutez le code suivant : `str(women)`
+    + Exécutez le code de la ligne précédente
+3. Sauvegardez votre fichier R Notebook
+4. Visualisez votre document final R Notebook en sélectionnant **Preview**
+    + Au besoin, apportez les correctifs pour qu'il ressemble à l'exemple de la Figure \@ref(fig:exercice4) :
+
+```{r exercice4, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Après avoir complété l'Exercice 4, votre document devrait ressembler à ceci"}
+knitr::include_graphics('figures/exercice_2.png')
+```

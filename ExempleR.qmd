@@ -1,0 +1,109 @@
+---
+format:
+  html:
+    css: include/webex.css
+    include-after-body: include/webex.js
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
+
+# Exemple avec R {#ExempleR}
+
+Dans le chapitre précédent, nous avons vu comment insérer un bloc de codes R à l'intérieur d'un document R Notebook. Dans le présent chapitre, à l'aide d'un exemple, nous allons explorer plus en détails le fonctionnement des blocs de codes R dans R Notebook. 
+
+## Introduction à R
+
+Avant d'aborder l'utilisation de blocs de codes R, j'encourage les plus curieux d'entre vous à consulter le livre électronique d'Anouar El Ghouch, professeur de statistiques à l'[Université Catholique de Louvain](https://uclouvain.be/fr/index.html) (Belgique). Dans son livre [Exploration de données avec R](https://bookdown.org/ael/rexplor/), le professeur Ghouch présente de façon simple la plupart des concepts de base de R. 
+
+Si la lecture en anglais ne vous fait pas peur, je suggère fortement la lecture du livre électronique d'Alex Douglas, Deon Roos, Rrancesca Mancini, Ana Couto et David Lusseau (2022). [An Introduction to R](https://intro2r.com/index.html). À mon avis, ce livre est l'un des meilleurs pour introduire les logiciels R et RStudio. Plusieurs petits trucs y sont présentés et ce, dans un style d'écriture très abordable. Et, comme bonus, les auteurs ont intégré quelques vidéos qui permettent de bien comprendre comment utiliser R et RStudio. Vous pouvez consulter la liste de ces vidéos en cliquant [ici](https://alexd106.github.io/intro2R/howto.html#rstudio_proj-vid).
+
+## Données
+
+Afin de démontrer le fonctionnement des blocs de codes R dans R Notebook, utilisons un fichier de données déjà disponible par défaut dans R[^data]. Nous allons utiliser le fichier de données **cars**. Ce fichier contient des données relatives à différentes marques de voitures. 
+
+[^data]: Vous pouvez consulter la liste de tous les ensembles de données disponibles dans R en inscrivant le code ` data() ` dans la fenêtre Console de RStudio.
+
+## Variables
+
+La fonction `str` de R permet d'examiner le contenu d'un ensemble de données (` str ` = structure). Puisque nous avons sélectionné l'option `inline` dans les métadonnées, après avoir exécuté la ligne de codes, les résultats s'affichent directement sous les codes exécutés dans la fenêtre Source de RStudio. 
+
+```{r}
+str(cars)
+```
+
+Suite à l'exécution de la commande `str(cars)`, nous remarquons que le fichier *cars* contient 50 observations (i.e. 50 voitures) et deux variables, soit **speed** et **dist**[^variables]. Ces deux variables sont de nature numérique (**num**). De plus, les dix premières valeurs de chacune des variables sont affichées à la droite du nom de chaque variable. Dans ce livre, vous pouvez copier les codes R en cliquant sur l'icone situé à la droite dans les blocs de codes R.
+
+[^variables]: La variable **speed** désigne la vitesse (en milles à l'heure) de la voiture et la variable **dist** désigne la distance de freinage (en pieds). Ces données ont été collectées dans les années 1920 ! Pour obtenir des informations supplémentaires sur cet ensemble de données, tapez ` ?cars ` et la touche ↵ dans la Console de RStudio.
+
+## Graphique avec R
+
+Imaginons que nous voulons examiner la relation qui existe entre les variables **speed** et **dist** à l'aide d'un diagramme en nuage de points (*scatterplot*, en anglais). La fonction `plot` de R permet de créer rapidement ce type de graphique. 
+
+Notez que les variables sont nommées en relation avec leur ensemble de données d'appartenance (cars) à l'aide du signe `$`. Par défaut, avec la fonction `plot`, la première variable nommée (`cars$speed`) se retrouve sur l'axe des X et la seconde variable (`cars$dist`) sur l'axe des X[^tilde].
+
+[^tilde]: Il est aussi possible d'écrire ` plot(cars$dist ~ cars$speed) `. Dans ce cas, la variable distance est mise en relation avec la variable speed à l'aide du symbole ` ~ ` (*tilde*). Avec cette notation, la première variable désigne la variable dépendante (dist) et la seconde variable désigne la variable indépendante (speed).
+
+```{r}
+plot(cars$speed, cars$dist)
+```
+
+## Graphique amélioré
+
+Le graphique présenté ci-haut est correct mais rien pour écrire à sa mère, n'est-ce pas ? Heureusement, R possède de nombreuses fonctions graphiques de base qui permettent d'améliorer l'apparence visuelle des graphiques. Ci-dessous, j'apporte les modifications suivantes :
+
+- l'ajout de `type = "p"` qui permet de préciser le type de graphique désiré ("p" = nuage de points). Il est possible de créer d'autres types de graphique avec la fonction `type`. Je vous invite à [cliquer ici](http://www.sthda.com/french/wiki/types-de-graphiques-generes-par-la-fonction-plot-logiciel-r) ou [ici](https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/plot) pour voir les autres types de graphiques possibles.
+- l'ajout de plusieurs fonctions (`xlab`, `ylab`, `col`, `main`, etc.) qui permettent de contrôler l'aspect visuelle du graphique. 
+- De plus, dans un bloc de codes, l'ajout du symbole **` # `** permet aussi d'insérer des commentaires qui ne sont pas traités comme des lignes de codes. Cela permet de documenter l'utilisation de telle ou de telle fonction directement dans notre bloc de codes.
+
+***
+
+De plus, imaginons que nous voulons ajouter la droite de régression qui permet de prédire la variable **dist** à partir de la variable **speed**. Il faut dans un premier temps :
+
+- créer un objet R (`model_1`)[^nom] qui contient les résultats du calcul de la droite de régression avec la fonction `lm` (lm = linear model) et,
+- ajouter la droite de régression avec la fonction `abline` à partir de l'objet R `model_1`
+
+[^nom]: Le nom d'un objet R est arbitraire. Vous pouvez écrire le nom que vous voulez. Nous aurions pu l'appeler Michel !
+
+```{r, fig.cap="Graphique amélioré"}
+plot(cars$dist ~ cars$speed, # variables mises en relation avec ~
+     type = "p", # nuage de points
+     main = "Relation entre la distance et la vitesse", # titre
+     xlab = "Vitesse (milles à l'heure)", # titre axe des x
+     ylab = "Distance parcourue (milles)", # titre axe des y
+     col = "red", # couleur des points
+     las = 1, # orientation horizontale des chiffres sur axe y
+     cex = 1.25, # grosseur des points
+     frame = FALSE, # pas de cadre autour du graphique
+     xlim = c(0, 30), # étendue axe des x
+     ylim = c(0, 120) # étendue axe des y
+)
+model_1 <- lm(cars$dist ~ cars$speed) # modèle linéaire simple
+abline(model_1, col="grey50", cex=2, lty="dashed") # droite de régression
+```
+
+## Exercice 5
+
+Dans le but de mettre en pratique quelqu'uns des éléments présentés ci-haut, voici un  exercice. À partir du fichier **Exercice R Notebook** que vous avez complété lors de l'Exercice 4, veuillez ajouter :
+
+1. Un second en-tête de niveau 2 du nom de `Graphique`
+2. Sous cet en-tête, écrire le texte `Illustration de la relation entre le poids et la taille pour un échantillon fictif de 15 femmes`
+3. Insérer un bloc de codes R après ce texte.
+4. Dans le bloc de codes, ajouter les codes R pour **créer un graphique semblable** à celui illustré ci-dessous (avec titres) dont les points sont reliés par une ligne[^ligne].
+    + Pour vous aider avec la figure, veuillez consulter la section `Graphique amélioré`.
+3. Sauvegardez votre fichier R Notebook
+4. Visualisez votre document final R Notebook en sélectionnant **Preview**
+    + Assurez-vous de la disponibilité des codes R dans le fichier .nb.html (voir le menu `Code` dans le coin supérieur droit)
+    + Au besoin, apportez les correctifs pour qu'il ressemble à l'exemple de la Figure \@ref(fig:exercice5) :
+
+[^ligne]: Même en sélectionnant le bon type de graphique, il est possible que la ligne qui joint les points n'apparaissent pas. **Solution** : Il faut agrandir la fenêtre Source du logiciel RStudio.
+
+```{r exercice5, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Après avoir complété l'Exercice 5, votre document devrait ressembler à ceci"}
+knitr::include_graphics('figures/show_all_code.png')
+```
+
+
+

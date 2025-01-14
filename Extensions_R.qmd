@@ -1,0 +1,62 @@
+---
+format:
+  html:
+    css: include/webex.css
+    include-after-body: include/webex.js
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
+
+# Extensions R
+
+Bien qu’à la base, R possède une multitude de fonctionnalités, il y a toujours une fonction qui manque ! En raison de sa license d’utilisation, R peut facilement être amélioré à partir d’extensions (en anglais : packages). Les extensions sont des programmes qui s’ajoutent à R. Ces extensions sont développées par des programmeurs indépendants et ils répondent à des besoins spécifiques. Bref, de nombreux programmeurs ont ajouté (et ajoutent encore) de nombreuses extensions dont le but est d’ajouter les fonctions manquantes à R. Vous pouvez consulter la liste des nouvelles extensions en consultant le site <https://rweekly.org/archive>. 
+
+Lors de son téléchargement initial, la version de base de R comprend déjà plusieurs extensions. Mais, selon ses besoins, l’utilisateur peut en ajouter autant qu’il le veut. Habituellement, les extensions sont déposées par leur(s) auteur(s) sur [CRAN](https://cran.r-project.org/). CRAN signifie *Comprehensive R Archive Network*. Le nombre d’extensions disponibles sur CRAN se chiffre par milliers. Bien que les extensions ne soient pas toutes disponibles sur CRAN (plusieurs sont disponibles sur [GitHub](https://github.com) ou d'autres sites webs indépendants), il est avantageux d’utiliser les extensions disponibles sur CRAN :
+
+- elles sont facilement disponibles via la fonction install.packages(“nom_du_package”) de R
+- elles ont subit une vérification contrôle par CRAN avant d’être mises à la disposition à tous.
+
+## Installation des extensions
+
+L'installation des extensions peut se faire de différentes façons via l'interface de RStudio. Malgré tout, selon moi, l'approche la plus simple consiste à inscrire la ligne de code `install.packages(pkgs="nom de l'extension")` dans la fenêtre Console de RStudio[^installation].
+
+[^installation]: Faites attention de ne pas écrire cette ligne de codes dans votre script R de la fenêtre Source de RStudio. Sinon, l'extension sera réinstallée à toutes les fois que vous exécuterez le bloc de codes qui le contient dans la fenêtre Source. Si vous oubliez, ce n'est pas dommageable pour votre ordinateur mais c'est simplement inutile...
+
+Tout comme les logiciels que nous installons et que nous utilisons sur notre ordinateur (ex: Microsoft Word), les extensions ne doivent être installées qu’une seule fois mais elles doivent être ouvertes à chaque fois que nous voulons les utiliser durant une séance de travail[^library]. De plus, tout comme nos logiciels, les extensions doivent être mises à jour régulièrement parce que les auteurs leur apportent des améliorations[^update].
+
+[^library]: À partir du code `library(nom de l'extension)` que nous inscrivons dans le script R de la fenêtre Source de RStudio.
+
+[^update]: Pour mettre à jour une extension en particulier, il suffit de réinstaller l'extension à partir du code `install.packages(pkgs="nom de l'extension")`
+
+## Extension rmarkdown
+
+Au cours des années, certaines extensions sont devenues très populaires et elles sont pour ainsi dire essentielles. L'extension [rmarkdown](https://rmarkdown.rstudio.com/lesson-1.html) est l'une de celles-ci. L'extension rmarkdown est décrite, par ses auteurs, comme un cadre de travail qui :
+
+- permet d'écrire, d'exécuter et de sauvegarder des codes d'analyses et 
+- de produire des documents de haute qualité qui sont reproductibles, dynamiques et disponibles dans plusieurs formats. 
+
+Parmi les formats R Markdown disponibles, notons le format PDF, HTML (incluant le format R Notebook), Word. De plus, l'extension rmarkdown permet de produit des documents écrits (comme des livres électroniques, via l'extension Bookdown) mais aussi des présentations (comme PowerPoint, via R Presentation). 
+
+## Installer rmarkdown
+
+*Si vous avez déjà installé l'extension rmarkdown, vous n'avez rien à faire et vous pouvez sauter cette étape.*
+
+Pour utiliser le format R Notebook, il faut donc que l'extension rmarkdown soit installée dans R via RStudio. L'approche la plus simple pour installer l'extension rmarkdown consiste à :
+
+- ouvrir le logiciel RStudio
+- écrire `install.packages("rmarkdown")` dans la fenêtre Console de RStudio (notez que selon la configuration des fenêtres de RStudio, la fenêtre Console peut se trouver en bas à gauche de l'écran) (Voir Figure \@ref(fig:fig4))
+- appuyer sur la touche enter (`↵`)
+
+```{r fig4, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Installation de l'extension rmarkdown à partir de la fenêtre Console de RStudio"}
+knitr::include_graphics('figures/install_rmarkdown.png')
+```
+
+- Par la suite, un message confirme l'installation de l'extension (nommée _package_, en anglais) dans la Console de RStudio (Voir Figure \@ref(fig:fig5)).
+
+```{r fig5, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Confirmation de l'installation"}
+knitr::include_graphics('figures/installed_rmarkdown.png')
+```
