@@ -11,7 +11,7 @@ language:
     crossref-tbl-title: "Tableau"
 ---
 
-# Project RStudio - niveau II {#niveau2}
+# Project RStudio - niveau II {#sec-niveau2}
 
 Dans le Chapitre \@ref(projetRStudio), nous avons vu brièvement comment créer un projet R de manière à y regrouper l'ensemble des fichiers associés à un projet d'analyse de données. Malheureusement, l'approche présentée au Chapitre \@ref(projetRStudio) n'est *valide* que lorsque le nombre de fichiers utilisés est petit et qu'il est possible de placer tous nos fichiers à l'intérieur du même répertoire. Par contre, lorsque le nombre de fichiers de données et/ou d'analyse devient trop grand, il est préférable d'utiliser une meilleure organisation de notre projet R. Cela permet, entre autres, de regrouper les différents types de fichiers ensembles. Dans le présent chapitre, nous avons examiner comment  organiser adéquatement le répertoire (aussi nommé "dossier" ou "folder" en anglais) qui contient votre fichier .Rproj sur votre ordinateur. De cette façon, vos données, fichiers d'analyses et résultats seront toujours organisés de manière cohérente sur votre ordinateur dans le répertoire qui contient le projet R.
 

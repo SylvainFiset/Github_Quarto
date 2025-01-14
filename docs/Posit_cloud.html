@@ -282,13 +282,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#renommer-le-nouveau-projet" id="toc-renommer-le-nouveau-projet" class="nav-link" data-scroll-target="#renommer-le-nouveau-projet"><span class="header-section-number">7.3.2</span> Renommer le nouveau projet</a></li>
   <li><a href="#importer-des-fichiers-dans-un-projet" id="toc-importer-des-fichiers-dans-un-projet" class="nav-link" data-scroll-target="#importer-des-fichiers-dans-un-projet"><span class="header-section-number">7.3.3</span> Importer des fichiers dans un projet</a></li>
   <li><a href="#examiner-la-liste-des-projets" id="toc-examiner-la-liste-des-projets" class="nav-link" data-scroll-target="#examiner-la-liste-des-projets"><span class="header-section-number">7.3.4</span> Examiner la liste des projets</a></li>
-  <li><a href="#exporter-un-projet-rstudio-cloud" id="toc-exporter-un-projet-rstudio-cloud" class="nav-link" data-scroll-target="#exporter-un-projet-rstudio-cloud"><span class="header-section-number">7.3.5</span> Exporter un projet RStudio Cloud</a></li>
-  <li><a href="#partager-un-projet-dans-rstudio-cloud" id="toc-partager-un-projet-dans-rstudio-cloud" class="nav-link" data-scroll-target="#partager-un-projet-dans-rstudio-cloud"><span class="header-section-number">7.3.6</span> Partager un projet dans RStudio Cloud</a></li>
+  <li><a href="#exporter-un-projet-posit-cloud" id="toc-exporter-un-projet-posit-cloud" class="nav-link" data-scroll-target="#exporter-un-projet-posit-cloud"><span class="header-section-number">7.3.5</span> Exporter un projet Posit Cloud</a></li>
+  <li><a href="#partager-un-projet-dans-posit-cloud" id="toc-partager-un-projet-dans-posit-cloud" class="nav-link" data-scroll-target="#partager-un-projet-dans-posit-cloud"><span class="header-section-number">7.3.6</span> Partager un projet dans Posit Cloud</a></li>
   <li><a href="#effacer-un-projet" id="toc-effacer-un-projet" class="nav-link" data-scroll-target="#effacer-un-projet"><span class="header-section-number">7.3.7</span> Effacer un projet</a></li>
   </ul></li>
-  <li><a href="#options-de-rstudio-cloud" id="toc-options-de-rstudio-cloud" class="nav-link" data-scroll-target="#options-de-rstudio-cloud"><span class="header-section-number">7.4</span> Options de RStudio Cloud</a></li>
+  <li><a href="#options-de-posit-cloud" id="toc-options-de-posit-cloud" class="nav-link" data-scroll-target="#options-de-posit-cloud"><span class="header-section-number">7.4</span> Options de Posit Cloud</a></li>
   <li><a href="#consulter-votre-compte" id="toc-consulter-votre-compte" class="nav-link" data-scroll-target="#consulter-votre-compte"><span class="header-section-number">7.5</span> Consulter votre compte</a></li>
-  <li><a href="#quitter-rstudio-cloud" id="toc-quitter-rstudio-cloud" class="nav-link" data-scroll-target="#quitter-rstudio-cloud"><span class="header-section-number">7.6</span> Quitter RStudio Cloud</a></li>
+  <li><a href="#quitter-posit-cloud" id="toc-quitter-posit-cloud" class="nav-link" data-scroll-target="#quitter-posit-cloud"><span class="header-section-number">7.6</span> Quitter Posit Cloud</a></li>
   </ul>
 </nav>
     </div>
@@ -314,22 +314,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Dans ce chapitre, j’introduis l’application <a href="https://www.rstudio.com/products/cloud/">RStudio Cloud</a>. RStudio Cloud est la version web de RStudio IDE. Elle permet :</p>
+<p>Dans ce chapitre, j’introduis l’application <a href="https://posit.cloud/?_gl=1*10qlpcw*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg4MDY2MS4yLjEuMTczNjg4MDY4My4wLjAuMA..">Posit Cloud</a>. Posit Cloud est la version web de RStudio IDE. Elle permet :</p>
 <ul>
 <li>d’utiliser R et RStudio directement dans votre navigateur web et ce, sans avoir à télécharger les logiciels R et RStudio sur votre ordinateur</li>
 <li>de partager aisément des projets RStudio avec plusieurs utilisateurs</li>
 </ul>
 <p>Si vous avez téléchargé avec succès les applications R et RStudio sur votre ordinateur (et quelles fonctionnent correctement) et que vous n’envisagez pas de partager vos projets d’analyse avec quelqu’un d’autre (ce qui arrive rarement, soit dit en passant), vous pouvez sauter la lecture de ce chapitre.</p>
-<p>Bien que RStudio Cloud s’apparente à la version locale<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> de RStudio IDE, les premiers pas avec RStudio Cloud peuvent s’avérer difficiles. Dans le présent chapitre, je désire soulever quelques éléments importants afin de maximiser l’expérience d’utilisation de RStudio Cloud.</p>
+<p>Bien que Posit Cloud s’apparente à la version locale<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> de RStudio IDE, les premiers pas avec Posit Cloud peuvent s’avérer difficiles. Dans le présent chapitre, je désire soulever quelques éléments importants afin de maximiser l’expérience d’utilisation de Posit Cloud.</p>
 <section id="création-dun-compte" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="création-dun-compte"><span class="header-section-number">7.1</span> Création d’un compte</h2>
-<p>La première étape consiste à créer un compte gratuit (<em>Free</em>) sur le site web de <a href="https://www.rstudio.com/products/cloud/">RStudio Cloud</a> (voir Figure @ref(fig:signup)). Notez, par ailleurs, que l’utilisateur atteint très rapidement les limites d’utilisation du plan gratuit de RStudio Cloud. Dans l’optique où l’utilisateur (i) dépasse le nombre de projets ou d’espaces de travail admissibles, (ii) dépasse le nombre d’heures par projet disponibles, ou (iii) qu’il désire augmenter la mémoire RAM et la vitesse d’exécution des codes, le plan <em>Premium</em> de RStudio Cloud s’avère une alternative intéressante, mais relativement dispendieuse<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
-<div class="cell" data-layout-align="center">
+<p>La première étape consiste à créer un compte gratuit (<em>Free</em>) sur le site web de <a href="https://posit.cloud/?_gl=1*10qlpcw*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg4MDY2MS4yLjEuMTczNjg4MDY4My4wLjAuMA..">Posit Cloud</a> (voir <a href="#fig-signup" class="quarto-xref">Figure&nbsp;<span>7.1</span></a>). Notez, par ailleurs, que l’utilisateur atteint très rapidement les limites d’utilisation du plan gratuit de Posit Cloud. Dans l’optique où l’utilisateur (i) dépasse le nombre de projets ou d’espaces de travail admissibles, (ii) dépasse le nombre d’heures par projet disponibles, ou (iii) qu’il désire augmenter la mémoire RAM et la vitesse d’exécution des codes, le plan <em>Premium</em> de Posit Cloud s’avère une alternative intéressante, mais relativement dispendieuse<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-Free-signUp.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Procédure de création d’un compte gratuit avec RStudio Cloud</figcaption>
+<div id="fig-signup" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-signup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-Free-signUp.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-signup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: Procédure de création d’un compte gratuit avec Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
@@ -337,37 +341,45 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="espaces-de-travail" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="espaces-de-travail"><span class="header-section-number">7.2</span> Espaces de travail</h2>
-<p>RStudio Cloud possède la capacité de regrouper plusieurs projets RStudio à l’intérieur d’un même espace de travail. Dans RStudio Cloud, ces environnements se nomment <code>Spaces</code>. Cette caractéristique permet (1) de regrouper tous vos projets RStudio associés au même thème (ex: un cours universitaire, une formation, une étude scientifique, etc.) à l’intérieur d’un même environnement et/ou (2) de partager un espace de travail avec d’autres personnes, comme un professeur avec ses étudiants.</p>
-<p>Afin d’atteindre ces objectifs, RStudio Cloud divise l’espace de travail en deux catégories d’espace :</p>
+<p>Posit Cloud possède la capacité de regrouper plusieurs projets RStudio à l’intérieur d’un même espace de travail. Dans Posit Cloud, ces environnements se nomment <code>Spaces</code>. Cette caractéristique permet (1) de regrouper tous vos projets RStudio associés au même thème (ex: un cours universitaire, une formation, une étude scientifique, etc.) à l’intérieur d’un même environnement et/ou (2) de partager un espace de travail avec d’autres personnes, comme un professeur avec ses étudiants.</p>
+<p>Afin d’atteindre ces objectifs, Posit Cloud divise l’espace de travail en deux catégories d’espace :</p>
 <ul>
 <li>les espaces de travail individuels</li>
 <li>les espaces de travail partagés<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</li>
 </ul>
 <section id="espace-individuel" class="level3" data-number="7.2.1">
 <h3 data-number="7.2.1" class="anchored" data-anchor-id="espace-individuel"><span class="header-section-number">7.2.1</span> Espace individuel</h3>
-<p>L’espace de travail individuel se trouve dans l’onglet <code>Your Workspace</code> sous l’en-tête <code>Spaces</code> à la gauche de RStudio Cloud (voir Figure @ref(fig:ws)). Par défaut, les projets RStudio qui sont créés à l’intérieur de cet espace de travail individuel ne sont disponibles et visibles qu’à l’utilisateur du compte. Cependant, il est possible de rendre disponibles les projets de cet espace individuel afin qu’ils soient consultés et copiés par d’autres utilisateurs de RStudio Cloud (si cela vous intéresse, veuillez <a href="https://rstudio.cloud/learn/guide#:~:text=for%20more%20info.-,Your%20Workspace,-Every%20RStudio%20Cloud">cliquer ici</a>).</p>
-<div class="cell" data-layout-align="center">
+<p>L’espace de travail individuel se trouve dans l’onglet <code>Your Workspace</code> sous l’en-tête <code>Spaces</code> à la gauche de Posit Cloud (voir <a href="#fig-ws" class="quarto-xref">Figure&nbsp;<span>7.2</span></a>). Par défaut, les projets RStudio qui sont créés à l’intérieur de cet espace de travail individuel ne sont disponibles et visibles qu’à l’utilisateur du compte. Cependant, il est possible de rendre disponibles les projets de cet espace individuel afin qu’ils soient consultés et copiés par d’autres utilisateurs de Posit Cloud (si cela vous intéresse, veuillez <a href="https://rstudio.cloud/learn/guide#:~:text=for%20more%20info.-,Your%20Workspace,-Every%20RStudio%20Cloud">cliquer ici</a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-yourProjects-yourws.png" class="img-fluid figure-img" style="width:40.0%"></p>
-<figcaption>Espace de travail individuel de RStudio Cloud</figcaption>
+<div id="fig-ws" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-yourProjects-yourws.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.2: Espace de travail individuel de Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Personnellement, j’utilise rarement l’espace de travail individuel. Je préfère regrouper mes projets RStudio à l’intérieur de thèmes spécifiques (cours, projets de recherche, etc.) à l’aide d’espace de travail partagé (voir ci-dessous). De plus, puisque l’utilité première de RStudio Cloud est de favoriser le travail collaboratif, je ne discute pas plus longuement de l’espace de travail individuel. Je considère qu’une gestion responsable des espaces partagés permet d’obtenir le même niveau de confidentialité que l’espace de travail individuel.</p>
+<p>Personnellement, j’utilise rarement l’espace de travail individuel. Je préfère regrouper mes projets RStudio à l’intérieur de thèmes spécifiques (cours, projets de recherche, etc.) à l’aide d’espace de travail partagé (voir ci-dessous). De plus, puisque l’utilité première de Posit Cloud est de favoriser le travail collaboratif, je ne discute pas plus longuement de l’espace de travail individuel. Je considère qu’une gestion responsable des espaces partagés permet d’obtenir le même niveau de confidentialité que l’espace de travail individuel.</p>
 </section>
 <section id="espaces-partagés" class="level3" data-number="7.2.2">
 <h3 data-number="7.2.2" class="anchored" data-anchor-id="espaces-partagés"><span class="header-section-number">7.2.2</span> Espaces partagés</h3>
-<p>RStudio Cloud permet de regrouper et de partager avec d’autres utilisateurs des projets RStudio dans le même espace de travail. Les projets RStudio qui sont intégrés à l’intérieur d’un espace de travail partagé doivent obligatoirement avoir un thème commun. Par exemple, je peux regrouper les exercices d’un même cours dans un espace de travail partagé ou regrouper les projets associés à mes travaux de recherche sur une thématique spécifique. Bref, avant de créer un espace de travail partagé, il faut cibler le dénominateur commun aux projets qui y seront regroupés. Dans le cadre d’un cours, par exemple, un professeur peut créer un espace de travail partagé avec tous ces étudiants pour un exercice particulier. Cela lui permet d’avoir accès à tous les travaux effectués dans le cadre de cet exercice<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
-<p>À titre d’exemple, la Figure @ref(fig:spaces) montre — voir la colonne de gauche — que j’ai créé un espace de travail partagé (voir l’icone avec 3 personnes) du nom de <code>Exercices</code>. Si désiré, je pourrais créer un nouvel espace de travail partagé en cliquant sur <code>+ New Space</code>. Personnellement, tous mes espaces de travail dans RStudio Cloud sont de nature partagée. Cette façon de faire me permet, si désiré, de rendre disponibles plusieurs projets à plusieurs personnes, et ce, très rapidement.</p>
-<div class="cell" data-layout-align="center">
+<p>Posit Cloud permet de regrouper et de partager avec d’autres utilisateurs des projets RStudio dans le même espace de travail. Les projets RStudio qui sont intégrés à l’intérieur d’un espace de travail partagé doivent obligatoirement avoir un thème commun. Par exemple, je peux regrouper les exercices d’un même cours dans un espace de travail partagé ou regrouper les projets associés à mes travaux de recherche sur une thématique spécifique. Bref, avant de créer un espace de travail partagé, il faut cibler le dénominateur commun aux projets qui y seront regroupés. Dans le cadre d’un cours, par exemple, un professeur peut créer un espace de travail partagé avec tous ces étudiants pour un exercice particulier. Cela lui permet d’avoir accès à tous les travaux effectués dans le cadre de cet exercice<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>À titre d’exemple, la <a href="#fig-spaces" class="quarto-xref">Figure&nbsp;<span>7.3</span></a> montre — voir la colonne de gauche — que j’ai créé un espace de travail partagé (voir l’icone avec 3 personnes) du nom de <code>Exercices</code>. Si désiré, je pourrais créer un nouvel espace de travail partagé en cliquant sur <code>+ New Space</code>. Personnellement, tous mes espaces de travail dans Posit Cloud sont de nature partagée. Cette façon de faire me permet, si désiré, de rendre disponibles plusieurs projets à plusieurs personnes, et ce, très rapidement.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-NewSpace.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Illustration de la fenêtre d’ouverture de RStudio Cloud</figcaption>
+<div id="fig-spaces" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-NewSpace.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spaces-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.3: Illustration de la fenêtre d’ouverture de Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
@@ -379,13 +391,17 @@ ul.task-list li input[type="checkbox"] {
 <p>RStudio oblige l’utilisateur à créer un projet RStudio, ce qui, à mon avis, est une très bonne chose <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. À titre de rappel (voir Chapitre @ref(projetRStudio)), un projet RStudio permet de regrouper tous les fichiers (données, analyses, figures, etc.) liés à un projet d’analyse statistique.</p>
 <section id="créer-un-nouveau-projet" class="level3" data-number="7.3.1">
 <h3 data-number="7.3.1" class="anchored" data-anchor-id="créer-un-nouveau-projet"><span class="header-section-number">7.3.1</span> Créer un nouveau projet</h3>
-<p>Pour créer un nouveau projet, il suffit de cliquer sur la flèche (<code>∨</code>) de l’onglet <code>New Project</code> (voir à droite de la Figure @ref(fig:spaces)) et, dans la bande déroulante, de sélectionner l’option <code>New RStudio Project</code> (voir Figure @ref(fig:newproject)). Pendant quelques secondes, le message <em>Deploying Project</em> apparaît et, ensuite, votre nouveau projet s’ouvre dans RStudio Cloud.</p>
-<div class="cell" data-layout-align="center">
+<p>Pour créer un nouveau projet, il suffit de cliquer sur la flèche (<code>∨</code>) de l’onglet <code>New Project</code> (voir à droite de la <a href="#fig-spaces" class="quarto-xref">Figure&nbsp;<span>7.3</span></a>) et, dans la bande déroulante, de sélectionner l’option <code>New RStudio Project</code> (voir <a href="#fig-newproject" class="quarto-xref">Figure&nbsp;<span>7.4</span></a>). Pendant quelques secondes, le message <em>Deploying Project</em> apparaît et, ensuite, votre nouveau projet s’ouvre dans Posit Cloud.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-newProject.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Création d’un nouveau projet dans RStudio Cloud</figcaption>
+<div id="fig-newproject" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-newproject-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-newProject.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-newproject-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.4: Création d’un nouveau projet dans Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
@@ -393,24 +409,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="renommer-le-nouveau-projet" class="level3" data-number="7.3.2">
 <h3 data-number="7.3.2" class="anchored" data-anchor-id="renommer-le-nouveau-projet"><span class="header-section-number">7.3.2</span> Renommer le nouveau projet</h3>
-<p>À l’ouverture d’un nouveau projet (voir Figure @ref(fig:untitled)), RStudio Cloud attribue le nom <code>Untitled Project</code> au nouveau projet. Le nom du projet est disponible tout au haut de l’écran et il est possible de voir dans quel espace de travail le projet est inséré. Dans mon exemple, l’expression <code>Exercices /</code> indique que le nouveau projet est inséré à l’intérieur de l’espace de travail partagé nommé <code>Exercices</code>.</p>
-<div class="cell" data-layout-align="center">
+<p>À l’ouverture d’un nouveau projet (voir <a href="#fig-untitled" class="quarto-xref">Figure&nbsp;<span>7.5</span></a>), Posit Cloud attribue le nom <code>Untitled Project</code> au nouveau projet. Le nom du projet est disponible tout au haut de l’écran et il est possible de voir dans quel espace de travail le projet est inséré. Dans mon exemple, l’expression <code>Exercices /</code> indique que le nouveau projet est inséré à l’intérieur de l’espace de travail partagé nommé <code>Exercices</code>.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-untitled.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Untitled project dans RStudio Cloud</figcaption>
+<div id="fig-untitled" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-untitled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-untitled.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-untitled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.5: Untitled project dans Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Donc, à l’ouverture d’un nouveau projet, la première chose à faire consiste à renommer le projet. Il faut cliquer sur <code>Untitled Project</code> (en haut à gauche de la fenêtre) et inscrire le nouveau nom de votre projet (Figure @ref(fig:exercice2)). À titre de démonstration, j’ai créé un nouveau projet du nom de <code>Exercice2</code>.</p>
-<div class="cell" data-layout-align="center">
+<p>Donc, à l’ouverture d’un nouveau projet, la première chose à faire consiste à renommer le projet. Il faut cliquer sur <code>Untitled Project</code> (en haut à gauche de la fenêtre) et inscrire le nouveau nom de votre projet (<a href="#fig-exercice2" class="quarto-xref">Figure&nbsp;<span>7.6</span></a>). À titre de démonstration, j’ai créé un nouveau projet du nom de <code>Exercice2</code>.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-exercices.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Modifier le nom d’un nouveau projet dans RStudio Cloud</figcaption>
+<div id="fig-exercice2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-exercice2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-exercices.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exercice2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.6: Modifier le nom d’un nouveau projet dans Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
@@ -418,19 +442,23 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="importer-des-fichiers-dans-un-projet" class="level3" data-number="7.3.3">
 <h3 data-number="7.3.3" class="anchored" data-anchor-id="importer-des-fichiers-dans-un-projet"><span class="header-section-number">7.3.3</span> Importer des fichiers dans un projet</h3>
-<p>Habituellement, l’analyste importe un ou des fichiers de données (.xlsx, .dat, .txt, .csv, etc.) dans RStudio pour ensuite l’analyser à l’aide d’un script R ou d’un script R Markdown. Avec la version locale de RStudio IDE, l’analyste n’a qu’à copier son fichier dans le répertoire qui contient son projet RStudio. Avec RStudio Cloud, l’approche est différente. À partir du projet RStudio, il faut importer le fichier de données dans l’espace <em>cloud</em> dédié à ce projet sur le serveur de RStudio.</p>
-<p>Voici un exemple. Dans la fenêtre <strong>Files</strong> de RStudio, nous pouvons voir que le projet RStudio (<code>project.Rproj</code>) est inséré dans le dossier <code>Cloud &gt; Project</code> (voir Figure @ref(fig:upload)).</p>
+<p>Habituellement, l’analyste importe un ou des fichiers de données (.xlsx, .dat, .txt, .csv, etc.) dans RStudio pour ensuite l’analyser à l’aide d’un script R ou d’un script R Markdown. Avec la version locale de RStudio IDE, l’analyste n’a qu’à copier son fichier dans le répertoire qui contient son projet RStudio. Avec Posit Cloud, l’approche est différente. À partir du projet RStudio, il faut importer le fichier de données dans l’espace <em>cloud</em> dédié à ce projet sur le serveur de RStudio.</p>
+<p>Voici un exemple. Dans la fenêtre <strong>Files</strong> de RStudio, nous pouvons voir que le projet RStudio (<code>project.Rproj</code>) est inséré dans le dossier <code>Cloud &gt; Project</code> (voir <a href="#fig-upload" class="quarto-xref">Figure&nbsp;<span>7.7</span></a>).</p>
 <ol type="1">
 <li>Nous pouvons importer un fichier de données dans ce dossier en cliquant sur l’onglet <code>Upload</code>.</li>
 <li>Une fenêtre s’ouvre et il faut simplement cliquer sur <code>Choisir le fichier</code> sous l’en-tête <code>File to upload</code>. Dans mon exemple, le fichier que je désire importé se nomme <code>RatLives.csv</code><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. Il est possible d’importer plusieurs fichiers simultanément. Ceux-ci, cependant, doivent être regroupés, au préalable, à l’intérieur d’un fichier .zip.</li>
-<li>Après l’importation, le fichier (<code>RatLives.csv</code>) est disponible dans le projet RStudio Cloud.</li>
+<li>Après l’importation, le fichier (<code>RatLives.csv</code>) est disponible dans le projet Posit Cloud.</li>
 </ol>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-uploadFile.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Importer un fichier dans un projet RStudio Cloud</figcaption>
+<div id="fig-upload" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-upload-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-uploadFile.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upload-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.7: Importer un fichier dans un projet Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
@@ -440,63 +468,79 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="7.3.4" class="anchored" data-anchor-id="examiner-la-liste-des-projets"><span class="header-section-number">7.3.4</span> Examiner la liste des projets</h3>
 <p>Il est possible d’obtenir la liste de tous les projets d’un même espace de travail. Pour cela, il faut cliquer sur le nom de l’espace de travail que vous désirez consulter. Dans mon exemple, le nom de mon espace de travail est <code>Exercices</code>. Pour voir la liste des projets associés à cet espace de travail, deux choix s’offrent à moi :</p>
 <ol type="1">
-<li>Je peux cliquer sur l’onglet <code>Exercices [Sylvain Fiset]</code> dans la liste des espaces à la gauche de la fenêtre de RStudio Cloud (sous l’en-tête <code>Spaces</code>).</li>
+<li>Je peux cliquer sur l’onglet <code>Exercices [Sylvain Fiset]</code> dans la liste des espaces à la gauche de la fenêtre de Posit Cloud (sous l’en-tête <code>Spaces</code>).</li>
 <li>Je peux aussi cliquer sur <code>Exercices</code> dans le titre <code>Exercices / Exercice2</code> de mon projet qui est déjà ouvert.</li>
 </ol>
-<p>La Figure @ref(fig:liste) montre un exemple de la liste des projets disponibles pour mon espace de travail <code>Exercices</code>.</p>
-<div class="cell" data-layout-align="center">
+<p>La <a href="#fig-liste" class="quarto-xref">Figure&nbsp;<span>7.8</span></a> montre un exemple de la liste des projets disponibles pour mon espace de travail <code>Exercices</code>.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-ProjectsList.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Examiner la liste de tous les projets d’un espace de travail dans RStudio Cloud</figcaption>
+<div id="fig-liste" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-liste-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-ProjectsList.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-liste-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.8: Examiner la liste de tous les projets d’un espace de travail dans Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="exporter-un-projet-rstudio-cloud" class="level3" data-number="7.3.5">
-<h3 data-number="7.3.5" class="anchored" data-anchor-id="exporter-un-projet-rstudio-cloud"><span class="header-section-number">7.3.5</span> Exporter un projet RStudio Cloud</h3>
-<p>Lorsque la liste des projets d’un espace de travail de RStudio Cloud est affichée à l’écran, vous pouvez facilement exporter l’un des projets sur votre ordinateur et le partager. Il suffit de cliquer sur l’option <code>Export</code>, laquelle est située à la droite du nom du projet dans la liste (voir la Figure @ref(fig:liste)). Tous les fichiers associés à ce projet seront exportés. L’exportation d’un projet RStudio Cloud sert principalement deux objectifs :</p>
+<section id="exporter-un-projet-posit-cloud" class="level3" data-number="7.3.5">
+<h3 data-number="7.3.5" class="anchored" data-anchor-id="exporter-un-projet-posit-cloud"><span class="header-section-number">7.3.5</span> Exporter un projet Posit Cloud</h3>
+<p>Lorsque la liste des projets d’un espace de travail de Posit Cloud est affichée à l’écran, vous pouvez facilement exporter l’un des projets sur votre ordinateur et le partager. Il suffit de cliquer sur l’option <code>Export</code>, laquelle est située à la droite du nom du projet dans la liste (voir la <a href="#fig-liste" class="quarto-xref">Figure&nbsp;<span>7.8</span></a>). Tous les fichiers associés à ce projet seront exportés. L’exportation d’un projet Posit Cloud sert principalement deux objectifs :</p>
 <ol type="1">
 <li>L’exportation permet de sauvegarder une copie de votre projet sur votre ordinateur.</li>
 <li>L’exportation facilite grandement le partage des projets RStudio entre les utilisateurs<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</li>
 </ol>
-<p>Après avoir cliquer sur l’option <code>Export</code>, une première fenêtre s’ouvre et génère le dossier d’exportation du projet. Ensuite, une seconde fenêtre apparaît et il faut cliquer sur <code>Download</code> pour télécharger le dossier (voir la Figure @ref(fig:export)). Par défaut, le projet est téléchargé dans le répertoire (ou dossier) de téléchargement de votre ordinateur. Il conserve exactement la même structure que votre dossier dans RStudio Cloud. Vous pouvez donc l’ouvrir avec la version locale de RStudio IDE sur votre ordinateur et avoir accès à tous les fichiers. Prenez note que lors du téléchargement, le dossier de téléchargement se voit attribuer un nom arbitraire composé de 7 chiffres. Si vous téléchargez à plusieurs reprises le même projet, le nom à 7 chiffres demeure le même d’un téléchargement à l’autre.</p>
-<div class="cell" data-layout-align="center">
+<p>Après avoir cliquer sur l’option <code>Export</code>, une première fenêtre s’ouvre et génère le dossier d’exportation du projet. Ensuite, une seconde fenêtre apparaît et il faut cliquer sur <code>Download</code> pour télécharger le dossier (voir la <a href="#fig-export" class="quarto-xref">Figure&nbsp;<span>7.9</span></a>). Par défaut, le projet est téléchargé dans le répertoire (ou dossier) de téléchargement de votre ordinateur. Il conserve exactement la même structure que votre dossier dans Posit Cloud. Vous pouvez donc l’ouvrir avec la version locale de RStudio IDE sur votre ordinateur et avoir accès à tous les fichiers. Prenez note que lors du téléchargement, le dossier de téléchargement se voit attribuer un nom arbitraire composé de 7 chiffres. Si vous téléchargez à plusieurs reprises le même projet, le nom à 7 chiffres demeure le même d’un téléchargement à l’autre.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-export.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Exportation d’un projet à partir de RStudio Cloud</figcaption>
+<div id="fig-export" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-export.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.9: Exportation d’un projet à partir de Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="partager-un-projet-dans-rstudio-cloud" class="level3" data-number="7.3.6">
-<h3 data-number="7.3.6" class="anchored" data-anchor-id="partager-un-projet-dans-rstudio-cloud"><span class="header-section-number">7.3.6</span> Partager un projet dans RStudio Cloud</h3>
-<p>L’un des avantages de RStudio Cloud est la possibilité de partager des projets RStudio avec plusieurs utilisateurs sans avoir à télécharger le projet. Tous les utilisateurs ont accès au même projet via RStudio Cloud. Par exemple, les membres d’une même équipe de recherche peuvent contribuer sur un même projet d’analyse statistique ou un étudiant peut partager son projet avec son professeur.</p>
-<p>Le partage d’un projet RStudio Cloud s’effectue à partir de l’espace de travail partagé (dans <code>Spaces</code>) dans lequel vous avez créé (ou déplacé) votre projet. Afin de partager votre espace de travail partagé, vous devez ajouter des membres. Sur la page d’ouverture de RStudio Cloud, cliquez sur le nom de l’espace de travail que vous désirez partager. Au haut de l’écran, cliquez sur <code>Members</code>. La liste des membres de l’environnement de travail sera affichée (voir Figure @ref(fig:members)). Par la suite, cliquez sur l’option <code>Add Member</code> pour inviter de nouveaux membres. Lors de l’invitation, vous devrez fournir une adresse courriel et préciser le rôle du nouveau membre (<em>Admin</em>, <em>Moderator</em>, <em>Contributor</em>, <em>Viewer</em>). Par défaut, le choix <em>Contributor</em> est offert et, à moins de raisons valables, ce choix demeure la meilleure option. De plus, en tant qu’administrateur de cet environnement de travail, vous pouvez déterminer les privilèges que vous désirez accorder à chaque membre que vous invitez (voir l’encadré pointillé à la droite de la Figure @ref(fig:members)).</p>
-<div class="cell" data-layout-align="center">
+<section id="partager-un-projet-dans-posit-cloud" class="level3" data-number="7.3.6">
+<h3 data-number="7.3.6" class="anchored" data-anchor-id="partager-un-projet-dans-posit-cloud"><span class="header-section-number">7.3.6</span> Partager un projet dans Posit Cloud</h3>
+<p>L’un des avantages de Posit Cloud est la possibilité de partager des projets RStudio avec plusieurs utilisateurs sans avoir à télécharger le projet. Tous les utilisateurs ont accès au même projet via Posit Cloud. Par exemple, les membres d’une même équipe de recherche peuvent contribuer sur un même projet d’analyse statistique ou un étudiant peut partager son projet avec son professeur.</p>
+<p>Le partage d’un projet Posit Cloud s’effectue à partir de l’espace de travail partagé (dans <code>Spaces</code>) dans lequel vous avez créé (ou déplacé) votre projet. Afin de partager votre espace de travail partagé, vous devez ajouter des membres. Sur la page d’ouverture de Posit Cloud, cliquez sur le nom de l’espace de travail que vous désirez partager. Au haut de l’écran, cliquez sur <code>Members</code>. La liste des membres de l’environnement de travail sera affichée (voir Figure @ref(fig:members)). Par la suite, cliquez sur l’option <code>Add Member</code> pour inviter de nouveaux membres. Lors de l’invitation, vous devrez fournir une adresse courriel et préciser le rôle du nouveau membre (<em>Admin</em>, <em>Moderator</em>, <em>Contributor</em>, <em>Viewer</em>). Par défaut, le choix <em>Contributor</em> est offert et, à moins de raisons valables, ce choix demeure la meilleure option. De plus, en tant qu’administrateur de cet environnement de travail, vous pouvez déterminer les privilèges que vous désirez accorder à chaque membre que vous invitez (voir l’encadré pointillé à la droite de la <a href="#fig-members" class="quarto-xref">Figure&nbsp;<span>7.10</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-spaceMembers.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Ajouter des membres à un espace de travail RStudio Cloud</figcaption>
+<div id="fig-members" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-members-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-spaceMembers.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-members-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.10: Ajouter des membres à un espace de travail Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <section id="accessibilité" class="level4" data-number="7.3.6.1">
 <h4 data-number="7.3.6.1" class="anchored" data-anchor-id="accessibilité"><span class="header-section-number">7.3.6.1</span> Accessibilité</h4>
-<p>Lors du partage d’un projet, vous pouvez restreindre l’accessibilité de votre projet. Ainsi, même si vous partagez un espace de travail avec 20 autres utilisateurs, vous pouvez limiter l’accès de votre projet aux administrateurs et aux modérateurs de l’environnement de travail. Pour vous assurez que cette option soit activée pour un projet en particulier, ouvrez le projet et cliquez sur l’icone de la petite roue située à la gauche de votre nom en haut à droite dans le fenêtre web de RStudio Cloud (voir Figure @ref(fig:access)). Par la suite, sélectionnez <code>Access</code> et assurez-vous que l’option <code>You*</code> soit sélectionnée dans la bande déroulante. Limiter l’accessibilité à un projet est particulièrement important dans le cadre d’un cours.</p>
-<div class="cell" data-layout-align="center">
+<p>Lors du partage d’un projet, vous pouvez restreindre l’accessibilité de votre projet. Ainsi, même si vous partagez un espace de travail avec 20 autres utilisateurs, vous pouvez limiter l’accès de votre projet aux administrateurs et aux modérateurs de l’environnement de travail. Pour vous assurez que cette option soit activée pour un projet en particulier, ouvrez le projet et cliquez sur l’icone de la petite roue située à la gauche de votre nom en haut à droite dans le fenêtre web de Posit Cloud (voir <a href="#fig-access" class="quarto-xref">Figure&nbsp;<span>7.11</span></a>). Par la suite, sélectionnez <code>Access</code> et assurez-vous que l’option <code>You*</code> soit sélectionnée dans la bande déroulante. Limiter l’accessibilité à un projet est particulièrement important dans le cadre d’un cours.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-project-accessibility.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Contrôler l’accessibilité à un projet RStudio Cloud</figcaption>
+<div id="fig-access" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-access-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-project-accessibility.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-access-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.11: Contrôler l’accessibilité à un projet Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
@@ -505,57 +549,65 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="effacer-un-projet" class="level3" data-number="7.3.7">
 <h3 data-number="7.3.7" class="anchored" data-anchor-id="effacer-un-projet"><span class="header-section-number">7.3.7</span> Effacer un projet</h3>
-<p>Si vous désirez effacer un projet de votre compte RStudio Cloud, deux possibilités s’offrent à vous :</p>
+<p>Si vous désirez effacer un projet de votre compte Posit Cloud, deux possibilités s’offrent à vous :</p>
 <ul>
-<li>Dans la liste des projets associés à un espace de travail spécifique, cliquez sur l’option <code>Delete</code>. L’option <code>Delete</code> est située à la droite du nom du projet dans la liste des projets (voir la Figure @ref(fig:liste)).</li>
-<li>Lorsque le projet est déjà ouvert dans RStudio Cloud, vous pouvez cliquer sur l’icone avec les trois petits points à l’horizontal situé près de votre nom en haut à droite de la page web de RStudio Cloud. Ensuite, sélectionnez l’option <code>Delete Project</code> dans la bande déroulante (voir la Figure @ref(fig:delete)).</li>
+<li>Dans la liste des projets associés à un espace de travail spécifique, cliquez sur l’option <code>Delete</code>. L’option <code>Delete</code> est située à la droite du nom du projet dans la liste des projets (voir la <a href="#fig-liste" class="quarto-xref">Figure&nbsp;<span>7.8</span></a>).</li>
+<li>Lorsque le projet est déjà ouvert dans Posit Cloud, vous pouvez cliquer sur l’icone avec les trois petits points à l’horizontal situé près de votre nom en haut à droite de la page web de Posit Cloud. Ensuite, sélectionnez l’option <code>Delete Project</code> dans la bande déroulante (voir la <a href="#fig-delete" class="quarto-xref">Figure&nbsp;<span>7.12</span></a>).</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-deleteProject.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Effacer un projet à partir de RStudio Cloud</figcaption>
+<div id="fig-delete" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-delete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-deleteProject.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-delete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.12: Effacer un projet à partir de Posit Cloud
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="options-de-rstudio-cloud" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="options-de-rstudio-cloud"><span class="header-section-number">7.4</span> Options de RStudio Cloud</h2>
-<p>Tout comme la version locale de RStudio IDE, tel que montré au Chapitre @ref(options), il est possible de modifier les options de RStudio Cloud. Prenez note, cependant, qu’il faut modifier les options pour chacun des projets que vous créez — ce qui n’est pas le cas avec la version locale de RStudio. Cela est nécessaire puisque pour chaque projet, RStudio Cloud produit un espace de travail dans lequel les projets sont tous indépendants les uns des autres.</p>
+<section id="options-de-posit-cloud" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="options-de-posit-cloud"><span class="header-section-number">7.4</span> Options de Posit Cloud</h2>
+<p>Tout comme la version locale de RStudio IDE, tel que montré à la <a href="RStudio_options.html" class="quarto-xref"><span>Chapitre 5</span></a>, il est possible de modifier les options de Posit Cloud. Prenez note, cependant, qu’il faut modifier les options pour chacun des projets que vous créez — ce qui n’est pas le cas avec la version locale de RStudio. Cela est nécessaire puisque pour chaque projet, Posit Cloud produit un espace de travail dans lequel les projets sont tous indépendants les uns des autres.</p>
 </section>
 <section id="consulter-votre-compte" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="consulter-votre-compte"><span class="header-section-number">7.5</span> Consulter votre compte</h2>
-<p>Vous pouvez consulter les paramètres d’utilisation de votre compte RStudio Cloud en cliquant sur votre nom. Vous y verrez quelques statistiques, comme le nombre de projets et le nombre d’heures d’utilisation pour un mois (voir la Figure @ref(fig:account)). Cela est particulièrement important si votre compte d’utilisateur est gratuit.</p>
-<div class="cell" data-layout-align="center">
+<p>Vous pouvez consulter les paramètres d’utilisation de votre compte Posit Cloud en cliquant sur votre nom. Vous y verrez quelques statistiques, comme le nombre de projets et le nombre d’heures d’utilisation pour un mois (voir la <a href="#fig-account" class="quarto-xref">Figure&nbsp;<span>7.13</span></a>). Cela est particulièrement important si votre compte d’utilisateur est gratuit.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/RScloud-account.png" class="img-fluid figure-img" style="width:75.0%"></p>
-<figcaption>Paramètres du compte de l’utilisateur</figcaption>
+<div id="fig-account" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-account-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/RScloud-account.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-account-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.13: Paramètres du compte de l’utilisateur
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="quitter-rstudio-cloud" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="quitter-rstudio-cloud"><span class="header-section-number">7.6</span> Quitter RStudio Cloud</h2>
-<p>Pour quitter RStudio Cloud, n’oubliez pas de cliquez l’option <code>Log Out</code> après avoir cliquer sur votre nom (voir la Figure @ref(fig:account)).</p>
+<section id="quitter-posit-cloud" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="quitter-posit-cloud"><span class="header-section-number">7.6</span> Quitter Posit Cloud</h2>
+<p>Pour quitter Posit Cloud, n’oubliez pas de cliquez l’option <code>Log Out</code> après avoir cliquer sur votre nom (voir la <a href="#fig-account" class="quarto-xref">Figure&nbsp;<span>7.13</span></a>).</p>
 
 
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>L’expression <code>version locale</code> désigne la version de RStudio téléchargée et installée sur un ordinateur (et non dans le nuage, comme RStudio Cloud).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>L’expression <code>version locale</code> désigne la version de RStudio téléchargée et installée sur un ordinateur (et non dans le nuage, comme Posit Cloud).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Cela est d’autant plus vrai que la version locale de RStudio IDE est, elle, disponible gratuitement.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Les espaces de travail individuels sont illustrés par une icone avec une personne et les espaces de travail partagés sont illustrés par des icones avec trois personnes.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>RStudio Cloud a d’ailleurs été conçu, en partie, pour répondre à ce besoin lors de l’enseignement de R et de RStudio.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Si vous n’êtes pas familier avec les projets RStudio, je vous invite à consulter le chapitre @ref(projetRStudio).<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Posit Cloud a d’ailleurs été conçu, en partie, pour répondre à ce besoin lors de l’enseignement de R et de RStudio.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Si vous n’êtes pas familier avec les projets RStudio, je vous invite à consulter la <a href="RProject.html" class="quarto-xref"><span>Chapitre 6</span></a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>Ce fichier provient des fichiers de données qui accompagnent le livre de John Kruschke, <em>Doing Bayesian Data Analysis</em>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Si vous ne désirez pas utiliser la fonction <code>share</code> de RStudio Cloud.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Si vous ne désirez pas utiliser la fonction <code>share</code> de Posit Cloud.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

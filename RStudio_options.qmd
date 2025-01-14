@@ -11,7 +11,7 @@ language:
     crossref-tbl-title: "Tableau"
 ---
 
-# Options de RStudio
+# Options de RStudio {#sec-options}
 
 Avant de créer notre premier fichier Quarto, je me propose de vous initier à quelques options de RStudio qui détermineront votre façon de travailler avec Quarto[^personnel]. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** > **Global Options...** (voir @fig-fig6). 
 
@@ -107,7 +107,7 @@ knitr::include_graphics('figures/bloc_code2.png')
 knitr::include_graphics('figures/basic1.png')
 ```
 
-- Avec Quarto, lorsque nous générons le document final en cliquant sur l'option **Preview**, le document final peut être affiché  (voir la @fig-fig11) :
+- Avec Quarto, lorsque nous générons le document final en cliquant sur l'option **Render** de la fenêtre Source de RStudio, le document final peut être affiché  (voir la @fig-fig11) :
     + dans une nouvelle fenêtre (option => Viewer Pane => Window), ou
     + dans la fenêtre Viewer de RStudio (option => Viewer Pane => Viewer Pane). 
 
@@ -122,7 +122,7 @@ knitr::include_graphics('figures/basic1.png')
 knitr::include_graphics('figures/notebook.png')
 ```
 
-## Changer la langue du dictionnaire {#dictadd}
+## Changer la langue du dictionnaire {#sec-dictadd}
 
 Par défaut, RStudio propose l'anglais comme langue d'usage. Le dictionnaire associé à RStudio est donc en anglais. Il est possible de changer la langue du dictionnaire. Voici les étapes à suivre.
 
