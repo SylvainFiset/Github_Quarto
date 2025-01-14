@@ -13,19 +13,29 @@ language:
 
 # Options de RStudio
 
-Avant de créer notre premier fichier R Notebook, je me propose de vous initier à quelques options de RStudio qui détermineront votre façon de travailler avec R Notebook[^personnel]. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** > **Global Options...** (voir Figure \@ref(fig:fig6). 
+Avant de créer notre premier fichier Quarto, je me propose de vous initier à quelques options de RStudio qui détermineront votre façon de travailler avec Quarto[^personnel]. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** > **Global Options...** (voir @fig-fig6). 
 
 [^personnel]: Prenez note que les options proposées s'inscrivent dans une démarche pédagogique et qu'au départ, il est préférable de sélectionner les options proposées. Par ailleurs, au fil de votre apprentissage, vous voudrez peut être modifier ces options. Libre à vous, à ce moment là, de sélectionner les options qui vous conviendront le mieux. Par exemple, il m'arrive fréquemment de *décocher* l'option *Output inline* afin d'avoir plus d'espace pour mes lignes de codes dans la fenêtre Source de RStudio.
 
-```{r fig6, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Sélection de la fenêtre Global Options... de RStudio"}
+```{r}
+#| label: fig-fig6
+#| fig-cap: "Sélection de la fenêtre Global Options... de RStudio"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/global_options.png')
 ```
 
 ## Options Code
 
-Dans un premier temps, il faut s'assurer que le type d'encodage de RStudio soit réglé à **UTF-8**. Cela nous assure que les accents seront disponibles en tout temps d'un ordinateur à l'autre. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** > **Global Options...**. Ensuite, dans Code, sélectionnez Saving, cliquez sur Change..., sélectionnez UTF-8 et cliquez sur OK  (voir Figure \@ref(fig:fig7)).
+Dans un premier temps, il faut s'assurer que le type d'encodage de RStudio soit réglé à **UTF-8**. Cela nous assure que les accents seront disponibles en tout temps d'un ordinateur à l'autre. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** > **Global Options...**. Ensuite, dans Code, sélectionnez Saving, cliquez sur Change..., sélectionnez UTF-8 et cliquez sur OK  (voir @fig-fig7).
 
-```{r fig7, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Sélection du code UTF-8"}
+```{r}
+#| label: fig-fig7
+#| fig-cap: "Sélection du code UTF-8"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/options_code.png')
 ```
 
@@ -38,52 +48,77 @@ RStudio présente normalement quatre fenêtres, lesquelles peuvent être agencé
 - <font color = "red">Environnement, History, Connection</font> : Où nous retrouvons les objets R et les ensembles de données disponibles
 - <font color = "red">Files, Plots, Packages, Help, View</font> : Contient plusieurs fenêtres très utiles où nous retrouvons nos fichiers, nos graphiques, nos extensions, l'aide et la _visionneuse_.
 
-Personnellement, j'organise mes fenêtres selon la configuration présentée à la Figure \@ref(fig:fig8). Deux raisons supportent ce choix:
+Personnellement, j'organise mes fenêtres selon la configuration présentée à la @fig-fig8. Deux raisons supportent ce choix:
 
 1. Je peux réduire au minimum la fenêtre *Environnement* afin de maximiser l'espace pour rédiger mon script R dans la fenêtre Source de RStudio.
 2. La ligne de codes de la Console est toujours disponible. Cela me permet, par exemple, d'installer rapidement de nouvelles extensions ou de faire un calcul rapide.
 
 En classe, je recommande à mes étudiants d'utiliser aussi cette configuration. De cette manière, les informations sont disposées aux mêmes endroits sur mon écran et sur leur écran de travail.
 
-```{r fig8, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Configuration recommandée pour les fenêtres de RStudio"}
+```{r}
+#| label: fig-fig8
+#| fig-cap: "Configuration recommandée pour les fenêtres de RStudio"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/code_pane.png')
 ```
 
 ## R Markdown Options
 
-L'utilisation du format R Notebook nécessite de prendre quelques décisions avec le format d'affichage de R Markdown dans RStudio. Ci-dessous, je montre comment faire ces choix après avoir sélectionné, dans le menu principal de RStudio, l'onglet **Tools** > **Global Options...**. 
+L'utilisation de Quarto nécessite de prendre quelques décisions avec le format d'affichage de R Markdown dans RStudio. Ci-dessous, je montre comment faire ces choix après avoir sélectionné, dans le menu principal de RStudio, l'onglet **Tools** > **Global Options...**. 
 
-Et voici les choix possibles dans dans la fenêtre **R Markdown > Basic** (voir lignes et cercles rouges dans la Figure \@ref(fig:fig9)) : 
+Et voici les choix possibles dans dans la fenêtre **R Markdown > Basic** (voir lignes et cercles rouges dans la @fig-fig9) : 
 
 ### Affichage Résultats
 
-```{r fig9, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Option pour obtenir le résultat d'un code R sous le bloc de codes"}
+```{r}
+#| label: fig-fig9
+#| fig-cap: "Option pour obtenir le résultat d'un code R sous le bloc de codes"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/basic2.png')
 ```
 
-- Lorsque nous travaillons avec R Notebook, quelques options s'offrent à nous pour afficher le résultat du code R que nous venons d'exécuter :
-    + Nous pouvons l'afficher directement sous le bloc de codes R (option = cochez *Show output inline...*). Voir Figure \@ref(fig:fig9).
+- Lorsque nous travaillons avec Quarto, quelques options s'offrent à nous pour afficher le résultat du code R que nous venons d'exécuter :
+    + Nous pouvons l'afficher directement sous le bloc de codes R (option = cochez *Show output inline...*). Voir la @fig-fig9.
     + Si cette option n'est pas cochée, selon le type de codes R, le résultat apparaîtra dans l'une des fenêtres suivantes de RStudio : **Console**, **Plots** ou **Viewer**. 
 
-- <font color = "red">Avec R Notebook, je recommande de cocher l'option **Show output inline...**</font> parce qu'on peut voir et conserver à l'écran le résultat d'un bloc de codes (voir un exemple  dans la Figure \@ref(fig:fig10)).
+- <font color = "red">Avec Quarto, je recommande de cocher l'option **Show output inline...**</font> parce qu'on peut voir et conserver à l'écran le résultat d'un bloc de codes (voir un exemple  dans la @fig-fig10).
 
-```{r fig10, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Exemple d'un résultat présenté sous un bloc de codes"}
+```{r}
+#| label: fig-fig10
+#| fig-cap: "Exemple d'un résultat présenté sous un bloc de codes"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/bloc_code2.png')
 ```
 
 ### Affichage Doc Final
 
-```{r fig11, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Sélection de l'option Viewer Pane lorsque nous travaillons avec le format R Markdown"}
+```{r}
+#| label: fig-fig11
+#| fig-cap: "Sélection de l'option Viewer Pane lorsque nous travaillons avec le format R Markdown"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/basic1.png')
 ```
 
-- Avec le format R Notebook, lorsque nous générons le document final en cliquant sur l'option **Preview**, le document final peut être affiché  (voir Figure \@ref(fig:fig11)) :
+- Avec Quarto, lorsque nous générons le document final en cliquant sur l'option **Preview**, le document final peut être affiché  (voir la @fig-fig11) :
     + dans une nouvelle fenêtre (option => Viewer Pane => Window), ou
     + dans la fenêtre Viewer de RStudio (option => Viewer Pane => Viewer Pane). 
 
-- <font color = "red">Avec R Notebook, je recommande l'option **Viewer Pane** </font> parce qu'on peut voir en temps réel (ou presque) les changements apportés à notre document à partir de la fenêtre Source de RStudio. Dans l'exemple ci-dessous (voir Figure \@ref(fig:fig12)), le texte et les blocs de codes R sont dans la fenêtre Source (à gauche) et le document final en format html est disponible dans la fenêtre Viewer (à droite).
+- <font color = "red">Avec Quarto, je recommande l'option **Viewer Pane** </font> parce qu'on peut voir en temps réel (ou presque) les changements apportés à notre document à partir de la fenêtre Source de RStudio. Dans l'exemple ci-dessous (voir Figure @fig-fig12), le texte et les blocs de codes R sont dans la fenêtre Source (à gauche) et le document final en format html est disponible dans la fenêtre Viewer (à droite).
 
-```{r fig12, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Exemple du format R Notebook dans la fenêtre Viewer de RStudio (à droite dans la figure ci-haut)"}
+```{r}
+#| label: fig-fig12
+#| fig-cap: "Exemple du format Quarto dans la fenêtre Viewer de RStudio (à droite dans la figure ci-haut)"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/notebook.png')
 ```
 
@@ -93,31 +128,51 @@ Par défaut, RStudio propose l'anglais comme langue d'usage. Le dictionnaire ass
 
 ### Ajouter des dictionnaires
 
-À partir de l'onglet **Tools** de RStudio, sélectionnez **Global Options...** (Figure \@ref(fig:spell1)). Dans la fenêtre **Options**, cliquez sur **Spelling**. Sur la ligne de l'option **Main dictionary language**, cliquez sur le symbole combiné des flèches montantes (▲) et descendantes (▼).  Finalement, dans la bande déroulante, sélectionnez l'option  **Install More Languages**.
+À partir de l'onglet **Tools** de RStudio, sélectionnez **Global Options...** (Figure @fig-spell1). Dans la fenêtre **Options**, cliquez sur **Spelling**. Sur la ligne de l'option **Main dictionary language**, cliquez sur le symbole combiné des flèches montantes (▲) et descendantes (▼).  Finalement, dans la bande déroulante, sélectionnez l'option  **Install More Languages**.
 
-```{r spell1, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Ajouter des dictionnaires supplémentaires dans RStudio"}
+```{r}
+#| label: fig-spell1
+#| fig-cap: "Ajouter des dictionnaires supplémentaires dans RStudio"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/rstudio-spelling-install.png')
 ```
 
 ### Ajouter le dictionnaire français
 
-Après avoir cliquer sur **Install More Languages**, une roue pointillée apparaît avec l'appellation **Downloading additional languages**. Lorsque ces informations disparaissent, cliquez sur la flèche descendante située à la droite de la langue par défaut (**English**) de RStudio et, dans la bande déroulante, sélectionnez **French** (Figure \@ref(fig:spell2)).
+Après avoir cliquer sur **Install More Languages**, une roue pointillée apparaît avec l'appellation **Downloading additional languages**. Lorsque ces informations disparaissent, cliquez sur la flèche descendante située à la droite de la langue par défaut (**English**) de RStudio et, dans la bande déroulante, sélectionnez **French** (@fig-spell2).
 
-```{r spell2, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Ajouter le dictionnaire français à RStudio"}
+```{r}
+#| label: fig-spell2
+#| fig-cap: "Ajouter le dictionnaire français à RStudio"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/rstudio-spelling-install-french.png')
 ```
 
-N'oubliez pas de cliquez sur **OK** au bas de la page pour confirmer l'utilisation du dictionnaire français comme dictionnaire principal de RStudio (Figure \@ref(fig:spell3)).
+N'oubliez pas de cliquez sur **OK** au bas de la page pour confirmer l'utilisation du dictionnaire français comme dictionnaire principal de RStudio (@fig-spell3).
 
-```{r spell3, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Ajouter des dictionnaires supplémentaires dans RStudio"}
+```{r}
+#| label: fig-spell3
+#| fig-cap: "Ajouter des dictionnaires supplémentaires dans RStudio"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/rstudio-spelling-install-ok.png')
 ```
 
 ### Vérification
 
-Pour vérifier si vous avez bien installé le dictionnaire français, fermez la fenêtre **Options** de RStudio et ouvrez la de nouveau. En cliquant sur l'onglet **Spelling**, vous verrez que le dictionnaire principal de RStudio est **French**  (Figure \@ref(fig:spell4)).
+Pour vérifier si vous avez bien installé le dictionnaire français, fermez la fenêtre **Options** de RStudio et ouvrez la de nouveau. En cliquant sur l'onglet **Spelling**, vous verrez que le dictionnaire principal de RStudio est **French** (@fig-spell4).
 
-```{r spell4, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Ajouter des dictionnaires supplémentaires dans RStudio"}
+```{r}
+#| label: fig-spell4
+#| fig-cap: "Ajouter des dictionnaires supplémentaires dans RStudio"
+#| fig-align: left
+#| out.width: "100%"
+#| echo: false
 knitr::include_graphics('figures/rstudio-spelling-french-installed.png')
 ```
 

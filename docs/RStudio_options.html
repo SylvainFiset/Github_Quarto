@@ -309,26 +309,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Avant de créer notre premier fichier R Notebook, je me propose de vous initier à quelques options de RStudio qui détermineront votre façon de travailler avec R Notebook<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Dans le menu principal de RStudio, sélectionnez l’onglet <strong>Tools</strong> &gt; <strong>Global Options…</strong> (voir Figure @ref(fig:fig6).</p>
-<div class="cell" data-layout-align="center">
+<p>Avant de créer notre premier fichier Quarto, je me propose de vous initier à quelques options de RStudio qui détermineront votre façon de travailler avec Quarto<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Dans le menu principal de RStudio, sélectionnez l’onglet <strong>Tools</strong> &gt; <strong>Global Options…</strong> (voir <a href="#fig-fig6" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/global_options.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Sélection de la fenêtre Global Options… de RStudio</figcaption>
+<div id="fig-fig6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/global_options.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Sélection de la fenêtre Global Options… de RStudio
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <section id="options-code" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="options-code"><span class="header-section-number">5.1</span> Options Code</h2>
-<p>Dans un premier temps, il faut s’assurer que le type d’encodage de RStudio soit réglé à <strong>UTF-8</strong>. Cela nous assure que les accents seront disponibles en tout temps d’un ordinateur à l’autre. Dans le menu principal de RStudio, sélectionnez l’onglet <strong>Tools</strong> &gt; <strong>Global Options…</strong>. Ensuite, dans Code, sélectionnez Saving, cliquez sur Change…, sélectionnez UTF-8 et cliquez sur OK (voir Figure @ref(fig:fig7)).</p>
-<div class="cell" data-layout-align="center">
+<p>Dans un premier temps, il faut s’assurer que le type d’encodage de RStudio soit réglé à <strong>UTF-8</strong>. Cela nous assure que les accents seront disponibles en tout temps d’un ordinateur à l’autre. Dans le menu principal de RStudio, sélectionnez l’onglet <strong>Tools</strong> &gt; <strong>Global Options…</strong>. Ensuite, dans Code, sélectionnez Saving, cliquez sur Change…, sélectionnez UTF-8 et cliquez sur OK (voir <a href="#fig-fig7" class="quarto-xref">Figure&nbsp;<span>5.2</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/options_code.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Sélection du code UTF-8</figcaption>
+<div id="fig-fig7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/options_code.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2: Sélection du code UTF-8
+</figcaption>
 </figure>
 </div>
 </div>
@@ -343,18 +351,22 @@ ul.task-list li input[type="checkbox"] {
 <li><font color="red">Environnement, History, Connection</font> : Où nous retrouvons les objets R et les ensembles de données disponibles</li>
 <li><font color="red">Files, Plots, Packages, Help, View</font> : Contient plusieurs fenêtres très utiles où nous retrouvons nos fichiers, nos graphiques, nos extensions, l’aide et la <em>visionneuse</em>.</li>
 </ul>
-<p>Personnellement, j’organise mes fenêtres selon la configuration présentée à la Figure @ref(fig:fig8). Deux raisons supportent ce choix:</p>
+<p>Personnellement, j’organise mes fenêtres selon la configuration présentée à la <a href="#fig-fig8" class="quarto-xref">Figure&nbsp;<span>5.3</span></a>. Deux raisons supportent ce choix:</p>
 <ol type="1">
 <li>Je peux réduire au minimum la fenêtre <em>Environnement</em> afin de maximiser l’espace pour rédiger mon script R dans la fenêtre Source de RStudio.</li>
 <li>La ligne de codes de la Console est toujours disponible. Cela me permet, par exemple, d’installer rapidement de nouvelles extensions ou de faire un calcul rapide.</li>
 </ol>
 <p>En classe, je recommande à mes étudiants d’utiliser aussi cette configuration. De cette manière, les informations sont disposées aux mêmes endroits sur mon écran et sur leur écran de travail.</p>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/code_pane.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Configuration recommandée pour les fenêtres de RStudio</figcaption>
+<div id="fig-fig8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/code_pane.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.3: Configuration recommandée pour les fenêtres de RStudio
+</figcaption>
 </figure>
 </div>
 </div>
@@ -362,34 +374,42 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="r-markdown-options" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="r-markdown-options"><span class="header-section-number">5.3</span> R Markdown Options</h2>
-<p>L’utilisation du format R Notebook nécessite de prendre quelques décisions avec le format d’affichage de R Markdown dans RStudio. Ci-dessous, je montre comment faire ces choix après avoir sélectionné, dans le menu principal de RStudio, l’onglet <strong>Tools</strong> &gt; <strong>Global Options…</strong>.</p>
-<p>Et voici les choix possibles dans dans la fenêtre <strong>R Markdown &gt; Basic</strong> (voir lignes et cercles rouges dans la Figure @ref(fig:fig9)) :</p>
+<p>L’utilisation de Quarto nécessite de prendre quelques décisions avec le format d’affichage de R Markdown dans RStudio. Ci-dessous, je montre comment faire ces choix après avoir sélectionné, dans le menu principal de RStudio, l’onglet <strong>Tools</strong> &gt; <strong>Global Options…</strong>.</p>
+<p>Et voici les choix possibles dans dans la fenêtre <strong>R Markdown &gt; Basic</strong> (voir lignes et cercles rouges dans la <a href="#fig-fig9" class="quarto-xref">Figure&nbsp;<span>5.4</span></a>) :</p>
 <section id="affichage-résultats" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="affichage-résultats"><span class="header-section-number">5.3.1</span> Affichage Résultats</h3>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/basic2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Option pour obtenir le résultat d’un code R sous le bloc de codes</figcaption>
+<div id="fig-fig9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/basic2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.4: Option pour obtenir le résultat d’un code R sous le bloc de codes
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <ul>
-<li>Lorsque nous travaillons avec R Notebook, quelques options s’offrent à nous pour afficher le résultat du code R que nous venons d’exécuter :
+<li>Lorsque nous travaillons avec Quarto, quelques options s’offrent à nous pour afficher le résultat du code R que nous venons d’exécuter :
 <ul>
-<li>Nous pouvons l’afficher directement sous le bloc de codes R (option = cochez <em>Show output inline…</em>). Voir Figure @ref(fig:fig9).</li>
+<li>Nous pouvons l’afficher directement sous le bloc de codes R (option = cochez <em>Show output inline…</em>). Voir la <a href="#fig-fig9" class="quarto-xref">Figure&nbsp;<span>5.4</span></a>.</li>
 <li>Si cette option n’est pas cochée, selon le type de codes R, le résultat apparaîtra dans l’une des fenêtres suivantes de RStudio : <strong>Console</strong>, <strong>Plots</strong> ou <strong>Viewer</strong>.</li>
 </ul></li>
-<li><font color="red">Avec R Notebook, je recommande de cocher l’option <strong>Show output inline…</strong></font> parce qu’on peut voir et conserver à l’écran le résultat d’un bloc de codes (voir un exemple dans la Figure @ref(fig:fig10)).</li>
+<li><font color="red">Avec Quarto, je recommande de cocher l’option <strong>Show output inline…</strong></font> parce qu’on peut voir et conserver à l’écran le résultat d’un bloc de codes (voir un exemple dans la <a href="#fig-fig10" class="quarto-xref">Figure&nbsp;<span>5.5</span></a>).</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/bloc_code2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Exemple d’un résultat présenté sous un bloc de codes</figcaption>
+<div id="fig-fig10" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/bloc_code2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.5: Exemple d’un résultat présenté sous un bloc de codes
+</figcaption>
 </figure>
 </div>
 </div>
@@ -397,30 +417,38 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="affichage-doc-final" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="affichage-doc-final"><span class="header-section-number">5.3.2</span> Affichage Doc Final</h3>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/basic1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Sélection de l’option Viewer Pane lorsque nous travaillons avec le format R Markdown</figcaption>
+<div id="fig-fig11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/basic1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.6: Sélection de l’option Viewer Pane lorsque nous travaillons avec le format R Markdown
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <ul>
-<li>Avec le format R Notebook, lorsque nous générons le document final en cliquant sur l’option <strong>Preview</strong>, le document final peut être affiché (voir Figure @ref(fig:fig11)) :
+<li>Avec Quarto, lorsque nous générons le document final en cliquant sur l’option <strong>Preview</strong>, le document final peut être affiché (voir la <a href="#fig-fig11" class="quarto-xref">Figure&nbsp;<span>5.6</span></a>) :
 <ul>
 <li>dans une nouvelle fenêtre (option =&gt; Viewer Pane =&gt; Window), ou</li>
 <li>dans la fenêtre Viewer de RStudio (option =&gt; Viewer Pane =&gt; Viewer Pane).</li>
 </ul></li>
-<li><font color="red">Avec R Notebook, je recommande l’option <strong>Viewer Pane</strong> </font> parce qu’on peut voir en temps réel (ou presque) les changements apportés à notre document à partir de la fenêtre Source de RStudio. Dans l’exemple ci-dessous (voir Figure @ref(fig:fig12)), le texte et les blocs de codes R sont dans la fenêtre Source (à gauche) et le document final en format html est disponible dans la fenêtre Viewer (à droite).</li>
+<li><font color="red">Avec Quarto, je recommande l’option <strong>Viewer Pane</strong> </font> parce qu’on peut voir en temps réel (ou presque) les changements apportés à notre document à partir de la fenêtre Source de RStudio. Dans l’exemple ci-dessous (voir Figure <a href="#fig-fig12" class="quarto-xref">Figure&nbsp;<span>5.7</span></a>), le texte et les blocs de codes R sont dans la fenêtre Source (à gauche) et le document final en format html est disponible dans la fenêtre Viewer (à droite).</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/notebook.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Exemple du format R Notebook dans la fenêtre Viewer de RStudio (à droite dans la figure ci-haut)</figcaption>
+<div id="fig-fig12" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/notebook.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.7: Exemple du format Quarto dans la fenêtre Viewer de RStudio (à droite dans la figure ci-haut)
+</figcaption>
 </figure>
 </div>
 </div>
@@ -432,13 +460,17 @@ ul.task-list li input[type="checkbox"] {
 <p>Par défaut, RStudio propose l’anglais comme langue d’usage. Le dictionnaire associé à RStudio est donc en anglais. Il est possible de changer la langue du dictionnaire. Voici les étapes à suivre.</p>
 <section id="ajouter-des-dictionnaires" class="level3" data-number="5.4.1">
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="ajouter-des-dictionnaires"><span class="header-section-number">5.4.1</span> Ajouter des dictionnaires</h3>
-<p>À partir de l’onglet <strong>Tools</strong> de RStudio, sélectionnez <strong>Global Options…</strong> (Figure @ref(fig:spell1)). Dans la fenêtre <strong>Options</strong>, cliquez sur <strong>Spelling</strong>. Sur la ligne de l’option <strong>Main dictionary language</strong>, cliquez sur le symbole combiné des flèches montantes (▲) et descendantes (▼). Finalement, dans la bande déroulante, sélectionnez l’option <strong>Install More Languages</strong>.</p>
-<div class="cell" data-layout-align="center">
+<p>À partir de l’onglet <strong>Tools</strong> de RStudio, sélectionnez <strong>Global Options…</strong> (Figure <a href="#fig-spell1" class="quarto-xref">Figure&nbsp;<span>5.8</span></a>). Dans la fenêtre <strong>Options</strong>, cliquez sur <strong>Spelling</strong>. Sur la ligne de l’option <strong>Main dictionary language</strong>, cliquez sur le symbole combiné des flèches montantes (▲) et descendantes (▼). Finalement, dans la bande déroulante, sélectionnez l’option <strong>Install More Languages</strong>.</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-spelling-install.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Ajouter des dictionnaires supplémentaires dans RStudio</figcaption>
+<div id="fig-spell1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spell1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-spelling-install.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spell1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.8: Ajouter des dictionnaires supplémentaires dans RStudio
+</figcaption>
 </figure>
 </div>
 </div>
@@ -446,24 +478,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="ajouter-le-dictionnaire-français" class="level3" data-number="5.4.2">
 <h3 data-number="5.4.2" class="anchored" data-anchor-id="ajouter-le-dictionnaire-français"><span class="header-section-number">5.4.2</span> Ajouter le dictionnaire français</h3>
-<p>Après avoir cliquer sur <strong>Install More Languages</strong>, une roue pointillée apparaît avec l’appellation <strong>Downloading additional languages</strong>. Lorsque ces informations disparaissent, cliquez sur la flèche descendante située à la droite de la langue par défaut (<strong>English</strong>) de RStudio et, dans la bande déroulante, sélectionnez <strong>French</strong> (Figure @ref(fig:spell2)).</p>
-<div class="cell" data-layout-align="center">
+<p>Après avoir cliquer sur <strong>Install More Languages</strong>, une roue pointillée apparaît avec l’appellation <strong>Downloading additional languages</strong>. Lorsque ces informations disparaissent, cliquez sur la flèche descendante située à la droite de la langue par défaut (<strong>English</strong>) de RStudio et, dans la bande déroulante, sélectionnez <strong>French</strong> (<a href="#fig-spell2" class="quarto-xref">Figure&nbsp;<span>5.9</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-spelling-install-french.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Ajouter le dictionnaire français à RStudio</figcaption>
+<div id="fig-spell2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spell2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-spelling-install-french.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spell2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.9: Ajouter le dictionnaire français à RStudio
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>N’oubliez pas de cliquez sur <strong>OK</strong> au bas de la page pour confirmer l’utilisation du dictionnaire français comme dictionnaire principal de RStudio (Figure @ref(fig:spell3)).</p>
-<div class="cell" data-layout-align="center">
+<p>N’oubliez pas de cliquez sur <strong>OK</strong> au bas de la page pour confirmer l’utilisation du dictionnaire français comme dictionnaire principal de RStudio (<a href="#fig-spell3" class="quarto-xref">Figure&nbsp;<span>5.10</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-spelling-install-ok.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Ajouter des dictionnaires supplémentaires dans RStudio</figcaption>
+<div id="fig-spell3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spell3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-spelling-install-ok.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spell3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.10: Ajouter des dictionnaires supplémentaires dans RStudio
+</figcaption>
 </figure>
 </div>
 </div>
@@ -471,13 +511,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="vérification" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="vérification"><span class="header-section-number">5.4.3</span> Vérification</h3>
-<p>Pour vérifier si vous avez bien installé le dictionnaire français, fermez la fenêtre <strong>Options</strong> de RStudio et ouvrez la de nouveau. En cliquant sur l’onglet <strong>Spelling</strong>, vous verrez que le dictionnaire principal de RStudio est <strong>French</strong> (Figure @ref(fig:spell4)).</p>
-<div class="cell" data-layout-align="center">
+<p>Pour vérifier si vous avez bien installé le dictionnaire français, fermez la fenêtre <strong>Options</strong> de RStudio et ouvrez la de nouveau. En cliquant sur l’onglet <strong>Spelling</strong>, vous verrez que le dictionnaire principal de RStudio est <strong>French</strong> (<a href="#fig-spell4" class="quarto-xref">Figure&nbsp;<span>5.11</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rstudio-spelling-french-installed.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Ajouter des dictionnaires supplémentaires dans RStudio</figcaption>
+<div id="fig-spell4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spell4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-spelling-french-installed.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spell4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.11: Ajouter des dictionnaires supplémentaires dans RStudio
+</figcaption>
 </figure>
 </div>
 </div>
