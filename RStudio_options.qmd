@@ -13,9 +13,9 @@ language:
 
 # Options de RStudio {#sec-options}
 
-Avant de créer notre premier fichier Quarto, je me propose de vous initier à quelques options de RStudio qui détermineront votre façon de travailler avec Quarto[^personnel]. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** > **Global Options...** (voir @fig-fig6). 
+Avant de créer notre premier fichier Quarto, je me propose de vous initier à quelques options de RStudio qui détermineront votre façon de travailler avec Quarto[^rstudio_options-1]. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** \> **Global Options...** (voir @fig-fig6).
 
-[^personnel]: Prenez note que les options proposées s'inscrivent dans une démarche pédagogique et qu'au départ, il est préférable de sélectionner les options proposées. Par ailleurs, au fil de votre apprentissage, vous voudrez peut être modifier ces options. Libre à vous, à ce moment là, de sélectionner les options qui vous conviendront le mieux. Par exemple, il m'arrive fréquemment de *décocher* l'option *Output inline* afin d'avoir plus d'espace pour mes lignes de codes dans la fenêtre Source de RStudio.
+[^rstudio_options-1]: Prenez note que les options proposées s'inscrivent dans une démarche pédagogique et qu'au départ, il est préférable de sélectionner les options proposées. Par ailleurs, au fil de votre apprentissage, vous voudrez peut être modifier ces options. Libre à vous, à ce moment là, de sélectionner les options qui vous conviendront le mieux. Par exemple, il m'arrive fréquemment de *décocher* l'option *Output inline* afin d'avoir plus d'espace pour mes lignes de codes dans la fenêtre Source de RStudio.
 
 ```{r}
 #| label: fig-fig6
@@ -28,7 +28,7 @@ knitr::include_graphics('figures/global_options.png')
 
 ## Options Code
 
-Dans un premier temps, il faut s'assurer que le type d'encodage de RStudio soit réglé à **UTF-8**. Cela nous assure que les accents seront disponibles en tout temps d'un ordinateur à l'autre. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** > **Global Options...**. Ensuite, dans Code, sélectionnez Saving, cliquez sur Change..., sélectionnez UTF-8 et cliquez sur OK  (voir @fig-fig7).
+Dans un premier temps, il faut s'assurer que le type d'encodage de RStudio soit réglé à **UTF-8**. Cela nous assure que les accents seront disponibles en tout temps d'un ordinateur à l'autre. Dans le menu principal de RStudio, sélectionnez l'onglet **Tools** \> **Global Options...**. Ensuite, dans Code, sélectionnez Saving, cliquez sur Change..., sélectionnez UTF-8 et cliquez sur OK (voir @fig-fig7).
 
 ```{r}
 #| label: fig-fig7
@@ -43,32 +43,25 @@ knitr::include_graphics('figures/options_code.png')
 
 RStudio présente normalement quatre fenêtres, lesquelles peuvent être agencées selon les préférences de l'utilisateur :
 
-- <font color = "red">Source</font> : Où nous écrivons le script de l'analyse (texte et codes)
-- <font color = "red">Console</font> : Où nous retrouvons les résultats des codes exécutés. Il est aussi possible d'écrire des codes dans la console
-- <font color = "red">Environnement, History, Connection</font> : Où nous retrouvons les objets R et les ensembles de données disponibles
-- <font color = "red">Files, Plots, Packages, Help, View</font> : Contient plusieurs fenêtres très utiles où nous retrouvons nos fichiers, nos graphiques, nos extensions, l'aide et la _visionneuse_.
+-   <font color = "red">Source</font> : Où nous écrivons le script de l'analyse (texte et codes)
+-   <font color = "red">Console</font> : Où nous retrouvons les résultats des codes exécutés. Il est aussi possible d'écrire des codes dans la console
+-   <font color = "red">Environnement, History, Connection</font> : Où nous retrouvons les objets R et les ensembles de données disponibles
+-   <font color = "red">Files, Plots, Packages, Help, View</font> : Contient plusieurs fenêtres très utiles où nous retrouvons nos fichiers, nos graphiques, nos extensions, l'aide et la *visionneuse*.
 
 Personnellement, j'organise mes fenêtres selon la configuration présentée à la @fig-fig8. Deux raisons supportent ce choix:
 
-1. Je peux réduire au minimum la fenêtre *Environnement* afin de maximiser l'espace pour rédiger mon script R dans la fenêtre Source de RStudio.
-2. La ligne de codes de la Console est toujours disponible. Cela me permet, par exemple, d'installer rapidement de nouvelles extensions ou de faire un calcul rapide.
+1.  Je peux réduire au minimum la fenêtre *Environnement* afin de maximiser l'espace pour rédiger mon script R dans la fenêtre Source de RStudio.
+2.  La ligne de codes de la Console est toujours disponible. Cela me permet, par exemple, d'installer rapidement de nouvelles extensions ou de faire un calcul rapide.
 
 En classe, je recommande à mes étudiants d'utiliser aussi cette configuration. De cette manière, les informations sont disposées aux mêmes endroits sur mon écran et sur leur écran de travail.
 
-```{r}
-#| label: fig-fig8
-#| fig-cap: "Configuration recommandée pour les fenêtres de RStudio"
-#| fig-align: left
-#| out.width: "100%"
-#| echo: false
-knitr::include_graphics('figures/code_pane.png')
-```
+![Configuration recommandée pour les fenêtres de RStudio](figures/code_pane.png){#fig-fig8 width=100%}
 
 ## R Markdown Options
 
-L'utilisation de Quarto nécessite de prendre quelques décisions avec le format d'affichage de R Markdown dans RStudio. Ci-dessous, je montre comment faire ces choix après avoir sélectionné, dans le menu principal de RStudio, l'onglet **Tools** > **Global Options...**. 
+L'utilisation de Quarto nécessite de prendre quelques décisions avec le format d'affichage de R Markdown dans RStudio. Ci-dessous, je montre comment faire ces choix après avoir sélectionné, dans le menu principal de RStudio, l'onglet **Tools** \> **Global Options...**.
 
-Et voici les choix possibles dans dans la fenêtre **R Markdown > Basic** (voir lignes et cercles rouges dans la @fig-fig9) : 
+Et voici les choix possibles dans dans la fenêtre **R Markdown \> Basic** (voir lignes et cercles rouges dans la @fig-fig9) :
 
 ### Affichage Résultats
 
@@ -81,11 +74,10 @@ Et voici les choix possibles dans dans la fenêtre **R Markdown > Basic** (voir 
 knitr::include_graphics('figures/basic2.png')
 ```
 
-- Lorsque nous travaillons avec Quarto, quelques options s'offrent à nous pour afficher le résultat du code R que nous venons d'exécuter :
-    + Nous pouvons l'afficher directement sous le bloc de codes R (option = cochez *Show output inline...*). Voir la @fig-fig9.
-    + Si cette option n'est pas cochée, selon le type de codes R, le résultat apparaîtra dans l'une des fenêtres suivantes de RStudio : **Console**, **Plots** ou **Viewer**. 
-
-- <font color = "red">Avec Quarto, je recommande de cocher l'option **Show output inline...**</font> parce qu'on peut voir et conserver à l'écran le résultat d'un bloc de codes (voir un exemple  dans la @fig-fig10).
+-   Lorsque nous travaillons avec Quarto, quelques options s'offrent à nous pour afficher le résultat du code R que nous venons d'exécuter :
+    -   Nous pouvons l'afficher directement sous le bloc de codes R (option = cochez *Show output inline...*). Voir la @fig-fig9.
+    -   Si cette option n'est pas cochée, selon le type de codes R, le résultat apparaîtra dans l'une des fenêtres suivantes de RStudio : **Console**, **Plots** ou **Viewer**.
+-   <font color = "red">Avec Quarto, je recommande de cocher l'option **Show output inline...**</font> parce qu'on peut voir et conserver à l'écran le résultat d'un bloc de codes (voir un exemple dans la @fig-fig10).
 
 ```{r}
 #| label: fig-fig10
@@ -107,11 +99,10 @@ knitr::include_graphics('figures/bloc_code2.png')
 knitr::include_graphics('figures/basic1.png')
 ```
 
-- Avec Quarto, lorsque nous générons le document final en cliquant sur l'option **Render** de la fenêtre Source de RStudio, le document final peut être affiché  (voir la @fig-fig11) :
-    + dans une nouvelle fenêtre (option => Viewer Pane => Window), ou
-    + dans la fenêtre Viewer de RStudio (option => Viewer Pane => Viewer Pane). 
-
-- <font color = "red">Avec Quarto, je recommande l'option **Viewer Pane** </font> parce qu'on peut voir en temps réel (ou presque) les changements apportés à notre document à partir de la fenêtre Source de RStudio. Dans l'exemple ci-dessous (voir Figure @fig-fig12), le texte et les blocs de codes R sont dans la fenêtre Source (à gauche) et le document final en format html est disponible dans la fenêtre Viewer (à droite).
+-   Avec Quarto, lorsque nous générons le document final en cliquant sur l'option **Render** de la fenêtre Source de RStudio, le document final peut être affiché (voir la @fig-fig11) :
+    -   dans une nouvelle fenêtre (option =\> Viewer Pane =\> Window), ou
+    -   dans la fenêtre Viewer de RStudio (option =\> Viewer Pane =\> Viewer Pane).
+-   <font color = "red">Avec Quarto, je recommande l'option **Viewer Pane** </font> parce qu'on peut voir en temps réel (ou presque) les changements apportés à notre document à partir de la fenêtre Source de RStudio. Dans l'exemple ci-dessous (voir Figure @fig-fig12), le texte et les blocs de codes R sont dans la fenêtre Source (à gauche) et le document final en format html est disponible dans la fenêtre Viewer (à droite).
 
 ```{r}
 #| label: fig-fig12
@@ -128,7 +119,7 @@ Par défaut, RStudio propose l'anglais comme langue d'usage. Le dictionnaire ass
 
 ### Ajouter des dictionnaires
 
-À partir de l'onglet **Tools** de RStudio, sélectionnez **Global Options...** (Figure @fig-spell1). Dans la fenêtre **Options**, cliquez sur **Spelling**. Sur la ligne de l'option **Main dictionary language**, cliquez sur le symbole combiné des flèches montantes (▲) et descendantes (▼).  Finalement, dans la bande déroulante, sélectionnez l'option  **Install More Languages**.
+À partir de l'onglet **Tools** de RStudio, sélectionnez **Global Options...** (Figure @fig-spell1). Dans la fenêtre **Options**, cliquez sur **Spelling**. Sur la ligne de l'option **Main dictionary language**, cliquez sur le symbole combiné des flèches montantes (▲) et descendantes (▼). Finalement, dans la bande déroulante, sélectionnez l'option **Install More Languages**.
 
 ```{r}
 #| label: fig-spell1

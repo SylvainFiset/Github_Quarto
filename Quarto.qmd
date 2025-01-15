@@ -11,81 +11,61 @@ language:
     crossref-tbl-title: "Tableau"
 ---
 
-# Application Quarto
+# Quarto
 
-L'application Quarto est relativement récente. Elle permet d'utiliser le logiciel R à partir de blocs de codes qui sont intégrés dans le document. Ces blocs de codes R sont insérés, au besoin, autour du texte qui documente la démarche de l'analyste. Il est donc possible de combiner le texte et les analyses (incluant tableaux, figures, résultats) à l'intérieur d'un même document.
+L’application Quarto est relativement récente. Elle permet d’utiliser le logiciel R à partir de blocs de codes qui sont intégrés dans le document. Ces blocs de codes R sont insérés, au besoin, autour du texte qui documente la démarche de l’analyste. Il est donc possible de combiner le texte et les analyses (incluant tableaux, figures, résultats) à l’intérieur d’un même document.
 
 ## Démarche avec Quarto
 
-La démarche de l'analyste qui utilise Quarto se résume, normalement, par les étapes suivantes :
+La démarche de l’analyste qui utilise Quarto se résume, normalement, par les étapes suivantes :
 
 - Créer un document Quarto à partir de RStudio.
 - Ajuster les métadonnées du ficher Quarto pour les rendre conformes au type de document final désiré.
 - Insérer un bloc de codes R et importer un ou des fichiers de données (ex : via un fichier Excel).
-- Examiner, manipuler, analyser et présenter les données à l'aide de plusieurs blocs de codes R.
-- Documenter sa démarche d'analyse et ses interprétations en insérant du texte autour des blocs de codes R à l'aide du langage R Markdown. Normalement, cette étape est effectuée à chaque fois qu'un bloc de codes R est intégré dans le document Quarto.
+- Examiner, manipuler, analyser et présenter les données à l’aide de plusieurs blocs de codes R.
+- Documenter sa démarche d’analyse et ses interprétations en insérant du texte autour des blocs de codes R à l’aide du langage R Markdown. Normalement, cette étape est effectuée à chaque fois qu’un bloc de codes R est intégré dans le document Quarto.
 - Générer, sauvegarder et publier le document final (en format HTML, PDF ou Word).
 
-La @fig-nb123 présente un résumé visuel de cette démarche :
+La @fig-demarche  présente un résumé visuel de cette démarche :
 
-```{r}
-#| label: fig-nb123
-#| fig-cap: "Démarche de l'analyste qui utilise Quarto"
-#| fig-align: center
-#| out.width: "100%"
-#| echo: false
-knitr::include_graphics('figures/demarche.png')
-```
+![Démarche de l’analyste qui utilise Quarto](figures/demarche.png){#fig-demarche}
 
 ## Avantages
 
 Le format Quarto possède de nombreux avantages :
 
-1. Son premier avantage réside dans la flexibilité du format de présentation. En effet, le document final peut facilement être exporté[^latex] en format HTML, Word ou PDF (ce dernier, à l'aide du langage [LaTeX](https://www.latex-project.org/)).
+1.	Son premier avantage réside dans la flexibilité du format de présentation. En effet, le document final peut facilement être exporté1 en format HTML, Word ou PDF (ce dernier, à l’aide du langage LaTeX)[^Quarto].
+2.	Son second avantage réside dans le fait que les résultats obtenus à l’aide des codes exécutés dans Quarto peuvent s’afficher directement sous les codes R à l’écran, mimant ainsi Jupiter Notebook pour le langage de programmation Python. Cela facilite la documentation des différentes étapes de l’analyse statistique.
 
-2. Son second avantage réside dans le fait que les résultats obtenus à l'aide des codes exécutés dans Quarto peuvent s'afficher directement sous les codes R à l'écran, mimant ainsi [Jupiter Notebook](https://jupyter.org/) pour le langage de programmation Python. Cela facilite la documentation des différentes étapes de l'analyse statistique.
+3.	Son troisième avantage est que la rédaction du document se fait à l’aide du langage R Markdown. La syntaxe Markdown est simple et facile à utiliser, ce qui permet de créer des documents de qualité sans à avoir à insérer une série de codes plus ou moins complexes (comme le langage html).
 
-3. Son troisième avantage est que la rédaction du document se fait à l'aide du langage [R Markdown](https://bookdown.org/yihui/rmarkdown/markdown-syntax.html). La syntaxe Markdown est simple et facile à utiliser, ce qui permet de créer des documents de qualité sans à avoir à insérer une série de codes plus ou moins complexes (comme le langage [html](https://www.tutorialspoint.com/html/index.htm)). 
+4.	Son quatrième avantage est que l’analyste peut documenter ses analyses et ses conclusions dans le même document que celui utilisé pour examiner, organiser, analyser et présenter ses résultats. Cette approche permet facilement le partage et la reproductibilité des conclusions tirées par l’analyste.
 
-4. Son quatrième avantage est que l'analyste peut documenter ses analyses et ses conclusions dans le même document que celui utilisé pour examiner, organiser, analyser et présenter ses résultats. Cette approche permet facilement le partage et la reproductibilité des conclusions tirées par l'analyste.
+5.	Finalement, l’intégration de R avec RStudio via le format Quarto est dynamique. Cela signifie que lorsque les données utilisées pour produire les analyses changent (exemple : par l’ajout de nouveaux participants), une nouvelle exécution des blocs de codes R rafraîchissent simultanément les tableaux et les figures du document R Notebook. Il n’est donc pas nécessaire d’utiliser la vieille et désuète technique du copier-coller, laquelle est propice aux erreurs et aux oublis.
 
-5. Finalement, l'intégration de R avec RStudio via le format Quarto est dynamique. Cela signifie que lorsque les données utilisées pour produire les analyses changent (exemple : par l'ajout de nouveaux participants), une nouvelle exécution des blocs de codes R rafraîchissent simultanément les tableaux et les figures du document R Notebook. Il n'est donc pas nécessaire d'utiliser la vieille et désuète technique du copier-coller, laquelle est propice aux erreurs et aux oublis.
 
-[^latex]: Pour exporter le fichier dans un autre format, comme le format LaTeX. Mais ce format ne sera pas abordé dans le présent document. Notez que le format PDF n'est disponible que si vous avez déjà installé le langage LaTeX sur votre ordinateur. À partir d'un bloc de codes R, il est possible d'installer TinyTeX, laquelle est une librairie qui permet la publication en format LaTeX. Après avoir installer la librairie TinyTeX à l'aide du code `install.packages('tinytex')`, tapez le code `tinytex::install_tinytex()` suivi de la touche `↵`.
+[^Quarto]: Pour exporter le fichier dans un autre format, comme le format LaTeX. Mais ce format ne sera pas abordé dans le présent document. Notez que le format PDF n’est disponible que si vous avez déjà installé le langage LaTeX sur votre ordinateur. À partir d’un bloc de codes R, il est possible d’installer TinyTeX, laquelle est une librairie qui permet la publication en format LaTeX. Après avoir installer la librairie TinyTeX à l’aide du code install.packages('tinytex'), tapez le code tinytex::install_tinytex() suivi de la touche
 
 ## Désavantages
 
-Quarto possède aussi quelques désavantages dont il faut être conscients et qu'il ne faut pas oublier, faute de quoi, l'utilisation de Quarto sera désagréable et le document final ne sera pas satisfaisant.
+Quarto possède aussi quelques désavantages dont il faut être conscients et qu’il ne faut pas oublier, faute de quoi, l’utilisation de Quarto sera désagréable et le document final ne sera pas satisfaisant.
 
-1. Malgré sa simplicité d'utilisation, le format Quarto (et le langage Markdown) demande, lors de ses premières utilisations, de porter attention à de nombreux petits détails qui risquent d'importuner et de décourager l'utilisateur. Heureusement, le présent document examine la majorité de ces détails et il suffit de suivre la démarche présentée pour obtenir un document de qualité. Aussi, au lien de débuter avec un fichier neuf à toutes les fois, je recommande fortement de dupliquer les fichiers Quarto qui fonctionnement bien. Cette approche accélère la productivité ! 
+1.	Malgré sa simplicité d’utilisation, le format Quarto (et le langage Markdown) demande, lors de ses premières utilisations, de porter attention à de nombreux petits détails qui risquent d’importuner et de décourager l’utilisateur. Heureusement, le présent document examine la majorité de ces détails et il suffit de suivre la démarche présentée pour obtenir un document de qualité. Aussi, au lien de débuter avec un fichier neuf à toutes les fois, je recommande fortement de dupliquer les fichiers Quarto qui fonctionnement bien. Cette approche accélère la productivité !
 
-2. Une autre difficulté réside dans le fait qu'au début, l'utilisateur tente d'apprendre à la fois l'utilisation du format Quarto (via le logiciel RStudio) et celle du logiciel R. L'apprenant a parfois de la difficulté à dissocier les codes du logiciel R avec ceux du format R Notebook. Le présent document a justement pour objectif de permettre à l'apprenant de bien maîtriser le format Quarto, pour se concentrer, par la suite, sur l'apprentissage des codes R.
+2.	Une autre difficulté réside dans le fait qu’au début, l’utilisateur tente d’apprendre à la fois l’utilisation du format Quarto (via le logiciel RStudio) et celle du logiciel R. L’apprenant a parfois de la difficulté à dissocier les codes du logiciel R avec ceux du format R Notebook. Le présent document a justement pour objectif de permettre à l’apprenant de bien maîtriser le format Quarto, pour se concentrer, par la suite, sur l’apprentissage des codes R.
 
-3. Le format Quarto est dynamique. Il est donc un peu gourmant au niveau de la mémoire pour les ordinateurs qui commencent à avoir de l'âge. Pour les documents courts, cela ne cause pas de problème. Mais pour les documents longs, cela risque d'agacer l'utilisateur.
+3.	Le format Quarto est dynamique. Il est donc un peu gourmant au niveau de la mémoire pour les ordinateurs qui commencent à avoir de l’âge. Pour les documents courts, cela ne cause pas de problème. Mais pour les documents longs, cela risque d’agacer l’utilisateur.
 
-4. Le format Quarto est extrêmement bien adapté à la production de documents électroniques de type HTML. Malheureusement, l'exportation vers les formats PDF et Word nécessitent souvent des ajustements après la production final du document. 
+4.	Le format Quarto est extrêmement bien adapté à la production de documents électroniques de type HTML. Malheureusement, l’exportation vers les formats PDF et Word nécessitent souvent des ajustements après la production final du document.
+
 
 ## Installer Quarto
 
-Pour installer Quarto, il suffit de visiter le site de [Quarto](https://quarto.org/) de la compagnie Posit. Cliquez sur `Get Started` et ensuite sur `Download Quarto CLI`. Par défaut, Quarto détecte votre système d'exploitation (Ubuntu, Linus, Mac, Windows). Une fois le fichier téléchargé, il faut l'installer comme les autres logiciels.
+Pour installer Quarto, il suffit de visiter le site de [Quarto](https://quarto.org) de la compagnie Posit. Cliquez sur [Get Started](https://quarto.org/docs/get-started/) et ensuite sur **Download Quarto CLI**. Par défaut, Quarto détecte votre système d’exploitation (Ubuntu, Linus, Mac, Windows). Une fois le fichier téléchargé, il faut l’installer sur votre ordinateur comme les autres logiciels.
 
 ## Vérifier la version de Quarto installée sur votre ordinateur
 
-Puisque Quarto est mis à jour régulièrement, il est parfois nécessaire de vérifier la version qui est déjà installée sur votre ordinateur. Pour cela, dans la fenêtre Console de RStudio, cliquez sur Terminal et inscrire `quarto check` ou `quarto --version`. La première commande fait une longue série de vérifications alors que la second commande indique seulement le numéro de la version de Quarto qui est installée. À vous de sélectionner la commande qui vous convient le mieux. La @fig-quartoversion présente la deuxième option :
+Puisque Quarto est mis à jour régulièrement, il est parfois nécessaire de vérifier la version qui est déjà installée sur votre ordinateur. Pour cela, dans la fenêtre Console de RStudio, cliquez sur Terminal et inscrire quarto check ou quarto --version. La première commande fait une longue série de vérifications alors que la second commande indique seulement le numéro de la version de Quarto qui est installée. À vous de sélectionner la commande qui vous convient le mieux. La @fig-quartoversion présente la deuxième option :
 
-```{r}
-#| label: fig-quartoversion
-#| fig-cap: "Vérification de la version intallée de Quarto"
-#| fig-align: left
-#| out.width: "100%"
-#| echo: false
-knitr::include_graphics('figures/quarto_version.png')
-```
-
-
-
-
-
-
-
+![Vérification de la version de Quarto qui est installée](figures/quarto_version.png){#fig-quartoversion width=100%}
 

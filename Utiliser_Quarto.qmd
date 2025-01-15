@@ -11,115 +11,822 @@ language:
     crossref-tbl-title: "Tableau"
 ---
 
-# Utiliser Quarto
+# Utiliser Quarto avec R
 
-Nous sommes maintenant prêts à créer un fichier qui utilise le format de présentation R Notebook. À partir d'un document vierge, nous allons graduellement ajouter des éléments à notre script jusqu'au moment où nous seront en mesure d'ajouter des codes R.
+Dans ce document, je présente brièvement comment intégrer le langage `Rmarkdown` dans un document `Quarto` tout en y insérant des `blocs de codes R`. 
 
-## Nouveau fichier
+## Extensions utilisées
 
-Après l'ouverture de votre projet RStudio, vous devez maintenant créer votre fichier R Notebook. Pour ce faire, deux options s'offrent à vous :
+Voici les extensions R que nous allons utiliser dans le présent chapitre.
 
-1. La première solution consiste à cliquez sur l'icone avec le rond vert et le signe + blanc à l'intérieur (lequel est situé dans le coin supérieur gauche du menu de RStudio) (voir Figure \@ref(fig:fig13)). Par la suite, il faut sélectionner R Notebook dans les options offertes dans la bande déroulante. 
-
-```{r fig13, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Créer un nouveau document R Notebook à partir du menu"}
-knitr::include_graphics('figures/n8.png')
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+library(kableExtra)
+library(tidyverse)
+library(webexercises)
 ```
 
-2. La seconde solution consiste, à partir du menu de RStudio, de sélectionner : **File > New File > R Notebook** (voir Figure \@ref(fig:fig1331)).
+## Introduction
 
-```{r fig1331, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Créer un nouveau document R Notebook à partir de l'icone"}
-knitr::include_graphics('figures/n7.png')
+Idéalement, l'étudiante ou l'étudiant débute avec un nouveau document `Quarto`. Ce nouveau document `quarto` comprend déjà une section métadonnée (voir ci-dessous) même si l'option `Create Empty Document` a été sélectionnée lors de la création du document `quarto`. 
+
+```{r}
+#| message: false
+#| warning: false
+#| eval: false
+---
+title: "Untitled"
+format: html
+---
 ```
 
-Remarquez que la fenêtre Source de RStudio contient maintenant un fichier du nom de <font color = "red">Untitled1*</font>.
+L'étudiante ou l'étudiant doit donc remplacer les codes de la section des métadonnées (`yaml`) par les 26 lignes de codes présentées ci-dessous :
 
-## Effacer texte {#cut}
-
-Par défaut, tous les nouveaux fichiers R Notebook qui s'affichent dans la fenêtre Source de RStudio contiennent du texte qui explique, brièvement, comment utiliser R Notebook. Ce texte, bien que pertinent, doit être enlevé de la fenêtre Source de RStudio. Je recommande de l'effacer en sélectionnant le texte et de l'effacer à l'aide de l'option **cut** (voir Figure \@ref(fig:fig14)).
-
-Assurez-vous, cependant, **de ne pas effacer les six premières lignes**, incluant les lignes avec des tirets (`---`) ! Cette section, nommée Métadonnées, est nécessaire pour générer le fichier R Notebook.
-
-```{r fig14, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Effacer le texte inutilisé lors de l'ouverture d'un nouveau document R Notebook"}
-knitr::include_graphics('figures/n9.png')
+```{r}
+#| message: false
+#| warning: false
+#| eval: false
+---
+title: "Numéro du problème à réaliser"
+subtitle: "Titre du problème à réaliser"
+author: 
+- Prénom et nom
+- Université de Moncton
+- campus Edmundston
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-fold: false
+    number-sections: true
+    code-line-numbers: true
+    theme: default
+    highlight-style: arrow
+    embed-resources: true     
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
 ```
 
-## Répertoire de travail
+::: {.callout-warning title="Conseils importants" collapse="true"}
 
-*Si vous avez créé un projet RStudio (voir Section \@ref(projetRStudio)), vous pouvez sauter cette section et vous diriger à la Section \@ref(preview).*
+- Il est obligatoire de copier toutes les lignes ci-haut, incluant la première et la dernière ligne avec des tirets (` --- `).
+- Idéalement, ajoutez une ligne vide (ligne 27) après les trois derniers tirets.
+- Il faut changer le titre (ligne 2) et le sous-titre (ligne 3) du document `quarto`.
+- Il faut ajouter son prénom et son nom (ligne 5).
+- Le thème par défaut peut être changé. Cliquez ici pour d'[autres thèmes](https://quarto.org/docs/output-formats/html-themes.html).
+- Le style d'écriture par défaut peut être changé. Cliquez ici pour d'[autres styles](https://quarto.org/docs/output-formats/html-code.html#highlighting)
+- D'autres options à insérer dans la section métadonnée sont disponibles. Vous pouvez les consulter [ici](https://quarto.org/docs/reference/formats/html.html).
 
-Si vous n'avez pas créé un projet RStudio pour votre environnement de travail pour ce projet en particulier[^RProject], avant de sauvegarder le fichier, il est important de décider du répertoire de travail (**Working directory**) sur votre ordinateur où vous allez sauvegarder les fichiers .Rmd et .nb.html qui seront sauvegardés par RStudio. Une fois cette décision prise, il faut indiquer à RStudio où se trouve ce répertoire de travail sur votre ordinateur.
+:::
 
-[^RProject]: Je recommande fortement de créer un projet RStudio (voir **File > New Project...**) lorsque vous débuter un nouveau projet d'analyses statistiques. En créant un projet RStudio, tous vous fichiers sont conservés dans le même répertoire sur votre ordinateur. Rien n'empêche que vous devez créer ce répertoire sur votre ordinateur et vous assurez d'y déposer vos fichiers de données (ex: .xlsx, .csv, .dat, etc.)
+# Rmarkdown et blocs de code R
 
-Bien qu'il existe plusieurs façons de faire pour sélectionner le répertoire de travail, je recommande d'utiliser le menu de RStudio. Dans le menu, cliquez sur **Session**, sélectionnez **Set Working directory** et ensuite, cliquez sur **Choose Directory...** (voir Figure \@ref(fig:fig15)). 
+Afin de bien maîtriser le langage Rmarkdow et l'intégration de blocs de codes R dans un document `quarto` à la suite de la section métadonnée (`yaml`), je recommande :
 
-```{r fig15, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Comment sélectionner un répertoire de travail"}
-knitr::include_graphics('figures/1wd.png')
+- que l'étudiante ou l'étudiant copie le titre de chacune des sections et des sous-sections du présent document `html` dans son propre fichier `quarto`. Débutez la copie des codes à partir de la section 3 (`3 Créer et examiner des objets R`). Ici, il est obligatoire d'utiliser le nombre de symboles ` # ` nécessaires selon les niveaux des titres et des sous-titres. `Quarto` utilise ces symboles pour créer la table des matières et attribuer un numéro à chacune des sections et sous-sections.
+- que l'étudiante ou l'étudiant copie le texte disponible sous les titres et sous-titres de section tout en respectant la mise en page du document `html`. 
+- que l'étudiante ou  l'étudiant insère des blocs de codes R et utilise l'option `copier-coller` dans les blocs de codes R disponibles dans le document `html`. 
+
+::: {.callout-tip title="À ce point-ci, le document Quarto de l'étudiante ou de l'étudiant devrait ressembler à ceci:" collapse="true"}
+
+![Fichier Quarto de l'étudiante ou de l'étudiant](figures/fig00_demo.png)
+
+:::
+
+
+- que l'étudiante ou l'étudiant exécute le contenu des blocs de codes R pour reproduire les résultats du document `html`. 
+- que l'étudiante ou l'étudiant clique sur l'option `Render` pour générer son document en format `html`. Je propose d'ailleurs d'effectuer cette opération après chacune des sections et sous-sections pour s'assurer que le document de travail s'apparente au document `html`.
+
+![Option Render pour générer des documents Quarto au format html](figures/fig05_demo.png)
+
+# Créer et examiner des objets R
+
+Dans cette section, j'aborde comment créer et examiner des objets R à partir de certaines fonctions.
+
+## Étape 1
+
+Créons deux objets R, soit `x1` et `x2`.
+
+### Objet `x1`
+
+J'assigne la valeur **12** à l'objet R `x1` et j'examine l'objet `x1` avec la fonction `print()`. La fonction `print()` possède un argument `x =` qui permet de désigner l'objet R que nous désirons examiner.
+
+```{r}
+x1 <- 12
+print( x = x1 )
 ```
 
-Lorsque le répertoire de travail est sélectionné, la fenêtre Console de RStudio génère un code à partir de la fonction **setwd** qui indique où se trouve votre répertoire de travail sur votre ordinateur (voir Figure \@ref(fig:fig16)). Remarquez aussi que le chemin d'accès au répertoire de travail sélectionné est aussi indiqué dans l'onglet **Files** de RStudio.
+::: {.callout-warning title="Autres conseils importants" collapse="true"}
 
-```{r fig16, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Code qui indique où se trouve le répertoire de travail sur l'ordinateur"}
-knitr::include_graphics('figures/1home.png')
+Lorsque vous rédiger un document `quarto`, respectez les règles suivantes :
+
+- Toujours laisser une ligne vide devant et après l'utilisation des symboles ` # `. Sinon, `quarto` ne comprend pas que cela est un titre ou un sous-titre, ce qui crée une table des matières imcomplète et empêche `quarto` d'attribuer des numéros à ces sections et sous-sections.
+- Toujours laisser une ligne vide devant et après un bloc de codes R.
+
+![Les flèches rouges désignent les lignes vides avant et après les symboles # et les flèches noires désignent les lignes vides avant et après les blocs de code R](figures/fig02_demo.png)
+
+:::
+
+### Objet `x2`
+
+J'assigne la valeur 44 à `x2` et j'examine l'objet `x2` avec la fonction `print()`.
+
+```{r}
+x2 <- 44
+print( x = x2 )
 ```
 
-## Preview on save {#preview}
+::: {.callout-warning title="Autre conseil important" collapse="true"}
 
-Après avoir effacer le texte (voir Section \@ref(cut)) et avoir créé votre répertoire de travail (si nécessaire), je vous invite à cocher l'option **Preview on Save** (voir Figure \@ref(fig:fig191)). De cette façon, à chaque fois que vous sauvegarderez votre fichier, le document final sera mise à jour dans la fenêtre **Viewer** de RStudio. C'est une bonne façon de voir, en temps réel, la progression de votre document en format .html.
+Dans les blocs de codes R précédents, les arguments présentés entre les parenthèses sont séparées par un espace. Cela n'est pas nécessaire mais cela aide à mieux lire le code. Bref, R comprend le code même s'il est collé comme illustré ci-dessous. Néanmoins, je recommande d'aérer vos codes, c'est plus facile de trouver les erreurs !
 
-```{r fig191, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Sélectionner l'option Preview on Save"}
-knitr::include_graphics('figures/p03_preview_on_save.png')
+```{r}
+#| eval: false
+x2<-44
+print(x=x2)
 ```
 
-## Sauvegarder
+:::
 
-Vous êtes maintenant prêts à sauvegarder le fichier R Notebook sur votre ordinateur. Notez que la démarche démontrée ci-dessous est effectuée après avoir créé un projet RStudio du nom de *Projet_1*. Pour la sauvegarde, encore une fois, deux options s'offrent à vous :
+## Étape 2
 
-1. Cliquez sur l'icone de la petite disquette bleue  (voir Figure \@ref(fig:fig17)).
+Utilisons un objet R déjà créé pour effectuer une opération mathématique. Je calcule la racine carrée de l'objet R nommé `x1` à l'aide de la fonction `sqrt()`. La fonction `sqrt()` possède un argument `x =` qui permet de désigner l'objet R dont nous voulons extraire la racine carrée.
 
-```{r fig17, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Sauvegarder le nouveau document R Notebook"}
-knitr::include_graphics('figures/n2.png')
+```{r}
+sqrt( x = x1 )
 ```
 
-2. La seconde solution consiste, à partir du menu de RStudio, de sélectionner : **File > Save** (voir Figure \@ref(fig:fig1332)).
+À l’aide du langage Rmarkdown, nous pouvons insérer ces objets R dans notre texte pour présenter les résultats associés à ces objets R. 
 
-```{r fig1332, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Créer un nouveau document R Notebook à partir de l'icone"}
-knitr::include_graphics('figures/n3.png')
+Ainsi, nous pouvons écrire dans `quarto` : 
+
+![](figures/fig07_demo.png){width=100% fig-align="left"}
+
+Ce qui donne (en format html) :
+
+- La valeur de la racine carrée est `r sqrt(x1)`.
+
+::: {.callout-warning title="Autre conseil" collapse="true"}
+
+Lorsque vous intégrez les objets R dans le texte de `quarto`, il faut obligatoirement entourer l'objet R par des accents aigus. Voici un exemple associé au texte que vous venez juste de lire :
+
+![Les sections entourés d'une bande rouge intègrent des codes R. Les codes R sont soulignés en rouge](figures/fig03_demo.png)
+
+:::
+
+## Étape 3
+
+Si je mets `r sqrt(x1)`^2^, j'observe la même valeur qu'au début, soit `r x1`.
+
+```{r}
+sqrt( x = x1 )^2
 ```
 
-Par la suite, effacez **Untitled1** et écrivez le nom du fichier que vous désirez utiliser. Cliquez sur **Save** (voir Figure \@ref(fig:fig18)). 
+# Données dans R
 
-```{r fig18, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Inscrire le nom du nouveau document R Notebook"}
-knitr::include_graphics('figures/n4.png')
+Par défaut, R possède de nombreux ensembles de données. La fonction `data( )` permet d'obtenir la liste complète des ensembles de données disponibles.
+
+```{r}
+#| message: false
+#| warning: false
+#| eval: false
+data()
 ```
 
-## Deux fichiers {#deuxfichiers}
+::: {.callout-tip title="Consulter tous les ensembles de données qui sont disponibles" collapse="true"}
 
-Après avoir cliquer sur **Save**, RStudio sauvegarde deux fichiers avec le même nom dans votre répertoire de travail (dans notre exemple, ce nom est : Exercice Notebook). La fenêtre **Files** de RStudio montre ces deux fichiers (voir Figure \@ref(fig:fig192)). Un fichier contient une extension .Rmd et l'autre une extension .nb.html. 
+Le code ci-dessous permet d'obtenir la liste complète de tous les ensembles de données disponibles sur votre ordinateur en fonction des extensions R qui y sont installées. Copiez cette ligne de codes dans la fenêtre `Console` de RStudio et appuyez sur la touche `Enter`. Vous verrez apparaître une longue liste d'ensembles de données dans une nouvelle fenêtre `Source` de RStudio.
 
-- Le fichier .Rmd contient tous vos codes et c'est lui qui permet de modifier et de générer le fichier .html.
-- le fichier .nb.html présente le produit final de votre fichier. Il est mis à jour lorsque l'on clique sur l'option **Preview** de RStudio. 
-
-```{r fig192, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Votre projet RStudio comprend maintenant deux nouveaux fichiers, un ficher .Rmd et un fichier .html"}
-knitr::include_graphics('figures/n5.png')
+```{r}
+#| message: false
+#| warning: false
+#| eval: false
+data(package = .packages(all.available = TRUE))
 ```
+
+:::
+
+# L'ensemble de données Trees
+
+Sélectionnons l'ensemble de données nommé `trees` et examinons les variables et les valeurs de celles-ci.
+
+```{r}
+data(trees)
+```
+
+## Structure
+
+Débutons avec la fonction `str()`, laquelle signifie `structure`. Cette fonction possède un argument (`x =`) qui précise l'objet R que nous désirons examiner.
+
+```{r}
+str(trees)
+```
+
+1. Nous constatons que l'objet R `trees` est un `data.frame`, lequel possède la même organisation qu'un chiffrier comme `Excel` qui contient 3 variables et 31 observations par variable.
+2. Les trois variables de notre ensemble `trees` sont : `Girth`, `Height` et `Volume`.
+3. Les valeurs associées à chacune de ces variables sont numériques (`num`). 
+4. Pour utiliser ces variables avec R, il faut débuter par préciser l'ensemble de données qui les contiennent et ensuite, à l'aide de l'opérateur ` $ `, nous pouvons les nommer. Voici comment faire :
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+
+# Extensions utilisées
+library(kableExtra)
+library(tidyverse)
+
+# Regrouper les variables dans des vecteurs
+`data.frame` <- c("trees", "trees", "trees")
+plus1 <- c("+", "+", "+")
+séparateur <- c("$")
+plus2 <- c("+", "+", "+")
+variable <- c("Girth", "Height", "Volume")
+devient <- c("=", "=", "=")
+`nom objet R` <- c("trees$Girth", "trees$Height", "trees$Volume")
+df02 <- data.frame(`data.frame`,
+                   "." = plus1,
+                   séparateur,
+                   ".." = plus2,
+                   variable,
+                   "..." = devient,
+                   `nom objet R`)
+
+# kableExtra
+kbl(df02,
+    align = c("l", "c", "c", "c", "c", "c", "r")) %>% 
+    column_spec(7, color = "white", background = "navy") %>% 
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Head
+
+La fonction `head()` permet aussi d'examiner un ensemble de données. Elle comprend deux arguments :
+
+- `x` = l'objet R qui contient les valeurs que nous désirons examiner.
+- `n` = le nombre de lignes que nous désirons examiner. Par défaut, cette valeur est fixée à 6.
+
+```{r}
+head( x = trees , n = 5)
+```
+
+# Graphiques
+
+L'analyse de données possède une importante composante graphique. En effet, il est essentiel de bien illustrer les valeurs associées aux variables qui nous intéressent afin de voir comment elles se comportent lorsqu'elles sont mises en relation les unes avec les autres. Ci-dessous, j'illustre comment utiliser les fonctions graphiques de base de R pour produire une série de graphiques en nuage de points (`scatterplots`). Chaque graphique (sauf le premier) ajoute un élément supplémentaire au graphique précédent. Chaque graphique met en relation les variables `Girth` [circonférence] et `Volume` de l'ensemble de données `trees`.
+
+## Graphiques de base avec R
+
+La fonction `plot()` contient de multiples arguments. Nous allons examinons certains d'entres eux. Ainsi, l'argument :
+
+- `x` = désigne la variable sur l'axe des `x`.
+- `y` = désigne la variable sur l'axe des `y`.
+
+```{r}
+plot( x = trees$Girth, y = trees$Volume )
+```
+
+1.  Note: L'expression `plot(trees$Volume ~ treees$Girth)` produit le même résultats.
+
+## Ajouter des titres aux axes
+
+```{r}
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)", # titre axe des x
+     ylab = "Volume (pieds cubes)")   # titre axe des y
+```
+
+Dans le bloc de codes ci-haut, notez que tous symboles (chiffres, lettres) qui se trouvent à la droite du symbole ` # ` ne font pas partie du code R. Ce sont des commentaires qui nous aident à ce souvenir de certains détails associés à notre code R. Ci-dessous, vous remarquerez que j'ai ajouté des commentaires au bout des lignes de codes qui sont nouvelles.
+
+## Ajouter une couleur aux points
+
+```{r}
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)",
+     ylab = "Volume (pieds cubes)",
+     col = "navy") # couleur
+```
+
+::: {.callout-tip title="liens pour sélectionner d'autres couleurs" collapse="true"}
+
+- [Département de statistiques de l'université Columbia (New York)](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) (les couleurs sont désignées par des noms. Exemple : "navy")
+- [R charts](https://r-charts.com/color-palettes/#discrete) (les couleurs sont désignées par un numéro. Exemple : "#00468B")
+
+:::
+
+## Enlever le cadre
+
+```{r}
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)",
+     ylab = "Volume (pieds cubes)",
+     col = "navy",
+     frame.plot = FALSE) # enlever le cadre
+```
+
+## Lier les points avec des lignes
+
+```{r}
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)",
+     ylab = "Volume (pieds cubes)",
+     col = "navy",
+     frame.plot = FALSE,
+     type = "b") # b = both; p = point, l = line
+```
+
+## Grossir les points
+
+```{r}
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)",
+     ylab = "Volume (pieds cubes)",
+     col = "navy",
+     frame.plot = FALSE,
+     type = "b",
+     cex = 1.5) # grossir ou diminuer la taille des symbôles
+```
+
+## Changer l'orientation des valeurs sur l'axe des Y
+
+```{r}
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)",
+     ylab = "Volume (pieds cubes)",
+     col = "navy",
+     frame.plot = FALSE,
+     type = "b", 
+     cex = 1.5,
+     las = 1) # orientation horizontale sur l'axe des Y (las=2: vertical) 
+```
+
+### Ajuster l'étendue des axes
+
+```{r}
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)",
+     ylab = "Volume (pieds cubes)",
+     col = "navy",
+     frame.plot = FALSE,
+     type = "b", 
+     cex = 1.5,
+     las = 1,
+     xlim = c(8, 22), ylim = c(0, 100)) # étendue des axes
+```
+
+### Changer la forme des symboles
+
+```{r}
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)",
+     ylab = "Volume (pieds cubes)",
+     col = "navy",
+     frame.plot = FALSE,
+     type = "b", 
+     cex = 1.5,
+     las = 1,
+     xlim = c(8, 22), ylim = c(0, 100),
+     pch = 2) # 0 = carrés, 1 = cercles, 2 = triangles, 3 = +, 4 = x, etc.
+```
+
+::: {.callout-tip title="Il existe 25 symboles de base" collapse="true"}
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+generateRPointShapes<-function(){
+  oldPar<-par()
+  par(font=2, mar=c(0.5,0,0,0))
+  y=rev(c(rep(1,6),rep(2,5), rep(3,5), rep(4,5), rep(5,5)))
+  x=c(rep(1:5,5),6)
+  plot(x, y, pch = 0:25, cex=1.5, ylim=c(1,5.5), xlim=c(1,6.5), 
+       axes=FALSE, xlab="", ylab="", bg="blue")
+  text(x, y, labels=0:25, pos=3)
+  par(mar=oldPar$mar,font=oldPar$font )
+}
+generateRPointShapes()
+```
+
+1. Le code utilisé pour générer ces symboles provient du site [STHDA](http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r).
+
+:::
+
+### Ajouter une ligne de régression linéaire
+
+1. La ligne de code ` type = "b" ` est enlevée de la fonction `plot()`.
+2. Pour ajouter une droite de régression linéaire, il faut calculer en premier la droite de régression linéaire avec la fonction `lm()` et ensuite il faut ajouter la droite dans le graphique avec la fonction `abline()`.
+
+```{r}
+# Modèle de régression linéaire simple (objet m1)
+m1 <- lm(trees$Volume ~ trees$Girth) # lm = linear model
+
+# Graphique avec R de base avec des points
+plot(x = trees$Girth, y = trees$Volume,
+     xlab = "Circonférence (pouces)",
+     ylab = "Volume (pieds cubes)",
+     col = "navy",
+     frame.plot = FALSE,
+     type = "p",
+     cex = 1.5,
+     las = 1,
+     xlim = c(8, 22), ylim = c(0, 100),
+     pch = 2,
+     main = "Droite de régression linéaire") # titre principal
+
+# Ajouter une droite de prédiction linéaire de m1
+abline(reg = m1, 
+       col = "darkorange", 
+       lwd=2,              # largeur de la ligne
+       lty = "dashed")     # type de ligne
+```
+
+- L'argument `lty =` permet de modifier le type de ligne. 
+
+::: {.callout-tip title="Six types de ligne sont disponibles" collapse="true"}
+
+Voici les types de ligne disponible par défaut avec R :
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+generateRLineTypes<-function(){
+  oldPar<-par()
+  par(font=2, mar=c(0,0,0,0))
+  plot(1, pch="", ylim=c(0,6), xlim=c(0,0.7),  axes=FALSE,xlab="", ylab="")
+  for(i in 0:6) lines(c(0.3,0.7), c(i,i), lty=i, lwd=3)
+  text(rep(0.1,6), 0:6, labels=c("0.'blank'", "1.'solid'", "2.'dashed'", "3.'dotted'",
+                                 "4.'dotdash'", "5.'longdash'", "6.'twodash'"))
+  par(mar=oldPar$mar,font=oldPar$font )
+}
+generateRLineTypes()
+```
+
+1. Le code utilisé pour générer ces lignes provient du site [STHDA](http://www.sthda.com/english/wiki/line-types-in-r-lty).
+
+:::
+
+# Graphiques avec ggplot2
+
+L’extension ggplot2 est nettement plus puissante et agréable à utiliser que les fonctions graphiques de R de base. Mais, sa courbe d'apprentissage est un peu plus longue que les fonctions graphiques que nous venons d'examiner. L'extension `ggplot2` sera donc abordée plus tard dans un document dédié uniquement à sa compréhension et à son utilisation.
+
+::: {.callout-warning title="Exemple de graphique avec l'extension ggplot2" collapse="true"}
+
+```{r}
+library(ggplot2)
+ggplot(data = trees, aes(x = Girth, y = Volume)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE, color = "darkorange") +
+  theme_minimal() +
+  labs(title = "Droite de régression linéaire",
+       x = "Circonférence (pouces)",
+       y = "Volume (pieds cubes)")
+```
+
+:::
+
+# Statistiques descriptives
+
+Puisque R est un outil statistique, examinons comment l'utiliser pour calculer quelques statistiques descriptives. Dans les exemples ci-dessous, le résultat du calcul est sauvegardé dans un objet R (soit : `moyenne`, `ecartype`, `variance`).
+
+```{r}
+moyenne <- mean(trees$Girth)
+ecartype <- sd(trees$Girth)
+variance <- var(trees$Girth)
+```
+
+Pour examiner le contenu de ces objets, il suffit de taper le nom de l'objet dans la `Console` de RStudio ou d'utiliser la fonction `print()` dans un bloc de codes R (dans un document `Quarto`).
+
+```{r}
+print(x = moyenne)
+```
+
+::: {.callout-tip title="Autre possibilité" collapse="true"}
+
+Il est aussi possible de simplement écrire le nom de l'objet dans R et d'exécuter le bloc de codes R.
+
+```{r}
+moyenne
+```
+
+:::
+
+À l'aide du langage `rmarkdown`, nous pouvons insérer ces objets R dans notre texte pour présenter les résultats associés à ces objets R. Par exemple :
+
+-   La moyenne est : `r moyenne`.
+-   L'écart-type est : `r ecartype`.
+-   La variance est : `r variance`.
+
+## Avec 2 décimales
+
+Par défaut, le nombre de décimales est assez élevé (voir ci-haut). La fonction `format()` arrange ce petit problème.
+
+-   La moyenne est : `r format(moyenne, digits = 4)`
+-   L'écart-type est : `r format(ecartype, digits = 3)`
+-   La variance est : `r format(variance, digits = 3)`
+
+
+::: {.callout-warning title="Autre conseil important" collapse="true"}
+
+Voici comment modifier le nombre de décimales dans un document `quarto` à l'aide de la fonction `format()` et son argument `digits =` :
+
+![Indice : Le code placé entre deux accents de grave débute toujours par r.](figures/fig04_demo.png)
+
+:::
+
+# Tableaux
+
+Nous pouvons aussi présenter les statistiques descriptives sous forme de tableau. Ici, plusieurs options s'offrent à vous. Voici un exemple avec le langage `html` :
+
+| Statistiques |                Valeurs observées |
+|--------------|---------------------------------:|
+| Moyenne      |  `r format(moyenne, digits = 4)` |
+| Écart-type   | `r format(ecartype, digits = 3)` |
+| Variance     | `r format(variance, digits = 3)` |
+
+: Tableau 1. Statistiques descriptives avec le language html
+
+Voici un autre exemple avec l'aide de l'extension `kableExtra` :
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+
+# Extensions utilisées
+library(kableExtra)
+library(tidyverse)
+
+# Regrouper les variables dans des vecteurs
+Statistiques <- c("Moyenne", "Écart-type", "Variance")
+`Valeurs observées` <- c(moyenne, ecartype, variance)
+
+# Regrouper les vecteurs dans un data.frame
+df01 <- data.frame(Statistiques = Statistiques,
+                   `Valeurs observées` = format(`Valeurs observées`, digits = 3))
+
+# Créer le tableau
+kbl(df01,
+    caption = "Tableau 2. Statistiques descriptives avec kableExtra",
+    align = c("l", "r")) %>% 
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+
+
+::: {.callout-tip title="Créer un tableau avec l'éditeur visuel de RStudio" collapse="true"}
+
+L'utilisation de l'éditeur `Visual` de `RStudio` facilite grandement la création de tableaux. Vous pouvez activer ce mode d'écriture en cliquant sur `Visual` au haut de la fenêtre `Source` de `RStudio`. Par la suite, il suffit de sélectionner l'option `table` et préciser le nombre de rangées et de colonnes. Plusieurs autres options sont disponibles, à vous de les explorer.
+
+![Éditeur visuel de RStudio](figures/fig01_demo.png)
+
+:::
+
+# Tutoriels
+
+Afin de bien maîtriser l'utilisation de `Quarto`, je recommande de suivre les tutoriels (sous forme vidéo et manuscrite) développés par Mine Çetinkaya-Rundel (éducatrice pour Posit et professeure à l'université Duke (Caroline du Nord, USA)) :
+
+- [Tutorial: Hello, Quarto](https://quarto.org/docs/get-started/hello/rstudio.html)
+- [Tutorial: Computations](https://quarto.org/docs/get-started/computations/rstudio.html)
+- [Tutorial: Authoring](https://quarto.org/docs/get-started/authoring/rstudio.html)
+
+
+![Logo de Quarto - Compagnie POSIT](figures/quarto_logo.jpg){width=300 fig-align="left"}
+
+## Guides quarto
+
+Si vous avez le goût de vous investir à fond dans l'utilisation de `Quarto`, je recommande fortement de consulter le guide développé par la compagnie `POSIT`. Vous trouverez tout ce que vous avez de besoin pour rédiger des pages web, des présentations, des livres électroniques et même des articles scientifiques !
+
+- [Quarto - Guide Posit](https://quarto.org/docs/guide/)
+
+Et si vous désirez consulter un résumé de ce que peut faire `quarto`, les chapitres 28 et 29 du volume de Wickham, Çetinkaya-Rundel et Grolemund (deuxième édition) peuvent vous intéresser. Néanmoins, ils sont assez techniques et ils ne s'adressent pas aux débutants.
+
+- [R for Data Science](https://r4ds.hadley.nz/quarto)
+
+# Exercices
 
 ## Exercice 1
 
-Voici un exercice dont les objectifs sont : (1) de créer un nouveau projet RStudio et (2) de créer un nouveau fichier R Notebook. Les instructions sont :
+Pouvez-vous faire la distinction entre un bloc de codes R, les métadonnées et le langage Rmarkdown ? Dans le document `quarto` présenté ci-dessous, quelles lignes désignent le bloc de codes R, les métadonnées et celles avec le langage Rmarkdown ?
 
-1. À partir de **Finder** (Mac) ou de **Explorateur de fichiers** (PC), créez un répertoire sur votre ordinateur, du type : 
-    + Home > Desktop > PSYC2002 > Periode 1
-2. Ouvrez le logiciel RStudio
-3. Créez, dans le répertoire que vous avez créé à l'étape 1, un nouveau projet RStudio du nom de **Projet_1**.
-4. À l'aide de RStudio, créez un nouveau fichier R Notebook
-5. Activez l'option **Save on Preview**
-6. Sauvegarder votre fichier R Notebook sous le nom de **Exercice Notebook** dans le répertoire de travail du projet RStudio que vous avez créé à l'étape 3
-8. Examiner la fenêtre Files de RStudio (voir Figure \@ref(fig:fig192)) et assurez-vous que deux fichiers s'y trouvent, soit :
-    + Exercice Notebook.Rmd
-    + Exercice Notebook.nb.html
-9. Cliquez sur **Preview** pour visualiser votre document dans la fenêtre **Viewer** de RStudio. Il devrait ressembler à celui présenté par la Figure \@ref(fig:fig193)
+![Document quarto](figures/fig06_demo.png)
 
-```{r fig193, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Après avoir complété l'Exercice 1, votre document devrait ressembler à ceci"}
-knitr::include_graphics('figures/n6.png')
+::: {.callout-note title="Solution" collapse="true"}
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+
+# Extensions utilisées
+library(kableExtra)
+library(tidyverse)
+
+# Regrouper les variables dans des vecteurs
+section <- c("Métadonnées", "Langage Rmarkdown", "Bloc de codes R")
+lignes <- c("1:5", "6:10, 14", "11:13")
+correspond <- c("=", "=", "=")
+df03 <- data.frame(section, correspond, lignes)
+
+# kableExtra
+kbl(df03,
+    align = c("l", "c", "r")) %>% 
+#    column_spec(7, color = "white", background = "navy") %>% 
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
 ```
+
+:::
+
+## Exercice 2
+
+Le bloc de codes R ci-dessous permet de générer deux variables (salaire [`salaire`], nombre d'années de scolarité post-secondaire [`années_postsec`]) mesurées, de manière hypothétique, chez 50 anciens étudiants de l'université de Moncton. Pouvez-vous créer un graphique en nuage de points avec la fonction `plot()` qui met en relation la variable `salaire` (exprimée en miliers) en fonction de la variable `année_postsec` ? Si désiré, vous pouvez ajouter une droite de régression linéaire et modifier les attributs du graphique.
+
+```{r}
+set.seed(seed = 123)
+salaire <- sort(rnorm(n = 50, mean = 135, sd = 25)) # en milliers
+année_postsec <- sort(rpois(n = 50, lambda = 6))
+```
+
+::: {.callout-note title="Solution 1" collapse="true"}
+
+```{r}
+# Graphique avec R de base avec des points
+plot(x = année_postsec, y = salaire,
+     xlab = "Nombre d'années d'étude post-secondaire",
+     ylab = "Salaire (x 1000$)",
+     col = "#D55E00",
+     frame.plot = FALSE,
+     type = "p",
+     cex = 1.75,
+     las = 1,
+     pch = 1,
+     xlim = c(0, 10),
+     ylim = c(80, 200)) 
+```
+
+:::
+
+::: {.callout-note title="Solution 2 - Avec droite de régression linéaire" collapse="true"}
+
+```{r}
+# Modèle de régression linéaire
+mod1 <- lm(salaire ~ année_postsec)
+
+# Graphique avec R de base avec des points
+plot(x = année_postsec, y = salaire,
+     xlab = "Nombre d'années d'étude post-secondaire",
+     ylab = "Salaire (x 1000$)",
+     col = "#D55E00",
+     frame.plot = FALSE,
+     type = "p",
+     cex = 1.75,
+     las = 1,
+     pch = 1,
+     xlim = c(0, 10),
+     ylim = c(80, 200)) 
+
+# Ajout de la droite de régression linéaire dans le nuage de points
+abline(reg = mod1, 
+       col = "navy", 
+       lwd=2,              # largeur de la ligne
+       lty = "longdash")     # type de ligne
+```
+
+:::
+
+## Exercice 3
+
+Pouvez-vous calculer la moyenne et l'écart-type des deux variables utilisées dans le problème précédent ? Pour le salaire, multipliez les valeurs par 1000 pour exprimer les chiffres sur l'échelle réelle en dollars.
+
+::: {.callout-note title="Solution" collapse="true"}
+
+```{r}
+# Moyenne salaire
+mean(salaire)*1000
+
+# Moyenne années d'étude post-secondaires
+mean(année_postsec)
+
+# Écart-type salaire
+sd(salaire)*1000
+
+# Écart-type années d'étude post-secondaires
+sd(année_postsec)
+```
+
+:::
+
+### Défit
+
+Pouvez-vous calculer la moyenne et l'écart-type des deux variables utilisées dans le problème précédent et les présenter sous forme de tableau avec l'extension `kableExtra` ?
+
+::: {.callout-note title="Solution" collapse="true"}
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+
+# Extensions utilisées
+library(kableExtra)
+library(tidyverse)
+
+# Calculer les statistiques descriptives
+moyenne_s <- mean(salaire)*1000
+moyenne_a <- mean(année_postsec)
+ecartype_s <- sd(salaire)*1000
+ecartype_a <- sd(année_postsec)
+
+# Regrouper les variables dans des vecteurs
+Variables <- c("Salaire", "Années_postsecondaires")
+Moyenne <- c(moyenne_s, moyenne_a)
+Écart_type <- c(ecartype_s, ecartype_a)
+
+# Regrouper les vecteurs dans un data.frame
+df02 <- data.frame(Variables = Variables,
+                   Moyenne = format(Moyenne, digits = 8),
+                   Écart_type = format(Écart_type, digits = 3))
+
+# Créer le tableau
+kbl(df02,
+    caption = "Tableau 3. Statistiques descriptives avec kableExtra",
+    align = c("l", "r", "r")) %>% 
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+:::
+
+## Exercice 4
+
+Voici une série du type `Questions à choix multiples`.
+
+::: {.callout-note title="Cliquez ici pour consulter les questions à choix multiples et les réponses" collapse="true"}
+
+```{r}
+#| echo: false
+#| results: asis
+
+# Define the questions
+q1 <- "1. Avec R, il n'est malheureusement pas possible de réutiliser un objet R dans un autre bloc de codes"
+q2 <- "2. Si mon objet R se nomme `oranges$poids`, le terme poids désigne l’ensemble de données qui contient la variable oranges"
+q3 <- "3. La fonction `data()` sert à rechercher la liste de tous les ensembles de données disponibles avec R"
+q4 <- "4. Quel est le nom de la fonction R qui permet d'examiner la structure d'un ensemble de données et des variables qu'il contient ?"
+q5 <- "5. L'argument `pch` de la fonction `plot()` permet de :"
+q6 <- "6. Dans un bloc de codes R, que signifie la présence du symbole numéro (#) ?"
+
+# Define the answer choices
+q1_choices <- c("Vrai", answer="Faux")
+q2_choices <- c("Vrai", answer="Faux")
+q3_choices <- c(answer="Vrai", "Faux")
+q4_choices <- c(answer="str()", "print()", "head()", "data()")
+q5_choices <- c("préciser le type de ligne qui relie les points", answer="préciser la forme des points dans le graphique", "de mettre à l'horizontal les étiquettes sur l'axe des Y", "de préciser la grosseur des points dans le graphique")
+q6_choices <- c("Compter le nombre de données", "Identifier le nombre de lignes dans le bloc de code R", "Permet d'ajouter une ligne de codes dans le bloc de codes R", answer="Permet d'ajouter des commentaires qui ne sont pas traités comme des codes R")
+
+cat(q1,longmcq(q1_choices))
+cat(q2,longmcq(q2_choices))
+cat(q3,longmcq(q3_choices))
+cat(q4,longmcq(q4_choices))
+cat(q5,longmcq(q5_choices))
+cat(q6,longmcq(q6_choices))
+
+```
+
+:::
+
+## Exercice 5
+
+Voici une série de questions du type `Remplir l'espace vide`.
+
+::: {.callout-note title="Cliquez ici pour consulter les questions du type Remplir l'espace vide" collapse="true"}
+
+1. Quel est le nom de la fonction R qui permet d'examiner les premières valeurs de chacune des variables d'un ensemble de données ? À la suite du nom de la fonction, ajoutez des parenthèses vides `()` sans laisser d'espace. 
+
+`r fitb(c("head()"), ignore_case = FALSE)`
+
+2. Quelle expression devez-vous écrire en langage Rmarkdown si vous désirez insérer l'objet R nommé `x4` directement dans votre document `Quarto` ? Attention, dans votre réponse, n'écrivez-pas les accents de grave (  ` ) qui accompagnent habituellement l'insertion de ce type d'expression en langage Rmarkdown.
+
+`r fitb(c("r x4", "r. x4"), ignore_case = FALSE)`
+
+3. Comment se nomme la section d'un document `Quarto` dans lequel vous précisez le nom de l'auteur, le type du document et le format de présentation (ex: html) du document ?
+
+`r fitb(c("métadonnées", "les métadonnées", "section des métadonnées", "la section des métadonnées", "yaml"), ignore_case = TRUE)`
+
+4. Si mon ensemble de données (`data.frame`) se nomme `Titanic` et que la variable qui m'intéresse se nomme `Survived`, quel est le nom de cet objet R ?
+
+`r fitb(c("Titanic$Survived", " Titanic$Survived", " Titanic$Survived "), ignore_case = FALSE)`
+
+5. Quel est le nom de la fonction R qui permet de créer un graphique de type `scatterplot` qui met en relation la variable `y` en fonction de la variable `x` ? À la suite du nom de la fonction, ajoutez des parenthèses vides `()` sans laisser d'espace. 
+
+`r fitb(c("plot()"), ignore_case = FALSE)`
+
+:::

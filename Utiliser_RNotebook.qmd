@@ -1,0 +1,125 @@
+---
+format:
+  html:
+    css: include/webex.css
+    include-after-body: include/webex.js
+lang: fr
+language:
+  en:
+    crossref-tbl-title: "Table"
+  fr:
+    crossref-tbl-title: "Tableau"
+---
+
+# Utiliser Quarto
+
+Nous sommes maintenant prêts à créer un fichier qui utilise le format de présentation R Notebook. À partir d'un document vierge, nous allons graduellement ajouter des éléments à notre script jusqu'au moment où nous seront en mesure d'ajouter des codes R.
+
+## Nouveau fichier
+
+Après l'ouverture de votre projet RStudio, vous devez maintenant créer votre fichier R Notebook. Pour ce faire, deux options s'offrent à vous :
+
+1. La première solution consiste à cliquez sur l'icone avec le rond vert et le signe + blanc à l'intérieur (lequel est situé dans le coin supérieur gauche du menu de RStudio) (voir Figure \@ref(fig:fig13)). Par la suite, il faut sélectionner R Notebook dans les options offertes dans la bande déroulante. 
+
+```{r fig13, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Créer un nouveau document R Notebook à partir du menu"}
+knitr::include_graphics('figures/n8.png')
+```
+
+2. La seconde solution consiste, à partir du menu de RStudio, de sélectionner : **File > New File > R Notebook** (voir Figure \@ref(fig:fig1331)).
+
+```{r fig1331, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Créer un nouveau document R Notebook à partir de l'icone"}
+knitr::include_graphics('figures/n7.png')
+```
+
+Remarquez que la fenêtre Source de RStudio contient maintenant un fichier du nom de <font color = "red">Untitled1*</font>.
+
+## Effacer texte {#cut}
+
+Par défaut, tous les nouveaux fichiers R Notebook qui s'affichent dans la fenêtre Source de RStudio contiennent du texte qui explique, brièvement, comment utiliser R Notebook. Ce texte, bien que pertinent, doit être enlevé de la fenêtre Source de RStudio. Je recommande de l'effacer en sélectionnant le texte et de l'effacer à l'aide de l'option **cut** (voir Figure \@ref(fig:fig14)).
+
+Assurez-vous, cependant, **de ne pas effacer les six premières lignes**, incluant les lignes avec des tirets (`---`) ! Cette section, nommée Métadonnées, est nécessaire pour générer le fichier R Notebook.
+
+```{r fig14, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Effacer le texte inutilisé lors de l'ouverture d'un nouveau document R Notebook"}
+knitr::include_graphics('figures/n9.png')
+```
+
+## Répertoire de travail
+
+*Si vous avez créé un projet RStudio (voir Section \@ref(projetRStudio)), vous pouvez sauter cette section et vous diriger à la Section \@ref(preview).*
+
+Si vous n'avez pas créé un projet RStudio pour votre environnement de travail pour ce projet en particulier[^RProject], avant de sauvegarder le fichier, il est important de décider du répertoire de travail (**Working directory**) sur votre ordinateur où vous allez sauvegarder les fichiers .Rmd et .nb.html qui seront sauvegardés par RStudio. Une fois cette décision prise, il faut indiquer à RStudio où se trouve ce répertoire de travail sur votre ordinateur.
+
+[^RProject]: Je recommande fortement de créer un projet RStudio (voir **File > New Project...**) lorsque vous débuter un nouveau projet d'analyses statistiques. En créant un projet RStudio, tous vous fichiers sont conservés dans le même répertoire sur votre ordinateur. Rien n'empêche que vous devez créer ce répertoire sur votre ordinateur et vous assurez d'y déposer vos fichiers de données (ex: .xlsx, .csv, .dat, etc.)
+
+Bien qu'il existe plusieurs façons de faire pour sélectionner le répertoire de travail, je recommande d'utiliser le menu de RStudio. Dans le menu, cliquez sur **Session**, sélectionnez **Set Working directory** et ensuite, cliquez sur **Choose Directory...** (voir Figure \@ref(fig:fig15)). 
+
+```{r fig15, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Comment sélectionner un répertoire de travail"}
+knitr::include_graphics('figures/1wd.png')
+```
+
+Lorsque le répertoire de travail est sélectionné, la fenêtre Console de RStudio génère un code à partir de la fonction **setwd** qui indique où se trouve votre répertoire de travail sur votre ordinateur (voir Figure \@ref(fig:fig16)). Remarquez aussi que le chemin d'accès au répertoire de travail sélectionné est aussi indiqué dans l'onglet **Files** de RStudio.
+
+```{r fig16, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Code qui indique où se trouve le répertoire de travail sur l'ordinateur"}
+knitr::include_graphics('figures/1home.png')
+```
+
+## Preview on save {#preview}
+
+Après avoir effacer le texte (voir Section \@ref(cut)) et avoir créé votre répertoire de travail (si nécessaire), je vous invite à cocher l'option **Preview on Save** (voir Figure \@ref(fig:fig191)). De cette façon, à chaque fois que vous sauvegarderez votre fichier, le document final sera mise à jour dans la fenêtre **Viewer** de RStudio. C'est une bonne façon de voir, en temps réel, la progression de votre document en format .html.
+
+```{r fig191, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Sélectionner l'option Preview on Save"}
+knitr::include_graphics('figures/p03_preview_on_save.png')
+```
+
+## Sauvegarder
+
+Vous êtes maintenant prêts à sauvegarder le fichier R Notebook sur votre ordinateur. Notez que la démarche démontrée ci-dessous est effectuée après avoir créé un projet RStudio du nom de *Projet_1*. Pour la sauvegarde, encore une fois, deux options s'offrent à vous :
+
+1. Cliquez sur l'icone de la petite disquette bleue  (voir Figure \@ref(fig:fig17)).
+
+```{r fig17, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Sauvegarder le nouveau document R Notebook"}
+knitr::include_graphics('figures/n2.png')
+```
+
+2. La seconde solution consiste, à partir du menu de RStudio, de sélectionner : **File > Save** (voir Figure \@ref(fig:fig1332)).
+
+```{r fig1332, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Créer un nouveau document R Notebook à partir de l'icone"}
+knitr::include_graphics('figures/n3.png')
+```
+
+Par la suite, effacez **Untitled1** et écrivez le nom du fichier que vous désirez utiliser. Cliquez sur **Save** (voir Figure \@ref(fig:fig18)). 
+
+```{r fig18, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Inscrire le nom du nouveau document R Notebook"}
+knitr::include_graphics('figures/n4.png')
+```
+
+## Deux fichiers {#deuxfichiers}
+
+Après avoir cliquer sur **Save**, RStudio sauvegarde deux fichiers avec le même nom dans votre répertoire de travail (dans notre exemple, ce nom est : Exercice Notebook). La fenêtre **Files** de RStudio montre ces deux fichiers (voir Figure \@ref(fig:fig192)). Un fichier contient une extension .Rmd et l'autre une extension .nb.html. 
+
+- Le fichier .Rmd contient tous vos codes et c'est lui qui permet de modifier et de générer le fichier .html.
+- le fichier .nb.html présente le produit final de votre fichier. Il est mis à jour lorsque l'on clique sur l'option **Preview** de RStudio. 
+
+```{r fig192, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Votre projet RStudio comprend maintenant deux nouveaux fichiers, un ficher .Rmd et un fichier .html"}
+knitr::include_graphics('figures/n5.png')
+```
+
+## Exercice 1
+
+Voici un exercice dont les objectifs sont : (1) de créer un nouveau projet RStudio et (2) de créer un nouveau fichier R Notebook. Les instructions sont :
+
+1. À partir de **Finder** (Mac) ou de **Explorateur de fichiers** (PC), créez un répertoire sur votre ordinateur, du type : 
+    + Home > Desktop > PSYC2002 > Periode 1
+2. Ouvrez le logiciel RStudio
+3. Créez, dans le répertoire que vous avez créé à l'étape 1, un nouveau projet RStudio du nom de **Projet_1**.
+4. À l'aide de RStudio, créez un nouveau fichier R Notebook
+5. Activez l'option **Save on Preview**
+6. Sauvegarder votre fichier R Notebook sous le nom de **Exercice Notebook** dans le répertoire de travail du projet RStudio que vous avez créé à l'étape 3
+8. Examiner la fenêtre Files de RStudio (voir Figure \@ref(fig:fig192)) et assurez-vous que deux fichiers s'y trouvent, soit :
+    + Exercice Notebook.Rmd
+    + Exercice Notebook.nb.html
+9. Cliquez sur **Preview** pour visualiser votre document dans la fenêtre **Viewer** de RStudio. Il devrait ressembler à celui présenté par la Figure \@ref(fig:fig193)
+
+```{r fig193, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Après avoir complété l'Exercice 1, votre document devrait ressembler à ceci"}
+knitr::include_graphics('figures/n6.png')
+```

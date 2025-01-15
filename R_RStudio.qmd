@@ -13,53 +13,53 @@ language:
 
 # R et RStudio
 
-Dans ce chapitre, vous trouverez un brève description des logiciels R et RStudio. À la toute fin de ce chapitre, vous trouverez aussi les liens pour les télécharger et les installer sur votre ordinateur[^RStudio_cloud].
+Dans ce chapitre, vous trouverez un brève description des logiciels R et RStudio. À la toute fin de ce chapitre, vous trouverez aussi les liens pour les télécharger et les installer sur votre ordinateur[^r_rstudio-1].
 
-[^RStudio_cloud]: L'interface web [Posit Cloud](https://posit.cloud/?_gl=1*1117k9g*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg3Nzk4MC4xLjAuMTczNjg3Nzk4MC4wLjAuMA..) permet d'utiliser gratuitement les logiciels R et RStudio sans qu'il ne soit nécessaire de télécharger R et RStudio sur votre ordinateur. Mais prenez note qu'il y a un maximum d'heures gratuites d'utilisation et votre compte devient bloquer jusqu'au mois suivant. La seule solution consiste à payer un certain montant d'argent par mois ($).
+[^r_rstudio-1]: L'interface web [Posit Cloud](https://posit.cloud/?_gl=1*1117k9g*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg3Nzk4MC4xLjAuMTczNjg3Nzk4MC4wLjAuMA..) permet d'utiliser gratuitement les logiciels R et RStudio sans qu'il ne soit nécessaire de télécharger R et RStudio sur votre ordinateur. Mais prenez note qu'il y a un maximum d'heures gratuites d'utilisation et votre compte devient bloquer jusqu'au mois suivant. La seule solution consiste à payer un certain montant d'argent par mois (\$).
 
 ## Intro à R
 
-R a été développé par Robert Gentleman et Ross Ihaka du département de statistiques de l’[Université de Auckland](https://www.auckland.ac.nz/en.html) (Nouvelle-Zélande). Le nom R proviendrait de la première lettre du prénom de ces deux auteurs [^S]. Depuis le milieu des années 1997, R est la responsabilité d’un groupe de travail intitulé _The R Project_ [@douglassIntroduction2022; @wickhamDataScienceImport2017]. La liste des membres de ce groupe est disponible en [cliquant ici](https://www.r-project.org/contributors.html).
+R a été développé par Robert Gentleman et Ross Ihaka du département de statistiques de l'[Université de Auckland](https://www.auckland.ac.nz/en.html) (Nouvelle-Zélande). Le nom R proviendrait de la première lettre du prénom de ces deux auteurs [^r_rstudio-2]. Depuis le milieu des années 1997, R est la responsabilité d'un groupe de travail intitulé *The R Project* [@douglassIntroduction2022; @wickhamDataScienceImport2017]. La liste des membres de ce groupe est disponible en [cliquant ici](https://www.r-project.org/contributors.html).
 
-[^S]: Prenez note que R est un langage de programmation qui s'apparente au langage S, lequel a été développé par Rick Becker, John Chambers et Allan Wilks de la compagnie AT&T Bell Laboratories. 
+[^r_rstudio-2]: Prenez note que R est un langage de programmation qui s'apparente au langage S, lequel a été développé par Rick Becker, John Chambers et Allan Wilks de la compagnie AT&T Bell Laboratories.
 
-R n’est pas simplement un logiciel de statistiques mais bien une suite intégrée de fonctionnalités logicielles. R est un environnement de travail pour la manipulation de données, le calcul de données et la représentation graphique de données. Entre autres, R :
+R n'est pas simplement un logiciel de statistiques mais bien une suite intégrée de fonctionnalités logicielles. R est un environnement de travail pour la manipulation de données, le calcul de données et la représentation graphique de données. Entre autres, R :
 
-- permet de manipuler, d'enregistrer et de présenter des données
-- comprend de nombreux opérateurs arithmétiques, logiques et de comparaison
-- comprend une multitude d’outils pour l’analyse statistique de données
-- comprend une capacité graphique exhaustive
-- comprend un langage de programmation
+-   permet de manipuler, d'enregistrer et de présenter des données
+-   comprend de nombreux opérateurs arithmétiques, logiques et de comparaison
+-   comprend une multitude d'outils pour l'analyse statistique de données
+-   comprend une capacité graphique exhaustive
+-   comprend un langage de programmation
 
 ### Avantages
 
-En plus de sa gratuité (telle que discutée dans la préface), R possède de nombreux avantages. 
+En plus de sa gratuité (telle que discutée dans la préface), R possède de nombreux avantages.
 
-- R permet de produire, à partir d'un même système, des analyses statistiques très simples mais aussi des analyses extrêmement complexes.
-- Les nouvelles approches statistiques développées par les statisticiens sont rapidement implantées par les développeurs de la communauté R. Il n'est pas nécessaire d'attendre des années avant qu'une compagnie intègre cette nouvelle approche dans son logiciel.
-- R possède un langage très flexible et il peut être adapté au besoin de l'utilisateur.
-- R est de nature *open source*. Donc, les codes des différentes fonctions statistiques sont disponibles à tous, ce qui permet de vérifier l'exactitude de l'approche utilisée et de les reproduire.
-- L'apprentissage de R facilite grandement l'apprentissage de d'autres logiciels statistiques, comme STATA ou SPSS. L'inverse, cependant, n'est pas vrai.
-- L'apprentissage de R favorise aussi l'apprentissage de d'autres langages informatiques, comme Python.
-- @fogartyQuantitativeSocialScience2018 argumente même que la connaissance de R est un atout incomparable lors de la sélection des candidats qui appliquent aux études gradués. Selon lui, les opportunités d'emploi sont plus grandes pour les candidats ayant des connaissances avec R que pour les autres candidats.
+-   R permet de produire, à partir d'un même système, des analyses statistiques très simples mais aussi des analyses extrêmement complexes.
+-   Les nouvelles approches statistiques développées par les statisticiens sont rapidement implantées par les développeurs de la communauté R. Il n'est pas nécessaire d'attendre des années avant qu'une compagnie intègre cette nouvelle approche dans son logiciel.
+-   R possède un langage très flexible et il peut être adapté au besoin de l'utilisateur.
+-   R est de nature *open source*. Donc, les codes des différentes fonctions statistiques sont disponibles à tous, ce qui permet de vérifier l'exactitude de l'approche utilisée et de les reproduire.
+-   L'apprentissage de R facilite grandement l'apprentissage de d'autres logiciels statistiques, comme STATA ou SPSS. L'inverse, cependant, n'est pas vrai.
+-   L'apprentissage de R favorise aussi l'apprentissage de d'autres langages informatiques, comme Python.
+-   @fogartyQuantitativeSocialScience2018 argumente même que la connaissance de R est un atout incomparable lors de la sélection des candidats qui appliquent aux études gradués. Selon lui, les opportunités d'emploi sont plus grandes pour les candidats ayant des connaissances avec R que pour les autres candidats.
 
 ### Désavantages
 
 Malgré ses avantages, R possèdent quelques inconvénients qui doivent être soulignés :
 
-- Contrairement à STATA, SPSS ou SAS, R n'offre pas de support d'aide centralisé. Heureusement, la communauté R est planétaire et il est relativement facile de trouver réponse à nos questions à l'aide du moteur de recherche de [Google](https://www.google.com/search/howsearchworks/).
-- La courbe d'apprentissage de R est relativement abrupte et les premiers pas avec R peuvent être décourageants.
-- Il y a un manque de consistance dans l'implantation des différentes fonctions statistiques et dans la présentation des fonctions d'aide. Certaines extensions sont très bien expliquées à l'aide de vignettes alors que d'autres sont présentées de façon très rudimentaire.
-- Les mêmes fonctions statistiques peuvent apparaître dans différentes extensions, dédoublant ou triplant même la même fonctionnalité.
-- Différentes fonctions statistiques associées à des extensions différentes possèdent le même nom mais elles n'ont pas la même utilité. Heureusement, il existe des solutions relativement simples pour préciser la fonction que nous désirons utiliser.
+-   Contrairement à STATA, SPSS ou SAS, R n'offre pas de support d'aide centralisé. Heureusement, la communauté R est planétaire et il est relativement facile de trouver réponse à nos questions à l'aide du moteur de recherche de [Google](https://www.google.com/search/howsearchworks/).
+-   La courbe d'apprentissage de R est relativement abrupte et les premiers pas avec R peuvent être décourageants.
+-   Il y a un manque de consistance dans l'implantation des différentes fonctions statistiques et dans la présentation des fonctions d'aide. Certaines extensions sont très bien expliquées à l'aide de vignettes alors que d'autres sont présentées de façon très rudimentaire.
+-   Les mêmes fonctions statistiques peuvent apparaître dans différentes extensions, dédoublant ou triplant même la même fonctionnalité.
+-   Différentes fonctions statistiques associées à des extensions différentes possèdent le même nom mais elles n'ont pas la même utilité. Heureusement, il existe des solutions relativement simples pour préciser la fonction que nous désirons utiliser.
 
 ## Intro à RStudio
 
-RStudio a été développé par une compagnie privée du nom de [Posit](https://posit.co/). RStudio est une interface logicielle entre R et l’utilisateur. Dans sa version de base, telle que démontrée précédemment, R présente une interface relativement sévère qui est difficile à utiliser. RStudio a été développé dans le but d’améliorer le plaisir de l’utilisateur qui interagit avec R. 
+RStudio a été développé par une compagnie privée du nom de [Posit](https://posit.co/). RStudio est une interface logicielle entre R et l'utilisateur. Dans sa version de base, telle que démontrée précédemment, R présente une interface relativement sévère qui est difficile à utiliser. RStudio a été développé dans le but d'améliorer le plaisir de l'utilisateur qui interagit avec R.
 
 Tel que présenté précédemment précédamment, RStudio comprend plusieurs fenêtres qui permettent à l'analyste de rédiger les codes R, tout en examinant les données et les résultats. De plus, RStudio facilite l'exportation des résultats en plusieurs formats (.docx, .pdf, .html).
 
-Notez que RStudio ne se limite pas à être l’interface avec R puisque de nombreux autres langages de programmation y ont été intégrés (ex : Python, STAN, C^++^). Nous allons utiliser la version gratuite de RStudio, soit RStudio IDE. IDE signifie *Integrated Development Environment*. RStudio IDE fonctionne avec plusieurs systèmes d’exploitation, dont Windows, MacOS et Linux.
+Notez que RStudio ne se limite pas à être l'interface avec R puisque de nombreux autres langages de programmation y ont été intégrés (ex : Python, STAN, C^++^). Nous allons utiliser la version gratuite de RStudio, soit RStudio IDE. IDE signifie *Integrated Development Environment*. RStudio IDE fonctionne avec plusieurs systèmes d'exploitation, dont Windows, MacOS et Linux.
 
 Afin de faciliter l'interaction avec R, certaines alternatives à RStudio existent. À titre d'exemples, je souligne [Jupyter notebook](https://jupyter.org/), [Jupyter lab](https://jupyter.org/try), [Architect](https://www.getarchitect.io/), ou [R AnalyticFlow](https://r.analyticflow.com/en/). Malgré tout, RStudio demeure le standard de qualité quand vient le temps d'interagir avec R. Personnellement, si RStudio n'existait pas, j'opterais pour [Jupyter notebook](https://jupyter.org/) via son intégration avec la plateforme [Anaconda Navigator](https://www.anaconda.com/products/individual), principalement en raison de sa simplicité d'utilisation et de son intégration avec le langage Markdown. La @fig-anaconda présente un exemple de codes R à partir de l'application Jupiter notebook (à gauche) et son rendu en format .html (à droite).
 
@@ -88,7 +88,6 @@ RStudio facilite la rédaction des scripts R en proposant de compléter votre sy
 #| echo: false
 knitr::include_graphics('figures/rstudio-binom-test1.png')
 ```
-
 
 ```{r}
 #| label: fig-binom2
@@ -138,28 +137,27 @@ knitr::include_graphics('figures/rstudio-d1-tableur.png')
 
 Le nombre d'options offertes par RStudio est particulièrement vaste et seule une bonne séance de travail avec RStudio nous permettrait d'en faire le tour. Néanmoins, ci-dessous, j'ai ajouté un lien pour une vidéo (10 min. 13 sec.) qui montre les principales caractéristiques de RStudio. Pour toute personne qui débute avec RStudio, le visionnement de cette vidéo est fortement recommandé. Personnellement, j'aurais bien aimé avoir accès à ce type de documentation lorsque j'ai débuté à utiliser RStudio !
 
-- [Vidéo (en anglais) : Comment utiliser RStudio](https://www.youtube.com/watch?v=g9vGnr4kkBU)
- 
+-   [Vidéo (en anglais) : Comment utiliser RStudio](https://www.youtube.com/watch?v=g9vGnr4kkBU)
+
 ## Installer R & RStudio
 
 *Si vous avez déjà installé R et RStudio, vous pouvez sauter cette section.*
 
 ### Vidéo d'installation
 
-Si vous n'avez pas encore installé R et RStudio, voici une vidéo (7 min. 38 sec.) dans laquelle je montre comment installer les logiciels R et RStudio à partir du site web de téléchargement de la compagnie *Posit*. La démonstration est faite à la fois pour le système d'exploitation Windows et pour le système d'exploitation macOS. Pour macOS, j'explique aussi comment identifier si votre ordinateur possède un processeur Apple silicon ou un processeur Intel, ce qui est important pour télécharger la bonne version de R. La @sec-liensweb présente les liens web pour installer R et RStudio. 
+Si vous n'avez pas encore installé R et RStudio, voici une vidéo (7 min. 38 sec.) dans laquelle je montre comment installer les logiciels R et RStudio à partir du site web de téléchargement de la compagnie *Posit*. La démonstration est faite à la fois pour le système d'exploitation Windows et pour le système d'exploitation macOS. Pour macOS, j'explique aussi comment identifier si votre ordinateur possède un processeur Apple silicon ou un processeur Intel, ce qui est important pour télécharger la bonne version de R. La @sec-liensweb présente les liens web pour installer R et RStudio.
 
-[^web]: La vidéo fut produite le 10 janvier 2023.
-
-- [Vidéo (en français) : Installation R RStudio](https://youtu.be/Qiz_CE-kb9o)
+-   [Vidéo (en français) : Installation R RStudio](https://youtu.be/Qiz_CE-kb9o)
 
 ### Liens web {#sec-liensweb}
 
 Voici les liens pour télécharger une version récente (et gratuite) de R et de RStudio. Assurez-vous de télécharger les versions adaptées à votre système d'exploitation (OS, Windows, Linux) :
 
-- [R](https://posit.co/download/rstudio-desktop/)
-- [RStudio Desktop](https://posit.co/download/rstudio-desktop/). 
+-   [R](https://posit.co/download/rstudio-desktop/)
 
-- [XQuartz](https://www.xquartz.org). Pour les utilisateurs d'ordinateur Mac, l'installation du logiciel XQuartz est aussi nécessaire pour la version 10.9 de OS X et les versions les plus récentes de OS X.
+-   [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
+
+-   [XQuartz](https://www.xquartz.org). Pour les utilisateurs d'ordinateur Mac, l'installation du logiciel XQuartz est aussi nécessaire pour la version 10.9 de OS X et les versions les plus récentes de OS X.
 
 ### Installation
 
@@ -167,4 +165,4 @@ Une fois les fichiers .exe (PC) ou .dmg (Mac) téléchargés dans votre dossier 
 
 ## Problèmes et solutions
 
-Dans l'éventualité où, peu importe la raison, vous ne réussissez pas à installer une version pleinement fonctionnelle de R et/ou de RStudio sur votre ordinateur, je vous encourage à utiliser Posit Cloud (voir @sec-positcloud). Cette version de RStudio vous permet d'utiliser R et RStudio directement dans votre navigateur web. 
+Dans l'éventualité où, peu importe la raison, vous ne réussissez pas à installer une version pleinement fonctionnelle de R et/ou de RStudio sur votre ordinateur, je vous encourage à utiliser Posit Cloud (voir @sec-positcloud). Cette version de RStudio vous permet d'utiliser R et RStudio directement dans votre navigateur web.

@@ -24,20 +24,19 @@ book:
       - RStudio_options.qmd
       - RProject.qmd
       - Posit_cloud.qmd
-    - part: "Partie II"
-      chapters:
-      - Utiliser_Quarto.qmd
-      - Metadonnees.qmd
-      - Texte.qmd
-      - Bloc_de_codes.qmd
-      - ExempleR.qmd
-      - Extract.qmd
-      - Save_share.qmd
-      - Problemes.qmd
+    # - part: "Partie II"
+    #   chapters:
+    #   - Utiliser_Quarto.qmd
+    #   - Metadonnees.qmd
+    #   - Texte.qmd
+    #   - Bloc_de_codes.qmd
+    #   - ExempleR.qmd
+    #   - Extract.qmd
+    #   - Save_share.qmd
+    #   - Problemes.qmd
     - part: "Partie III"
       chapters:
       - RProject_avance.qmd
-      
     - references.qmd
 
 bibliography: book0.bib
