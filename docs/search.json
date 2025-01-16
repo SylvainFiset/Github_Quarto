@@ -680,5 +680,16 @@
     "crumbs": [
       "References"
     ]
+  },
+  {
+    "objectID": "Posit_cloud.html#compte-cloud-instructor",
+    "href": "Posit_cloud.html#compte-cloud-instructor",
+    "title": "7  Posit Cloud",
+    "section": "7.2 Compte Cloud Instructor",
+    "text": "7.2 Compte Cloud Instructor\nDans le cadre d’un cours universitaire ou collégial, je recommande fortement l’utilisation d’un compte Cloud Instructor. Ce compte permet au professor d’héberger tous les projets de ses étudiantes et étudiants dans un espace de travail (spaces) dédié à un cours. Le coût — pour le professeur et les étudiante et étudiants — est faible et facilite grandement le travail du professeur.\nLe partage de l’espace de travail peut se faire via une invitation individuelle ou via un lien de partage. De plus, le professeur peut créer des gabarits (templates) qui sont copiés par les étudiantes et étudiants. Ces gabarits peuvent inclure, entre autres, une série d’extension déjà téléchargées dans l’espace de travail et des scripts qui seront modifiés par les étudiantes et étudiants.",
+    "crumbs": [
+      "Partie I",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Posit Cloud</span>"
+    ]
   }
 ]

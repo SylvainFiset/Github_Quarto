@@ -13,22 +13,22 @@ language:
 
 # Posit Cloud {#sec-positcloud}
 
-Dans ce chapitre, j'introduis l'application [Posit Cloud](https://posit.cloud/?_gl=1*10qlpcw*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg4MDY2MS4yLjEuMTczNjg4MDY4My4wLjAuMA..). Posit Cloud est la version web de RStudio IDE. Elle permet : 
+Dans ce chapitre, j'introduis l'application [Posit Cloud](https://posit.cloud/?_gl=1*10qlpcw*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg4MDY2MS4yLjEuMTczNjg4MDY4My4wLjAuMA..). Posit Cloud est la version web de RStudio IDE. Elle permet :
 
-- d'utiliser R et RStudio directement dans votre navigateur web et ce, sans avoir à télécharger les logiciels R et RStudio sur votre ordinateur
-- de partager aisément des projets RStudio avec plusieurs utilisateurs
+-   d'utiliser R et RStudio directement dans votre navigateur web et ce, sans avoir à télécharger les logiciels R et RStudio sur votre ordinateur
+-   de partager aisément des projets RStudio avec plusieurs utilisateurs
 
 Si vous avez téléchargé avec succès les applications R et RStudio sur votre ordinateur (et quelles fonctionnent correctement) et que vous n'envisagez pas de partager vos projets d'analyse avec quelqu'un d'autre (ce qui arrive rarement, soit dit en passant), vous pouvez sauter la lecture de ce chapitre.
 
-Bien que Posit Cloud s'apparente à la version locale[^locale] de RStudio IDE, les premiers pas avec Posit Cloud peuvent s'avérer difficiles. Dans le présent chapitre, je désire soulever quelques éléments importants afin de maximiser l'expérience d'utilisation de Posit Cloud.
+Bien que Posit Cloud s'apparente à la version locale[^posit_cloud-1] de RStudio IDE, les premiers pas avec Posit Cloud peuvent s'avérer difficiles. Dans le présent chapitre, je désire soulever quelques éléments importants afin de maximiser l'expérience d'utilisation de Posit Cloud.
 
-[^locale]: L'expression `version locale` désigne la version de RStudio téléchargée et installée sur un ordinateur (et non dans le nuage, comme Posit Cloud).
+[^posit_cloud-1]: L'expression `version locale` désigne la version de RStudio téléchargée et installée sur un ordinateur (et non dans le nuage, comme Posit Cloud).
 
 ## Création d'un compte
 
-La première étape consiste à créer un compte gratuit (*Free*) sur le site web de [Posit Cloud](https://posit.cloud/?_gl=1*10qlpcw*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg4MDY2MS4yLjEuMTczNjg4MDY4My4wLjAuMA..) (voir @fig-signup). Notez, par ailleurs, que l'utilisateur atteint très rapidement les limites d'utilisation du plan gratuit de Posit Cloud. Dans l'optique où l'utilisateur (i) dépasse le nombre de projets ou d'espaces de travail admissibles, (ii) dépasse le nombre d'heures par projet disponibles, ou (iii) qu'il désire augmenter la mémoire RAM et la vitesse d'exécution des codes, le plan *Premium* de Posit Cloud s'avère une alternative intéressante, mais relativement dispendieuse[^premium].
+La première étape consiste à créer un compte gratuit (*Free*) sur le site web de [Posit Cloud](https://posit.cloud/?_gl=1*10qlpcw*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg4MDY2MS4yLjEuMTczNjg4MDY4My4wLjAuMA..) (voir @fig-signup). Notez, par ailleurs, que l'utilisateur atteint très rapidement les limites d'utilisation du plan gratuit de Posit Cloud. Dans l'optique où l'utilisateur (i) dépasse le nombre de projets ou d'espaces de travail admissibles, (ii) dépasse le nombre d'heures par projet disponibles, ou (iii) qu'il désire augmenter la mémoire RAM et la vitesse d'exécution des codes, le plan *Premium* de Posit Cloud s'avère une alternative intéressante, mais relativement dispendieuse[^posit_cloud-2].
 
-[^premium]: Cela est d'autant plus vrai que la version locale de RStudio IDE est, elle, disponible gratuitement.
+[^posit_cloud-2]: Cela est d'autant plus vrai que la version locale de RStudio IDE est, elle, disponible gratuitement.
 
 ```{r}
 #| label: fig-signup
@@ -39,20 +39,26 @@ La première étape consiste à créer un compte gratuit (*Free*) sur le site we
 knitr::include_graphics('figures/RScloud-Free-signUp.png')
 ```
 
+## Compte Cloud Instructor
+
+Dans le cadre d'un cours universitaire ou collégial, je recommande fortement l'utilisation d'un compte *Cloud Instructor*. Ce compte permet au professor d'héberger tous les projets de ses étudiantes et étudiants dans un espace de travail (`spaces`) dédié à un cours. Le coût --- pour le professeur et les étudiante et étudiants --- est faible et facilite grandement le travail du professeur.
+
+Le partage de l'espace de travail peut se faire via une invitation individuelle ou via un lien de partage. De plus, le professeur peut créer des *gabarits* (templates) qui sont copiés par les étudiantes et étudiants. Ces gabarits peuvent inclure, entre autres, une série d'extension déjà téléchargées dans l'espace de travail et des scripts qui seront modifiés par les étudiantes et étudiants.
+
 ## Espaces de travail
 
-Posit Cloud possède la capacité de regrouper plusieurs projets RStudio à l'intérieur d'un même espace de travail. Dans Posit Cloud, ces environnements se nomment `Spaces`. Cette caractéristique permet (1) de regrouper tous vos projets RStudio associés au même thème (ex: un cours universitaire, une formation, une étude scientifique, etc.) à l'intérieur d'un même environnement et/ou (2) de partager un espace de travail avec d'autres personnes, comme un professeur avec ses étudiants. 
+Posit Cloud possède la capacité de regrouper plusieurs projets RStudio à l'intérieur d'un même espace de travail. Dans Posit Cloud, ces environnements se nomment `Spaces`. Cette caractéristique permet (1) de regrouper tous vos projets RStudio associés au même thème (ex: un cours universitaire, une formation, une étude scientifique, etc.) à l'intérieur d'un même environnement et/ou (2) de partager un espace de travail avec d'autres personnes, comme un professeur avec ses étudiants.
 
 Afin d'atteindre ces objectifs, Posit Cloud divise l'espace de travail en deux catégories d'espace :
 
-- les espaces de travail individuels
-- les espaces de travail partagés[^icones].
+-   les espaces de travail individuels
+-   les espaces de travail partagés[^posit_cloud-3].
 
-[^icones]: Les espaces de travail individuels sont illustrés par une icone avec une personne et les espaces de travail partagés sont illustrés par des icones avec trois personnes.
+[^posit_cloud-3]: Les espaces de travail individuels sont illustrés par une icone avec une personne et les espaces de travail partagés sont illustrés par des icones avec trois personnes.
 
 ### Espace individuel
 
-L'espace de travail individuel se trouve dans l'onglet `Your Workspace` sous l'en-tête `Spaces` à la gauche de Posit Cloud (voir @fig-ws). Par défaut, les projets RStudio qui sont créés à l'intérieur de cet espace de travail individuel ne sont disponibles et visibles qu'à l'utilisateur du compte. Cependant, il est possible de rendre disponibles les projets de cet espace individuel afin qu'ils soient consultés et copiés par d'autres utilisateurs de Posit Cloud (si cela vous intéresse, veuillez [cliquer ici](https://rstudio.cloud/learn/guide#:~:text=for%20more%20info.-,Your%20Workspace,-Every%20RStudio%20Cloud)). 
+L'espace de travail individuel se trouve dans l'onglet `Your Workspace` sous l'en-tête `Spaces` à la gauche de Posit Cloud (voir @fig-ws). Par défaut, les projets RStudio qui sont créés à l'intérieur de cet espace de travail individuel ne sont disponibles et visibles qu'à l'utilisateur du compte. Cependant, il est possible de rendre disponibles les projets de cet espace individuel afin qu'ils soient consultés et copiés par d'autres utilisateurs de Posit Cloud (si cela vous intéresse, veuillez [cliquer ici](https://rstudio.cloud/learn/guide#:~:text=for%20more%20info.-,Your%20Workspace,-Every%20RStudio%20Cloud)).
 
 ```{r}
 #| label: fig-ws
@@ -67,9 +73,9 @@ Personnellement, j'utilise rarement l'espace de travail individuel. Je préfère
 
 ### Espaces partagés
 
-Posit Cloud permet de regrouper et de partager avec d'autres utilisateurs des projets RStudio dans le même espace de travail. Les projets RStudio qui sont intégrés à l'intérieur d'un espace de travail partagé doivent obligatoirement avoir un thème commun. Par exemple, je peux regrouper les exercices d'un même cours dans un espace de travail partagé ou regrouper les projets associés à mes travaux de recherche sur une thématique spécifique. Bref, avant de créer un espace de travail partagé, il faut cibler le dénominateur commun aux projets qui y seront regroupés. Dans le cadre d'un cours, par exemple, un professeur peut créer un espace de travail partagé avec tous ces étudiants pour un exercice particulier. Cela lui permet d'avoir accès à tous les travaux effectués dans le cadre de cet exercice[^class].
+Posit Cloud permet de regrouper et de partager avec d'autres utilisateurs des projets RStudio dans le même espace de travail. Les projets RStudio qui sont intégrés à l'intérieur d'un espace de travail partagé doivent obligatoirement avoir un thème commun. Par exemple, je peux regrouper les exercices d'un même cours dans un espace de travail partagé ou regrouper les projets associés à mes travaux de recherche sur une thématique spécifique. Bref, avant de créer un espace de travail partagé, il faut cibler le dénominateur commun aux projets qui y seront regroupés. Dans le cadre d'un cours, par exemple, un professeur peut créer un espace de travail partagé avec tous ces étudiants pour un exercice particulier. Cela lui permet d'avoir accès à tous les travaux effectués dans le cadre de cet exercice[^posit_cloud-4].
 
-[^class]: Posit Cloud a d'ailleurs été conçu, en partie, pour répondre à ce besoin lors de l'enseignement de R et de RStudio.
+[^posit_cloud-4]: Posit Cloud a d'ailleurs été conçu, en partie, pour répondre à ce besoin lors de l'enseignement de R et de RStudio.
 
 À titre d'exemple, la @fig-spaces montre --- voir la colonne de gauche --- que j'ai créé un espace de travail partagé (voir l'icone avec 3 personnes) du nom de `Exercices`. Si désiré, je pourrais créer un nouvel espace de travail partagé en cliquant sur `+ New Space`. Personnellement, tous mes espaces de travail dans Posit Cloud sont de nature partagée. Cette façon de faire me permet, si désiré, de rendre disponibles plusieurs projets à plusieurs personnes, et ce, très rapidement.
 
@@ -84,13 +90,13 @@ knitr::include_graphics('figures/RScloud-NewSpace.png')
 
 ## Projets
 
-RStudio oblige l'utilisateur à créer un projet RStudio, ce qui, à mon avis, est une très bonne chose [^projetR]. À titre de rappel (voir Chapitre \@ref(projetRStudio)), un projet RStudio permet de regrouper tous les fichiers (données, analyses, figures, etc.) liés à un projet d'analyse statistique. 
+RStudio oblige l'utilisateur à créer un projet RStudio, ce qui, à mon avis, est une très bonne chose [^posit_cloud-5]. À titre de rappel (voir le @sec-projetRStudio), un projet RStudio permet de regrouper tous les fichiers (données, analyses, figures, etc.) liés à un projet d'analyse statistique.
+
+[^posit_cloud-5]: Si vous n'êtes pas familier avec les projets RStudio, je vous invite à consulter la @sec-projetRStudio.
 
 ### Créer un nouveau projet
 
 Pour créer un nouveau projet, il suffit de cliquer sur la flèche (`∨`) de l'onglet `New Project` (voir à droite de la @fig-spaces) et, dans la bande déroulante, de sélectionner l'option `New RStudio Project` (voir @fig-newproject). Pendant quelques secondes, le message *Deploying Project* apparaît et, ensuite, votre nouveau projet s'ouvre dans Posit Cloud.
-
-[^projetR]: Si vous n'êtes pas familier avec les projets RStudio, je vous invite à consulter la @sec-projetRStudio.
 
 ```{r}
 #| label: fig-newproject
@@ -100,6 +106,20 @@ Pour créer un nouveau projet, il suffit de cliquer sur la flèche (`∨`) de l'
 #| echo: false
 knitr::include_graphics('figures/RScloud-newProject.png')
 ```
+
+### Template
+
+Vous aurez probablement remarqué qu'il est possible de créer un nouveau projet à partir d'un gabarit (*Template*). Par défaut, quelques gabarits sont disponibles mais, honnêtement, ne perdez pas votre temps avec ces gabarits (s'ils sont disponibles). Il est préférable de construire son projet RStudio à partir d'un document neuf ou d'un projet que vous avez déjà utilisé. 
+
+Néanmoins, dans le cadre d'un cours, le professeur peut créer un gabarit qui sert de base pour la construction d'un exercice particulier, incluant les extensions R nécessaires à sa réalisation. Dans ce cas là, l'utilisation du gabarit est recommandée. Si cela se produit, le gabarit sera répliqué dans votre compte sur Posit Cloud et vous pourrez le modifier à volonté comme si c'était votre projet.
+
+### Devoirs (`Assignments`)
+
+Dans le cadre d'un cours, un professeur peut créer un projet RStudio qui contient tous les fichiers (données, explications, solution) nécessaires à la réalisation d'un exercice --- devoir --- spécifique. Si le professeur produit un devoir (`assignment`) dans Posit Cloud, vous recevrez un lien par courriel (ou autre moyen de communication électronique utilisé par le professeur). Il suffit de cliquer sur le lien et d'ouvrir votre compte Posit Cloud. Vous verrez un projet avec un icone bleu du nom de `Start`. Cliquez sur cette icone pour dupliquer le projet du professeur. Par la suite, je suggère de changer le nom de ce projet dupliqué pour y ajouter votre nom. Le professeur pouvoir avoir accès à votre projet RStudio directement dans son propre compte.
+
+Une fois que le projet du devoir fut dupliqué et renommé, il demeure accessible dans votre fenêtre `All Content`. Mais, ne l'utilisez pas. Il faut maintenant travailler avec le projet auquel vous avez ajouté votre nom. C'est ce projet que le professeur voit dans son espace de travail. 
+
+La @fig-duplique montre que le projet avec votre nom (étudiant) à utiliser est présent dans votre espace de travail. Vous pouvez le modifier à volonter puisqu'il vous appartient. Remarquez tous les petits icones à la droite de ce projet renommé, ce qui n'est pas le cas pour le projet partagé par le professeur.
 
 ### Renommer le nouveau projet
 
@@ -127,15 +147,15 @@ knitr::include_graphics('figures/RScloud-exercices.png')
 
 ### Importer des fichiers dans un projet
 
-Habituellement, l'analyste importe un ou des fichiers de données (.xlsx, .dat, .txt, .csv, etc.) dans RStudio pour ensuite l'analyser à l'aide d'un script R ou d'un script R Markdown. Avec la version locale de RStudio IDE, l'analyste n'a qu'à copier son fichier dans le répertoire qui contient son projet RStudio. Avec Posit Cloud, l'approche est différente. À partir du projet RStudio, il faut importer le fichier de données dans l'espace *cloud* dédié à ce projet sur le serveur de RStudio. 
+Habituellement, l'analyste importe un ou des fichiers de données (.xlsx, .dat, .txt, .csv, etc.) dans RStudio pour ensuite l'analyser à l'aide d'un script R ou d'un script R Markdown. Avec la version locale de RStudio IDE, l'analyste n'a qu'à copier son fichier dans le répertoire qui contient son projet RStudio. Avec Posit Cloud, l'approche est différente. À partir du projet RStudio, il faut importer le fichier de données dans l'espace *cloud* dédié à ce projet sur le serveur de RStudio.
 
-Voici un exemple. Dans la fenêtre **Files** de RStudio, nous pouvons voir que le projet RStudio (`project.Rproj`) est inséré dans le dossier `Cloud > Project` (voir @fig-upload). 
+Voici un exemple. Dans la fenêtre **Files** de RStudio, nous pouvons voir que le projet RStudio (`project.Rproj`) est inséré dans le dossier `Cloud > Project` (voir @fig-upload).
 
-1. Nous pouvons importer un fichier de données dans ce dossier en cliquant sur l'onglet `Upload`.
-2. Une fenêtre s'ouvre et il faut simplement cliquer sur `Choisir le fichier` sous l'en-tête `File to upload`. Dans mon exemple, le fichier que je désire importé se nomme `RatLives.csv`[^KruschkeData]. Il est possible d'importer plusieurs fichiers simultanément. Ceux-ci, cependant, doivent être regroupés, au préalable, à l'intérieur d'un fichier .zip. 
-3. Après l'importation, le fichier (`RatLives.csv`) est disponible dans le projet Posit Cloud.
+1.  Nous pouvons importer un fichier de données dans ce dossier en cliquant sur l'onglet `Upload`.
+2.  Une fenêtre s'ouvre et il faut simplement cliquer sur `Choisir le fichier` sous l'en-tête `File to upload`. Dans mon exemple, le fichier que je désire importé se nomme `RatLives.csv`[^posit_cloud-6]. Il est possible d'importer plusieurs fichiers simultanément. Ceux-ci, cependant, doivent être regroupés, au préalable, à l'intérieur d'un fichier .zip.
+3.  Après l'importation, le fichier (`RatLives.csv`) est disponible dans le projet Posit Cloud.
 
-[^KruschkeData]: Ce fichier provient des fichiers de données qui accompagnent le livre de John Kruschke, *Doing Bayesian Data Analysis*.
+[^posit_cloud-6]: Ce fichier provient des fichiers de données qui accompagnent le livre de John Kruschke, *Doing Bayesian Data Analysis*.
 
 ```{r}
 #| label: fig-upload
@@ -148,10 +168,10 @@ knitr::include_graphics('figures/RScloud-uploadFile.png')
 
 ### Examiner la liste des projets
 
-Il est possible d'obtenir la liste de tous les projets d'un même espace de travail. Pour cela, il faut cliquer sur le nom de l'espace de travail que vous désirez consulter. Dans mon exemple, le nom de mon espace de travail est `Exercices`. Pour voir la liste des projets associés à cet espace de travail, deux choix s'offrent à moi : 
+Il est possible d'obtenir la liste de tous les projets d'un même espace de travail. Pour cela, il faut cliquer sur le nom de l'espace de travail que vous désirez consulter. Dans mon exemple, le nom de mon espace de travail est `Exercices`. Pour voir la liste des projets associés à cet espace de travail, deux choix s'offrent à moi :
 
-1. Je peux cliquer sur l'onglet `Exercices [Sylvain Fiset]` dans la liste des espaces à la gauche de la fenêtre de Posit Cloud (sous l'en-tête `Spaces`).
-2. Je peux aussi cliquer sur `Exercices` dans le titre `Exercices / Exercice2` de mon projet qui est déjà ouvert. 
+1.  Je peux cliquer sur l'onglet `Exercices [Sylvain Fiset]` dans la liste des espaces à la gauche de la fenêtre de Posit Cloud (sous l'en-tête `Spaces`).
+2.  Je peux aussi cliquer sur `Exercices` dans le titre `Exercices / Exercice2` de mon projet qui est déjà ouvert.
 
 La @fig-liste montre un exemple de la liste des projets disponibles pour mon espace de travail `Exercices`.
 
@@ -168,10 +188,10 @@ knitr::include_graphics('figures/RScloud-ProjectsList.png')
 
 Lorsque la liste des projets d'un espace de travail de Posit Cloud est affichée à l'écran, vous pouvez facilement exporter l'un des projets sur votre ordinateur et le partager. Il suffit de cliquer sur l'option `Export`, laquelle est située à la droite du nom du projet dans la liste (voir la @fig-liste). Tous les fichiers associés à ce projet seront exportés. L'exportation d'un projet Posit Cloud sert principalement deux objectifs :
 
-1. L'exportation permet de sauvegarder une copie de votre projet sur votre ordinateur.
-2. L'exportation facilite grandement le partage des projets RStudio entre les utilisateurs[^share].
+1.  L'exportation permet de sauvegarder une copie de votre projet sur votre ordinateur.
+2.  L'exportation facilite grandement le partage des projets RStudio entre les utilisateurs[^posit_cloud-7].
 
-[^share]: Si vous ne désirez pas utiliser la fonction `share` de Posit Cloud.
+[^posit_cloud-7]: Si vous ne désirez pas utiliser la fonction `share` de Posit Cloud.
 
 Après avoir cliquer sur l'option `Export`, une première fenêtre s'ouvre et génère le dossier d'exportation du projet. Ensuite, une seconde fenêtre apparaît et il faut cliquer sur `Download` pour télécharger le dossier (voir la @fig-export). Par défaut, le projet est téléchargé dans le répertoire (ou dossier) de téléchargement de votre ordinateur. Il conserve exactement la même structure que votre dossier dans Posit Cloud. Vous pouvez donc l'ouvrir avec la version locale de RStudio IDE sur votre ordinateur et avoir accès à tous les fichiers. Prenez note que lors du téléchargement, le dossier de téléchargement se voit attribuer un nom arbitraire composé de 7 chiffres. Si vous téléchargez à plusieurs reprises le même projet, le nom à 7 chiffres demeure le même d'un téléchargement à l'autre.
 
@@ -188,7 +208,7 @@ knitr::include_graphics('figures/RScloud-export.png')
 
 L'un des avantages de Posit Cloud est la possibilité de partager des projets RStudio avec plusieurs utilisateurs sans avoir à télécharger le projet. Tous les utilisateurs ont accès au même projet via Posit Cloud. Par exemple, les membres d'une même équipe de recherche peuvent contribuer sur un même projet d'analyse statistique ou un étudiant peut partager son projet avec son professeur.
 
-Le partage d'un projet Posit Cloud s'effectue à partir de l'espace de travail partagé (dans `Spaces`) dans lequel vous avez créé (ou déplacé) votre projet. Afin de partager votre espace de travail partagé, vous devez ajouter des membres. Sur la page d'ouverture de Posit Cloud, cliquez sur le nom de l'espace de travail que vous désirez partager. Au haut de l'écran, cliquez sur `Members`. La liste des membres de l'environnement de travail sera affichée (voir Figure \@ref(fig:members)). Par la suite, cliquez sur l'option `Add Member` pour inviter de nouveaux membres. Lors de l'invitation, vous devrez fournir une adresse courriel et préciser le rôle du nouveau membre (*Admin*, *Moderator*, *Contributor*, *Viewer*). Par défaut, le choix *Contributor* est offert et, à moins de raisons valables, ce choix demeure la meilleure option. De plus, en tant qu'administrateur de cet environnement de travail, vous pouvez déterminer les privilèges que vous désirez accorder à chaque membre que vous invitez (voir l'encadré pointillé à la droite de la @fig-members). 
+Le partage d'un projet Posit Cloud s'effectue à partir de l'espace de travail partagé (dans `Spaces`) dans lequel vous avez créé (ou déplacé) votre projet. Afin de partager votre espace de travail partagé, vous devez ajouter des membres. Sur la page d'ouverture de Posit Cloud, cliquez sur le nom de l'espace de travail que vous désirez partager. Au haut de l'écran, cliquez sur `Members`. La liste des membres de l'environnement de travail sera affichée (voir Figure \@ref(fig:members)). Par la suite, cliquez sur l'option `Add Member` pour inviter de nouveaux membres. Lors de l'invitation, vous devrez fournir une adresse courriel et préciser le rôle du nouveau membre (*Admin*, *Moderator*, *Contributor*, *Viewer*). Par défaut, le choix *Contributor* est offert et, à moins de raisons valables, ce choix demeure la meilleure option. De plus, en tant qu'administrateur de cet environnement de travail, vous pouvez déterminer les privilèges que vous désirez accorder à chaque membre que vous invitez (voir l'encadré pointillé à la droite de la @fig-members).
 
 ```{r}
 #| label: fig-members
@@ -216,8 +236,8 @@ knitr::include_graphics('figures/RScloud-project-accessibility.png')
 
 Si vous désirez effacer un projet de votre compte Posit Cloud, deux possibilités s'offrent à vous :
 
-- Dans la liste des projets associés à un espace de travail spécifique, cliquez sur l'option `Delete`. L'option `Delete` est située à la droite du nom du projet dans la liste des projets (voir la @fig-liste).
-- Lorsque le projet est déjà ouvert dans Posit Cloud, vous pouvez cliquer sur l'icone avec les trois petits points à l'horizontal situé près de votre nom en haut à droite de la page web de Posit Cloud. Ensuite, sélectionnez l'option `Delete Project` dans la bande déroulante (voir la @fig-delete).
+-   Dans la liste des projets associés à un espace de travail spécifique, cliquez sur l'option `Delete`. L'option `Delete` est située à la droite du nom du projet dans la liste des projets (voir la @fig-liste).
+-   Lorsque le projet est déjà ouvert dans Posit Cloud, vous pouvez cliquer sur l'icone avec les trois petits points à l'horizontal situé près de votre nom en haut à droite de la page web de Posit Cloud. Ensuite, sélectionnez l'option `Delete Project` dans la bande déroulante (voir la @fig-delete).
 
 ```{r}
 #| label: fig-delete
@@ -248,4 +268,3 @@ knitr::include_graphics('figures/RScloud-account.png')
 ## Quitter Posit Cloud
 
 Pour quitter Posit Cloud, n'oubliez pas de cliquez l'option `Log Out` après avoir cliquer sur votre nom (voir la @fig-account).
-
