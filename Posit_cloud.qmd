@@ -131,6 +131,8 @@ knitr::include_graphics('figures/RScloud-spaceMembers.png')
 
 ### Effacer un espace de travail
 
+::: {.callout-tip title="Exemple - Effacer un espace de travail" collapse="true"}
+
 Si vous désirez effacer un espace travail de votre compte Posit Cloud, cliquez sur le nom de votre espace de travail et ensuite  cliquez sur l'icone avec les trois petits points à l'horizontal situé près de votre nom en haut à droite de la page web de Posit Cloud. Finalement, sélectionnez l'option `Delete Sapce` dans la bande déroulante (voir la @fig-deletespace).
 
 ```{r}
@@ -142,6 +144,8 @@ Si vous désirez effacer un espace travail de votre compte Posit Cloud, cliquez 
 knitr::include_graphics('figures/posit_cloud_delete_space.png')
 ```
 
+:::
+
 ## Projets {#sec-projets}
 
 RStudio oblige l'utilisateur à créer un projet RStudio, ce qui, à mon avis, est une très bonne chose [^posit_cloud-5]. À titre de rappel (voir le @sec-projetRStudio), un projet RStudio permet de regrouper tous les fichiers (données, analyses, figures, etc.) liés à un projet d'analyse statistique.
@@ -149,6 +153,8 @@ RStudio oblige l'utilisateur à créer un projet RStudio, ce qui, à mon avis, e
 [^posit_cloud-5]: Si vous n'êtes pas familier avec les projets RStudio, je vous invite à consulter la @sec-projetRStudio.
 
 ### Créer un nouveau projet
+
+::: {.callout-tip title="Exemple - Création d'un nouveau projet" collapse="true"}
 
 Pour créer un nouveau projet, il suffit de cliquer sur la flèche (`∨`) de l'onglet `New Project` (voir à droite de la @fig-newproject) et, dans la bande déroulante, de sélectionner l'option `New RStudio Project`. Pendant quelques secondes, le message *Deploying Project* apparaît et, ensuite, votre nouveau projet s'ouvre dans Posit Cloud.
 
@@ -160,6 +166,8 @@ Pour créer un nouveau projet, il suffit de cliquer sur la flèche (`∨`) de l'
 #| echo: false
 knitr::include_graphics('figures/RScloud-newProject.png')
 ```
+
+:::
 
 ### Gabarits (`Templates`)
 
@@ -175,9 +183,13 @@ Dans la page d'ouverture de l'espace de travail partagé avec votre professeur, 
 
 ![Icone Start pour un nouveau devoir](figures/posit_cloud_start.png){#fig-start fig-align="left"}
 
+::: {.callout-tip title="Exemple - Devoir partagé" collapse="true"}
+
 Une fois que le projet du devoir est dupliqué, vous pouvez l'utiliser puisqu'il vous appartient. De plus, le professeur peut avoir accès à votre projet RStudio directement dans son propre compte et ce, en temps réel. Si vous quittez l'espace de travail partagé avec le projet, à votre retour, les projets dupliqués possèdent une icone `Continue` (voir la @fig-continue2). Il suffit de cliquez sur cet icone pour avoir accès à votre projet partagé avec votre professeur.
 
 ![Icone Continue](figures/posit_cloud_assignment_continue.png){#fig-continue2}
+
+:::
 
 ### Renommer le nouveau projet
 
@@ -192,7 +204,7 @@ Une fois que le projet du devoir est dupliqué, vous pouvez l'utiliser puisqu'il
 knitr::include_graphics('figures/RScloud-untitled.png')
 ```
 
-::: {.callout-tip title="Exemple - Changement de nom"  collapse="true"}
+::: {.callout-tip title="Exemple - Procédure de changement de nom"  collapse="true"}
 
 Pour changer le nom, il faut cliquer sur `Untitled Project` (en haut à gauche de la fenêtre) et inscrire le nouveau nom de votre projet (@fig-exercice2). À titre de démonstration, j'ai créé un nouveau projet du nom de `Exercice2`.
 
@@ -359,6 +371,8 @@ Tout comme la version locale de RStudio IDE, tel que montré à la @sec-options,
 
 ## Consulter votre compte
 
+::: {.callout-tip title="Exemple - Consulter votre compte" collapse="true"}
+
 Vous pouvez consulter les paramètres d'utilisation de votre compte Posit Cloud en cliquant sur votre nom. Vous y verrez quelques statistiques, comme le nombre de projets et le nombre d'heures d'utilisation pour un mois (voir la @fig-account). Cela est particulièrement important si votre compte d'utilisateur est gratuit.
 
 ```{r}
@@ -369,6 +383,8 @@ Vous pouvez consulter les paramètres d'utilisation de votre compte Posit Cloud 
 #| echo: false
 knitr::include_graphics('figures/posit_cloud_account.png')
 ```
+
+:::
 
 ## Quitter Posit Cloud
 
