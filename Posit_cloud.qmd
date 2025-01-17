@@ -137,7 +137,7 @@ Si vous désirez effacer un espace travail de votre compte Posit Cloud, cliquez 
 #| label: fig-deletespace
 #| fig-cap: "Effacer un espace de travail à partir de Posit Cloud"
 #| fig-align: left
-#| out.width: "60%"
+#| out.width: "100%"
 #| echo: false
 knitr::include_graphics('figures/posit_cloud_delete_space.png')
 ```
@@ -156,7 +156,7 @@ Pour créer un nouveau projet, il suffit de cliquer sur la flèche (`∨`) de l'
 #| label: fig-newproject
 #| fig-cap: "Création d'un nouveau projet dans Posit Cloud"
 #| fig-align: left
-#| out.width: "100%"
+#| out.width: "60%"
 #| echo: false
 knitr::include_graphics('figures/RScloud-newProject.png')
 ```
@@ -173,9 +173,9 @@ Dans le cadre d'un cours, un professeur peut créer un projet RStudio qui contie
 
 Dans la page d'ouverture de l'espace de travail partagé avec votre professeur, vous verrez un projet avec un icone bleu du nom de `Start` (voir la @fig-start). Cliquez sur cette icone pour dupliquer le projet du professeur. 
 
-![Icone Start pour un nouveau devoir](figures/posit_cloud_start.png){#fig-start}
+![Icone Start pour un nouveau devoir](figures/posit_cloud_start.png){#fig-start fig-align="left"}
 
-Une fois que le projet du devoir est dupliqué, vous pouvez l'utiliser puisqu'il vous appartient. De plus, le professeur peut avoir accès à votre projet RStudio directement dans son propre compte et ce, en temps réel. Si vous quittez l'espce de travail partagé avec le projet, les projets dupliqués possèdent une icone `Continue` (voir la @fig-continue2). Il suffit de cliquez sur cet icone pour avoir accès à votre projet partagé avec votre professeur.
+Une fois que le projet du devoir est dupliqué, vous pouvez l'utiliser puisqu'il vous appartient. De plus, le professeur peut avoir accès à votre projet RStudio directement dans son propre compte et ce, en temps réel. Si vous quittez l'espace de travail partagé avec le projet, à votre retour, les projets dupliqués possèdent une icone `Continue` (voir la @fig-continue2). Il suffit de cliquez sur cet icone pour avoir accès à votre projet partagé avec votre professeur.
 
 ![Icone Continue](figures/posit_cloud_assignment_continue.png){#fig-continue2}
 
@@ -346,7 +346,7 @@ knitr::include_graphics('figures/posit_cloud_delete_project.png')
 #| label: fig-deletemovetotrash
 #| fig-cap: "Effacer un projet à partir de Posit Cloud"
 #| fig-align: left
-#| out.width: "60%"
+#| out.width: "40%"
 #| echo: false
 knitr::include_graphics('figures/posit_cloud_delete_movetotrash.png')
 ```
@@ -365,7 +365,7 @@ Vous pouvez consulter les paramètres d'utilisation de votre compte Posit Cloud 
 #| label: fig-account
 #| fig-cap: "Paramètres du compte de l'utilisateur"
 #| fig-align: left
-#| out.width: "100%"
+#| out.width: "60%"
 #| echo: false
 knitr::include_graphics('figures/posit_cloud_account.png')
 ```
