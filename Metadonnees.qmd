@@ -13,17 +13,17 @@ language:
 
 # Les métadonnées
 
-Un fichier R Notebook comprend trois sections[^sections]. La première de ces sections se nomme **Métadonnées**. Les métadonnées d'un fichier R Markdown désignent le type de document que vous avez créé, la date de création du fichier, le nom de l'auteur et plusieurs autres types d'information qui contrôlent l'aspect visuel du document final. 
+Un fichier R Notebook comprend trois sections[^metadonnees-1]. La première de ces sections se nomme **Métadonnées**. Les métadonnées d'un fichier R Markdown désignent le type de document que vous avez créé, la date de création du fichier, le nom de l'auteur et plusieurs autres types d'information qui contrôlent l'aspect visuel du document final.
 
-[^sections]: Ces trois sections sont : (1) Métadonnées, (2) Texte et (3) Blocs de codes
+[^metadonnees-1]: Ces trois sections sont : (1) Métadonnées, (2) Texte et (3) Blocs de codes
 
-À titre d'information, la section Métadonnées porte aussi le nom de *Préambule* et  l'expression YAML désigne *Ain't Markup langage*.
+À titre d'information, la section Métadonnées porte aussi le nom de *Préambule* et l'expression YAML désigne *Ain't Markup langage*.
 
 ## Exemple
 
-Ci-dessous se trouve une figure qui illustre la section Métadonnées d'un fichier R Markdown. Vous remarquerez que les métadonnées sont situées au tout début du fichier (d'où l'appellation *préambule*) et qu'elles sont incluses à l'intérieur de deux lignes créées à partir de trois tirets (`---`). 
+Ci-dessous se trouve une figure qui illustre la section Métadonnées d'un fichier R Markdown. Vous remarquerez que les métadonnées sont situées au tout début du fichier (d'où l'appellation *préambule*) et qu'elles sont incluses à l'intérieur de deux lignes créées à partir de trois tirets (`---`).
 
-Dans l'exemple présenté à la Figure \@ref(fig:nb2), les lignes qui délimitent les métadonnées (`---`) correspondent aux lignes 1 et 19, respectivement. Il est important de <font color = "red">ne jamais effacer les lignes avec les trois tirets à l'horizontal</font>. Sinon, le logiciel RStudio sera incapable de générer le document final avec le format R Notebook. 
+Dans l'exemple présenté à la Figure \@ref(fig:nb2), les lignes qui délimitent les métadonnées (`---`) correspondent aux lignes 1 et 19, respectivement. Il est important de <font color = "red">ne jamais effacer les lignes avec les trois tirets à l'horizontal</font>. Sinon, le logiciel RStudio sera incapable de générer le document final avec le format R Notebook.
 
 ```{r nb2, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Exemple des métadonnées d'un fichier R Notebook"}
 knitr::include_graphics('figures/rnb.fig2.png')
@@ -33,17 +33,17 @@ knitr::include_graphics('figures/rnb.fig2.png')
 
 Voici, brièvement, la définition de chacun des éléments présentés dans les métadonnées du fichier R Notebook illustré par la Figure \@ref(fig:nb2) :
 
-- <font color = "hotpink">title</font> : le titre du document placé entre guillemets (" ") ou (' '). Le titre devrait refléter la nature du travail. Par exemple : "PSYC2002 - Exercice  1".
-- <font color = "hotpink">author</font> : le nom de l'auteur du document. L'approche la plus simple consiste à inscrire son nom entre guillemets ("Sylvain Fiset") ou ('Sylvain Fiset'). Il est possible de mettre plusieurs auteurs (ou information supplémentaire - comme je l'ai fait) en plaçant un tiret (-) au début de chaque ligne sous la ligne `Author`. Assurez-vous d'avoir un espace devant le tiret et un espace après le tiret.
-- <font color = "hotpink">date</font> : la date de création du document est inscrite automatiquement par l'expression `"r Sys.Date()"`, laquelle est insérée à l'intérieur des guillemets (" ") ou (' '). Ne pas oublier d'ajouter les deux accents de grave (`) avant les guillemets (voir dans la Figure \@ref(fig:nb2)). Il est aussi possible de modifier le format de la date, comme je l'ai fait, mais cela demande un code plus complexe et ce n'est pas nécessaire.
-- <font color = "hotpink">output: html_notebook:</font> : désigne le type de document produit. Dans ce cas-ci, c'est le format `html_notebook`.
-- <font color = "hotpink">theme</font> : le theme `cerulean` est utilisé. D'autres thèmes sont disponibles en [cliquant ici](https://www.datadreaming.org/post/r-markdown-theme-gallery/).
-- <font color = "hotpink">number_sections</font> : permet (yes) ou non (no) d'attribuer automatiquement un numéro aux sections et sous-section du document.
-- <font color = "hotpink">toc</font> : désigne la table des matières (`toc` = *table of contents*)
-- <font color = "hotpink">toc_depth</font> : désigne le nombre de niveaux de la table des matières qui s'affichent à l'écran
-- <font color = "hotpink">toc-float: collapsed</font> : indique si la table des matières se déroule (yes) ou non (no).
-- <font color = "hotpink">toc-float: smooth_scrool</font> : indique si la table des matières se déroule lentement (yes) ou non (no).
-- <font color = "hotpink">editor_options: chunk_output_type</font> : l'option `inline` indique que le résultat du code sera affiché immédiatement sous le code alors que l'option `console` indique que le résultat du code sera affiché dans la fenêtre console de RStudio.
+-   <font color = "hotpink">title</font> : le titre du document placé entre guillemets (" ") ou (' '). Le titre devrait refléter la nature du travail. Par exemple :"PSYC2002 - Exercice 1".
+-   <font color = "hotpink">author</font> : le nom de l'auteur du document. L'approche la plus simple consiste à inscrire son nom entre guillemets ("Sylvain Fiset") ou ('Sylvain Fiset'). Il est possible de mettre plusieurs auteurs (ou information supplémentaire - comme je l'ai fait) en plaçant un tiret (-) au début de chaque ligne sous la ligne `Author`. Assurez-vous d'avoir un espace devant le tiret et un espace après le tiret.
+-   <font color = "hotpink">date</font> : la date de création du document est inscrite automatiquement par l'expression `"r Sys.Date()"`, laquelle est insérée à l'intérieur des guillemets (" ") ou (' '). Ne pas oublier d'ajouter les deux accents de grave (\`) avant les guillemets (voir dans la Figure \@ref(fig:nb2)). Il est aussi possible de modifier le format de la date, comme je l'ai fait, mais cela demande un code plus complexe et ce n'est pas nécessaire.
+-   <font color = "hotpink">output: html_notebook:</font> : désigne le type de document produit. Dans ce cas-ci, c'est le format `html_notebook`.
+-   <font color = "hotpink">theme</font> : le theme `cerulean` est utilisé. D'autres thèmes sont disponibles en [cliquant ici](https://www.datadreaming.org/post/r-markdown-theme-gallery/).
+-   <font color = "hotpink">number_sections</font> : permet (yes) ou non (no) d'attribuer automatiquement un numéro aux sections et sous-section du document.
+-   <font color = "hotpink">toc</font> : désigne la table des matières (`toc` = *table of contents*)
+-   <font color = "hotpink">toc_depth</font> : désigne le nombre de niveaux de la table des matières qui s'affichent à l'écran
+-   <font color = "hotpink">toc-float: collapsed</font> : indique si la table des matières se déroule (yes) ou non (no).
+-   <font color = "hotpink">toc-float: smooth_scrool</font> : indique si la table des matières se déroule lentement (yes) ou non (no).
+-   <font color = "hotpink">editor_options: chunk_output_type</font> : l'option `inline` indique que le résultat du code sera affiché immédiatement sous le code alors que l'option `console` indique que le résultat du code sera affiché dans la fenêtre console de RStudio.
 
 ## Nouveau fichier
 
@@ -63,7 +63,7 @@ knitr::include_graphics('figures/rnb.fig9.png')
 
 ### Édition
 
-Une fenêtre s'ouvre et présente différentes options. Je propose de faire les changements indiqués par les lignes et cercles rouges dans la Figure \@ref(fig:nb5). 
+Une fenêtre s'ouvre et présente différentes options. Je propose de faire les changements indiqués par les lignes et cercles rouges dans la Figure \@ref(fig:nb5).
 
 Il peut aussi s'avérer utile de modifier le format de présentation des figures créées par R. Pour ce faire, je recommande de cliquer sur l'onglet **Figures** et de changer la largeur des figures (**width**) pour 4 pouces (**4 inches**) et de changer la hauteur des figures (**height**) pour 3 pouces (**3 inches**).
 
@@ -81,12 +81,12 @@ knitr::include_graphics('figures/rnb.fig6.png')
 
 ### Ajouts
 
-Certaines options des métadonnées ne peuvent pas être ajoutées via `Output Options...`. Mais cela n'est pas vraiment un problème. Il suffit d'ajouter manuellement les quelques options supplémentaires manquantes (voir la Figure \@ref(fig:nb62)), comme : 
+Certaines options des métadonnées ne peuvent pas être ajoutées via `Output Options...`. Mais cela n'est pas vraiment un problème. Il suffit d'ajouter manuellement les quelques options supplémentaires manquantes (voir la Figure \@ref(fig:nb62)), comme :
 
-- le titre du document
-- le nom de l'auteur du document
-- la date du document
-- les options pour la table des matières (toc). 
+-   le titre du document
+-   le nom de l'auteur du document
+-   la date du document
+-   les options pour la table des matières (toc).
 
 Évidemment, une fois qu'un premier document a été créé avec succès, il suffit de copier - coller les métadonnées d'un fichier à l'autre pour accélérer le processus de rédaction !
 
@@ -96,32 +96,32 @@ knitr::include_graphics('figures/rnb.fig12.png')
 
 ### Taille du lettrage
 
-Notez que par défaut, le lettrage du format qui apparaît dans la fenêtre `Viewer` de RStudio peut vous sembler petit. Il est possible d'ajouter une ligne dans les métadonnées qui contrôle la grosseur du lettrage. Dans la section métadonnée, vous pouvez ajouter cette ligne sous la ligne de la date[^fontsize] :
+Notez que par défaut, le lettrage du format qui apparaît dans la fenêtre `Viewer` de RStudio peut vous sembler petit. Il est possible d'ajouter une ligne dans les métadonnées qui contrôle la grosseur du lettrage. Dans la section métadonnée, vous pouvez ajouter cette ligne sous la ligne de la date[^metadonnees-2] :
 
-- `fontsize: 14pt`
+[^metadonnees-2]: Notez, cependant, qu'il est bien plus simple d'ouvrir le fichier .nb.html dans votre navigateur web et d'agrandir directement le lettrage à partir de la combinaison des touches "Cmd +" (agrandir) ou "Cmd -" (diminuer) (Mac). Avec PC, les combinaisons des touches "Ctrl +" et "Ctrl -" font la même chose. C'est ce que je fais la plupart du temps.
 
-[^fontsize]: Notez, cependant, qu'il est bien plus simple d'ouvrir le fichier .nb.html dans votre navigateur web et d'agrandir directement le lettrage à partir de la combinaison des touches "Cmd +" (agrandir) ou "Cmd -" (diminuer) (Mac). Avec PC, les combinaisons des touches "Ctrl +" et "Ctrl -" font la même chose. C'est ce que je fais la plupart du temps.
+-   `fontsize: 14pt`
 
 ## Exercice 2
 
 L'objectif de cet exercice est d'apprendre à modifier les métadonnées d'un fichier R Notebook. Voici les instructions :
 
-1. Ouvrez le fichier Exercice Notebook.Rmd que vous avez créé lors de l'Exercice 1. 
-2. Modifiez les **métadonnées** de manière à ajouter ou à modifier les informations suivantes :
-    + Changez le titre du document pour `Exercice R Notebook`
-    + Ajoutez `votre nom` comme l'auteur du document
-    + Ajoutez `la date courante` au document
-    + Ajoutez `une table des matières`
-    + Ajoutez `3 niveaux` à la table des matières
-    + Ajoutez le thème `cerulean`
-    + Ajoutez la `numérotation` des sections
-    + Ajoutez une table des matières avec les attributs suivants :
-        + `Déroulement` de la table des matières (oui)
-        + `Déroulement lent` de la table des matières (oui)
-    + Ajoutez l'option pour que le résultat du code soit affiché directement sous le bloc de codes
-3. Sauvegardez votre fichier dans le répertoire de travail de votre projet RStudio
-4. Visualisez votre document final R Notebook en sélectionnant **Preview**
-    + Au besoin, apportez les correctifs pour qu'il ressemble à l'exemple de la Figure \@ref(fig:meta) :
+1.  Ouvrez le fichier Exercice Notebook.Rmd que vous avez créé lors de l'Exercice 1.
+2.  Modifiez les **métadonnées** de manière à ajouter ou à modifier les informations suivantes :
+    -   Changez le titre du document pour `Exercice R Notebook`
+    -   Ajoutez `votre nom` comme l'auteur du document
+    -   Ajoutez `la date courante` au document
+    -   Ajoutez `une table des matières`
+    -   Ajoutez `3 niveaux` à la table des matières
+    -   Ajoutez le thème `cerulean`
+    -   Ajoutez la `numérotation` des sections
+    -   Ajoutez une table des matières avec les attributs suivants :
+        -   `Déroulement` de la table des matières (oui)
+        -   `Déroulement lent` de la table des matières (oui)
+    -   Ajoutez l'option pour que le résultat du code soit affiché directement sous le bloc de codes
+3.  Sauvegardez votre fichier dans le répertoire de travail de votre projet RStudio
+4.  Visualisez votre document final R Notebook en sélectionnant **Preview**
+    -   Au besoin, apportez les correctifs pour qu'il ressemble à l'exemple de la Figure \@ref(fig:meta) :
 
 ```{r meta, echo=FALSE, out.width='100%', fig.align='center', fig.cap="Après avoir complété l'Exercice 2, votre document devrait ressembler à ceci"}
 knitr::include_graphics('figures/meta.png')

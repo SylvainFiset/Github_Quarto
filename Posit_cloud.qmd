@@ -15,14 +15,14 @@ language:
 
 Dans ce chapitre, j'introduis l'application [Posit Cloud](https://posit.cloud/?_gl=1*10qlpcw*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg4MDY2MS4yLjEuMTczNjg4MDY4My4wLjAuMA..). Posit Cloud est la version web de RStudio IDE. Elle permet :
 
--   d'utiliser R et RStudio directement dans votre navigateur web et ce, sans avoir à télécharger les logiciels R, RStudio et Quarto sur votre ordinateur
+-   d'utiliser R, RStudio et Quarto directement dans votre navigateur web et ce, sans avoir à télécharger ces logiciels sur votre ordinateur
 -   de partager aisément des projets RStudio avec plusieurs utilisateurs
 
 Si vous avez téléchargé avec succès les applications R, RStudio et Quarto sur votre ordinateur (et quelles fonctionnent correctement) et que vous n'envisagez pas de partager vos projets d'analyse avec quelqu'un d'autre (ce qui arrive rarement, soit dit en passant), vous pouvez sauter la lecture de ce chapitre.
 
-Par ailleurs, dans le cadre d'un cours, il est fort possible que l'université exige l'utilisation de Posit Cloud. Cela facile grandement le travail de la professeure ou du professeur puisque tous les projets d'un cours sont regroupés dans le compte du professeur. Dans ce cas, veuillez suivre la démarche de création d'un compte Posit Cloud (voir la @sec-comptegratuit).
+Par ailleurs, dans le cadre d'un cours, il est fort possible que votre professeure ou professeur exige l'utilisation de Posit Cloud. Cela facile grandement le travail de la professeure ou du professeur puisque tous les projets d'un cours sont regroupés dans le compte du professeur. Dans ce cas, veuillez suivre la démarche de création d'un compte Posit Cloud (voir la @sec-comptegratuit).
 
-De plus, bien que Posit Cloud s'apparente à la version locale[^posit_cloud-1] de RStudio IDE, les premiers pas avec Posit Cloud peuvent s'avérer difficiles. Dans le présent chapitre, je désire soulever quelques éléments importants afin de maximiser l'expérience d'utilisation de Posit Cloud.
+De plus, bien que Posit Cloud s'apparente à la version locale[^posit_cloud-1] de RStudio IDE, les premiers pas avec Posit Cloud peuvent s'avérer difficiles. Dans le présent chapitre, je soulève quelques éléments importants afin de maximiser l'expérience d'utilisation de Posit Cloud.
 
 [^posit_cloud-1]: L'expression `version locale` désigne la version de RStudio téléchargée et installée sur un ordinateur (et non dans le nuage, comme Posit Cloud).
 
