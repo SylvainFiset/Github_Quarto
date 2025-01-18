@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sylvain Fiset, PhD">
 
-<title>Utiliser R avec Quarto</title>
+<title>References – Utiliser R avec Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02_preface.html" rel="next">
+<link href="./20_RProject_avance.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -55,22 +73,21 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Pas de résultats",
-    "search-matching-documents-text": "documents trouvés",
-    "search-copy-link-title": "Copier le lien vers la recherche",
-    "search-hide-matches-text": "Cacher les correspondances additionnelles",
-    "search-more-match-text": "correspondance de plus dans ce document",
-    "search-more-matches-text": "correspondances de plus dans ce document",
-    "search-clear-button-title": "Effacer",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Annuler",
-    "search-submit-button-title": "Envoyer",
-    "search-label": "Recherche"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
 
-<link rel="stylesheet" href="include/webex.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -79,13 +96,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Bienvenue</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./21_references.html">References</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -102,14 +119,14 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Recherche"></div>
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bienvenue</span></a>
   </div>
 </li>
@@ -129,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Partie I</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -182,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Partie III</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -197,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./21_references.html" class="sidebar-item-text sidebar-link">
+  <a href="./21_references.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -206,48 +223,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table des matières</h2>
-   
-  <ul>
-  <li><a href="#bienvenue" id="toc-bienvenue" class="nav-link active" data-scroll-target="#bienvenue">Bienvenue</a>
-  <ul class="collapse">
-  <li><a href="#copier-les-codes" id="toc-copier-les-codes" class="nav-link" data-scroll-target="#copier-les-codes">Copier les codes</a></li>
-  <li><a href="#comment-exécuter-une-ligne-de-codes-r" id="toc-comment-exécuter-une-ligne-de-codes-r" class="nav-link" data-scroll-target="#comment-exécuter-une-ligne-de-codes-r">Comment exécuter une ligne de codes R</a></li>
-  <li><a href="#exercices" id="toc-exercices" class="nav-link" data-scroll-target="#exercices">Exercices</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  <li><a href="#mot-de-la-fin" id="toc-mot-de-la-fin" class="nav-link" data-scroll-target="#mot-de-la-fin">Mot de la fin</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Utiliser R avec Quarto</h1>
-<p class="subtitle lead">Une introduction</p>
+<h1 class="title">References</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Auteur·rice</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sylvain Fiset, PhD </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Date de publication</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">18 janvier 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -257,252 +248,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bienvenue" class="level1 unnumbered">
-<h1 class="unnumbered">Bienvenue</h1>
-<p><em>Utiliser R avec Quarto. Une introduction</em> est une brève introduction à l’utilisation de Quarto avec R. Ce livre présente la démarche à suivre afin de bien maîtriser l’application RStudio de la compagnie <a href="https://posit.co/">POSIT</a> comme interface pour communiquer avec R.</p>
-<section id="copier-les-codes" class="level2">
-<h2 class="anchored" data-anchor-id="copier-les-codes">Copier les codes</h2>
-<p>Dans le présent livre, les codes R sont présentés à l’intérieur d’un bloc de codes sur fond gris. Pour copier toutes les lignes d’un bloc, il suffit de déplacer votre curseur par-dessus le bloc de codes pour voir apparaître le symbole <code>copier</code> dans le coin supérieur droit et de cliquer sur ce dernier. Par la suite, vous pouvez les insérer (coller) dans votre propres scripts R en appuyant sur <code>Ctrl + C</code> (PC) ou <code>Cmd + C</code> (Mac).</p>
-<p><img src="./figures/intro-copier.png" class="img-fluid"></p>
-</section>
-<section id="comment-exécuter-une-ligne-de-codes-r" class="level2">
-<h2 class="anchored" data-anchor-id="comment-exécuter-une-ligne-de-codes-r">Comment exécuter une ligne de codes R</h2>
-<p>Dans R (et RStudio), une fois que la rédaction de la ligne de codes est complétée, il faut l’exécuter. Bien que RStudio offre de multiples possibilités à cet égard, selon moi, l’option la plus simple consiste à placer le curseur de l’ordinateur sur la ligne de codes que nous voulons exécuter et d’appuyer sur les touches <code>Ctrl + Enter</code> (PC) ou <code>Cmd + Enter</code> (Mac).</p>
-<p><img src="./figures/intro-touches.png" class="img-fluid"></p>
-<p>L’utilisation de ces deux touches fonctionne pour tous les types de documents produits avec RStudio (script R, documents Quarto, R Notebook ou R Markdown). Bref, mémorisez bien ces deux touches selon le type de système d’exploitation utilisé par votre ordinateur. Vous aurez à les utiliser très régulièrement.</p>
-</section>
-<section id="exercices" class="level2">
-<h2 class="anchored" data-anchor-id="exercices">Exercices</h2>
-<p>Plusieurs des chapitres se terminent par une série d’exercices qui permettent d’intégrer le contenu du chapitre. N’hésitez pas à vous mettre au défit.</p>
-</section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p>Ce document est gratuit (et il le sera toujours). Il est disponible sous la licence Creative Commons Attribution-NonCommercial-NoDerivs 4.0<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-</section>
-<section id="mot-de-la-fin" class="level2">
-<h2 class="anchored" data-anchor-id="mot-de-la-fin">Mot de la fin</h2>
-<p>Bonne lecture et bon apprentissage,</p>
-<p>Sylvain</p>
-<p>Sylvain Fiset, Ph.D.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><br> Professeur titulaire de psychologie<br> Université de Moncton, campus d’Edmundston.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-douglassIntroduction2022" class="csl-entry" role="listitem">
+Douglass, Alex, Deon Roos, Francesca Mancini, Ana Couto, and David
+Lusseau. 2022. <em>An Introduction to r</em>. <a href="https://alexd106.github.io/Rbook/">https://alexd106.github.io/Rbook/</a>.
+</div>
+<div id="ref-fogartyQuantitativeSocialScience2018" class="csl-entry" role="listitem">
+Fogarty, Brian J. 2018. <em>Quantitative Social Science Data with r: An
+Introduction</em>. Thousand Oaks, California: <span>SAGE</span>
+Publications, Inc. <a href="https://us.sagepub.com/en-us/nam/quantitative-social-science-data-with-r/book257236">https://us.sagepub.com/en-us/nam/quantitative-social-science-data-with-r/book257236</a>.
+</div>
+<div id="ref-Guitard:2023aa" class="csl-entry" role="listitem">
+Guitard, Dominic, and Sylvain Fiset. 2023. <span>“Stat Checkers: Make
+Reproducible Computer Code Mandatory.”</span> <em>Nature</em> 616
+(7957): 433. <a href="https://doi.org/10.1038/d41586-023-01275-8">https://doi.org/10.1038/d41586-023-01275-8</a>.
+</div>
+<div id="ref-wickhamDataScienceImport2017" class="csl-entry" role="listitem">
+Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for Data Science:
+Import, Tidy, Transform, Visualize, and Model Data</em>. 1st edition.
+Sebastopol, <span>CA</span>: O’Reilly Media. <a href="https://r4ds.had.co.nz/">https://r4ds.had.co.nz/</a>.
+</div>
+<div id="ref-xieMarkdownDefinitiveGuide2018" class="csl-entry" role="listitem">
+Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown:
+The Definitive Guide</em>. New York: Chapman; Hall/<span>CRC</span>. <a href="https://doi.org/10.1201/9781138359444">https://doi.org/10.1201/9781138359444</a>.
+</div>
+<div id="ref-xieMarkdownCookbook2020" class="csl-entry" role="listitem">
+Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R
+Markdown Cookbook</em>. Boca Raton: Chapman; Hall/<span>CRC</span>. <a href="https://doi.org/10.1201/9781003097471">https://doi.org/10.1201/9781003097471</a>.
+</div>
+</div>
 
 
-</section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Cliquez sur <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="external" target="_blank">ce lien</a> pour accéder à la description de cette licence.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Cliquez sur <a href="https://www.umoncton.ca/prof/umce-fiset_sylvain" class="external" target="_blank">ce lien</a> pour accéder au <strong>site web du professeur Fiset</strong> à l’Université de Moncton.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 
 </main> <!-- /main -->
-<script>
-
-/* update total correct if #webex-total_correct exists */
-update_total_correct = function() {
-  console.log("webex: update total_correct");
-
-  var t = document.getElementsByClassName("webex-total_correct");
-  for (var i = 0; i < t.length; i++) {
-    p = t[i].parentElement;
-    var correct = p.getElementsByClassName("webex-correct").length;
-    var solvemes = p.getElementsByClassName("webex-solveme").length;
-    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
-    var selects = p.getElementsByClassName("webex-select").length;
-
-    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
-  }
-}
-
-/* webex-solution button toggling function */
-b_func = function() {
-  console.log("webex: toggle hide");
-
-  var cl = this.parentElement.classList;
-  if (cl.contains('open')) {
-    cl.remove("open");
-  } else {
-    cl.add("open");
-  }
-}
-
-/* check answers */
-check_func = function() {
-  console.log("webex: check answers");
-
-  var cl = this.parentElement.classList;
-  if (cl.contains('unchecked')) {
-    cl.remove("unchecked");
-    this.innerHTML = "Hide Answers";
-  } else {
-    cl.add("unchecked");
-    this.innerHTML = "Show Answers";
-  }
-}
-
-/* function for checking solveme answers */
-solveme_func = function(e) {
-  console.log("webex: check solveme");
-
-  var real_answers = JSON.parse(this.dataset.answer);
-  var my_answer = this.value;
-  var cl = this.classList;
-  if (cl.contains("ignorecase")) {
-    my_answer = my_answer.toLowerCase();
-  }
-  if (cl.contains("nospaces")) {
-    my_answer = my_answer.replace(/ /g, "")
-  }
-
-  if (my_answer == "") {
-    cl.remove("webex-correct");
-    cl.remove("webex-incorrect");
-  } else if (real_answers.includes(my_answer)) {
-    cl.add("webex-correct");
-    cl.remove("webex-incorrect");
-  } else {
-    cl.add("webex-incorrect");
-    cl.remove("webex-correct");
-  }
-
-  // match numeric answers within a specified tolerance
-  if(this.dataset.tol > 0){
-    var tol = JSON.parse(this.dataset.tol);
-    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
-    if (matches.reduce((a, b) => a + b, 0) > 0) {
-      cl.add("webex-correct");
-    } else {
-      cl.remove("webex-correct");
-    }
-  }
-
-  // added regex bit
-  if (cl.contains("regex")){
-    answer_regex = RegExp(real_answers.join("|"))
-    if (answer_regex.test(my_answer)) {
-      cl.add("webex-correct");
-    }
-  }
-
-  update_total_correct();
-}
-
-/* function for checking select answers */
-select_func = function(e) {
-  console.log("webex: check select");
-
-  var cl = this.classList
-
-  /* add style */
-  cl.remove("webex-incorrect");
-  cl.remove("webex-correct");
-  if (this.value == "answer") {
-    cl.add("webex-correct");
-  } else if (this.value != "blank") {
-    cl.add("webex-incorrect");
-  }
-
-  update_total_correct();
-}
-
-/* function for checking radiogroups answers */
-radiogroups_func = function(e) {
-  console.log("webex: check radiogroups");
-
-  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
-  var cl = checked_button.parentElement.classList;
-  var labels = checked_button.parentElement.parentElement.children;
-
-  /* get rid of styles */
-  for (i = 0; i < labels.length; i++) {
-    labels[i].classList.remove("webex-incorrect");
-    labels[i].classList.remove("webex-correct");
-  }
-
-  /* add style */
-  if (checked_button.value == "answer") {
-    cl.add("webex-correct");
-  } else {
-    cl.add("webex-incorrect");
-  }
-
-  update_total_correct();
-}
-
-window.onload = function() {
-  console.log("webex onload");
-  /* set up solution buttons */
-  var buttons = document.getElementsByTagName("button");
-
-  for (var i = 0; i < buttons.length; i++) {
-    if (buttons[i].parentElement.classList.contains('webex-solution')) {
-      buttons[i].onclick = b_func;
-    }
-  }
-
-  var check_sections = document.getElementsByClassName("webex-check");
-  console.log("check:", check_sections.length);
-  for (var i = 0; i < check_sections.length; i++) {
-    check_sections[i].classList.add("unchecked");
-
-    let btn = document.createElement("button");
-    btn.innerHTML = "Show Answers";
-    btn.classList.add("webex-check-button");
-    btn.onclick = check_func;
-    check_sections[i].appendChild(btn);
-
-    let spn = document.createElement("span");
-    spn.classList.add("webex-total_correct");
-    check_sections[i].appendChild(spn);
-  }
-
-  /* set up webex-solveme inputs */
-  var solveme = document.getElementsByClassName("webex-solveme");
-
-  for (var i = 0; i < solveme.length; i++) {
-    /* make sure input boxes don't auto-anything */
-    solveme[i].setAttribute("autocomplete","off");
-    solveme[i].setAttribute("autocorrect", "off");
-    solveme[i].setAttribute("autocapitalize", "off");
-    solveme[i].setAttribute("spellcheck", "false");
-    solveme[i].value = "";
-
-    /* adjust answer for ignorecase or nospaces */
-    var cl = solveme[i].classList;
-    var real_answer = solveme[i].dataset.answer;
-    if (cl.contains("ignorecase")) {
-      real_answer = real_answer.toLowerCase();
-    }
-    if (cl.contains("nospaces")) {
-      real_answer = real_answer.replace(/ /g, "");
-    }
-    solveme[i].dataset.answer = real_answer;
-
-    /* attach checking function */
-    solveme[i].onkeyup = solveme_func;
-    solveme[i].onchange = solveme_func;
-
-    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
-  }
-
-  /* set up radiogroups */
-  var radiogroups = document.getElementsByClassName("webex-radiogroup");
-  for (var i = 0; i < radiogroups.length; i++) {
-    radiogroups[i].onchange = radiogroups_func;
-  }
-
-  /* set up selects */
-  var selects = document.getElementsByClassName("webex-select");
-  for (var i = 0; i < selects.length; i++) {
-    selects[i].onchange = select_func;
-    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
-  }
-
-  update_total_correct();
-}
-
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -546,12 +324,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copié");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copié");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -922,11 +700,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./20_RProject_avance.html" class="pagination-link" aria-label="Project RStudio - niveau II">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02_preface.html" class="pagination-link" aria-label="Préface">
-        <span class="nav-page-text">Préface</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

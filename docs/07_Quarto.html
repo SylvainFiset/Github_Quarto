@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>References – Utiliser R avec Quarto</title>
+<title>4&nbsp; Quarto – Utiliser R avec Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./RProject_avance.html" rel="prev">
+<link href="./08_RStudio_options.html" rel="next">
+<link href="./06_Extensions_R.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,21 +55,22 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script>
 
 
+<link rel="stylesheet" href="include/webex.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -96,13 +79,13 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_Introduction.html">Partie I</a></li><li class="breadcrumb-item"><a href="./07_Quarto.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quarto</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -119,7 +102,7 @@ div.csl-indent {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Recherche"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -132,13 +115,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+  <a href="./02_preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Préface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./a_propos_auteur.html" class="sidebar-item-text sidebar-link">
+  <a href="./03_a_propos_auteur.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">À propos de l’auteur</span></a>
   </div>
 </li>
@@ -146,50 +129,50 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Partie I</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="./04_Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./R_RStudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./05_R_RStudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R et RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Extensions_R.html" class="sidebar-item-text sidebar-link">
+  <a href="./06_Extensions_R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Extensions R</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="./07_Quarto.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quarto</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./RStudio_options.html" class="sidebar-item-text sidebar-link">
+  <a href="./08_RStudio_options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Options de RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./RProject.html" class="sidebar-item-text sidebar-link">
+  <a href="./09_RProject.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Projet RStudio - niveau I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Posit_cloud.html" class="sidebar-item-text sidebar-link">
+  <a href="./10_Posit_cloud.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Posit Cloud</span></span></a>
   </div>
 </li>
@@ -199,14 +182,14 @@ div.csl-indent {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Partie III</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./RProject_avance.html" class="sidebar-item-text sidebar-link">
+  <a href="./20_RProject_avance.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></span></a>
   </div>
 </li>
@@ -214,7 +197,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./21_references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -223,15 +206,25 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#démarche-avec-quarto" id="toc-démarche-avec-quarto" class="nav-link active" data-scroll-target="#démarche-avec-quarto"><span class="header-section-number">4.1</span> Démarche avec Quarto</a></li>
+  <li><a href="#avantages" id="toc-avantages" class="nav-link" data-scroll-target="#avantages"><span class="header-section-number">4.2</span> Avantages</a></li>
+  <li><a href="#désavantages" id="toc-désavantages" class="nav-link" data-scroll-target="#désavantages"><span class="header-section-number">4.3</span> Désavantages</a></li>
+  <li><a href="#installer-quarto" id="toc-installer-quarto" class="nav-link" data-scroll-target="#installer-quarto"><span class="header-section-number">4.4</span> Installer Quarto</a></li>
+  <li><a href="#vérifier-la-version-de-quarto-installée-sur-votre-ordinateur" id="toc-vérifier-la-version-de-quarto-installée-sur-votre-ordinateur" class="nav-link" data-scroll-target="#vérifier-la-version-de-quarto-installée-sur-votre-ordinateur"><span class="header-section-number">4.5</span> Vérifier la version de Quarto installée sur votre ordinateur</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_Introduction.html">Partie I</a></li><li class="breadcrumb-item"><a href="./07_Quarto.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quarto</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quarto</span></h1>
 </div>
 
 
@@ -248,39 +241,285 @@ div.csl-indent {
 </header>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-douglassIntroduction2022" class="csl-entry" role="listitem">
-Douglass, Alex, Deon Roos, Francesca Mancini, Ana Couto, and David
-Lusseau. 2022. <em>An Introduction to r</em>. <a href="https://alexd106.github.io/Rbook/">https://alexd106.github.io/Rbook/</a>.
+<p>L’application Quarto est relativement récente. Elle permet d’utiliser le logiciel R à partir de blocs de codes qui sont intégrés dans le document. Ces blocs de codes R sont insérés, au besoin, autour du texte qui documente la démarche de l’analyste. Il est donc possible de combiner le texte et les analyses (incluant tableaux, figures, résultats) à l’intérieur d’un même document.</p>
+<section id="démarche-avec-quarto" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="démarche-avec-quarto"><span class="header-section-number">4.1</span> Démarche avec Quarto</h2>
+<p>La démarche de l’analyste qui utilise Quarto se résume, normalement, par les étapes suivantes :</p>
+<ul>
+<li>Créer un document Quarto à partir de RStudio.</li>
+<li>Ajuster les métadonnées du ficher Quarto pour les rendre conformes au type de document final désiré.</li>
+<li>Insérer un bloc de codes R et importer un ou des fichiers de données (ex : via un fichier Excel).</li>
+<li>Examiner, manipuler, analyser et présenter les données à l’aide de plusieurs blocs de codes R.</li>
+<li>Documenter sa démarche d’analyse et ses interprétations en insérant du texte autour des blocs de codes R à l’aide du langage R Markdown. Normalement, cette étape est effectuée à chaque fois qu’un bloc de codes R est intégré dans le document Quarto.</li>
+<li>Générer, sauvegarder et publier le document final (en format HTML, PDF ou Word).</li>
+</ul>
+<p>La <a href="#fig-demarche" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> présente un résumé visuel de cette démarche :</p>
+<div id="fig-demarche" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-demarche-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/demarche.png" class="img-fluid figure-img">
 </div>
-<div id="ref-fogartyQuantitativeSocialScience2018" class="csl-entry" role="listitem">
-Fogarty, Brian J. 2018. <em>Quantitative Social Science Data with r: An
-Introduction</em>. Thousand Oaks, California: <span>SAGE</span>
-Publications, Inc. <a href="https://us.sagepub.com/en-us/nam/quantitative-social-science-data-with-r/book257236">https://us.sagepub.com/en-us/nam/quantitative-social-science-data-with-r/book257236</a>.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-demarche-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Démarche de l’analyste qui utilise Quarto
+</figcaption>
+</figure>
 </div>
-<div id="ref-Guitard:2023aa" class="csl-entry" role="listitem">
-Guitard, Dominic, and Sylvain Fiset. 2023. <span>“Stat Checkers: Make
-Reproducible Computer Code Mandatory.”</span> <em>Nature</em> 616
-(7957): 433. <a href="https://doi.org/10.1038/d41586-023-01275-8">https://doi.org/10.1038/d41586-023-01275-8</a>.
+</section>
+<section id="avantages" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="avantages"><span class="header-section-number">4.2</span> Avantages</h2>
+<p>Le format Quarto possède de nombreux avantages :</p>
+<ol type="1">
+<li><p>Son premier avantage réside dans la flexibilité du format de présentation. En effet, le document final peut facilement être exporté1&nbsp;en format HTML, Word ou PDF (ce dernier, à l’aide du langage&nbsp;LaTeX)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p></li>
+<li><p>Son second avantage réside dans le fait que les résultats obtenus à l’aide des codes exécutés dans Quarto peuvent s’afficher directement sous les codes R à l’écran, mimant ainsi&nbsp;Jupiter Notebook&nbsp;pour le langage de programmation Python. Cela facilite la documentation des différentes étapes de l’analyse statistique.</p></li>
+<li><p>Son troisième avantage est que la rédaction du document se fait à l’aide du langage&nbsp;R Markdown. La syntaxe Markdown est simple et facile à utiliser, ce qui permet de créer des documents de qualité sans à avoir à insérer une série de codes plus ou moins complexes (comme le langage&nbsp;html).</p></li>
+<li><p>Son quatrième avantage est que l’analyste peut documenter ses analyses et ses conclusions dans le même document que celui utilisé pour examiner, organiser, analyser et présenter ses résultats. Cette approche permet facilement le partage et la reproductibilité des conclusions tirées par l’analyste.</p></li>
+<li><p>Finalement, l’intégration de R avec RStudio via le format Quarto est dynamique. Cela signifie que lorsque les données utilisées pour produire les analyses changent (exemple : par l’ajout de nouveaux participants), une nouvelle exécution des blocs de codes R rafraîchissent simultanément les tableaux et les figures du document R Notebook. Il n’est donc pas nécessaire d’utiliser la vieille et désuète technique du copier-coller, laquelle est propice aux erreurs et aux oublis.</p></li>
+</ol>
+</section>
+<section id="désavantages" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="désavantages"><span class="header-section-number">4.3</span> Désavantages</h2>
+<p>Quarto possède aussi quelques désavantages dont il faut être conscients et qu’il ne faut pas oublier, faute de quoi, l’utilisation de Quarto sera désagréable et le document final ne sera pas satisfaisant.</p>
+<ol type="1">
+<li><p>Malgré sa simplicité d’utilisation, le format Quarto (et le langage Markdown) demande, lors de ses premières utilisations, de porter attention à de nombreux petits détails qui risquent d’importuner et de décourager l’utilisateur. Heureusement, le présent document examine la majorité de ces détails et il suffit de suivre la démarche présentée pour obtenir un document de qualité. Aussi, au lien de débuter avec un fichier neuf à toutes les fois, je recommande fortement de dupliquer les fichiers Quarto qui fonctionnement bien. Cette approche accélère la productivité !</p></li>
+<li><p>Une autre difficulté réside dans le fait qu’au début, l’utilisateur tente d’apprendre à la fois l’utilisation du format Quarto (via le logiciel RStudio) et celle du logiciel R. L’apprenant a parfois de la difficulté à dissocier les codes du logiciel R avec ceux du format R Notebook. Le présent document a justement pour objectif de permettre à l’apprenant de bien maîtriser le format Quarto, pour se concentrer, par la suite, sur l’apprentissage des codes R.</p></li>
+<li><p>Le format Quarto est dynamique. Il est donc un peu gourmant au niveau de la mémoire pour les ordinateurs qui commencent à avoir de l’âge. Pour les documents courts, cela ne cause pas de problème. Mais pour les documents longs, cela risque d’agacer l’utilisateur.</p></li>
+<li><p>Le format Quarto est extrêmement bien adapté à la production de documents électroniques de type HTML. Malheureusement, l’exportation vers les formats PDF et Word nécessitent souvent des ajustements après la production final du document.</p></li>
+</ol>
+</section>
+<section id="installer-quarto" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="installer-quarto"><span class="header-section-number">4.4</span> Installer Quarto</h2>
+<p>Pour installer Quarto, il suffit de visiter le site de&nbsp;<a href="https://quarto.org">Quarto</a>&nbsp;de la compagnie Posit. Cliquez sur&nbsp;<a href="https://quarto.org/docs/get-started/">Get Started</a>&nbsp;et ensuite sur&nbsp;<strong>Download Quarto CLI</strong>. Par défaut, Quarto détecte votre système d’exploitation (Ubuntu, Linus, Mac, Windows). Une fois le fichier téléchargé, il faut l’installer sur votre ordinateur comme les autres logiciels.</p>
+</section>
+<section id="vérifier-la-version-de-quarto-installée-sur-votre-ordinateur" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="vérifier-la-version-de-quarto-installée-sur-votre-ordinateur"><span class="header-section-number">4.5</span> Vérifier la version de Quarto installée sur votre ordinateur</h2>
+<p>Puisque Quarto est mis à jour régulièrement, il est parfois nécessaire de vérifier la version qui est déjà installée sur votre ordinateur. Pour cela, dans la fenêtre Console de RStudio, cliquez sur Terminal et inscrire&nbsp;quarto check&nbsp;ou&nbsp;quarto –version. La première commande fait une longue série de vérifications alors que la second commande indique seulement le numéro de la version de Quarto qui est installée. À vous de sélectionner la commande qui vous convient le mieux. La <a href="#fig-quartoversion" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> présente la deuxième option :</p>
+<div id="fig-quartoversion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quartoversion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/quarto_version.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<div id="ref-wickhamDataScienceImport2017" class="csl-entry" role="listitem">
-Wickham, Hadley, and Garrett Grolemund. 2017. <em>R for Data Science:
-Import, Tidy, Transform, Visualize, and Model Data</em>. 1st edition.
-Sebastopol, <span>CA</span>: O’Reilly Media. <a href="https://r4ds.had.co.nz/">https://r4ds.had.co.nz/</a>.
-</div>
-<div id="ref-xieMarkdownDefinitiveGuide2018" class="csl-entry" role="listitem">
-Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown:
-The Definitive Guide</em>. New York: Chapman; Hall/<span>CRC</span>. <a href="https://doi.org/10.1201/9781138359444">https://doi.org/10.1201/9781138359444</a>.
-</div>
-<div id="ref-xieMarkdownCookbook2020" class="csl-entry" role="listitem">
-Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R
-Markdown Cookbook</em>. Boca Raton: Chapman; Hall/<span>CRC</span>. <a href="https://doi.org/10.1201/9781003097471">https://doi.org/10.1201/9781003097471</a>.
-</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quartoversion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Vérification de la version de Quarto qui est installée
+</figcaption>
+</figure>
 </div>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Pour exporter le fichier dans un autre format, comme le format LaTeX. Mais ce format ne sera pas abordé dans le présent document. Notez que le format PDF n’est disponible que si vous avez déjà installé le langage LaTeX sur votre ordinateur. À partir d’un bloc de codes R, il est possible d’installer TinyTeX, laquelle est une librairie qui permet la publication en format LaTeX. Après avoir installer la librairie TinyTeX à l’aide du code&nbsp;install.packages(‘tinytex’), tapez le code&nbsp;tinytex::install_tinytex()&nbsp;suivi de la touche<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  update_total_correct();
+}
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -324,12 +563,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copié");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copié");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -700,11 +939,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./RProject_avance.html" class="pagination-link" aria-label="Project RStudio - niveau II">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></span>
+      <a href="./06_Extensions_R.html" class="pagination-link" aria-label="Extensions R">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Extensions R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./08_RStudio_options.html" class="pagination-link" aria-label="Options de RStudio">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Options de RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

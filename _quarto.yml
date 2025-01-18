@@ -13,17 +13,17 @@ book:
   search: true
   chapters:
     - index.qmd
-    - preface.qmd
-    - a_propos_auteur.qmd
+    - 02_preface.qmd
+    - 03_a_propos_auteur.qmd
     - part: "Partie I"
       chapters:
-      - introduction.qmd
-      - R_RStudio.qmd
-      - Extensions_R.qmd
-      - Quarto.qmd
-      - RStudio_options.qmd
-      - RProject.qmd
-      - Posit_cloud.qmd
+      - 04_Introduction.qmd
+      - 05_R_RStudio.qmd
+      - 06_Extensions_R.qmd
+      - 07_Quarto.qmd
+      - 08_RStudio_options.qmd
+      - 09_RProject.qmd
+      - 10_Posit_cloud.qmd
     # - part: "Partie II"
     #   chapters:
     #   - Utiliser_Quarto.qmd
@@ -36,8 +36,8 @@ book:
     #   - Problemes.qmd
     - part: "Partie III"
       chapters:
-      - RProject_avance.qmd
-    - references.qmd
+      - 20_RProject_avance.qmd
+    - 21_references.qmd
 
 bibliography: book0.bib
 

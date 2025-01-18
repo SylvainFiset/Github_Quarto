@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Project RStudio - niveau II – Utiliser R avec Quarto</title>
+<title>2&nbsp; R et RStudio – Utiliser R avec Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./Posit_cloud.html" rel="prev">
+<link href="./06_Extensions_R.html" rel="next">
+<link href="./04_Introduction.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,35 +89,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="include/webex.css">
 </head>
@@ -111,7 +102,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./RProject_avance.html">Partie III</a></li><li class="breadcrumb-item"><a href="./RProject_avance.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_Introduction.html">Partie I</a></li><li class="breadcrumb-item"><a href="./05_R_RStudio.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R et RStudio</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Recherche" onclick="window.quartoOpenSearch();">
@@ -144,13 +135,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+  <a href="./02_preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Préface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./a_propos_auteur.html" class="sidebar-item-text sidebar-link">
+  <a href="./03_a_propos_auteur.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">À propos de l’auteur</span></a>
   </div>
 </li>
@@ -165,43 +156,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="./04_Introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./R_RStudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./05_R_RStudio.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R et RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Extensions_R.html" class="sidebar-item-text sidebar-link">
+  <a href="./06_Extensions_R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Extensions R</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="./07_Quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quarto</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./RStudio_options.html" class="sidebar-item-text sidebar-link">
+  <a href="./08_RStudio_options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Options de RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./RProject.html" class="sidebar-item-text sidebar-link">
+  <a href="./09_RProject.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Projet RStudio - niveau I</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Posit_cloud.html" class="sidebar-item-text sidebar-link">
+  <a href="./10_Posit_cloud.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Posit Cloud</span></span></a>
   </div>
 </li>
@@ -218,7 +209,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./RProject_avance.html" class="sidebar-item-text sidebar-link active">
+  <a href="./20_RProject_avance.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></span></a>
   </div>
 </li>
@@ -226,7 +217,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./21_references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -240,29 +231,32 @@ window.Quarto = {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#sous-répertoires" id="toc-sous-répertoires" class="nav-link active" data-scroll-target="#sous-répertoires"><span class="header-section-number">8.1</span> Sous-répertoires</a></li>
-  <li><a href="#description-des-sous-répertoires" id="toc-description-des-sous-répertoires" class="nav-link" data-scroll-target="#description-des-sous-répertoires"><span class="header-section-number">8.2</span> Description des sous-répertoires</a></li>
-  <li><a href="#avantages-et-désavantages" id="toc-avantages-et-désavantages" class="nav-link" data-scroll-target="#avantages-et-désavantages"><span class="header-section-number">8.3</span> Avantages et désavantages</a></li>
-  <li><a href="#comment-créer-les-sous-répertoires" id="toc-comment-créer-les-sous-répertoires" class="nav-link" data-scroll-target="#comment-créer-les-sous-répertoires"><span class="header-section-number">8.4</span> Comment créer les sous-répertoires</a></li>
-  <li><a href="#exemple" id="toc-exemple" class="nav-link" data-scroll-target="#exemple"><span class="header-section-number">8.5</span> Exemple</a></li>
-  <li><a href="#répertoire-du-projet" id="toc-répertoire-du-projet" class="nav-link" data-scroll-target="#répertoire-du-projet"><span class="header-section-number">8.6</span> Répertoire du projet</a></li>
-  <li><a href="#chemins-daccès-relatifs" id="toc-chemins-daccès-relatifs" class="nav-link" data-scroll-target="#chemins-daccès-relatifs"><span class="header-section-number">8.7</span> Chemins d’accès relatifs</a>
+  <li><a href="#intro-à-r" id="toc-intro-à-r" class="nav-link active" data-scroll-target="#intro-à-r"><span class="header-section-number">2.1</span> Intro à R</a>
   <ul class="collapse">
-  <li><a href="#importation-de-fichiers" id="toc-importation-de-fichiers" class="nav-link" data-scroll-target="#importation-de-fichiers"><span class="header-section-number">8.7.1</span> Importation de fichiers</a></li>
-  <li><a href="#exportation-de-fichiers" id="toc-exportation-de-fichiers" class="nav-link" data-scroll-target="#exportation-de-fichiers"><span class="header-section-number">8.7.2</span> Exportation de fichiers</a></li>
+  <li><a href="#avantages" id="toc-avantages" class="nav-link" data-scroll-target="#avantages"><span class="header-section-number">2.1.1</span> Avantages</a></li>
+  <li><a href="#désavantages" id="toc-désavantages" class="nav-link" data-scroll-target="#désavantages"><span class="header-section-number">2.1.2</span> Désavantages</a></li>
   </ul></li>
-  <li><a href="#recommandation" id="toc-recommandation" class="nav-link" data-scroll-target="#recommandation"><span class="header-section-number">8.8</span> Recommandation</a></li>
-  <li><a href="#exercice-7" id="toc-exercice-7" class="nav-link" data-scroll-target="#exercice-7"><span class="header-section-number">8.9</span> Exercice 7</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution"><span class="header-section-number">8.10</span> Solution</a></li>
+  <li><a href="#intro-à-rstudio" id="toc-intro-à-rstudio" class="nav-link" data-scroll-target="#intro-à-rstudio"><span class="header-section-number">2.2</span> Intro à RStudio</a>
+  <ul class="collapse">
+  <li><a href="#avantages-1" id="toc-avantages-1" class="nav-link" data-scroll-target="#avantages-1"><span class="header-section-number">2.2.1</span> Avantages</a></li>
+  <li><a href="#rstudio---vidéo-dintroduction" id="toc-rstudio---vidéo-dintroduction" class="nav-link" data-scroll-target="#rstudio---vidéo-dintroduction"><span class="header-section-number">2.2.2</span> RStudio - vidéo d’introduction</a></li>
+  </ul></li>
+  <li><a href="#installer-r-rstudio" id="toc-installer-r-rstudio" class="nav-link" data-scroll-target="#installer-r-rstudio"><span class="header-section-number">2.3</span> Installer R &amp; RStudio</a>
+  <ul class="collapse">
+  <li><a href="#vidéo-dinstallation" id="toc-vidéo-dinstallation" class="nav-link" data-scroll-target="#vidéo-dinstallation"><span class="header-section-number">2.3.1</span> Vidéo d’installation</a></li>
+  <li><a href="#sec-liensweb" id="toc-sec-liensweb" class="nav-link" data-scroll-target="#sec-liensweb"><span class="header-section-number">2.3.2</span> Liens web</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">2.3.3</span> Installation</a></li>
+  </ul></li>
+  <li><a href="#problèmes-et-solutions" id="toc-problèmes-et-solutions" class="nav-link" data-scroll-target="#problèmes-et-solutions"><span class="header-section-number">2.4</span> Problèmes et solutions</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./RProject_avance.html">Partie III</a></li><li class="breadcrumb-item"><a href="./RProject_avance.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_Introduction.html">Partie I</a></li><li class="breadcrumb-item"><a href="./05_R_RStudio.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R et RStudio</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-niveau2" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Project RStudio - niveau II</span></span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R et RStudio</span></h1>
 </div>
 
 
@@ -279,215 +273,201 @@ window.Quarto = {
 </header>
 
 
-<p>Dans le Chapitre @ref(projetRStudio), nous avons vu brièvement comment créer un projet R de manière à y regrouper l’ensemble des fichiers associés à un projet d’analyse de données. Malheureusement, l’approche présentée au Chapitre @ref(projetRStudio) n’est <em>valide</em> que lorsque le nombre de fichiers utilisés est petit et qu’il est possible de placer tous nos fichiers à l’intérieur du même répertoire. Par contre, lorsque le nombre de fichiers de données et/ou d’analyse devient trop grand, il est préférable d’utiliser une meilleure organisation de notre projet R. Cela permet, entre autres, de regrouper les différents types de fichiers ensembles. Dans le présent chapitre, nous avons examiner comment organiser adéquatement le répertoire (aussi nommé “dossier” ou “folder” en anglais) qui contient votre fichier .Rproj sur votre ordinateur. De cette façon, vos données, fichiers d’analyses et résultats seront toujours organisés de manière cohérente sur votre ordinateur dans le répertoire qui contient le projet R.</p>
-<p>À titre de rappel, immédiatement après la création d’un nouveau projet R dans un nouveau répertoire, un seul fichier compose ce répertoire. Dans notre exemple du Chapitre @ref(projetRStudio), seul le fichier Projet_1.Rproj faisait partie de ce répertoire (voir Figure @ref(fig:figrp2)).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/rprojet-2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Fichier avec l’extension .Pproj disponible dans le répertoire associé au projet RStudio</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<section id="sous-répertoires" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sous-répertoires"><span class="header-section-number">8.1</span> Sous-répertoires</h2>
-<p>Idéalement, le répertoire qui contient le projet R doit être divisé en sous-répertoires. La Figure @ref(fig:structure) montre l’organisation de base d’un répertoire qui contient un projet R. Je suggère la création de quatre sous-répertoires principaux : <em>Data</em>, <em>Output</em>, <em>R</em> et <em>Rmd</em>. L’appellation anglophone permet d’arrimer l’utilisation de RStudio avec d’autres outils, comme GitHub. Évidemment, vous pouvez les modifier et les nommer à votre goût en leur donnant un nom en français, comme <em>Données</em>, <em>Résultats</em>, <em>R</em> et <em>Rmd</em>. Personnellement, j’évite d’utiliser les accents dans la création des répertoires et les objets R. Cela peut compliquer bien des choses lorsque l’on partage nos fichiers avec des collègues qui n’utilisent pas l’encodage de type UFT-8.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/structure_Rproj.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Organisation des sous-répertoires d’un projet R</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="description-des-sous-répertoires" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="description-des-sous-répertoires"><span class="header-section-number">8.2</span> Description des sous-répertoires</h2>
-<ol type="1">
-<li><em>Data</em></li>
-</ol>
+<p>Dans ce chapitre, vous trouverez un brève description des logiciels R et RStudio. À la toute fin de ce chapitre, vous trouverez aussi les liens pour les télécharger et les installer sur votre ordinateur<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<section id="intro-à-r" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="intro-à-r"><span class="header-section-number">2.1</span> Intro à R</h2>
+<p>R a été développé par Robert Gentleman et Ross Ihaka du département de statistiques de l’<a href="https://www.auckland.ac.nz/en.html">Université de Auckland</a> (Nouvelle-Zélande). Le nom R proviendrait de la première lettre du prénom de ces deux auteurs <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Depuis le milieu des années 1997, R est la responsabilité d’un groupe de travail intitulé <em>The R Project</em> <span class="citation" data-cites="douglassIntroduction2022 wickhamDataScienceImport2017">(<a href="21_references.html#ref-douglassIntroduction2022" role="doc-biblioref">Douglass et al. 2022</a>; <a href="21_references.html#ref-wickhamDataScienceImport2017" role="doc-biblioref">Wickham et Grolemund 2017</a>)</span>. La liste des membres de ce groupe est disponible en <a href="https://www.r-project.org/contributors.html">cliquant ici</a>.</p>
+<p>R n’est pas simplement un logiciel de statistiques mais bien une suite intégrée de fonctionnalités logicielles. R est un environnement de travail pour la manipulation de données, le calcul de données et la représentation graphique de données. Entre autres, R :</p>
 <ul>
-<li>Le sous-répertoire <em>Data</em> est divisée en deux sous-répertoires : <em>Raw</em> et <em>Transformed</em>. Le sous-répertoire <em>Raw</em> contient le fichier des données brutes, soit les données initialement récoltées par le chercheur ou l’analyste, comme un fichier Excel. Le sous-répertoire <em>Transformed</em> contient, quant à lui, les fichiers de données transformés par l’analyste à partir de ses scripts .R ou .Rmd. Par exemple, il arrive fréquemment que l’analyste ajoute des variables au fichier de données initiales. Donc, au lieu de travailler avec le donnée original, il en crée un nouveau qu’il sauvegarde dans le répertoire <em>Transformed</em>.</li>
+<li>permet de manipuler, d’enregistrer et de présenter des données</li>
+<li>comprend de nombreux opérateurs arithmétiques, logiques et de comparaison</li>
+<li>comprend une multitude d’outils pour l’analyse statistique de données</li>
+<li>comprend une capacité graphique exhaustive</li>
+<li>comprend un langage de programmation</li>
 </ul>
-<ol start="2" type="1">
-<li><em>Output</em></li>
-</ol>
+<section id="avantages" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="avantages"><span class="header-section-number">2.1.1</span> Avantages</h3>
+<p>En plus de sa gratuité (telle que discutée dans la préface), R possède de nombreux avantages.</p>
 <ul>
-<li>Le sous-répertoire <em>Output</em> contient le document final produit par l’analyse. Par exemple, ce répertoire contient les fichiers .pdf et/ou les fichiers .docs qui sont associées aux analyses produites par l’analyste. Il comprend aussi les fichiers associés aux Figures qui seront utilisées dans les différentes publications associées au projet.</li>
-</ul>
-<ol start="3" type="1">
-<li><em>R et Rmd</em></li>
-</ol>
-<ul>
-<li>Finalement, les sous-répertoires <em>R</em> et <em>Rmd</em> contiennent, respectivement, les fichiers .R et .Rmd (avec l’écriture R Markdown, comme les fichiers R Notebook). En résumé, ce sont les fichiers qui contiennent tous les codes R et R Markdown nécessaires pour transformer les données, réaliser les analyses et les figures, et publier les rapports finaux.</li>
+<li>R permet de produire, à partir d’un même système, des analyses statistiques très simples mais aussi des analyses extrêmement complexes.</li>
+<li>Les nouvelles approches statistiques développées par les statisticiens sont rapidement implantées par les développeurs de la communauté R. Il n’est pas nécessaire d’attendre des années avant qu’une compagnie intègre cette nouvelle approche dans son logiciel.</li>
+<li>R possède un langage très flexible et il peut être adapté au besoin de l’utilisateur.</li>
+<li>R est de nature <em>open source</em>. Donc, les codes des différentes fonctions statistiques sont disponibles à tous, ce qui permet de vérifier l’exactitude de l’approche utilisée et de les reproduire.</li>
+<li>L’apprentissage de R facilite grandement l’apprentissage de d’autres logiciels statistiques, comme STATA ou SPSS. L’inverse, cependant, n’est pas vrai.</li>
+<li>L’apprentissage de R favorise aussi l’apprentissage de d’autres langages informatiques, comme Python.</li>
+<li><span class="citation" data-cites="fogartyQuantitativeSocialScience2018">Fogarty (<a href="21_references.html#ref-fogartyQuantitativeSocialScience2018" role="doc-biblioref">2018</a>)</span> argumente même que la connaissance de R est un atout incomparable lors de la sélection des candidats qui appliquent aux études gradués. Selon lui, les opportunités d’emploi sont plus grandes pour les candidats ayant des connaissances avec R que pour les autres candidats.</li>
 </ul>
 </section>
-<section id="avantages-et-désavantages" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="avantages-et-désavantages"><span class="header-section-number">8.3</span> Avantages et désavantages</h2>
-<p>Plusieurs raisons militent pour cette sous-division :</p>
-<ol type="1">
-<li>Nous pouvons regrouper les fichiers de même nature dans le même sous-répertoire (ex : fichiers de données).</li>
-<li>En utilisant une structure semblable d’un projet R à l’autre, l’analyste peut facilement importer et exporter des fichiers de données sans craindre de ne pas savoir où les retrouver.</li>
-<li>Lors du partage du projet R, il est facile pour un collaborateur de retrouver toutes les informations à partir du nom des sous-répertoires.</li>
-</ol>
-<p>Par ailleurs, l’utilisation de sous-répertoires produit quelques inconvénients :</p>
-<ol type="1">
-<li>Lors de l’importation et de l’exportation des fichiers de données, il faut ajouter l’extension du sous-répertoire associé au répertoire <em>Data</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
-<li>Parfois, dans notre empressement de créer une nouvelle analyse, nous oublions de déplacer le fichier dans le bon répertoire (<em>R</em> ou <em>Rmd</em>).</li>
-<li>L’ajout de multiples sous-répertoires peut complexifier la navigation à l’intérieur du projet R. Il est donc recommandé de limiter les sous-répertoires à deux niveaux (ex : <em>Data</em> / <em>Raw</em>).</li>
-</ol>
+<section id="désavantages" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="désavantages"><span class="header-section-number">2.1.2</span> Désavantages</h3>
+<p>Malgré ses avantages, R possèdent quelques inconvénients qui doivent être soulignés :</p>
+<ul>
+<li>Contrairement à STATA, SPSS ou SAS, R n’offre pas de support d’aide centralisé. Heureusement, la communauté R est planétaire et il est relativement facile de trouver réponse à nos questions à l’aide du moteur de recherche de <a href="https://www.google.com/search/howsearchworks/">Google</a>.</li>
+<li>La courbe d’apprentissage de R est relativement abrupte et les premiers pas avec R peuvent être décourageants.</li>
+<li>Il y a un manque de consistance dans l’implantation des différentes fonctions statistiques et dans la présentation des fonctions d’aide. Certaines extensions sont très bien expliquées à l’aide de vignettes alors que d’autres sont présentées de façon très rudimentaire.</li>
+<li>Les mêmes fonctions statistiques peuvent apparaître dans différentes extensions, dédoublant ou triplant même la même fonctionnalité.</li>
+<li>Différentes fonctions statistiques associées à des extensions différentes possèdent le même nom mais elles n’ont pas la même utilité. Heureusement, il existe des solutions relativement simples pour préciser la fonction que nous désirons utiliser.</li>
+</ul>
 </section>
-<section id="comment-créer-les-sous-répertoires" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="comment-créer-les-sous-répertoires"><span class="header-section-number">8.4</span> Comment créer les sous-répertoires</h2>
-<p>Bien que vous pouvez créer les sous-répertoires à partir de logiciels déjà disponibles par défaut avec votre ordinateur<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, je recommande d’utiliser le logiciel RStudio pour cela. Dans le fenêtre des utilitaires (Files, Plots, Packages, Help, Viewer), l’onglet <strong>Files</strong> contient, entre autres, tous les outils nécessaires pour créer, effacer et renommer les sous-répertoires. Cette approche réplique d’ailleurs celle qui doit être utilisée avec RStudio Cloud.</p>
-<p>Avant de débuter à créer de nouveaux sous-répertoires, il faut s’assurer que la fenêtre <strong>Files</strong> présente les fichiers disponibles dans le répertoire principal de votre projet R. Si le nom du fichier de votre projet R est visible (fichier .Rproj), vous êtes à la bonne place (voir Figure @ref(fig:figrp2)) ! Sinon, naviguez à l’intérieur des répertoires situés à la droite de <strong>Home</strong> pour retrouver votre fichier .Rproj. Par la suite, l’onglet <strong>New Folder</strong> vous permet de créer les sous-répertoires. Pour effacer ou renommer un sous-répertoire, il faut cocher la case située à sa gauche et cliquer sur l’onglet <strong>Delete</strong> ou <strong>Rename</strong>. De plus, l’onglet <strong>More</strong> comprend d’autres options intéressantes comme le déplacement des fichiers d’un répertoire à l’autre ou la possibilité de copier les fichiers dans de nouveaux répertoires.</p>
 </section>
-<section id="exemple" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="exemple"><span class="header-section-number">8.5</span> Exemple</h2>
-<p>À titre d’exemple, j’ai créé les sous-répertoires dans le répertoire principal de mon projet R (<strong>Projet_1</strong>) et j’ai déplacé dans le sous-répertoire les fichiers .Rmd et .nb.html que nous avons créé à la section @ref(deuxfichiers). À l’aide du logiciel <em>Finder</em> de mon ordinateur (Mac), nous pouvons voir l’organisation des sous-répertoires (voir Figure @ref(fig:Files2)).</p>
+<section id="intro-à-rstudio" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="intro-à-rstudio"><span class="header-section-number">2.2</span> Intro à RStudio</h2>
+<p>RStudio a été développé par une compagnie privée du nom de <a href="https://posit.co/">Posit</a>. RStudio est une interface logicielle entre R et l’utilisateur. Dans sa version de base, telle que démontrée précédemment, R présente une interface relativement sévère qui est difficile à utiliser. RStudio a été développé dans le but d’améliorer le plaisir de l’utilisateur qui interagit avec R.</p>
+<p>Tel que présenté précédemment précédamment, RStudio comprend plusieurs fenêtres qui permettent à l’analyste de rédiger les codes R, tout en examinant les données et les résultats. De plus, RStudio facilite l’exportation des résultats en plusieurs formats (.docx, .pdf, .html).</p>
+<p>Notez que RStudio ne se limite pas à être l’interface avec R puisque de nombreux autres langages de programmation y ont été intégrés (ex : Python, STAN, C<sup>++</sup>). Nous allons utiliser la version gratuite de RStudio, soit RStudio IDE. IDE signifie <em>Integrated Development Environment</em>. RStudio IDE fonctionne avec plusieurs systèmes d’exploitation, dont Windows, MacOS et Linux.</p>
+<p>Afin de faciliter l’interaction avec R, certaines alternatives à RStudio existent. À titre d’exemples, je souligne <a href="https://jupyter.org/">Jupyter notebook</a>, <a href="https://jupyter.org/try">Jupyter lab</a>, <a href="https://www.getarchitect.io/">Architect</a>, ou <a href="https://r.analyticflow.com/en/">R AnalyticFlow</a>. Malgré tout, RStudio demeure le standard de qualité quand vient le temps d’interagir avec R. Personnellement, si RStudio n’existait pas, j’opterais pour <a href="https://jupyter.org/">Jupyter notebook</a> via son intégration avec la plateforme <a href="https://www.anaconda.com/products/individual">Anaconda Navigator</a>, principalement en raison de sa simplicité d’utilisation et de son intégration avec le langage Markdown. La <a href="#fig-anaconda" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> présente un exemple de codes R à partir de l’application Jupiter notebook (à gauche) et son rendu en format .html (à droite).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/Files2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Sous-répertoires du projet Projet_1.Rproj sur mon ordinateur</figcaption>
+<div id="fig-anaconda" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anaconda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/jupyter-notebook2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anaconda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Illustration de codes R et du langage Markdown à partir de l’application Jupiter Notebook (image de gauche) et son rendu en format .html (image de droite)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="avantages-1" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="avantages-1"><span class="header-section-number">2.2.1</span> Avantages</h3>
+<p>Dans le but de faciliter l’interaction avec l’utilisateur, RStudio présente quelques avantages très notables. Bien que ma démarche de présentation peut sembler un peu précoce pour celles et ceux d’entre vous qui ne connaissez pas encore RStudio, j’en profite immédiatement pour présenter deux de ses avantages.</p>
+<section id="syntaxe-intégrée" class="level4" data-number="2.2.1.1">
+<h4 data-number="2.2.1.1" class="anchored" data-anchor-id="syntaxe-intégrée"><span class="header-section-number">2.2.1.1</span> Syntaxe intégrée</h4>
+<p>RStudio facilite la rédaction des scripts R en proposant de compléter votre syntaxe. Ainsi, dès que vous débutez à écrire le nom d’une fonction, RStudio propose (1) le nom de quelques fonctions qui débute par les mêmes lettres et (2) la syntaxe à suivre pour compléter l’écriture de la fonction. Par exemple, imaginons que nous désirons effectuer un test binomial. Le nom de la fonction à utiliser est <code>binom.test()</code>. Dans un bloc de codes R, dès que j’inscris <code>binom</code>, RStudio me propose deux choix possibles de fonctions qui débutent par <code>binom</code> (voir <a href="#fig-binom" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>). Il me suffit de sélectionner celle que je désire utiliser pour qu’elle se complète automatiquement dans mon bloc de codes R. Par la suite, RStudio propose à nouveau la syntaxe à utiliser pour compléter l’écriture de la fonction sélectionnée (voir <a href="#fig-binom2" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>).</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-binom" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-binom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-binom-test1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Suggestions de fonctions offertes par RStudio
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-binom2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-binom2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-binom-test2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binom2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Syntaxe proposée par RStudio pour la fonction binom.test
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="répertoire-du-projet" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="répertoire-du-projet"><span class="header-section-number">8.6</span> Répertoire du projet</h2>
-<p>Après avoir créer nos répertoires dans notre projet RStudio, pour chacun des fichiers .Rmd que nous créons, il faut indiquer à RStudio d’utiliser le répertoire principal de notre projet RStudio. Par défaut, R utilise le répertoire <em>Document</em> de votre ordinateur et non celui du projet. Il faut donc changer le répertoire <em>Document</em> par le répertoire du projet RStudio. La démarche consiste simplement à cliquer sur l’onglet <code>Knit</code>, au haut de la fenêtre Source de RStudio, de sélectionner <code>Directory</code> et ensuite <code>Project Directory</code> (voir Figure @ref(fig:project-directory)).</p>
-<div class="cell" data-layout-align="center">
+<section id="examiner-les-objets-r" class="level4" data-number="2.2.1.2">
+<h4 data-number="2.2.1.2" class="anchored" data-anchor-id="examiner-les-objets-r"><span class="header-section-number">2.2.1.2</span> Examiner les objets R</h4>
+<p>La fenêtre <code>Environment</code> vous permet de voir rapidement tous les objets R que vous avez créés lors de votre session de travail et de les examiner via une fenêtre qui ressemble à un chiffrier électronique (comme Excel ou Numbers). Prenons l’exemple du bloc de codes R de la <a href="#fig-d1" class="quarto-xref">Figure&nbsp;<span>2.4</span></a> dans lequel j’ai créé un ensemble de données nommé <code>d1</code> qui contient le quotient intellectuel (QI) de 10 participants fictifs :</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/project-directory.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>Sélectionner le répertoire du projet RStudio à partir de l’option Knit</figcaption>
+<div id="fig-d1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-d1.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: Création de l’objet d1 qui contient le QI de 10 participants
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="chemins-daccès-relatifs" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="chemins-daccès-relatifs"><span class="header-section-number">8.7</span> Chemins d’accès relatifs</h2>
-<p>En indiquant à RStudio d’utiliser le répertoire du projet RStudio comme répertoire principal, il est possible d’utiliser des <em>chemins d’accès relatifs</em> dans nos codes R pour préciser les répertoires où il faut importer et/ou exporter nos fichiers sur notre ordinateur. Un <em>chemin d’accès relatif</em> est un chemin (<em>path</em>, en anglais) qui précise le répertoire où se trouve nos fichiers sur notre ordinateur relativement au répertoire principal du projet RStudio.</p>
-<div class="cell" data-layout-align="center">
+<p>Je peux examiner le contenu de cet objet <code>d1</code> à partir de la fenêtre <strong>Environment</strong> de RStudio en cliquant sur le triangle blanc placée dans un cercle bleu à la gauche l’objet <code>d1</code> (voir <a href="#fig-d2" class="quarto-xref">Figure&nbsp;<span>2.5</span></a>).</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/chemin-relatif2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Chemin relatif du fichier oranges.txt à partir du répertoire du projet RStudio</figcaption>
+<div id="fig-d2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-d1-environment2.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: Examiner le contenu de l’objet d1 dans la fenêtre Environment de RStudio
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Dans l’exemple de la Figure @ref(fig:Files2), le répertoire principal du projet RStudio est <code>Projet_1</code>. Donc, tous les chemins relatifs précisés dans nos codes R doivent prendre le répertoire <code>Projet_1</code> comme point de départ. Ainsi, le chemin relatif pour le fichier <code>oranges.txt</code> qui se trouve dans le répertoire <code>Raw</code> (voir Figure @ref(fig:chemin-relatif2) aurait la forme suivante :</p>
-<p><span class="math display">\[
-./Data/Raw/oranges.txt
-\]</span></p>
-<p>Notez la présence du <code>.</code> qui désigne le répertoire principal du projet RStudio.</p>
-<section id="importation-de-fichiers" class="level3" data-number="8.7.1">
-<h3 data-number="8.7.1" class="anchored" data-anchor-id="importation-de-fichiers"><span class="header-section-number">8.7.1</span> Importation de fichiers</h3>
-<p>La Figure @ref(fig:import-data) montre le chemin d’accès relatif (<code>./Data/Raw/</code>) pour importer le fichier de données oranges.txt à partir d’un bloc de codes R.</p>
-<div class="cell" data-layout-align="center">
+<p>Je peux aussi examiner l’ensemble du contenu de l’objet <code>d1</code> en cliquant sur le symbole du chiffrier situé à l’extrême droite de l’objet <code>d1</code> dans le fenêtre <strong>Environment</strong> (voir <a href="#fig-d3" class="quarto-xref">Figure&nbsp;<span>2.6</span></a>) :</p>
+<div class="cell" data-layout-align="left">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/import-data.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Chemin relatif pour l’importation du fichier oranges.txt dans un bloc de codes R</figcaption>
-</figure>
+<div id="fig-d3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/rstudio-d1-tableur.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:100.0%">
 </div>
-</div>
-</div>
-</section>
-<section id="exportation-de-fichiers" class="level3" data-number="8.7.2">
-<h3 data-number="8.7.2" class="anchored" data-anchor-id="exportation-de-fichiers"><span class="header-section-number">8.7.2</span> Exportation de fichiers</h3>
-<p>La Figure @ref(fig:export-data) montre le chemin d’accès relatif (<code>./Data/Transformed/</code>) pour exporter (et sauvegarder) le fichier de données oranges-transformed.txt à partir d’un bloc de codes R. Dans le premier bloc de codes, les mesures métriques de l’âge et de la circonférences des arbres ont été transformées en mesures anglaises. Dans le second bloc de codes, le fichier oranges-transformed a été sauvegardé en format .txt.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/export-data.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Chemin relatif pour l’exportation du fichier oranges-transformed.txt dans un bloc de codes R</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>La Figure @ref(fig:chemin-relatif-transformed) nous confirme que le fichier oranges-transformed.txt a bel et bien été exporté dans le répertoire /Data/Transformed/ du Projet_1.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/chemin-relatif-transformed.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Confirmation de l’exportation du fichier oranges-transformed.txt</figcaption>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: Examiner le contenu de l’objet d1 à l’aide du tableur intégré de RStudio
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="recommandation" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="recommandation"><span class="header-section-number">8.8</span> Recommandation</h2>
-<p>Lorsque nous travaillons sur un projet d’analyse de données, il est facile de devenir mélangé dans les différentes versions de nos analyses et avec les différents fichiers qui contiennent les données transformées. La meilleure façon d’éviter la confusion consiste à bien organiser votre espace de travail pour chacun des projets R que vous allez entreprendre. Et la meilleure façon consiste à créer la même structure que celle présentée ci-haut pour chacun de vos projets R.</p>
-<p>Néanmoins, prenez note que cette proposition de structure de projet R est minimale. Si vous le désirez, vous pouvez créer autant de sous-répertoires que vous le désirez. Par exemple, le sous-répertoire <em>Rmd</em> pourrait comprendre les sous-répertoires <em>Analyse-1</em>, <em>Analyse-2</em>, <em>Analyse-3</em>, etc. Bref, avec la pratique, vous serez en mesure de préciser la structure d’un projet R qui vous convient le mieux. Malgré tout, gardez en tête de limiter le nombre de sous-répertoires. Parfois, trop, c’est comme pas assez !</p>
+<section id="rstudio---vidéo-dintroduction" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="rstudio---vidéo-dintroduction"><span class="header-section-number">2.2.2</span> RStudio - vidéo d’introduction</h3>
+<p>Le nombre d’options offertes par RStudio est particulièrement vaste et seule une bonne séance de travail avec RStudio nous permettrait d’en faire le tour. Néanmoins, ci-dessous, j’ai ajouté un lien pour une vidéo (10 min. 13 sec.) qui montre les principales caractéristiques de RStudio. Pour toute personne qui débute avec RStudio, le visionnement de cette vidéo est fortement recommandé. Personnellement, j’aurais bien aimé avoir accès à ce type de documentation lorsque j’ai débuté à utiliser RStudio !</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=g9vGnr4kkBU">Vidéo (en anglais) : Comment utiliser RStudio</a></li>
+</ul>
 </section>
-<section id="exercice-7" class="level2" data-number="8.9">
-<h2 data-number="8.9" class="anchored" data-anchor-id="exercice-7"><span class="header-section-number">8.9</span> Exercice 7</h2>
-<p>L’objectif de l’Exercice 7 consiste à organiser votre projet R. En résumé, vous devez créer les sous-répertoires présentés ci-haut et déplacer les fichiers correspondants dans les bons sous-répertoires. À partir du fichier <strong>Exercice R Notebook</strong> que vous avez complété lors de l’Exercice 6, veuillez :</p>
-<ol type="1">
-<li>Créer les sous-répertoires <em>Data</em>, <em>Output</em>, <em>R</em> et <em>Rmd</em>.</li>
-<li>Dans le répertoire <em>Data</em>, créer les sous-répertoires <em>Raw</em> et <em>Transformed</em>.</li>
-<li>Déplacer les fichiers <em>Exercice Notebook.Rmd</em> et <em>Exercice Notebook.nb.html</em> dans le sous-répertoire <em>Rmd</em>.</li>
-</ol>
 </section>
-<section id="solution" class="level2" data-number="8.10">
-<h2 data-number="8.10" class="anchored" data-anchor-id="solution"><span class="header-section-number">8.10</span> Solution</h2>
-<p>La structure de votre projet R (dans l’onglet Projet_1) devrait ressembler à celui de la Figure @ref(fig:Files3).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/Files.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>À la fin de l’Exercice 7, vos sous-répertoires de votre projet R devraient ressembler à ceci</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>De plus, votre répertoire <em>Data</em> devraient comprendre les sous-répertoires illustrés à la Figure @ref(fig:Files4) et votre répertoire <em>Rmd</em> devraient comprendre les fichiers présentés à la Figure @ref(fig:Files5).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/FilesData.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>À la fin de l’Exercice 7, les sous-répertoires du répertoire Data devraient ressembler à ceci</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/FilesRmd.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>À la fin de l’Exercice 7, le répertoire Rmd devraient comprendre ceux deux fichiers</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="installer-r-rstudio" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="installer-r-rstudio"><span class="header-section-number">2.3</span> Installer R &amp; RStudio</h2>
+<p><em>Si vous avez déjà installé R et RStudio, vous pouvez sauter cette section.</em></p>
+<section id="vidéo-dinstallation" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="vidéo-dinstallation"><span class="header-section-number">2.3.1</span> Vidéo d’installation</h3>
+<p>Si vous n’avez pas encore installé R et RStudio, voici une vidéo (7 min. 38 sec.) dans laquelle je montre comment installer les logiciels R et RStudio à partir du site web de téléchargement de la compagnie <em>Posit</em>. La démonstration est faite à la fois pour le système d’exploitation Windows et pour le système d’exploitation macOS. Pour macOS, j’explique aussi comment identifier si votre ordinateur possède un processeur Apple silicon ou un processeur Intel, ce qui est important pour télécharger la bonne version de R. La <a href="#sec-liensweb" class="quarto-xref"><span>Section 2.3.2</span></a> présente les liens web pour installer R et RStudio.</p>
+<ul>
+<li><a href="https://youtu.be/Qiz_CE-kb9o">Vidéo (en français) : Installation R RStudio</a></li>
+</ul>
+</section>
+<section id="sec-liensweb" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-liensweb"><span class="header-section-number">2.3.2</span> Liens web</h3>
+<p>Voici les liens pour télécharger une version récente (et gratuite) de R et de RStudio. Assurez-vous de télécharger les versions adaptées à votre système d’exploitation (OS, Windows, Linux) :</p>
+<ul>
+<li><p><a href="https://posit.co/download/rstudio-desktop/">R</a></p></li>
+<li><p><a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a>.</p></li>
+<li><p><a href="https://www.xquartz.org">XQuartz</a>. Pour les utilisateurs d’ordinateur Mac, l’installation du logiciel XQuartz est aussi nécessaire pour la version 10.9 de OS X et les versions les plus récentes de OS X.</p></li>
+</ul>
+</section>
+<section id="installation" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="installation"><span class="header-section-number">2.3.3</span> Installation</h3>
+<p>Une fois les fichiers .exe (PC) ou .dmg (Mac) téléchargés dans votre dossier de <strong>Téléchargement</strong>, cliquez sur les fichiers pour installer les applications et ensuite, suivez les étapes d’installation. Débutez par installer R avant d’installer RStudio.</p>
+</section>
+</section>
+<section id="problèmes-et-solutions" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="problèmes-et-solutions"><span class="header-section-number">2.4</span> Problèmes et solutions</h2>
+<p>Dans l’éventualité où, peu importe la raison, vous ne réussissez pas à installer une version pleinement fonctionnelle de R et/ou de RStudio sur votre ordinateur, je vous encourage à utiliser Posit Cloud (voir <a href="10_Posit_cloud.html" class="quarto-xref"><span>Chapitre 7</span></a>). Cette version de RStudio vous permet d’utiliser R et RStudio directement dans votre navigateur web.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-douglassIntroduction2022" class="csl-entry" role="listitem">
+Douglass, Alex, Deon Roos, Francesca Mancini, Ana Couto, et David Lusseau. 2022. <em>An Introduction to R</em>. <a href="https://alexd106.github.io/Rbook/">https://alexd106.github.io/Rbook/</a>.
+</div>
+<div id="ref-fogartyQuantitativeSocialScience2018" class="csl-entry" role="listitem">
+Fogarty, Brian J. 2018. <em>Quantitative Social Science Data with R: An Introduction</em>. Thousand Oaks, California: <span>SAGE</span> Publications, Inc. <a href="https://us.sagepub.com/en-us/nam/quantitative-social-science-data-with-r/book257236">https://us.sagepub.com/en-us/nam/quantitative-social-science-data-with-r/book257236</a>.
+</div>
+<div id="ref-wickhamDataScienceImport2017" class="csl-entry" role="listitem">
+Wickham, Hadley, et Garrett Grolemund. 2017. <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</em>. 1st edition. Sebastopol, <span>CA</span>: O’Reilly Media. <a href="https://r4ds.had.co.nz/">https://r4ds.had.co.nz/</a>.
+</div>
+</div>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Par exemple, l’importation et l’exportation des fichiers de données nécessitent l’obligation d’ajouter le chemin d’accès relatif au répertoire du projet RStudio.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Avec un Mac, vous pouvez créer les sous-répertoires à partir du logiciel <em>Finder</em>. Avec un PC, vous pouvez créer les sous-répertoires à partir du logiciel <em>Explorateur de fichiers</em>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>L’interface web <a href="https://posit.cloud/?_gl=1*1117k9g*_ga*MjExNTExNDUyNy4xNzM2ODc3OTgw*_ga_2C0WZ1JHG0*MTczNjg3Nzk4MC4xLjAuMTczNjg3Nzk4MC4wLjAuMA..">Posit Cloud</a> permet d’utiliser gratuitement les logiciels R et RStudio sans qu’il ne soit nécessaire de télécharger R et RStudio sur votre ordinateur. Mais prenez note qu’il y a un maximum d’heures gratuites d’utilisation et votre compte devient bloquer jusqu’au mois suivant. La seule solution consiste à payer un certain montant d’argent par mois ($).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Prenez note que R est un langage de programmation qui s’apparente au langage S, lequel a été développé par Rick Becker, John Chambers et Allan Wilks de la compagnie AT&amp;T Bell Laboratories.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -1117,13 +1097,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Posit_cloud.html" class="pagination-link" aria-label="Posit Cloud">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Posit Cloud</span></span>
+      <a href="./04_Introduction.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_Extensions_R.html" class="pagination-link" aria-label="Extensions R">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Extensions R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

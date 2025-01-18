@@ -28,17 +28,16 @@ Dans sa version de base, l'interface d'utilisation du logiciel R est relativemen
 knitr::include_graphics('figures/R_Console2.png')
 ```
 
-
 ## Interface de RStudio
 
-Heureusement, certains logiciels ont été développés pour agrémenter l'usage de R. Parmi ceux-ci, le logiciel RStudio est possiblement celui dont l'utilisation est la plus répandue. RStudio présente une interface divisée en quatre fenêtres (voir @fig-fig2)). 
+Heureusement, certains logiciels ont été développés pour agrémenter l'usage de R. Parmi ceux-ci, le logiciel RStudio est possiblement celui dont l'utilisation est la plus répandue. RStudio présente une interface divisée en quatre fenêtres (voir @fig-fig2)).
 
-1. La fenêtre *Source* comprend les lignes de codes du script .R ou .Rmd.
-2. La fenêtre *Console* permet d'écrire une ligne de codes R ou d'obtenir les résultats d'un code R.
-3. La fenêtre *Environnement, History, Connexion* contient les objets R en mémoire et l'historique des codes R utilisés.
-4. La fenêtre *Files, Plots, Packages, help, Viewer* comprend de nombreuses fonctions qui permettent de copier les fichiers, examiner les graphiques, d'installer des extension, etc..
+1.  La fenêtre *Source* comprend les lignes de codes du script .R ou .Rmd.
+2.  La fenêtre *Console* permet d'écrire une ligne de codes R ou d'obtenir les résultats d'un code R.
+3.  La fenêtre *Environnement, History, Connexion* contient les objets R en mémoire et l'historique des codes R utilisés.
+4.  La fenêtre *Files, Plots, Packages, help, Viewer* comprend de nombreuses fonctions qui permettent de copier les fichiers, examiner les graphiques, d'installer des extension, etc..
 
-Malgré sa flexibilité, dans sa version de base, RStudio demeure rigide dans sa façon de présenter l'information. En effet, les tableaux, graphiques et/ou ensembles de données doivent être exportés vers d'autres logiciels pour y être intégrés (ex: Microsoft Word) dans un document final. 
+Malgré sa flexibilité, dans sa version de base, RStudio demeure rigide dans sa façon de présenter l'information. En effet, les tableaux, graphiques et/ou ensembles de données doivent être exportés vers d'autres logiciels pour y être intégrés (ex: Microsoft Word) dans un document final.
 
 ```{r}
 #| label: fig-fig2
@@ -51,7 +50,7 @@ knitr::include_graphics('figures/RStudio-panels.png')
 
 ## Langage R Markdown
 
-Cette rigidité est maintenant chose du passé. En effet, depuis l'intégration du langage R Markdown à l'aide de l'extension rmarkdown [@xieMarkdownCookbook2020; @xieMarkdownDefinitiveGuide2018], le logiciel RStudio permet de créer des fichiers dynamiques dans plusieurs formats (HTML, PDF, Word). Cela signifie qu'une fois les données récoltées, toutes les étapes de l'analyse, en passant de la transformation des variables jusqu'à la publication du rapport final, se déroulent dans RStudio (voir @fig-fig3). Par exemple, la fenêtre de gauche de la @fig-fig3 comprend les codes R utilisés alors que la fenêtre de droite de la @fig-fig3 présente le résultat final des commandes R en format .html. Cela représente un net avantage puisque chaque petit changement est automatiquement intégré dans le document final. 
+Cette rigidité est maintenant chose du passé. En effet, depuis l'intégration du langage R Markdown à l'aide de l'extension rmarkdown [@xieMarkdownCookbook2020; @xieMarkdownDefinitiveGuide2018], le logiciel RStudio permet de créer des fichiers dynamiques dans plusieurs formats (HTML, PDF, Word). Cela signifie qu'une fois les données récoltées, toutes les étapes de l'analyse, en passant de la transformation des variables jusqu'à la publication du rapport final, se déroulent dans RStudio (voir @fig-fig3). Par exemple, la fenêtre de gauche de la @fig-fig3 comprend les codes R utilisés alors que la fenêtre de droite de la @fig-fig3 présente le résultat final des commandes R en format .html. Cela représente un net avantage puisque chaque petit changement est automatiquement intégré dans le document final.
 
 ```{r}
 #| label: fig-fig3
@@ -66,5 +65,5 @@ knitr::include_graphics('figures/notebook2.png')
 
 Bien que le langage rmarkdown permette de produire un document final dans divers formats, je me limite en n'en présenter qu'un seul, soit le format **Quarto**. Vous découvrirez, à la lecture du présent document, pourquoi je favorise l'utilisation du format Quarto comparativement aux autres formats proposés comme R Notebook ou R Markdown. Ainsi, après avoir complété la lecture de ce document, vous serez en mesure :
 
-- d'utiliser le format de présentation Quarto afin d'examiner et d'analyser des données à partir des logiciels R et RStudio,
-- de produire des documents de qualité facilement partageables avec vos collaborateurs.
+-   d'utiliser le format de présentation Quarto afin d'examiner et d'analyser des données à partir des logiciels R et RStudio,
+-   de produire des documents de qualité facilement partageables avec vos collaborateurs.
